@@ -7,6 +7,7 @@ import shutil
 import os
 
 from inference.infer_extraction import inference, inference_by_theme
+from utils.extraction_ai import extraire_elements_key_from_context
 from utils.music_generator_ai import generate_music_lyrics
 from utils.parsers_ai import MusicLyrics
 
@@ -29,7 +30,7 @@ app.add_middleware(
 )
 
 
-@app.post("/extract_elements_key_from_docs/",tags=['module'])
+@app.post("/extract_elements_key_from_docs/",tags=['extraction'])
 async def extract_elements_key_from_docs(
         file: UploadFile = File(..., description="Le document à traiter (Word, PDF, PowerPoint)"),
         orientation: str = Form(..., description="L'orientation du contexte à extraire du document"),
@@ -63,6 +64,21 @@ async def extract_elements_key_from_docs(
 
     return {"context": elements}
 
+
+@app.post("/extract_elements_key_from_theme/",tags=['extraction'])
+async def extract_elements_key_from_theme(
+        theme: str = Form(..., description="Le thème pour générer les paroles"),
+        orientation: str = Form("Comprendre l'intelligence artificielle et des exemples d'application",
+                                description="L'orientation des paroles générées"),
+
+        taille: int = Form(1300, description="La taille totale des paroles générées en nombre de caractères")
+):
+    # Appeler la fonction d'inférence avec le thème et l'orientation
+    a = inference_by_theme(theme, orientation)
+    tmp=extraire_elements_key_from_context(a, orientation, taille)
+
+    return {"context": tmp.content}
+
 @app.post("/generate_lyrics_from_elements_keys/",tags=['module'])
 async def generate_lyrics_from_elements_key(
     elements: str = Form(..., description="Les éléments clés pour générer les paroles"),
@@ -83,8 +99,8 @@ async def generate_lyrics_from_elements_key(
 
 
 
-@app.post("/generate_lyrics/",tags=['complete'])
-async def generate_full_lyrics(
+@app.post("/generate_lyrics_docs/",tags=['complete'])
+async def generate_lyrics_from_docs(
         file: UploadFile = File(..., description="Le document à traiter (Word, PDF, PowerPoint)"),
         orientation: str = Form(..., description="L'orientation du contexte à extraire du document"),
         min_char: int = Form(1000, description="Le nombre minimum de caractères pour le contexte extrait"),
@@ -129,7 +145,7 @@ async def generate_full_lyrics(
     return MusicLyrics.parse_obj(data)
 
 
-@app.post("/generate_lyrics_from_theme/",tags=["complete"])
+@app.post("/generate_lyrics_theme/",tags=["complete"])
 async def generate_lyrics_from_theme(
         theme: str = Form(..., description="Le thème pour générer les paroles"),
         orientation: str = Form("Comprendre l'intelligence artificielle et des exemples d'application",
@@ -140,11 +156,12 @@ async def generate_lyrics_from_theme(
 ):
     # Appeler la fonction d'inférence avec le thème et l'orientation
     a = inference_by_theme(theme, orientation)
+    tmp=extraire_elements_key_from_context(a, orientation, taille)
 
 
     # Générer les paroles de musique
     data = generate_music_lyrics(
-        elements=a,
+        elements=tmp.content,
         style=style,
         num_verses=num_verses,
         taille=taille,

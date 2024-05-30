@@ -6,7 +6,7 @@ from utils.prompt_ai import get_lyrics_generator_prompt
 
 def generate_music_lyrics(elements, style, num_verses, taille,orientation):
     prompt = get_lyrics_generator_prompt()
-    llm = ChatOpenAI(temperature=0.5, model_name="gpt-4o",)
+    llm = ChatOpenAI(temperature=0.05, model_name="gpt-4o",)
     chain = prompt | llm | music_lyrics_parser
 
     res = chain.invoke({

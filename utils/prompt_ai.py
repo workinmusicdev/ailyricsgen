@@ -24,6 +24,17 @@ def load_extraction_prompt():
     return prompt
 
 
+def load_extraction_prompt_from_context():
+    human_prompt = """En te basant uniquement sur les informations ci pour extraire des éléments clés de taille maximale {taille} en abordant {orientation}. Voici les informations : {elements}"""
+
+    prompt = PromptTemplate(
+        template=human_prompt,
+        input_variables=["elements", "orientation", "taille"]
+    )
+
+    return prompt
+
+
 def get_lyrics_generator_prompt():
     music_template = r""""
         En se basant entièrement sur les informations suivantes : {elements},

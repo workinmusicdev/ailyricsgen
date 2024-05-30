@@ -23,6 +23,8 @@ def inference_by_theme(theme,orientation):
 
     # Setup the agent using the defined utility function
     agent_executor: AgentExecutor = setup_agent()
+
+    #Optimiser
     question=f"J'aimerais en apprendre sur {theme} en te basant {orientation}"
     response = agent_executor.invoke({"input":question})
 

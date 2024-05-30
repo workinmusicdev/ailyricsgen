@@ -1,9 +1,10 @@
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain.chains.retrieval import create_retrieval_chain
 from langchain.chains.retrieval_qa.base import RetrievalQA
+from langchain_core.output_parsers import StrOutputParser
 from langchain_openai import OpenAI, ChatOpenAI
 
-from utils.prompt_ai import load_extraction_prompt
+from utils.prompt_ai import load_extraction_prompt, load_extraction_prompt_from_context
 
 
 def extraire_elements_pertinents(orientation, store, embedding_model,min_nombre_caracteres=1000,max_nombre_caracteres=2000, k=5):
@@ -18,4 +19,15 @@ def extraire_elements_pertinents(orientation, store, embedding_model,min_nombre_
 
     return chain.invoke({"input": orientation,"nombre_caracteres":min_nombre_caracteres,"nombre_caracteres_max":max_nombre_caracteres})
 
+def extraire_elements_key_from_context(context,orientation,nbr_caratères=1400):
+    prompt = load_extraction_prompt_from_context()
+    llm = ChatOpenAI(temperature=0, model_name="gpt-4o", )
+    chain = prompt | llm
 
+    res = chain.invoke({
+        "elements": context,
+        "taille": nbr_caratères,
+        "orientation": orientation
+    })
+
+    return res
