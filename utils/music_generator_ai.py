@@ -4,8 +4,8 @@ from langchain_openai import ChatOpenAI
 from utils.parsers_ai import MusicLyrics, music_lyrics_parser
 from utils.prompt_ai import get_lyrics_generator_prompt
 
-def generate_music_lyrics(elements, style, num_verses, taille,orientation):
-    prompt = get_lyrics_generator_prompt()
+def generate_music_lyrics(elements, style, num_verses, taille,orientation,mode="auto"):
+    prompt = get_lyrics_generator_prompt(mode)
     llm = ChatOpenAI(temperature=0.05, model_name="gpt-4o",)
     chain = prompt | llm | music_lyrics_parser
 

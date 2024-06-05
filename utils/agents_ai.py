@@ -29,8 +29,8 @@ def setup_agent():
              description="Effectue des recherches sur des informations générales, des thèmes en général et concepts éducatifs"),
         Tool(name="Calculator", func=llm_math_chain.run,
              description="Propose des outils de calcul mathématique."),
-        Tool(name="Wikipedia", func=wikipedia.run,
-             description="Offre un accès  à des connaissances , encyclopédie , idéal pour approfondir la connaissance et des notions sur des sujets."),
+        #Tool(name="Wikipedia", func=wikipedia.run,
+         #    description="Fais des recherches sur des informations encyclopédie"),
        # Tool(name="DocumentRetrieval", func=rag_chain.run,
         #     description="Récupère et génère des documents en utilisant une base de connaissances augmentée par la récupération.")
     ]
