@@ -21,7 +21,7 @@ def extraire_elements_pertinents(orientation, store, embedding_model,min_nombre_
 
     return chain.invoke({"input": orientation,"nombre_caracteres":min_nombre_caracteres,"nombre_caracteres_max":max_nombre_caracteres})
 
-def extraire_elements_key_from_context(context,orientation,nbr_caratères=1400,):
+def extraire_elements_key_from_context(context,orientation,nbr_caratères=2500,):
     prompt = load_extraction_prompt_from_context()
     llm = ChatOpenAI(temperature=0, model_name="gpt-4o", )
     chain = prompt | llm

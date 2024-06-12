@@ -61,4 +61,3 @@ def format_lyrics_single_refrain(lyrics_dict):
 
     return formatted_lyrics.strip()
 
-

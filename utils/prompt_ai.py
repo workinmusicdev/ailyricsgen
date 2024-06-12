@@ -53,6 +53,7 @@ def prompt_format_to_human_lyrics():
     """
 
 
+
     prompt = PromptTemplate(
         template=human_prompt,
         input_variables=["elements"],
@@ -66,7 +67,7 @@ def get_lyrics_generator_prompt(mode):
     if mode=="auto":
         music_template = r""""
                     En te basant entièrement sur les informations suivantes : {elements},
-                    Générez lyrics en français abordant essentiellement {orientation}  dans le style {style} avec un refrain et des couplets dont tu déterminenras automatiquement le nombre en fonction du contenu.
+                    Générez lyrics en {langue} abordant essentiellement {orientation}  dans le style {style} avec un refrain et des couplets dont tu déterminenras automatiquement le nombre en fonction du contenu.
                     La chanson doit comporter :
                     1. Un refrain répétitif et mémorable, résumant les idées principales.
                     2. plusieurs  couplets dont tu détermineras le nombre.
@@ -78,7 +79,7 @@ def get_lyrics_generator_prompt(mode):
     else:
         music_template = r""""
             En te basant entièrement sur les informations suivantes : {elements},
-            Générez lyrics en français abordant essentiellement {orientation}  dans le style {style} avec un refrain, {num_verses} couplets et un pont.
+            Générez lyrics en {langue} abordant essentiellement {orientation}  dans le style {style} avec un refrain, {num_verses} couplets et un pont.
             La chanson doit comporter :
             1. Un refrain répétitif et mémorable, résumant les idées principales.
             2. {num_verses} couplets.

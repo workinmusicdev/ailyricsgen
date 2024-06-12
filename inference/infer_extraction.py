@@ -6,10 +6,13 @@ from utils.extraction_ai import extraire_elements_pertinents
 from utils.loader_ai import load_document_and_save_on_vectorbd
 
 
-def inference(file_path,orientation,min_nombre_caracteres=1000,max_nombre_caracteres=2000,mode="chroma",k=5,matiere=""):
+def inference(file_path,orientation,min_nombre_caracteres=1500,max_nombre_caracteres=200,k=5,matiere="",niveau="",langue=""):
     embedding=load_embedding_openai()
     tmp_store, docs=load_document_and_save_on_vectorbd(file_path,embedding,)
     print(len(docs))
+    if niveau!="":
+        orientation+=f".Pour un niveau {niveau}"
+    orientation+=f" en {langue}"
 
     output=extraire_elements_pertinents(orientation,tmp_store,embedding,min_nombre_caracteres=min_nombre_caracteres,max_nombre_caracteres=max_nombre_caracteres,k=k,matiere=matiere)
 
@@ -17,13 +20,17 @@ def inference(file_path,orientation,min_nombre_caracteres=1000,max_nombre_caract
     return output
 
 
-def inference_by_theme(theme,orientation):
+def inference_by_theme(theme,orientation,niveau="",langue="français",matiere="Français"):
     # Load environment variables if needed
 
 
     # Setup the agent using the defined utility function
     agent_executor: AgentExecutor = setup_agent()
-
+    # Charger l'orientation
+    if niveau!="":
+        orientation+=f".Pour un niveau {niveau}"
+    orientation+=f" dans le domaine {matiere}"
+    orientation+=f" en {langue}"
     #Optimiser
     question=f"J'aimerais en apprendre sur {theme} en te basant {orientation}"
     response = agent_executor.invoke({"input":question})
