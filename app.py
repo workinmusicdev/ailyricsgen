@@ -11,9 +11,12 @@ import tempfile
 import shutil
 import os
 
+from redis import Redis
+from rq import Queue
 from starlette.responses import FileResponse, JSONResponse
 
 from inference.infer_extraction import inference, inference_by_theme
+from job import print_number
 from models.data_input import GenerateMusicRequest
 from utils.extraction_ai import extraire_elements_key_from_context, format_to_human
 from utils.googdrive.quickstart import upload_file_to_gdrive, upload_file_in_folder_to_gdrive
@@ -24,6 +27,8 @@ from utils.tools import format_lyrics_single_refrain, format_lyrics_single_refra
 
 load_dotenv()
 app = FastAPI()
+redis_conn=Redis(host="146.59.196.155",port=6379)
+task_queue=Queue("task_queue",connection=redis_conn)
 
 UPLOAD_DIR = "./uploads"
 OUTPUT_DIR = "./output"
@@ -326,17 +331,38 @@ async def generate_music_from_multi_docs(
         )
 
         out = MusicLyrics.parse_obj(data)
-        tmp = out.to_dict()
-        tmp2 = Lyrics.parse_obj(format_to_human(out.lyrics))
-        tmp.update(tmp2.to_dict())
-        tmp["music"] = generate_music(format_lyrics_single_refrain(tmp2.lyrics_without_formule), out.title, out.style)
+        tmp_dict = out.to_dict()
+        tmp_dict['url'] = []
+        tmp_dict["music"] = generate_music(format_lyrics_single_refrain(out.lyrics), out.title, out.style)
+        time.sleep(500)
+        print(tmp_dict)
+        c = 1
+        name = ""
+        for id in tmp_dict["music"]:
+            print(id)
+            dat = fetch_feed(id)[0]
+            print(dat)
+            n = download_file_by_url(dat['audio_url'], )
+            n2 = download_file_by_url(dat['image_large_url'], )
+            name = dat["title"].replace(' ', '').lower()
+            dat["url_drive"] = upload_file_in_folder_to_gdrive(n, f"{dat['title'].replace(' ', '').lower()}_v{c}.mp3",
+                                                               '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s',
+                                                               dat["title"].replace(' ', '').lower())
+            dat["img_drive"] = upload_file_in_folder_to_gdrive(n2, f"{dat['title'].replace(' ', '').lower()}_v{c}.jpeg",
+                                                               '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s',
+                                                               dat["title"].replace(' ', '').lower())
+            tmp_dict['url'].append(dat)
+            c += 1
 
-        # Sauvegarder le résultat sous forme de JSON
-        output_path = os.path.join(OUTPUT_DIR, f"{doc_id}_output.json")
+        # Sauvegarder le résultat sous forme de JSON avec encodage UTF-8
+        output_path = os.path.join(OUTPUT_DIR, f"{theme.replace(' ', '')}_output.json")
+        f = upload_file_in_folder_to_gdrive(output_path, f"data.json",
+                                            '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s',
+                                            name)
         with open(output_path, "w", encoding="utf-8") as json_file:
-            json.dump(tmp, json_file, ensure_ascii=False, indent=4)
+            json.dump(tmp_dict, json_file, ensure_ascii=False, indent=4)
 
-        outputs.append(tmp)
+        outputs.append(tmp_dict)
     # Créer un fichier ZIP contenant tous les fichiers JSON générés
     zip_path = os.path.join(ZIP_OUTPUT_DIR, "outputs.zip")
     with zipfile.ZipFile(zip_path, 'w') as zipf:
@@ -465,8 +491,18 @@ async def download_file(file_name: str):
     if os.path.exists(file_path):
         return FileResponse(file_path, media_type='application/octet-stream', filename=file_name)
     return JSONResponse(content={"message": "File not found"}, status_code=404)
+
+
+@app.post("/job/text_to_music_docs")
+def post_jon(low:int,high:int):
+    job_instance=task_queue.enqueue(print_number,low,high)
+    return {
+        "sucess":True,
+        "job_id":job_instance.id
+    }
 # Lancer l'application
 if __name__ == "__main__":
     import uvicorn
 
     uvicorn.run(app, host="0.0.0.0", port=8000)
+#rq worker task_queue
