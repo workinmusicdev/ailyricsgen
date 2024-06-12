@@ -1,2 +1,11 @@
 .env
 tiers/ServiceAccountWim.json
+zip_outputs
+temp
+venv
+output
+utils/googdrive/certificates.json
+utils/googdrive/credentials.json
+utils/googdrive/client_secrets.json
+
+
