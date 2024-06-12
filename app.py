@@ -16,7 +16,7 @@ from rq import Queue
 from starlette.responses import FileResponse, JSONResponse
 
 from inference.infer_extraction import inference, inference_by_theme
-from job import print_number, process_music_from_docs, process_lyrics_from_theme
+from job import  process_music_from_docs, process_lyrics_from_theme
 from models.data_input import GenerateMusicRequest
 from utils.extraction_ai import extraire_elements_key_from_context, format_to_human
 from utils.googdrive.quickstart import upload_file_to_gdrive, upload_file_in_folder_to_gdrive
@@ -534,13 +534,6 @@ async def download_file(file_name: str):
     return JSONResponse(content={"message": "File not found"}, status_code=404)
 
 
-@app.post("/job/text_to_music_docs")
-def post_jon(low:int,high:int):
-    job_instance=task_queue.enqueue(print_number,low,high)
-    return {
-        "sucess":True,
-        "job_id":job_instance.id
-    }
 
 
 @app.post("/job/generate_music_from_multiple_docs/", tags=['text to music (multiple)'])
