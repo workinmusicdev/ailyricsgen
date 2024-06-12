@@ -10,11 +10,9 @@ from typing import List
 import tempfile
 import shutil
 import os
-
 from redis import Redis
 from rq import Queue
 from starlette.responses import FileResponse, JSONResponse
-
 from inference.infer_extraction import inference, inference_by_theme
 from job import  process_music_from_docs, process_lyrics_from_theme
 from models.data_input import GenerateMusicRequest
@@ -26,6 +24,7 @@ from utils.sunowrapper.generate_song import fetch_feed, generate_music
 from utils.tools import format_lyrics_single_refrain, format_lyrics_single_refrain
 from rq.job import Job
 from rq.registry import StartedJobRegistry, FinishedJobRegistry
+
 
 load_dotenv()
 app = FastAPI()

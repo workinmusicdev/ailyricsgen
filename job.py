@@ -15,9 +15,9 @@ from utils.parsers_ai import MusicLyrics
 from utils.sunowrapper.generate_song import generate_music, fetch_feed
 from utils.tools import format_lyrics_single_refrain
 
-UPLOAD_DIR = "path/to/upload/dir"
-OUTPUT_DIR = "path/to/output/dir"
-ZIP_OUTPUT_DIR = "path/to/zip/output/dir"
+UPLOAD_DIR = "./uploads"
+OUTPUT_DIR = "./output"
+ZIP_OUTPUT_DIR = "zip_outputs/"
 
 
 def process_music_from_docs(files: List[UploadFile], metadata_file: UploadFile) -> Dict:
