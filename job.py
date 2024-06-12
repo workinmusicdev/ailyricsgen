@@ -1,6 +1,5 @@
 def print_number(low,high):
     print("=== Job processing")
-    x=low
-    while x<=high:
-        print(f"{x}\n")
+    print(low+high)
     print("===End Job")
+    return f"^Prince is {low}"

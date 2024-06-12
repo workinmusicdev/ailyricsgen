@@ -24,6 +24,8 @@ from utils.music_generator_ai import generate_music_lyrics, download_file_by_url
 from utils.parsers_ai import MusicLyrics, Lyrics
 from utils.sunowrapper.generate_song import fetch_feed, generate_music
 from utils.tools import format_lyrics_single_refrain, format_lyrics_single_refrain
+from rq.job import Job
+from rq.registry import StartedJobRegistry, FinishedJobRegistry
 
 load_dotenv()
 app = FastAPI()
@@ -48,6 +50,45 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.get("/job/status/{job_id}", tags=["job"])
+async def get_job_status(job_id: str):
+    """
+    Endpoint to get the status and result of a job.
+    """
+    try:
+        job = Job.fetch(job_id, connection=redis_conn)
+    except Exception as e:
+        raise HTTPException(status_code=404, detail=str(e))
+
+    if job.is_finished:
+        return {"status": job.get_status(), "result": job.result}
+    elif job.is_queued:
+        return {"status": job.get_status(), "result": None}
+    elif job.is_started:
+        return {"status": job.get_status(), "result": None}
+    else:
+        return {"status": job.get_status(), "result": None}
+
+
+@app.get("/queue/status", tags=["job"])
+async def get_queue_status():
+    """
+    Endpoint to get the status of the queue.
+    """
+    job_ids = task_queue.job_ids
+    started_registry = StartedJobRegistry(queue=task_queue)
+    finished_registry = FinishedJobRegistry(queue=task_queue)
+
+    return {
+        "total_jobs": len(job_ids),
+        "finished_jobs": len(finished_registry.get_job_ids()),
+        "started_jobs": len(started_registry.get_job_ids()),
+        "queued_jobs": len(job_ids) - len(finished_registry.get_job_ids()) - len(started_registry.get_job_ids()),
+        "started_job_ids": started_registry.get_job_ids(),
+        "queued_job_ids": task_queue.job_ids,
+    }
 
 
 @app.post("/extract_elements_key_from_docs/",tags=['module'])
@@ -355,7 +396,7 @@ async def generate_music_from_multi_docs(
             c += 1
 
         # Sauvegarder le résultat sous forme de JSON avec encodage UTF-8
-        output_path = os.path.join(OUTPUT_DIR, f"{theme.replace(' ', '')}_output.json")
+        output_path = os.path.join(OUTPUT_DIR, f"{file_path.split('.')[0].replace(' ', '')}_output.json")
         f = upload_file_in_folder_to_gdrive(output_path, f"data.json",
                                             '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s',
                                             name)
