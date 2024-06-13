@@ -64,4 +64,5 @@ if __name__ == "__main__":
     output_lrc_path = "output.lrc"
 
     # Générer le fichier LRC
-    generate_lrc_from_audio(model, audio_path, output_lrc_path)
+    o=generate_audio_to_lrc(model, audio_path)
+    print(o)

@@ -18,6 +18,7 @@ from job import  process_music_from_docs, process_lyrics_from_theme
 from models.data_input import GenerateMusicRequest
 from utils.extraction_ai import extraire_elements_key_from_context, format_to_human
 from utils.googdrive.quickstart import upload_file_to_gdrive, upload_file_in_folder_to_gdrive
+from utils.lrcgenerator.genlrc import load_whisper_model
 from utils.music_generator_ai import generate_music_lyrics, download_file_by_url
 from utils.parsers_ai import MusicLyrics, Lyrics
 from utils.sunowrapper.generate_song import fetch_feed, generate_music
@@ -50,6 +51,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Charger le modèle Whisper au démarrage de l'application
+model = None
+
+@app.on_event("startup")
+async def startup_event():
+    global model
+    model = load_whisper_model("large")
+    print("Whisper model loaded successfully")
 
 @app.get("/job/status/{job_id}", tags=["job"])
 async def get_job_status(job_id: str):
@@ -540,7 +549,7 @@ async def job_generate_music_from_multi_docs(
         files: List[UploadFile] = File(..., description="Les documents à traiter (Word, PDF, PowerPoint)"),
         metadata_file: UploadFile = File(..., description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc.")
 ):
-    job_instance = task_queue.enqueue(process_music_from_docs, files, metadata_file,job_timeout=18000)
+    job_instance = task_queue.enqueue(process_music_from_docs, model,files, metadata_file,job_timeout=18000)
     return {
         "success": True,
         "job_id": job_instance.id
@@ -550,7 +559,7 @@ async def job_generate_music_from_multi_docs(
 async def job_generate_lyrics_multi_from_theme(
         metadata_file: UploadFile = File(..., description="Fichier Excel avec les paramètres (thème, orientation, taille, etc.)")
 ):
-    job_instance = task_queue.enqueue(process_lyrics_from_theme, metadata_file,job_timeout=18000)
+    job_instance = task_queue.enqueue(process_lyrics_from_theme, model,metadata_file,job_timeout=18000)
     return {
         "success": True,
         "job_id": job_instance.id

@@ -10,6 +10,7 @@ from fastapi import UploadFile
 from inference.infer_extraction import inference, inference_by_theme
 from utils.extraction_ai import extraire_elements_key_from_context
 from utils.googdrive.quickstart import upload_file_in_folder_to_gdrive
+from utils.lrcgenerator.genlrc import generate_audio_to_lrc
 from utils.music_generator_ai import generate_music_lyrics, download_file_by_url
 from utils.parsers_ai import MusicLyrics
 from utils.sunowrapper.generate_song import generate_music, fetch_feed
@@ -20,7 +21,7 @@ OUTPUT_DIR = "./output"
 ZIP_OUTPUT_DIR = "zip_outputs/"
 
 
-def process_music_from_docs(files: List[UploadFile], metadata_file: UploadFile) -> Dict:
+def process_music_from_docs(model,files: List[UploadFile], metadata_file: UploadFile) -> Dict:
     file_paths = []
     for file in files:
         file_path = os.path.join(UPLOAD_DIR, file.filename)
@@ -69,7 +70,9 @@ def process_music_from_docs(files: List[UploadFile], metadata_file: UploadFile) 
         for id in tmp_dict["music"]:
             dat = fetch_feed(id)[0]
             n = download_file_by_url(dat['audio_url'])
+            dat['lrc_lyrics']=generate_audio_to_lrc(model, n)
             n2 = download_file_by_url(dat['image_large_url'])
+
             name = dat["title"].replace(' ', '').lower()
             dat["url_drive"] = upload_file_in_folder_to_gdrive(n, f"{dat['title'].replace(' ', '').lower()}_v{c}.mp3",
                                                                '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s',
@@ -107,7 +110,7 @@ def process_music_from_docs(files: List[UploadFile], metadata_file: UploadFile) 
     return {"download": zip_url, "data": outputs}
 
 
-def process_lyrics_from_theme(metadata_file: UploadFile) -> Dict:
+def process_lyrics_from_theme(model,metadata_file: UploadFile) -> Dict:
     metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
     with open(metadata_path, "wb") as f:
         shutil.copyfileobj(metadata_file.file, f)
@@ -142,6 +145,7 @@ def process_lyrics_from_theme(metadata_file: UploadFile) -> Dict:
         for id in tmp_dict["music"]:
             dat = fetch_feed(id)[0]
             n = download_file_by_url(dat['audio_url'])
+            dat['lrc_lyrics'] = generate_audio_to_lrc(model, n)
             n2 = download_file_by_url(dat['image_large_url'])
             name = dat["title"].replace(' ', '').lower()
             dat["url_drive"] = upload_file_in_folder_to_gdrive(n, f"{dat['title'].replace(' ', '').lower()}_v{c}.mp3",
