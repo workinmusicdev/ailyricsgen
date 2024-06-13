@@ -52,13 +52,6 @@ app.add_middleware(
 )
 
 # Charger le modèle Whisper au démarrage de l'application
-model = None
-
-@app.on_event("startup")
-async def startup_event():
-    global model
-    model = load_whisper_model("small")
-    print("Whisper model loaded successfully")
 
 @app.get("/job/status/{job_id}", tags=["job"])
 async def get_job_status(job_id: str):
@@ -549,7 +542,7 @@ async def job_generate_music_from_multi_docs(
         files: List[UploadFile] = File(..., description="Les documents à traiter (Word, PDF, PowerPoint)"),
         metadata_file: UploadFile = File(..., description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc.")
 ):
-    job_instance = task_queue.enqueue(process_music_from_docs, model,files, metadata_file,job_timeout=30000)
+    job_instance = task_queue.enqueue(process_music_from_docs, files, metadata_file,job_timeout=30000)
     return {
         "success": True,
         "job_id": job_instance.id
@@ -559,7 +552,7 @@ async def job_generate_music_from_multi_docs(
 async def job_generate_lyrics_multi_from_theme(
         metadata_file: UploadFile = File(..., description="Fichier Excel avec les paramètres (thème, orientation, taille, etc.)")
 ):
-    job_instance = task_queue.enqueue(process_lyrics_from_theme, model,metadata_file,job_timeout=30000)
+    job_instance = task_queue.enqueue(process_lyrics_from_theme, metadata_file,job_timeout=30000)
     return {
         "success": True,
         "job_id": job_instance.id
