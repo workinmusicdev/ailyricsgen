@@ -57,7 +57,7 @@ model = None
 @app.on_event("startup")
 async def startup_event():
     global model
-    model = load_whisper_model("medium")
+    model = load_whisper_model("small")
     print("Whisper model loaded successfully")
 
 @app.get("/job/status/{job_id}", tags=["job"])
