@@ -57,12 +57,12 @@ def generate_audio_to_lrc(model, audio_path):
 # Exemple d'utilisation
 if __name__ == "__main__":
     # Charger le modèle Whisper
-    model = load_whisper_model("medium")
+    model = load_whisper_model("large")
 
     # Spécifiez le chemin du fichier audio et le chemin de sortie LRC
     audio_path = "./539b31d8-6c87-49b1-a1b4-9a3a33a9eca0.mp3"
     output_lrc_path = "output.lrc"
 
     # Générer le fichier LRC
-    o=generate_audio_to_lrc(model, audio_path)
+    o=generate_audio_to_lrc(model, "https://cdn1.suno.ai/df36fdb9-143b-40e7-8ad8-441be1ceb1b6.mp3")
     print(o)
