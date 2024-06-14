@@ -29,7 +29,11 @@ from rq.registry import StartedJobRegistry, FinishedJobRegistry
 
 load_dotenv()
 app = FastAPI()
-redis_conn=Redis(host="146.59.196.155",port=6379)
+# Lire les variables d'environnement pour la configuration de Redis
+redis_host = os.getenv("REDIS_HOST", "localhost")
+redis_port = int(os.getenv("REDIS_PORT", 6379))
+
+redis_conn = Redis(host=redis_host, port=redis_port)
 task_queue=Queue("task_queue",connection=redis_conn)
 
 UPLOAD_DIR = "./uploads"
