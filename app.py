@@ -18,7 +18,7 @@ from job import  process_music_from_docs, process_lyrics_from_theme
 from models.data_input import GenerateMusicRequest
 from utils.extraction_ai import extraire_elements_key_from_context, format_to_human
 from utils.googdrive.quickstart import upload_file_to_gdrive, upload_file_in_folder_to_gdrive
-from utils.lrcgenerator.genlrc import load_whisper_model
+
 from utils.music_generator_ai import generate_music_lyrics, download_file_by_url
 from utils.parsers_ai import MusicLyrics, Lyrics
 from utils.sunowrapper.generate_song import fetch_feed, generate_music
