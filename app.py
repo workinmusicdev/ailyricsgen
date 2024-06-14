@@ -367,7 +367,7 @@ async def generate_music_from_multi_docs(
         os.remove(file_path)
 
         # Extraire les éléments de réponse
-        elements = data['answer']
+        elements = data['answer']g
         data = generate_music_lyrics(
             elements=elements,
             style=style,
@@ -553,7 +553,7 @@ async def job_generate_music_from_multi_docs(
     }
 
 @app.post("/job/generate_lyrics_multiple_theme/", tags=['text to music (multiple)'])
-async def job_generate_lyrics_multi_from_theme(
+async def job_generate_music_multi_from_theme(
         metadata_file: UploadFile = File(..., description="Fichier Excel avec les paramètres (thème, orientation, taille, etc.)")
 ):
     job_instance = task_queue.enqueue(process_lyrics_from_theme, metadata_file,job_timeout=18000)
