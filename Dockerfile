@@ -9,7 +9,7 @@ LABEL authors="princegedeon03"
 WORKDIR /app
 
 # Copier les fichiers de dépendances
-COPY requirements.txt .
+COPY req.txt .
 
 # Installer les dépendances
 RUN pip install --no-cache-dir -r req.txt
