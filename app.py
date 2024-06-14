@@ -367,7 +367,7 @@ async def generate_music_from_multi_docs(
         os.remove(file_path)
 
         # Extraire les éléments de réponse
-        elements = data['answer']g
+        elements = data['answer']
         data = generate_music_lyrics(
             elements=elements,
             style=style,
