@@ -10,7 +10,7 @@ from fastapi import UploadFile
 from inference.infer_extraction import inference, inference_by_theme
 from utils.extraction_ai import extraire_elements_key_from_context
 from utils.googdrive.quickstart import upload_file_in_folder_to_gdrive
-from utils.lrcgenerator.genlrc import generate_audio_to_lrc, load_whisper_model
+
 from utils.music_generator_ai import generate_music_lyrics, download_file_by_url
 from utils.parsers_ai import MusicLyrics
 from utils.sunowrapper.generate_song import generate_music, fetch_feed
