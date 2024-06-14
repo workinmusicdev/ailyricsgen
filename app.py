@@ -552,7 +552,7 @@ async def job_generate_music_from_multi_docs(
         "job_id": job_instance.id
     }
 
-@app.post("/job/generate_lyrics_multiple_theme/", tags=['text to music (multiple)'])
+@app.post("/job/generate_musicg_multiple_theme/", tags=['text to music (multiple)'])
 async def job_generate_music_multi_from_theme(
         metadata_file: UploadFile = File(..., description="Fichier Excel avec les paramètres (thème, orientation, taille, etc.)")
 ):
