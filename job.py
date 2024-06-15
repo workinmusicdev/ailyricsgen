@@ -64,6 +64,7 @@ def process_music_from_docs(files: List[UploadFile], metadata_file: UploadFile) 
         out = MusicLyrics.parse_obj(data)
         tmp_dict = out.to_dict()
         tmp_dict['url'] = []
+        tmp_dict['langue'] = langue
         tmp_dict["music"] = generate_music(format_lyrics_single_refrain(out.lyrics), out.title, out.style)
         time.sleep(500)
 
@@ -143,6 +144,7 @@ def process_lyrics_from_theme(metadata_file: UploadFile) -> Dict:
         out = MusicLyrics.parse_obj(data)
         tmp_dict = out.to_dict()
         tmp_dict['url'] = []
+        tmp_dict['langue']=langue
         tmp_dict["music"] = generate_music(format_lyrics_single_refrain(out.lyrics), out.title, out.style)
         time.sleep(500)
 
