@@ -80,20 +80,20 @@ def process_music_from_docs(files: List[UploadFile], metadata_file: UploadFile) 
             n2 = download_file_by_url(dat['image_large_url'])
 
             name = f"{doc_id}_folder"
-            dat["url_drive"] = upload_file_in_folder_to_gdrive(n, f"{dat['title'].replace(' ', '').lower()}_v{c}.mp3",
+            dat["url_drive"] = upload_file_in_folder_to_gdrive(n, f"{doc_id}_v{c}.mp3",
                                                                '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s',
-                                                               dat["title"].replace(' ', '').lower())
-            dat["img_drive"] = upload_file_in_folder_to_gdrive(n2, f"{dat['title'].replace(' ', '').lower()}_v{c}.jpeg",
+                                                               name)
+            dat["img_drive"] = upload_file_in_folder_to_gdrive(n2, f"{doc_id}_v{c}.jpeg",
                                                                '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s',
-                                                               dat["title"].replace(' ', '').lower())
+                                                              name)
             tmp_dict['url'].append(dat)
             c += 1
 
         output_path = os.path.join(OUTPUT_DIR, f"{doc_id}_output.json")
-        upload_file_in_folder_to_gdrive(output_path, f"data.json", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
+
         with open(output_path, "w", encoding="utf-8") as json_file:
             json.dump(tmp_dict, json_file, ensure_ascii=False, indent=4)
-
+        upload_file_in_folder_to_gdrive(output_path, f"data.json", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
         outputs.append(tmp_dict)
 
     zip_path = os.path.join(ZIP_OUTPUT_DIR, "outputs.zip")
@@ -166,10 +166,10 @@ def process_lyrics_from_theme(metadata_file: UploadFile) -> Dict:
             c += 1
 
         output_path = os.path.join(OUTPUT_DIR, f"{theme.replace(' ', '')}_output.json")
-        upload_file_in_folder_to_gdrive(output_path, f"data.json", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
+
         with open(output_path, "w", encoding="utf-8") as json_file:
             json.dump(tmp_dict, json_file, ensure_ascii=False, indent=4)
-
+        upload_file_in_folder_to_gdrive(output_path, f"data.json", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
         outputs.append(tmp_dict)
 
     zip_path = os.path.join(ZIP_OUTPUT_DIR, "outputs.zip")
