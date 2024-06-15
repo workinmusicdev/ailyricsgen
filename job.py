@@ -78,7 +78,7 @@ def process_music_from_docs(files: List[UploadFile], metadata_file: UploadFile) 
             #dat['lrc_lyrics']=generate_audio_to_lrc(model, n)
             n2 = download_file_by_url(dat['image_large_url'])
 
-            name = dat["title"].replace(' ', '').lower()
+            name = f"{doc_id}_folder"
             dat["url_drive"] = upload_file_in_folder_to_gdrive(n, f"{dat['title'].replace(' ', '').lower()}_v{c}.mp3",
                                                                '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s',
                                                                dat["title"].replace(' ', '').lower())
@@ -88,7 +88,7 @@ def process_music_from_docs(files: List[UploadFile], metadata_file: UploadFile) 
             tmp_dict['url'].append(dat)
             c += 1
 
-        output_path = os.path.join(OUTPUT_DIR, f"{file_path.split('.')[0].replace(' ', '')}_output.json")
+        output_path = os.path.join(OUTPUT_DIR, f"{doc_id}_output.json")
         upload_file_in_folder_to_gdrive(output_path, f"data.json", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
         with open(output_path, "w", encoding="utf-8") as json_file:
             json.dump(tmp_dict, json_file, ensure_ascii=False, indent=4)
