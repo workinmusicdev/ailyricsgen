@@ -45,7 +45,7 @@ def process_music_from_docs(files: List[UploadFile], metadata_file: UploadFile) 
     for index, row in df.iterrows():
         doc_id = str(row['id'])
         orientation = row['orientation']
-        niv_detail = row['niv_detail']
+        niv_detail = 7
         style = row['style']
         langue = row['langue']
         niveau = row['niveau']
