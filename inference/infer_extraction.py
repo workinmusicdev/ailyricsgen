@@ -20,6 +20,10 @@ def inference(file_path,orientation,min_nombre_caracteres=1500,max_nombre_caract
     return output
 
 
+def inference_without_rag(file_path,orientation,min_nombre_caracteres=1500,max_nombre_caracteres=200,k=5,matiere="",niveau="",langue=""):
+    output=""
+    return output
+
 def inference_by_theme(theme,orientation,niveau="",langue="français",matiere="Français"):
     # Load environment variables if needed
 

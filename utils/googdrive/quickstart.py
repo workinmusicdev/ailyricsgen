@@ -62,6 +62,13 @@ def create_folder_in_gdrive(drive, folder_name, parent_directory_id=None):
 
     return folder['id']
 
+def check_file_exists(drive, file_name, folder_id):
+    # Function to check if a file with the same name exists in the folder
+    file_list = drive.ListFile({'q': f"'{folder_id}' in parents and trashed=false"}).GetList()
+    for file in file_list:
+        if file['title'] == file_name:
+            return True
+    return False
 
 def upload_file_in_folder_to_gdrive(file_path, file_name, parent_directory_id, folder_name):
     # Authenticate using the service account credentials
@@ -82,6 +89,11 @@ def upload_file_in_folder_to_gdrive(file_path, file_name, parent_directory_id, f
     if not folder_id:
         folder_id = create_folder_in_gdrive(drive, folder_name, parent_directory_id)
 
+    # Check if the file already exists in the folder
+    if check_file_exists(drive, file_name, folder_id):
+        print("\n--------- File already exists in Google Drive ----------")
+        return None
+
     # Upload the file to the folder
     file_to_upload = drive.CreateFile({'parents': [{"id": folder_id}], 'title': file_name})
     file_to_upload.SetContentFile(file_path)
@@ -98,6 +110,7 @@ def upload_file_in_folder_to_gdrive(file_path, file_name, parent_directory_id, f
     # Return the public URL
     public_url = file_to_upload['alternateLink']
     return public_url
+
 
 # Example usage
 #f=upload_file_to_gdrive('./Rapport_7_Juin_2024.pdf', 'rapport.pdf', '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s')

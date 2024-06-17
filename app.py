@@ -14,7 +14,7 @@ from redis import Redis
 from rq import Queue
 from starlette.responses import FileResponse, JSONResponse
 from inference.infer_extraction import inference, inference_by_theme
-from job import  process_music_from_docs, process_lyrics_from_theme
+from job import  process_music_from_docs, process_lyrics_from_theme,process_without_music_from_docs
 from models.data_input import GenerateMusicRequest
 from utils.extraction_ai import extraire_elements_key_from_context, format_to_human
 from utils.googdrive.quickstart import upload_file_to_gdrive, upload_file_in_folder_to_gdrive
@@ -551,6 +551,18 @@ async def job_generate_music_from_multi_docs(
         "success": True,
         "job_id": job_instance.id
     }
+
+@app.post("/job/generate_without_extraction_music_from_multiple_docs/", tags=['text to music (multiple)'])
+async def job_generate_music_from_multi_docs_without_extraction(
+        files: List[UploadFile] = File(..., description="Les documents à traiter (Word, PDF, PowerPoint)"),
+        metadata_file: UploadFile = File(..., description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc.")
+):
+    job_instance = task_queue.enqueue(process_without_music_from_docs, files, metadata_file,job_timeout=18000)
+    return {
+        "success": True,
+        "job_id": job_instance.id
+    }
+
 
 @app.post("/job/generate_music_from_multiple_theme/", tags=['text to music (multiple)'])
 async def job_generate_music_multi_from_theme(
