@@ -151,7 +151,7 @@ def process_without_music_from_docs(files: List[UploadFile], metadata_file: Uplo
         data = inference_without_rag(file_path, orientation=orientation, langue=langue, niveau=niveau, matiere=matiere,
                          k=niv_detail)
         os.remove(file_path)
-        elements = data['answer']
+        elements = data
         data = generate_music_lyrics(elements=elements, style=style, orientation=orientation, langue=langue)
 
         out = MusicLyrics.parse_obj(data)

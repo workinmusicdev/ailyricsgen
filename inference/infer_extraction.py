@@ -1,4 +1,6 @@
 from langchain.agents import AgentExecutor
+from langchain_community.document_loaders import PyPDFLoader, Docx2txtLoader
+from langchain_text_splitters import CharacterTextSplitter
 
 from utils.agents_ai import setup_agent
 from utils.embeddings_ai import load_embedding_openai
@@ -20,9 +22,25 @@ def inference(file_path,orientation,min_nombre_caracteres=1500,max_nombre_caract
     return output
 
 
-def inference_without_rag(file_path,orientation,min_nombre_caracteres=1500,max_nombre_caracteres=200,k=5,matiere="",niveau="",langue=""):
-    output=""
-    return output
+def load_document(file_path):
+    if file_path.endswith('.pdf'):
+        loader = PyPDFLoader(file_path)
+    elif file_path.endswith('.docx'):
+        loader = Docx2txtLoader(file_path)
+    else:
+        raise ValueError("Unsupported file type. Only PDF and DOCX are supported.")
+
+    documents = loader.load()
+    return documents
+
+
+
+def inference_without_rag(file_path, orientation="", min_nombre_caracteres=1500, max_nombre_caracteres=200, k=5,
+                          matiere="", niveau="", langue=""):
+    documents = load_document(file_path)
+    text=[i.page_content for i in documents]
+    return "\n\n".join(text)
+
 
 def inference_by_theme(theme,orientation,niveau="",langue="français",matiere="Français"):
     # Load environment variables if needed
