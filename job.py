@@ -79,7 +79,7 @@ def process_music_from_docs(files: List[UploadFile], metadata_file: UploadFile) 
             #dat['lrc_lyrics']=generate_audio_to_lrc(model, n)
             n2 = download_file_by_url(dat['image_large_url'])
 
-            name = f"{doc_id}_folder"
+            name = f"{doc_id}_{style}_{langue}_{matiere}_folder"
             dat["url_drive"] = upload_file_in_folder_to_gdrive(n, f"{doc_id}_v{c}.mp3",
                                                                '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s',
                                                                name)
@@ -172,7 +172,7 @@ def process_without_music_from_docs(files: List[UploadFile], metadata_file: Uplo
             #dat['lrc_lyrics']=generate_audio_to_lrc(model, n)
             n2 = download_file_by_url(dat['image_large_url'])
 
-            name = f"{doc_id}_folder"
+            name = f"{doc_id}_{style}_{langue}_{matiere}_folder"
             dat["url_drive"] = upload_file_in_folder_to_gdrive(n, f"{doc_id}_v{c}.mp3",
                                                                '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s',
                                                                name)
@@ -249,12 +249,13 @@ def process_lyrics_from_theme(metadata_file: UploadFile) -> Dict:
             #dat['lrc_lyrics'] = generate_audio_to_lrc(model, n)
             n2 = download_file_by_url(dat['image_large_url'])
             name = dat["title"].replace(' ', '').lower()
+            name+=f"_{style}_{langue}_{matiere}"
             dat["url_drive"] = upload_file_in_folder_to_gdrive(n, f"{dat['title'].replace(' ', '').lower()}_v{c}.mp3",
                                                                '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s',
-                                                               dat["title"].replace(' ', '').lower())
+                                                               name)
             dat["img_drive"] = upload_file_in_folder_to_gdrive(n2, f"{dat['title'].replace(' ', '').lower()}_v{c}.jpeg",
                                                                '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s',
-                                                               dat["title"].replace(' ', '').lower())
+                                                               name)
             tmp_dict['url'].append(dat)
             c += 1
 
