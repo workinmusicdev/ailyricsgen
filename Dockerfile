@@ -1,13 +1,11 @@
-
-
 # Utiliser une image officielle de Python comme image de base
 FROM python:3.9-slim
 LABEL authors="princegedeon03"
 
-# Installer git et autres dépendances nécessaires
+# Installer git, unrar et autres dépendances nécessaires
 RUN apt-get update && \
-    apt-get install -y git && \
-    apt-get clean \
+    apt-get install -y git unrar && \
+    apt-get clean
 
 # Définir le répertoire de travail
 WORKDIR /app
