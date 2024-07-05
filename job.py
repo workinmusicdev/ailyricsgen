@@ -5,10 +5,9 @@ import zipfile
 import pandas as pd
 import json
 from typing import List, Dict
-from fastapi import UploadFile
+import rarfile
 
 from inference.infer_extraction import inference, inference_by_theme, inference_without_rag
-from utils.email_notifier import send_mail
 from utils.extraction_ai import extraire_elements_key_from_context
 from utils.googdrive.quickstart import upload_file_in_folder_to_gdrive
 from utils.music_generator_ai import generate_music_lyrics, download_file_by_url
@@ -20,7 +19,11 @@ UPLOAD_DIR = "./uploads"
 OUTPUT_DIR = "./output"
 ZIP_OUTPUT_DIR = "./zip_outputs"
 
+
 def process_music_from_docs(file_paths: List[str], metadata_path: str) -> Dict:
+    if not os.path.exists(metadata_path):
+        raise FileNotFoundError(f"The file {metadata_path} does not exist.")
+
     if metadata_path.endswith(".xlsx"):
         df = pd.read_excel(metadata_path)
     else:
@@ -41,7 +44,8 @@ def process_music_from_docs(file_paths: List[str], metadata_path: str) -> Dict:
         if not file_path:
             continue
 
-        data = inference(file_path, orientation=orientation, langue=langue, niveau=niveau, matiere=matiere, k=niv_detail)
+        data = inference(file_path, orientation=orientation, langue=langue, niveau=niveau, matiere=matiere,
+                         k=niv_detail)
         os.remove(file_path)
         elements = data['answer']
         data = generate_music_lyrics(elements=elements, style=style, orientation=orientation, langue=langue)
@@ -62,8 +66,10 @@ def process_music_from_docs(file_paths: List[str], metadata_path: str) -> Dict:
             image_url = download_file_by_url(dat['image_large_url'])
 
             name = f"{doc_id}_{style}_{langue}_{matiere}_folder"
-            dat["url_drive"] = upload_file_in_folder_to_gdrive(audio_url, f"{doc_id}_v{c}.mp3", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
-            dat["img_drive"] = upload_file_in_folder_to_gdrive(image_url, f"{doc_id}_v{c}.jpeg", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
+            dat["url_drive"] = upload_file_in_folder_to_gdrive(audio_url, f"{doc_id}_v{c}.mp3",
+                                                               '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
+            dat["img_drive"] = upload_file_in_folder_to_gdrive(image_url, f"{doc_id}_v{c}.jpeg",
+                                                               '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
             tmp_dict['url'].append(dat)
             c += 1
 
@@ -93,7 +99,11 @@ def process_music_from_docs(file_paths: List[str], metadata_path: str) -> Dict:
     zip_url = f"/download/{os.path.basename(zip_path)}"
     return {"download": zip_url, "data": outputs}
 
+
 def process_without_music_from_docs(file_paths: List[str], metadata_path: str) -> Dict:
+    if not os.path.exists(metadata_path):
+        raise FileNotFoundError(f"The file {metadata_path} does not exist.")
+
     if metadata_path.endswith(".xlsx"):
         df = pd.read_excel(metadata_path)
     else:
@@ -114,7 +124,8 @@ def process_without_music_from_docs(file_paths: List[str], metadata_path: str) -
         if not file_path:
             continue
 
-        data = inference_without_rag(file_path, orientation=orientation, langue=langue, niveau=niveau, matiere=matiere, k=niv_detail)
+        data = inference_without_rag(file_path, orientation=orientation, langue=langue, niveau=niveau, matiere=matiere,
+                                     k=niv_detail)
         os.remove(file_path)
         elements = data
         data = generate_music_lyrics(elements=elements, style=style, orientation=orientation, langue=langue)
@@ -135,8 +146,10 @@ def process_without_music_from_docs(file_paths: List[str], metadata_path: str) -
             image_url = download_file_by_url(dat['image_large_url'])
 
             name = f"{doc_id}_without_{style}_{langue}_{matiere}_folder"
-            dat["url_drive"] = upload_file_in_folder_to_gdrive(audio_url, f"{doc_id}_v{c}.mp3", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
-            dat["img_drive"] = upload_file_in_folder_to_gdrive(image_url, f"{doc_id}_v{c}.jpeg", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
+            dat["url_drive"] = upload_file_in_folder_to_gdrive(audio_url, f"{doc_id}_v{c}.mp3",
+                                                               '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
+            dat["img_drive"] = upload_file_in_folder_to_gdrive(image_url, f"{doc_id}_v{c}.jpeg",
+                                                               '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
             tmp_dict['url'].append(dat)
             c += 1
 
@@ -166,7 +179,11 @@ def process_without_music_from_docs(file_paths: List[str], metadata_path: str) -
     zip_url = f"/download/{os.path.basename(zip_path)}"
     return {"download": zip_url, "data": outputs}
 
+
 def process_lyrics_from_theme(metadata_path: str) -> Dict:
+    if not os.path.exists(metadata_path):
+        raise FileNotFoundError(f"The file {metadata_path} does not exist.")
+
     if metadata_path.endswith(".xlsx"):
         df = pd.read_excel(metadata_path)
     else:
@@ -201,8 +218,12 @@ def process_lyrics_from_theme(metadata_path: str) -> Dict:
             image_url = download_file_by_url(dat['image_large_url'])
             name = dat["title"].replace(' ', '').lower()
             name += f"_{style}_{langue}_{matiere}"
-            dat["url_drive"] = upload_file_in_folder_to_gdrive(audio_url, f"{dat['title'].replace(' ', '').lower()}_v{c}.mp3", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
-            dat["img_drive"] = upload_file_in_folder_to_gdrive(image_url, f"{dat['title'].replace(' ', '').lower()}_v{c}.jpeg", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
+            dat["url_drive"] = upload_file_in_folder_to_gdrive(audio_url,
+                                                               f"{dat['title'].replace(' ', '').lower()}_v{c}.mp3",
+                                                               '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
+            dat["img_drive"] = upload_file_in_folder_to_gdrive(image_url,
+                                                               f"{dat['title'].replace(' ', '').lower()}_v{c}.jpeg",
+                                                               '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
             tmp_dict['url'].append(dat)
             c += 1
 
@@ -212,8 +233,6 @@ def process_lyrics_from_theme(metadata_path: str) -> Dict:
             json.dump(tmp_dict, json_file, ensure_ascii=False, indent=4)
         upload_file_in_folder_to_gdrive(output_path, f"data.json", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
         outputs.append(tmp_dict)
-
-
 
     zip_path = os.path.join(ZIP_OUTPUT_DIR, "outputs.zip")
     with zipfile.ZipFile(zip_path, 'w') as zipf:

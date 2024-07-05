@@ -557,6 +557,17 @@ def extract_files_from_rar(rar_path: str, extract_to: str) -> List[str]:
 
 
 
+
+def extract_files_from_zip(zip_path: str, extract_to: str) -> List[str]:
+    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+        zip_ref.extractall(extract_to)
+    return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
+
+def extract_files_from_rar(rar_path: str, extract_to: str) -> List[str]:
+    with rarfile.RarFile(rar_path) as rar_ref:
+        rar_ref.extractall(extract_to)
+    return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
+
 @app.post("/job/generate_music_from_archive/", tags=['text to music (multiple)'])
 async def job_generate_music_from_archive(
         archive_file: UploadFile = File(..., description="Le fichier zip ou rar contenant les documents à traiter (Word, PDF, PowerPoint)"),
@@ -567,9 +578,8 @@ async def job_generate_music_from_archive(
     os.makedirs(archive_extract_path, exist_ok=True)
 
     archive_path = os.path.join(UPLOAD_DIR, archive_file.filename)
-    async with aiofiles.open(archive_path, "wb") as f:
-        content = await archive_file.read()
-        await f.write(content)
+    with open(archive_path, "wb") as f:
+        shutil.copyfileobj(archive_file.file, f)
 
     extracted_files = []
     if archive_path.endswith(".zip"):
@@ -580,9 +590,8 @@ async def job_generate_music_from_archive(
         return {"error": "Unsupported file format. Please upload a zip or rar file."}
 
     metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
-    async with aiofiles.open(metadata_path, "wb") as f:
-        content = await metadata_file.read()
-        await f.write(content)
+    with open(metadata_path, "wb") as f:
+        shutil.copyfileobj(metadata_file.file, f)
 
     send_mail(
         subject="WIM Gen : Job start",
@@ -609,9 +618,8 @@ async def job_generate_music_from_archive_without_extraction(
     os.makedirs(archive_extract_path, exist_ok=True)
 
     archive_path = os.path.join(UPLOAD_DIR, archive_file.filename)
-    async with aiofiles.open(archive_path, "wb") as f:
-        content = await archive_file.read()
-        await f.write(content)
+    with open(archive_path, "wb") as f:
+        shutil.copyfileobj(archive_file.file, f)
 
     extracted_files = []
     if archive_path.endswith(".zip"):
@@ -622,9 +630,8 @@ async def job_generate_music_from_archive_without_extraction(
         return {"error": "Unsupported file format. Please upload a zip or rar file."}
 
     metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
-    async with aiofiles.open(metadata_path, "wb") as f:
-        content = await metadata_file.read()
-        await f.write(content)
+    with open(metadata_path, "wb") as f:
+        shutil.copyfileobj(metadata_file.file, f)
 
     send_mail(
         subject="WIM Gen : Job start",
@@ -647,9 +654,8 @@ async def job_generate_music_from_theme_archive(
         email_notification: Optional[str] = Form("workinmusic.app@gmail.com")
 ):
     metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
-    async with aiofiles.open(metadata_path, "wb") as f:
-        content = await metadata_file.read()
-        await f.write(content)
+    with open(metadata_path, "wb") as f:
+        shutil.copyfileobj(metadata_file.file, f)
 
     send_mail(
         subject="WIM Gen : Job start",
