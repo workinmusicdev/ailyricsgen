@@ -19,18 +19,7 @@ UPLOAD_DIR = "./uploads"
 OUTPUT_DIR = "./output"
 ZIP_OUTPUT_DIR = "./zip_outputs"
 
-def process_music_from_docs(files: List[UploadFile], metadata_file: UploadFile) -> Dict:
-    file_paths = []
-    for file in files:
-        file_path = os.path.join(UPLOAD_DIR, file.filename)
-        with open(file_path, "wb") as f:
-            shutil.copyfileobj(file.file, f)
-        file_paths.append(file_path)
-
-    metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
-    with open(metadata_path, "wb") as f:
-        shutil.copyfileobj(metadata_file.file, f)
-
+def process_music_from_docs(file_paths: List[str], metadata_path: str) -> Dict:
     if metadata_path.endswith(".xlsx"):
         df = pd.read_excel(metadata_path)
     else:
@@ -103,18 +92,7 @@ def process_music_from_docs(files: List[UploadFile], metadata_file: UploadFile) 
     zip_url = f"/download/{os.path.basename(zip_path)}"
     return {"download": zip_url, "data": outputs}
 
-def process_without_music_from_docs(files: List[UploadFile], metadata_file: UploadFile) -> Dict:
-    file_paths = []
-    for file in files:
-        file_path = os.path.join(UPLOAD_DIR, file.filename)
-        with open(file_path, "wb") as f:
-            shutil.copyfileobj(file.file, f)
-        file_paths.append(file_path)
-
-    metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
-    with open(metadata_path, "wb") as f:
-        shutil.copyfileobj(metadata_file.file, f)
-
+def process_without_music_from_docs(file_paths: List[str], metadata_path: str) -> Dict:
     if metadata_path.endswith(".xlsx"):
         df = pd.read_excel(metadata_path)
     else:
@@ -187,11 +165,7 @@ def process_without_music_from_docs(files: List[UploadFile], metadata_file: Uplo
     zip_url = f"/download/{os.path.basename(zip_path)}"
     return {"download": zip_url, "data": outputs}
 
-def process_lyrics_from_theme(metadata_file: UploadFile) -> Dict:
-    metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
-    with open(metadata_path, "wb") as f:
-        shutil.copyfileobj(metadata_file.file, f)
-
+def process_lyrics_from_theme(metadata_path: str) -> Dict:
     if metadata_path.endswith(".xlsx"):
         df = pd.read_excel(metadata_path)
     else:
