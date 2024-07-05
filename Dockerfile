@@ -20,7 +20,7 @@ RUN apt-get install -y python3.9 python3.9-dev python3-pip git unrar tzdata && \
 RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 1
 
 # Installer rq (Redis Queue)
-RUN pip3 install rq
+RUN pip3 install rq uvicorn
 
 # Définir le répertoire de travail
 WORKDIR /app
