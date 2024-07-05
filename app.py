@@ -1,7 +1,7 @@
 import json
 import time
 import zipfile
-
+from utils.email_notifier import send_mail
 import pandas as pd
 from dotenv import load_dotenv
 from fastapi import FastAPI, File, UploadFile, Form, HTTPException
@@ -34,7 +34,7 @@ redis_host = os.getenv("REDIS_HOST", "localhost")
 redis_port = int(os.getenv("REDIS_PORT", 6379))
 
 redis_conn = Redis(host=redis_host, port=redis_port)
-task_queue=Queue("task_queue",connection=redis_conn)
+task_queue=Queue("task_queue",connection=redis_conn,default_timeout=172800)
 
 UPLOAD_DIR = "./uploads"
 OUTPUT_DIR = "./output"
@@ -541,38 +541,90 @@ async def download_file(file_name: str):
 
 
 
-@app.post("/job/generate_music_from_multiple_docs/", tags=['text to music (multiple)'])
-async def job_generate_music_from_multi_docs(
-        files: List[UploadFile] = File(..., description="Les documents à traiter (Word, PDF, PowerPoint)"),
-        metadata_file: UploadFile = File(..., description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc.")
+def extract_files_from_zip(zip_file: UploadFile, extract_to: str) -> List[str]:
+    with zipfile.ZipFile(zip_file.file, 'r') as zip_ref:
+        zip_ref.extractall(extract_to)
+    return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
+
+@app.post("/job/generate_music_from_zip/", tags=['text to music (multiple)'])
+async def job_generate_music_from_zip(
+        zip_file: UploadFile = File(..., description="Le fichier zip contenant les documents à traiter (Word, PDF, PowerPoint)"),
+        metadata_file: UploadFile = File(..., description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc."),
+        email_notification: Optional[str] = Form("admin@example.com")
 ):
-    job_instance = task_queue.enqueue(process_music_from_docs, files, metadata_file,job_timeout=18000)
+    zip_extract_path = os.path.join(UPLOAD_DIR, "extracted_files")
+    os.makedirs(zip_extract_path, exist_ok=True)
+
+    extracted_files = extract_files_from_zip(zip_file, zip_extract_path)
+    send_mail(
+        subject="WIM Gen : Job start",
+        message=f"Your job with ID {job_instance.id} start with {len(extracted_files)} files.",
+        recipient_email=email_notification
+    )
+    job_instance = task_queue.enqueue(
+        process_music_from_docs, extracted_files, metadata_file,
+        job_timeout=172800, retry=Retry(max=3)
+    )
+    send_mail(
+        subject="WIM Gen : Job terminé avec succès",
+        message=f"Your job with ID {job_instance.id} has been submitted successfully with {len(extracted_files)} files.",
+        recipient_email=email_notification
+    )
     return {
         "success": True,
         "job_id": job_instance.id
     }
 
-@app.post("/job/generate_without_extraction_music_from_multiple_docs/", tags=['text to music (multiple)'])
-async def job_generate_music_from_multi_docs_without_extraction(
-        files: List[UploadFile] = File(..., description="Les documents à traiter (Word, PDF, PowerPoint)"),
-        metadata_file: UploadFile = File(..., description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc.")
+@app.post("/job/generate_without_extraction_music_from_zip/", tags=['text to music (multiple)'])
+async def job_generate_music_from_zip_without_extraction(
+        zip_file: UploadFile = File(..., description="Le fichier zip contenant les documents à traiter (Word, PDF, PowerPoint)"),
+        metadata_file: UploadFile = File(..., description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc."),
+        email_notification: Optional[str] = Form("admin@example.com")
 ):
-    job_instance = task_queue.enqueue(process_without_music_from_docs, files, metadata_file,job_timeout=18000)
+    zip_extract_path = os.path.join(UPLOAD_DIR, "extracted_files")
+    os.makedirs(zip_extract_path, exist_ok=True)
+
+    extracted_files = extract_files_from_zip(zip_file, zip_extract_path)
+    send_mail(
+        subject="WIM Gen : Job start",
+        message=f"Your job with ID {job_instance.id} start with {len(extracted_files)} files.",
+        recipient_email=email_notification
+    )
+    job_instance = task_queue.enqueue(
+        process_without_music_from_docs, extracted_files, metadata_file,
+        job_timeout=172800, retry=Retry(max=3)
+    )
+    send_mail(
+        subject="WIM Gen : Job terminé avec succès",
+        message=f"Your job with ID {job_instance.id} has been submitted successfully with {len(extracted_files)} files.",
+        recipient_email=email_notification
+    )
     return {
         "success": True,
         "job_id": job_instance.id
     }
 
-
-@app.post("/job/generate_music_from_multiple_theme/", tags=['text to music (multiple)'])
-async def job_generate_music_multi_from_theme(
-        metadata_file: UploadFile = File(..., description="Fichier Excel avec les paramètres (thème, orientation, taille, etc.)")
+@app.post("/job/generate_music_from_theme_zip/", tags=['text to music (multiple)'])
+async def job_generate_music_from_theme_zip(
+        metadata_file: UploadFile = File(..., description="Fichier Excel avec les paramètres (thème, orientation, taille, etc.)"),
+        email_notification: Optional[str] = Form("admin@example.com")
 ):
-    job_instance = task_queue.enqueue(process_lyrics_from_theme, metadata_file,job_timeout=18000)
+    send_mail(
+        subject="WIM Gen : Job start",
+        message=f"Your job with ID {job_instance.id} start with {len(extracted_files)} files.",
+        recipient_email=email_notification
+    )
+    job_instance = task_queue.enqueue(
+        process_lyrics_from_theme, metadata_file,
+        job_timeout=172800, retry=Retry(max=3)
+    )
+    send_mail(
+        subject="WIM Gen : Job terminé avec succès",
+        message=f"Your job with ID {job_instance.id} has been submitted successfully ",
+        recipient_email=email_notification
+    )
     return {
         "success": True,
         "job_id": job_instance.id
     }
-
-
 #rq worker task_queue

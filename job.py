@@ -10,20 +10,16 @@ from fastapi import UploadFile
 from inference.infer_extraction import inference, inference_by_theme, inference_without_rag
 from utils.extraction_ai import extraire_elements_key_from_context
 from utils.googdrive.quickstart import upload_file_in_folder_to_gdrive
-
 from utils.music_generator_ai import generate_music_lyrics, download_file_by_url
 from utils.parsers_ai import MusicLyrics
 from utils.sunowrapper.generate_song import generate_music, fetch_feed
-from utils.tools import format_lyrics_single_refrain,format_lyrics
+from utils.tools import format_lyrics_single_refrain, format_lyrics
 
 UPLOAD_DIR = "./uploads"
 OUTPUT_DIR = "./output"
-ZIP_OUTPUT_DIR = "zip_outputs/"
-
+ZIP_OUTPUT_DIR = "./zip_outputs"
 
 def process_music_from_docs(files: List[UploadFile], metadata_file: UploadFile) -> Dict:
-
-    #model = load_whisper_model("small")
     file_paths = []
     for file in files:
         file_path = os.path.join(UPLOAD_DIR, file.filename)
@@ -55,8 +51,7 @@ def process_music_from_docs(files: List[UploadFile], metadata_file: UploadFile) 
         if not file_path:
             continue
 
-        data = inference(file_path, orientation=orientation, langue=langue, niveau=niveau, matiere=matiere,
-                         k=niv_detail)
+        data = inference(file_path, orientation=orientation, langue=langue, niveau=niveau, matiere=matiere, k=niv_detail)
         os.remove(file_path)
         elements = data['answer']
         data = generate_music_lyrics(elements=elements, style=style, orientation=orientation, langue=langue)
@@ -66,26 +61,19 @@ def process_music_from_docs(files: List[UploadFile], metadata_file: UploadFile) 
         tmp_dict['url'] = []
         tmp_dict['langue'] = langue
         tmp_dict["music"] = generate_music(format_lyrics(out.lyrics), out.title, out.style)
-        time.sleep(500)
+        time.sleep(300)
 
         c = 1
         name = ""
-        for id in tmp_dict["music"]:
-            dat = fetch_feed(id)[0]
+        for music_id in tmp_dict["music"]:
+            dat = fetch_feed(music_id)[0]
 
-            n = download_file_by_url(dat['audio_url'])
-            print(n)
-
-            #dat['lrc_lyrics']=generate_audio_to_lrc(model, n)
-            n2 = download_file_by_url(dat['image_large_url'])
+            audio_url = download_file_by_url(dat['audio_url'])
+            image_url = download_file_by_url(dat['image_large_url'])
 
             name = f"{doc_id}_{style}_{langue}_{matiere}_folder"
-            dat["url_drive"] = upload_file_in_folder_to_gdrive(n, f"{doc_id}_v{c}.mp3",
-                                                               '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s',
-                                                               name)
-            dat["img_drive"] = upload_file_in_folder_to_gdrive(n2, f"{doc_id}_v{c}.jpeg",
-                                                               '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s',
-                                                              name)
+            dat["url_drive"] = upload_file_in_folder_to_gdrive(audio_url, f"{doc_id}_v{c}.mp3", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
+            dat["img_drive"] = upload_file_in_folder_to_gdrive(image_url, f"{doc_id}_v{c}.jpeg", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
             tmp_dict['url'].append(dat)
             c += 1
 
@@ -115,15 +103,14 @@ def process_music_from_docs(files: List[UploadFile], metadata_file: UploadFile) 
     zip_url = f"/download/{os.path.basename(zip_path)}"
     return {"download": zip_url, "data": outputs}
 
-
 def process_without_music_from_docs(files: List[UploadFile], metadata_file: UploadFile) -> Dict:
-    #model = load_whisper_model("small")
     file_paths = []
     for file in files:
         file_path = os.path.join(UPLOAD_DIR, file.filename)
         with open(file_path, "wb") as f:
             shutil.copyfileobj(file.file, f)
         file_paths.append(file_path)
+
     metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
     with open(metadata_path, "wb") as f:
         shutil.copyfileobj(metadata_file.file, f)
@@ -148,8 +135,7 @@ def process_without_music_from_docs(files: List[UploadFile], metadata_file: Uplo
         if not file_path:
             continue
 
-        data = inference_without_rag(file_path, orientation=orientation, langue=langue, niveau=niveau, matiere=matiere,
-                         k=niv_detail)
+        data = inference_without_rag(file_path, orientation=orientation, langue=langue, niveau=niveau, matiere=matiere, k=niv_detail)
         os.remove(file_path)
         elements = data
         data = generate_music_lyrics(elements=elements, style=style, orientation=orientation, langue=langue)
@@ -159,26 +145,19 @@ def process_without_music_from_docs(files: List[UploadFile], metadata_file: Uplo
         tmp_dict['url'] = []
         tmp_dict['langue'] = langue
         tmp_dict["music"] = generate_music(format_lyrics(out.lyrics), out.title, out.style)
-        time.sleep(500)
+        time.sleep(300)
 
         c = 1
         name = ""
-        for id in tmp_dict["music"]:
-            dat = fetch_feed(id)[0]
+        for music_id in tmp_dict["music"]:
+            dat = fetch_feed(music_id)[0]
 
-            n = download_file_by_url(dat['audio_url'])
-            print(n)
+            audio_url = download_file_by_url(dat['audio_url'])
+            image_url = download_file_by_url(dat['image_large_url'])
 
-            #dat['lrc_lyrics']=generate_audio_to_lrc(model, n)
-            n2 = download_file_by_url(dat['image_large_url'])
-
-            name = f"{doc_id}_{style}_{langue}_{matiere}_folder"
-            dat["url_drive"] = upload_file_in_folder_to_gdrive(n, f"{doc_id}_v{c}.mp3",
-                                                               '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s',
-                                                               name)
-            dat["img_drive"] = upload_file_in_folder_to_gdrive(n2, f"{doc_id}_v{c}.jpeg",
-                                                               '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s',
-                                                              name)
+            name = f"{doc_id}_without_{style}_{langue}_{matiere}_folder"
+            dat["url_drive"] = upload_file_in_folder_to_gdrive(audio_url, f"{doc_id}_v{c}.mp3", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
+            dat["img_drive"] = upload_file_in_folder_to_gdrive(image_url, f"{doc_id}_v{c}.jpeg", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
             tmp_dict['url'].append(dat)
             c += 1
 
@@ -208,9 +187,7 @@ def process_without_music_from_docs(files: List[UploadFile], metadata_file: Uplo
     zip_url = f"/download/{os.path.basename(zip_path)}"
     return {"download": zip_url, "data": outputs}
 
-
 def process_lyrics_from_theme(metadata_file: UploadFile) -> Dict:
-    #model = load_whisper_model("small")
     metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
     with open(metadata_path, "wb") as f:
         shutil.copyfileobj(metadata_file.file, f)
@@ -237,25 +214,20 @@ def process_lyrics_from_theme(metadata_file: UploadFile) -> Dict:
         out = MusicLyrics.parse_obj(data)
         tmp_dict = out.to_dict()
         tmp_dict['url'] = []
-        tmp_dict['langue']=langue
+        tmp_dict['langue'] = langue
         tmp_dict["music"] = generate_music(format_lyrics(out.lyrics), out.title, out.style)
-        time.sleep(500)
+        time.sleep(300)
 
         c = 1
         name = ""
-        for id in tmp_dict["music"]:
-            dat = fetch_feed(id)[0]
-            n = download_file_by_url(dat['audio_url'])
-            #dat['lrc_lyrics'] = generate_audio_to_lrc(model, n)
-            n2 = download_file_by_url(dat['image_large_url'])
+        for music_id in tmp_dict["music"]:
+            dat = fetch_feed(music_id)[0]
+            audio_url = download_file_by_url(dat['audio_url'])
+            image_url = download_file_by_url(dat['image_large_url'])
             name = dat["title"].replace(' ', '').lower()
-            name+=f"_{style}_{langue}_{matiere}"
-            dat["url_drive"] = upload_file_in_folder_to_gdrive(n, f"{dat['title'].replace(' ', '').lower()}_v{c}.mp3",
-                                                               '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s',
-                                                               name)
-            dat["img_drive"] = upload_file_in_folder_to_gdrive(n2, f"{dat['title'].replace(' ', '').lower()}_v{c}.jpeg",
-                                                               '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s',
-                                                               name)
+            name += f"_{style}_{langue}_{matiere}"
+            dat["url_drive"] = upload_file_in_folder_to_gdrive(audio_url, f"{dat['title'].replace(' ', '').lower()}_v{c}.mp3", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
+            dat["img_drive"] = upload_file_in_folder_to_gdrive(image_url, f"{dat['title'].replace(' ', '').lower()}_v{c}.jpeg", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
             tmp_dict['url'].append(dat)
             c += 1
 
