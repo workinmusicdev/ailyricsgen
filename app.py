@@ -6,8 +6,9 @@ import pandas as pd
 from dotenv import load_dotenv
 from fastapi import FastAPI, File, UploadFile, Form, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from typing import List
+from typing import List, Optional
 import tempfile
+import rarfile
 import shutil
 import os
 from redis import Redis
@@ -539,26 +540,36 @@ async def download_file(file_name: str):
     return JSONResponse(content={"message": "File not found"}, status_code=404)
 
 
-
-
 def extract_files_from_zip(zip_file: UploadFile, extract_to: str) -> List[str]:
     with zipfile.ZipFile(zip_file.file, 'r') as zip_ref:
         zip_ref.extractall(extract_to)
     return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
 
-@app.post("/job/generate_music_from_zip/", tags=['text to music (multiple)'])
-async def job_generate_music_from_zip(
-        zip_file: UploadFile = File(..., description="Le fichier zip contenant les documents à traiter (Word, PDF, PowerPoint)"),
-        metadata_file: UploadFile = File(..., description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc."),
-        email_notification: Optional[str] = Form("admin@example.com")
-):
-    zip_extract_path = os.path.join(UPLOAD_DIR, "extracted_files")
-    os.makedirs(zip_extract_path, exist_ok=True)
+def extract_files_from_rar(rar_file: UploadFile, extract_to: str) -> List[str]:
+    with rarfile.RarFile(rar_file.file) as rar_ref:
+        rar_ref.extractall(extract_to)
+    return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
 
-    extracted_files = extract_files_from_zip(zip_file, zip_extract_path)
+@app.post("/job/generate_music_from_archive/", tags=['text to music (multiple)'])
+async def job_generate_music_from_archive(
+        archive_file: UploadFile = File(..., description="Le fichier zip ou rar contenant les documents à traiter (Word, PDF, PowerPoint)"),
+        metadata_file: UploadFile = File(..., description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc."),
+        email_notification: Optional[str] = Form("workinmusic.app@gmail.com")
+):
+    archive_extract_path = os.path.join(UPLOAD_DIR, "extracted_files")
+    os.makedirs(archive_extract_path, exist_ok=True)
+
+    extracted_files = []
+    if archive_file.filename.endswith(".zip"):
+        extracted_files = extract_files_from_zip(archive_file, archive_extract_path)
+    elif archive_file.filename.endswith(".rar"):
+        extracted_files = extract_files_from_rar(archive_file, archive_extract_path)
+    else:
+        return {"error": "Unsupported file format. Please upload a zip or rar file."}
+
     send_mail(
         subject="WIM Gen : Job start",
-        message=f"Your job with ID {job_instance.id} start with {len(extracted_files)} files.",
+        message=f"Your job has started with {len(extracted_files)} files.",
         recipient_email=email_notification
     )
     job_instance = task_queue.enqueue(
@@ -575,19 +586,26 @@ async def job_generate_music_from_zip(
         "job_id": job_instance.id
     }
 
-@app.post("/job/generate_without_extraction_music_from_zip/", tags=['text to music (multiple)'])
-async def job_generate_music_from_zip_without_extraction(
-        zip_file: UploadFile = File(..., description="Le fichier zip contenant les documents à traiter (Word, PDF, PowerPoint)"),
+@app.post("/job/generate_without_extraction_music_from_archive/", tags=['text to music (multiple)'])
+async def job_generate_music_from_archive_without_extraction(
+        archive_file: UploadFile = File(..., description="Le fichier zip ou rar contenant les documents à traiter (Word, PDF, PowerPoint)"),
         metadata_file: UploadFile = File(..., description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc."),
-        email_notification: Optional[str] = Form("admin@example.com")
+        email_notification: Optional[str] = Form("workinmusic.app@gmail.com")
 ):
-    zip_extract_path = os.path.join(UPLOAD_DIR, "extracted_files")
-    os.makedirs(zip_extract_path, exist_ok=True)
+    archive_extract_path = os.path.join(UPLOAD_DIR, "extracted_files")
+    os.makedirs(archive_extract_path, exist_ok=True)
 
-    extracted_files = extract_files_from_zip(zip_file, zip_extract_path)
+    extracted_files = []
+    if archive_file.filename.endswith(".zip"):
+        extracted_files = extract_files_from_zip(archive_file, archive_extract_path)
+    elif archive_file.filename.endswith(".rar"):
+        extracted_files = extract_files_from_rar(archive_file, archive_extract_path)
+    else:
+        return {"error": "Unsupported file format. Please upload a zip or rar file."}
+
     send_mail(
         subject="WIM Gen : Job start",
-        message=f"Your job with ID {job_instance.id} start with {len(extracted_files)} files.",
+        message=f"Your job has started with {len(extracted_files)} files.",
         recipient_email=email_notification
     )
     job_instance = task_queue.enqueue(
@@ -604,27 +622,26 @@ async def job_generate_music_from_zip_without_extraction(
         "job_id": job_instance.id
     }
 
-@app.post("/job/generate_music_from_theme_zip/", tags=['text to music (multiple)'])
-async def job_generate_music_from_theme_zip(
+@app.post("/job/generate_music_from_theme/", tags=['text to music (multiple)'])
+async def job_generate_music_from_theme_archive(
         metadata_file: UploadFile = File(..., description="Fichier Excel avec les paramètres (thème, orientation, taille, etc.)"),
-        email_notification: Optional[str] = Form("admin@example.com")
+        email_notification: Optional[str] = Form("workinmusic.app@gmail.com")
 ):
-    send_mail(
-        subject="WIM Gen : Job start",
-        message=f"Your job with ID {job_instance.id} start with {len(extracted_files)} files.",
-        recipient_email=email_notification
-    )
     job_instance = task_queue.enqueue(
         process_lyrics_from_theme, metadata_file,
         job_timeout=172800, retry=Retry(max=3)
     )
     send_mail(
+        subject="WIM Gen : Job start",
+        message=f"Your job has started.",
+        recipient_email=email_notification
+    )
+    send_mail(
         subject="WIM Gen : Job terminé avec succès",
-        message=f"Your job with ID {job_instance.id} has been submitted successfully ",
+        message=f"Your job with ID {job_instance.id} has been submitted successfully.",
         recipient_email=email_notification
     )
     return {
         "success": True,
         "job_id": job_instance.id
     }
-#rq worker task_queue
