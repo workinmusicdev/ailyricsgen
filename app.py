@@ -1,4 +1,5 @@
 import json
+import subprocess
 import time
 import zipfile
 from utils.email_notifier import send_mail
@@ -546,8 +547,11 @@ def extract_files_from_zip(zip_file: UploadFile, extract_to: str) -> List[str]:
     return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
 
 def extract_files_from_rar(rar_file: UploadFile, extract_to: str) -> List[str]:
-    with rarfile.RarFile(rar_file.file) as rar_ref:
-        rar_ref.extractall(extract_to)
+    rar_path = os.path.join(extract_to, rar_file.filename)
+    with open(rar_path, 'wb') as f:
+        f.write(rar_file.file.read())
+    subprocess.run(['unrar-free', '-x', rar_path, extract_to], check=True)
+    os.remove(rar_path)
     return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
 
 @app.post("/job/generate_music_from_archive/", tags=['text to music (multiple)'])
@@ -566,7 +570,7 @@ async def job_generate_music_from_archive(
         extracted_files = extract_files_from_rar(archive_file, archive_extract_path)
     else:
         return {"error": "Unsupported file format. Please upload a zip or rar file."}
-
+    print(extracted_files)
     send_mail(
         subject="WIM Gen : Job start",
         message=f"Your job has started with {len(extracted_files)} files.",

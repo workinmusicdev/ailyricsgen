@@ -4,7 +4,7 @@ LABEL authors="princegedeon03"
 
 # Installer git, unrar et autres dépendances nécessaires
 RUN apt-get update && \
-    apt-get install -y git unrar && \
+    apt-get install -y git unrar-free && \
     apt-get clean
 
 # Définir le répertoire de travail
