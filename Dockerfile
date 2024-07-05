@@ -7,7 +7,7 @@ LABEL authors="princegedeon03"
 # Installer git et autres dépendances nécessaires
 RUN apt-get update && \
     apt install bsdtar &&\
-    apt-get install unrar &&\g
+    apt-get install unrar &&\
     apt-get install -y git && \
     apt-get clean \
 
