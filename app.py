@@ -554,6 +554,9 @@ def extract_files_from_rar(rar_file: UploadFile, extract_to: str) -> List[str]:
     os.remove(rar_path)
     return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
 
+#--
+
+
 @app.post("/job/generate_music_from_archive/", tags=['text to music (multiple)'])
 async def job_generate_music_from_archive(
         archive_file: UploadFile = File(..., description="Le fichier zip ou rar contenant les documents à traiter (Word, PDF, PowerPoint)"),
@@ -563,21 +566,29 @@ async def job_generate_music_from_archive(
     archive_extract_path = os.path.join(UPLOAD_DIR, "extracted_files")
     os.makedirs(archive_extract_path, exist_ok=True)
 
+    archive_path = os.path.join(UPLOAD_DIR, archive_file.filename)
+    with open(archive_path, "wb") as f:
+        shutil.copyfileobj(archive_file.file, f)
+
     extracted_files = []
-    if archive_file.filename.endswith(".zip"):
-        extracted_files = extract_files_from_zip(archive_file, archive_extract_path)
-    elif archive_file.filename.endswith(".rar"):
-        extracted_files = extract_files_from_rar(archive_file, archive_extract_path)
+    if archive_path.endswith(".zip"):
+        extracted_files = extract_files_from_zip(archive_path, archive_extract_path)
+    elif archive_path.endswith(".rar"):
+        extracted_files = extract_files_from_rar(archive_path, archive_extract_path)
     else:
         return {"error": "Unsupported file format. Please upload a zip or rar file."}
-    print(extracted_files)
+
+    metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
+    with open(metadata_path, "wb") as f:
+        shutil.copyfileobj(metadata_file.file, f)
+
     send_mail(
         subject="WIM Gen : Job start",
         message=f"Your job has started with {len(extracted_files)} files.",
         recipient_email=email_notification
     )
     job_instance = task_queue.enqueue(
-        process_music_from_docs, extracted_files, metadata_file,
+        process_music_from_docs, extracted_files, metadata_path,
         job_timeout=172800, retry=Retry(max=3)
     )
     send_mail(
@@ -599,13 +610,21 @@ async def job_generate_music_from_archive_without_extraction(
     archive_extract_path = os.path.join(UPLOAD_DIR, "extracted_files")
     os.makedirs(archive_extract_path, exist_ok=True)
 
+    archive_path = os.path.join(UPLOAD_DIR, archive_file.filename)
+    with open(archive_path, "wb") as f:
+        shutil.copyfileobj(archive_file.file, f)
+
     extracted_files = []
-    if archive_file.filename.endswith(".zip"):
-        extracted_files = extract_files_from_zip(archive_file, archive_extract_path)
-    elif archive_file.filename.endswith(".rar"):
-        extracted_files = extract_files_from_rar(archive_file, archive_extract_path)
+    if archive_path.endswith(".zip"):
+        extracted_files = extract_files_from_zip(archive_path, archive_extract_path)
+    elif archive_path.endswith(".rar"):
+        extracted_files = extract_files_from_rar(archive_path, archive_extract_path)
     else:
         return {"error": "Unsupported file format. Please upload a zip or rar file."}
+
+    metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
+    with open(metadata_path, "wb") as f:
+        shutil.copyfileobj(metadata_file.file, f)
 
     send_mail(
         subject="WIM Gen : Job start",
@@ -613,7 +632,7 @@ async def job_generate_music_from_archive_without_extraction(
         recipient_email=email_notification
     )
     job_instance = task_queue.enqueue(
-        process_without_music_from_docs, extracted_files, metadata_file,
+        process_without_music_from_docs, extracted_files, metadata_path,
         job_timeout=172800, retry=Retry(max=3)
     )
     send_mail(
@@ -631,14 +650,18 @@ async def job_generate_music_from_theme_archive(
         metadata_file: UploadFile = File(..., description="Fichier Excel avec les paramètres (thème, orientation, taille, etc.)"),
         email_notification: Optional[str] = Form("workinmusic.app@gmail.com")
 ):
-    job_instance = task_queue.enqueue(
-        process_lyrics_from_theme, metadata_file,
-        job_timeout=172800, retry=Retry(max=3)
-    )
+    metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
+    with open(metadata_path, "wb") as f:
+        shutil.copyfileobj(metadata_file.file, f)
+
     send_mail(
         subject="WIM Gen : Job start",
         message=f"Your job has started.",
         recipient_email=email_notification
+    )
+    job_instance = task_queue.enqueue(
+        process_lyrics_from_theme, metadata_path,
+        job_timeout=172800, retry=Retry(max=3)
     )
     send_mail(
         subject="WIM Gen : Job terminé avec succès",
