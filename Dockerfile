@@ -2,9 +2,13 @@
 FROM ubuntu:20.04
 LABEL authors="princegedeon03"
 
+# Configurer le fuseau horaire
+ENV TZ=Africa/Abidjan
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 # Installer Python, git, unrar et autres dépendances nécessaires
 RUN apt-get update && \
-    apt-get install -y python3 python3-pip git unrar-free && \
+    apt-get install -y python3 python3-pip git unrar-free tzdata && \
     apt-get clean
 
 # Définir le répertoire de travail
