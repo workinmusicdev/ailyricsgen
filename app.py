@@ -565,7 +565,7 @@ async def job_generate_music_from_archive(
 
     archive_path = os.path.join(UPLOAD_DIR, archive_file.filename)
     with open(archive_path, "wb") as f:
-        shutil.copyfileobj(archive_file.file, f)
+        f.write(await archive_file.read())
 
     extracted_files = []
     if archive_path.endswith(".zip"):
@@ -577,7 +577,7 @@ async def job_generate_music_from_archive(
 
     metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
     with open(metadata_path, "wb") as f:
-        shutil.copyfileobj(metadata_file.file, f)
+        f.write(await metadata_file.read())
 
     send_mail(
         subject="WIM Gen : Job start",
@@ -605,7 +605,7 @@ async def job_generate_music_from_archive_without_extraction(
 
     archive_path = os.path.join(UPLOAD_DIR, archive_file.filename)
     with open(archive_path, "wb") as f:
-        shutil.copyfileobj(archive_file.file, f)
+        f.write(await archive_file.read())
 
     extracted_files = []
     if archive_path.endswith(".zip"):
@@ -617,7 +617,7 @@ async def job_generate_music_from_archive_without_extraction(
 
     metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
     with open(metadata_path, "wb") as f:
-        shutil.copyfileobj(metadata_file.file, f)
+        f.write(await metadata_file.read())
 
     send_mail(
         subject="WIM Gen : Job start",
@@ -641,7 +641,7 @@ async def job_generate_music_from_theme_archive(
 ):
     metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
     with open(metadata_path, "wb") as f:
-        shutil.copyfileobj(metadata_file.file, f)
+        f.write(await metadata_file.read())
 
     send_mail(
         subject="WIM Gen : Job start",
