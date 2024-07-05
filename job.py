@@ -8,6 +8,7 @@ from typing import List, Dict
 from fastapi import UploadFile
 
 from inference.infer_extraction import inference, inference_by_theme, inference_without_rag
+from utils.email_notifier import send_mail
 from utils.extraction_ai import extraire_elements_key_from_context
 from utils.googdrive.quickstart import upload_file_in_folder_to_gdrive
 from utils.music_generator_ai import generate_music_lyrics, download_file_by_url
@@ -211,6 +212,8 @@ def process_lyrics_from_theme(metadata_path: str) -> Dict:
             json.dump(tmp_dict, json_file, ensure_ascii=False, indent=4)
         upload_file_in_folder_to_gdrive(output_path, f"data.json", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
         outputs.append(tmp_dict)
+
+
 
     zip_path = os.path.join(ZIP_OUTPUT_DIR, "outputs.zip")
     with zipfile.ZipFile(zip_path, 'w') as zipf:

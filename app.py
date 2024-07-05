@@ -39,6 +39,7 @@ redis_conn = Redis(host=redis_host, port=redis_port)
 task_queue=Queue("task_queue",connection=redis_conn,default_timeout=172800)
 
 UPLOAD_DIR = "./uploads"
+UPLOAD_DIR = "./uploads"
 OUTPUT_DIR = "./output"
 ZIP_OUTPUT_DIR = "zip_outputs/"
 # Créer le répertoire de téléchargement s'il n'existe pas
@@ -541,15 +542,6 @@ async def download_file(file_name: str):
     return JSONResponse(content={"message": "File not found"}, status_code=404)
 
 
-def extract_files_from_zip(zip_file: UploadFile, extract_to: str) -> List[str]:
-    with zipfile.ZipFile(zip_file.file, 'r') as zip_ref:
-        zip_ref.extractall(extract_to)
-    return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
-
-import zipfile
-import subprocess
-import os
-from typing import List
 
 def extract_files_from_zip(zip_path: str, extract_to: str) -> List[str]:
     with zipfile.ZipFile(zip_path, 'r') as zip_ref:
@@ -560,7 +552,7 @@ def extract_files_from_rar(rar_path: str, extract_to: str) -> List[str]:
     subprocess.run(['unrar-free', '-x', rar_path, extract_to], check=True)
     return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
 
-#--
+
 
 @app.post("/job/generate_music_from_archive/", tags=['text to music (multiple)'])
 async def job_generate_music_from_archive(
@@ -596,11 +588,7 @@ async def job_generate_music_from_archive(
         process_music_from_docs, extracted_files, metadata_path,
         job_timeout=172800, retry=Retry(max=3)
     )
-    send_mail(
-        subject="WIM Gen : Job terminé avec succès",
-        message=f"Your job with ID {job_instance.id} has been submitted successfully with {len(extracted_files)} files.",
-        recipient_email=email_notification
-    )
+
     return {
         "success": True,
         "job_id": job_instance.id
@@ -640,11 +628,7 @@ async def job_generate_music_from_archive_without_extraction(
         process_without_music_from_docs, extracted_files, metadata_path,
         job_timeout=172800, retry=Retry(max=3)
     )
-    send_mail(
-        subject="WIM Gen : Job terminé avec succès",
-        message=f"Your job with ID {job_instance.id} has been submitted successfully with {len(extracted_files)} files.",
-        recipient_email=email_notification
-    )
+
     return {
         "success": True,
         "job_id": job_instance.id
@@ -668,11 +652,7 @@ async def job_generate_music_from_theme_archive(
         process_lyrics_from_theme, metadata_path,
         job_timeout=172800, retry=Retry(max=3)
     )
-    send_mail(
-        subject="WIM Gen : Job terminé avec succès",
-        message=f"Your job with ID {job_instance.id} has been submitted successfully.",
-        recipient_email=email_notification
-    )
+
     return {
         "success": True,
         "job_id": job_instance.id
