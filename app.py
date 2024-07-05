@@ -666,7 +666,6 @@ async def job_generate_music_from_theme_archive(
         process_lyrics_from_theme, metadata_path,
         job_timeout=172800, retry=Retry(max=3)
     )
-
     return {
         "success": True,
         "job_id": job_instance.id
