@@ -13,13 +13,13 @@ RUN apt-get update && \
     apt-get update
 
 # Installer Python 3.9, git, unrar et autres dépendances nécessaires
-RUN apt-get install -y python3.9 python3.9-dev python3-pip git unrar tzdata && \
+RUN apt-get install -y python3.9 python3.9-dev python3-pip git unrar-free tzdata && \
     apt-get clean
 
 # Utiliser Python 3.9 comme version par défaut
 RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 1
 
-# Installer rq (Redis Queue)
+# Installer rq (Redis Queue) et uvicorn
 RUN pip3 install rq uvicorn
 
 # Définir le répertoire de travail
@@ -28,9 +28,6 @@ WORKDIR /app
 # Copier les fichiers de dépendances
 COPY req.txt .
 
-COPY requirements.txt .
-
-RUN pip3 install --no-cache-dir -r requirements.txt
 # Installer les dépendances
 RUN pip3 install --no-cache-dir -r req.txt
 
