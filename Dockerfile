@@ -1,10 +1,10 @@
-# Utiliser une image officielle de Python comme image de base
-FROM python:3.9-slim
+# Utiliser une image officielle d'Ubuntu comme image de base
+FROM ubuntu:20.04
 LABEL authors="princegedeon03"
 
-# Installer git, unrar et autres dépendances nécessaires
+# Installer Python, git, unrar et autres dépendances nécessaires
 RUN apt-get update && \
-    apt-get install -y git unrar-free && \
+    apt-get install -y python3 python3-pip git unrar-free && \
     apt-get clean
 
 # Définir le répertoire de travail
@@ -14,7 +14,7 @@ WORKDIR /app
 COPY req.txt .
 
 # Installer les dépendances
-RUN pip install --no-cache-dir -r req.txt
+RUN pip3 install --no-cache-dir -r req.txt
 
 # Copier le reste de l'application
 COPY . .
