@@ -2,6 +2,9 @@ import json
 import subprocess
 import time
 import zipfile
+
+import aiofiles
+
 from utils.email_notifier import send_mail
 import pandas as pd
 from dotenv import load_dotenv
@@ -564,8 +567,9 @@ async def job_generate_music_from_archive(
     os.makedirs(archive_extract_path, exist_ok=True)
 
     archive_path = os.path.join(UPLOAD_DIR, archive_file.filename)
-    with open(archive_path, "wb") as f:
-        f.write(await archive_file.read())
+    async with aiofiles.open(archive_path, "wb") as f:
+        content = await archive_file.read()
+        await f.write(content)
 
     extracted_files = []
     if archive_path.endswith(".zip"):
@@ -576,8 +580,9 @@ async def job_generate_music_from_archive(
         return {"error": "Unsupported file format. Please upload a zip or rar file."}
 
     metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
-    with open(metadata_path, "wb") as f:
-        f.write(await metadata_file.read())
+    async with aiofiles.open(metadata_path, "wb") as f:
+        content = await metadata_file.read()
+        await f.write(content)
 
     send_mail(
         subject="WIM Gen : Job start",
@@ -604,8 +609,9 @@ async def job_generate_music_from_archive_without_extraction(
     os.makedirs(archive_extract_path, exist_ok=True)
 
     archive_path = os.path.join(UPLOAD_DIR, archive_file.filename)
-    with open(archive_path, "wb") as f:
-        f.write(await archive_file.read())
+    async with aiofiles.open(archive_path, "wb") as f:
+        content = await archive_file.read()
+        await f.write(content)
 
     extracted_files = []
     if archive_path.endswith(".zip"):
@@ -616,8 +622,9 @@ async def job_generate_music_from_archive_without_extraction(
         return {"error": "Unsupported file format. Please upload a zip or rar file."}
 
     metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
-    with open(metadata_path, "wb") as f:
-        f.write(await metadata_file.read())
+    async with aiofiles.open(metadata_path, "wb") as f:
+        content = await metadata_file.read()
+        await f.write(content)
 
     send_mail(
         subject="WIM Gen : Job start",
@@ -640,8 +647,9 @@ async def job_generate_music_from_theme_archive(
         email_notification: Optional[str] = Form("workinmusic.app@gmail.com")
 ):
     metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
-    with open(metadata_path, "wb") as f:
-        f.write(await metadata_file.read())
+    async with aiofiles.open(metadata_path, "wb") as f:
+        content = await metadata_file.read()
+        await f.write(content)
 
     send_mail(
         subject="WIM Gen : Job start",
