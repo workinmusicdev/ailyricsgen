@@ -1,28 +1,19 @@
-# Utiliser une image officielle d'Ubuntu comme image de base
-FROM ubuntu:20.04
+# Utiliser une image officielle Python 3.10 slim comme image de base
+FROM python:3.10-slim
 LABEL authors="princegedeon03"
 
 # Configurer le fuseau horaire
 ENV TZ=Africa/Abidjan
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
-# Installer les dépendances nécessaires pour ajouter les dépôts de Python 3.10
 RUN apt-get update && \
-    apt-get install -y software-properties-common && \
-    add-apt-repository ppa:deadsnakes/ppa && \
-    apt-get update
+    apt-get install -y tzdata && \
+    ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-# Installer Python 3.10, distutils, git, unrar et autres dépendances nécessaires
-RUN apt-get install -y python3.10 python3.10-dev python3-pip python3.10-distutils git unrar-free tzdata && \
+# Installer git, unrar et autres dépendances nécessaires
+RUN apt-get install -y git unrar-free && \
     apt-get clean
 
-# Utiliser Python 3.10 comme version par défaut
-RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
-
 # Installer rq (Redis Queue) et uvicorn
-RUN pip3 install --upgrade pip
-RUN pip3 install  requests
-RUN pip3 install rq uvicorn
+RUN pip install rq uvicorn
 
 # Définir le répertoire de travail
 WORKDIR /app
@@ -31,7 +22,7 @@ WORKDIR /app
 COPY req.txt .
 
 # Installer les dépendances
-RUN pip3 install --no-cache-dir -r req.txt
+RUN pip install --no-cache-dir -r req.txt
 
 # Copier le reste de l'application
 COPY . .
