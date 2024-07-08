@@ -20,7 +20,7 @@ RUN apt-get install -y python3.10 python3.10-dev python3-pip python3.10-distutil
 RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
 
 # Installer rq (Redis Queue) et uvicorn
-RUN pip3 install rq uvicorn
+RUN pip3 install rq uvicorn html5lib requests
 
 # Définir le répertoire de travail
 WORKDIR /app
