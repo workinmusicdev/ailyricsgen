@@ -557,7 +557,7 @@ def extract_files_from_rar(rar_path: str, extract_to: str) -> List[str]:
     Archive(rar_path).extractall(extract_to)
     return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
 
-@app.post("/job/generate_music_from_archive/", tags=['text to music (multiple)'])
+@app.post("/job/generate_music_from_docs/", tags=['text to music (multiple)'])
 async def job_generate_music_from_archive(
         archive_file: UploadFile = File(..., description="Le fichier zip ou rar contenant les documents à traiter (Word, PDF, PowerPoint)"),
         metadata_file: UploadFile = File(..., description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc."),
@@ -597,7 +597,7 @@ async def job_generate_music_from_archive(
         "job_id": job_instance.id
     }
 
-@app.post("/job/generate_without_extraction_music_from_archive/", tags=['text to music (multiple)'])
+@app.post("/job/generate_without_extraction_music_from_docs/", tags=['text to music (multiple)'])
 async def job_generate_music_from_archive_without_extraction(
         archive_file: UploadFile = File(..., description="Le fichier zip ou rar contenant les documents à traiter (Word, PDF, PowerPoint)"),
         metadata_file: UploadFile = File(..., description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc."),

