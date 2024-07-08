@@ -12,8 +12,8 @@ RUN apt-get update && \
     add-apt-repository ppa:deadsnakes/ppa && \
     apt-get update
 
-# Installer Python 3.10, git, unrar et autres dépendances nécessaires
-RUN apt-get install -y python3.10 python3.10-dev python3-pip git unrar-free tzdata && \
+# Installer Python 3.10, git, unrar, distutils et autres dépendances nécessaires
+RUN apt-get install -y python3.10 python3.10-dev python3-pip python3-distutils git unrar-free tzdata && \
     apt-get clean
 
 # Utiliser Python 3.10 comme version par défaut
