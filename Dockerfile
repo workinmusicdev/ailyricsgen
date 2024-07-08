@@ -35,6 +35,6 @@ RUN pip3 install --no-cache-dir -r req.txt
 COPY . .
 
 # Exposer le port de l'application
-EXPOSE 8080g
+EXPOSE 8080
 # Commande pour lancer l'application
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8080"]
