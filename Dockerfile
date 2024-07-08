@@ -6,18 +6,18 @@ LABEL authors="princegedeon03"
 ENV TZ=Africa/Abidjan
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-# Installer les dépendances nécessaires pour ajouter les dépôts de Python 3.9
+# Installer les dépendances nécessaires pour ajouter les dépôts de Python 3.10
 RUN apt-get update && \
     apt-get install -y software-properties-common && \
     add-apt-repository ppa:deadsnakes/ppa && \
     apt-get update
 
-# Installer Python 3.9, git, unrar et autres dépendances nécessaires
-RUN apt-get install -y python3.9 python3.9-dev python3-pip git unrar-free tzdata && \
+# Installer Python 3.10, git, unrar et autres dépendances nécessaires
+RUN apt-get install -y python3.10 python3.10-dev python3-pip git unrar-free tzdata && \
     apt-get clean
 
-# Utiliser Python 3.9 comme version par défaut
-RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 1
+# Utiliser Python 3.10 comme version par défaut
+RUN update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
 
 # Installer rq (Redis Queue) et uvicorn
 RUN pip3 install rq uvicorn
