@@ -4,6 +4,8 @@ import time
 import zipfile
 
 import aiofiles
+import boto3
+from botocore.exceptions import NoCredentialsError
 from pyunpack import Archive
 
 from utils.email_notifier import send_mail
@@ -43,10 +45,24 @@ redis_conn = Redis(host=redis_host, port=redis_port)
 task_queue=Queue("task_queue",connection=redis_conn,default_timeout=172800)
 
 UPLOAD_DIR = "./uploads"
-UPLOAD_DIR = "./uploads"
 OUTPUT_DIR = "./output"
 ZIP_OUTPUT_DIR = "zip_outputs/"
 TEMP_DIR = "/media"
+
+# Configure AWS S3
+S3_BUCKET = "wimbucketstorage"
+s3_client = boto3.client('s3', aws_access_key_id='AKIAZQ3DOIWH4GXKQBUP', aws_secret_access_key='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')
+
+def upload_to_s3(file_obj, bucket_name, object_name=None):
+    try:
+        if object_name is None:
+            object_name = file_obj.filename
+        s3_client.upload_fileobj(file_obj.file, bucket_name, object_name)
+        return f"s3://{bucket_name}/{object_name}"
+    except NoCredentialsError:
+        raise HTTPException(status_code=500, detail="Credentials not available")
+
+
 os.makedirs(TEMP_DIR, exist_ok=True)
 # Créer le répertoire de téléchargement s'il n'existe pas
 os.makedirs(ZIP_OUTPUT_DIR, exist_ok=True)
@@ -548,6 +564,16 @@ async def download_file(file_name: str):
     return JSONResponse(content={"message": "File not found"}, status_code=404)
 
 
+def extract_files_from_zip(zip_path: str, extract_to: str) -> List[str]:
+    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+        zip_ref.extractall(extract_to)
+    return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
+
+def extract_files_from_rar(rar_path: str, extract_to: str) -> List[str]:
+    Archive(rar_path).extractall(extract_to)
+    return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
+
+
 @app.post("/job/generate_music_from_docs/", tags=['text to music (multiple)'])
 async def job_generate_music_from_docs(
         document_files: List[UploadFile] = File(...,
@@ -556,16 +582,9 @@ async def job_generate_music_from_docs(
                                          description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc."),
         email_notification: Optional[str] = Form("workinmusic.app@gmail.com")
 ):
-    document_paths = []
-    for document_file in document_files:
-        document_path = os.path.join(TEMP_DIR, document_file.filename)
-        with open(document_path, "wb") as f:
-            shutil.copyfileobj(document_file.file, f)
-        document_paths.append(document_path)
-
-    metadata_path = os.path.join(TEMP_DIR, metadata_file.filename)
-    with open(metadata_path, "wb") as f:
-        shutil.copyfileobj(metadata_file.file, f)
+    document_paths = [upload_to_s3(document_file, S3_BUCKET, f"uploads/{document_file.filename}") for document_file in
+                      document_files]
+    metadata_path = upload_to_s3(metadata_file, S3_BUCKET, f"uploads/{metadata_file.filename}")
 
     # Envoyer un email
     send_mail(
@@ -593,16 +612,9 @@ async def job_generate_music_from_docs_without_extraction(
                                          description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc."),
         email_notification: Optional[str] = Form("workinmusic.app@gmail.com")
 ):
-    document_paths = []
-    for document_file in document_files:
-        document_path = os.path.join(TEMP_DIR, document_file.filename)
-        with open(document_path, "wb") as f:
-            shutil.copyfileobj(document_file.file, f)
-        document_paths.append(document_path)
-
-    metadata_path = os.path.join(TEMP_DIR, metadata_file.filename)
-    with open(metadata_path, "wb") as f:
-        shutil.copyfileobj(metadata_file.file, f)
+    document_paths = [upload_to_s3(document_file, S3_BUCKET, f"uploads/{document_file.filename}") for document_file in
+                      document_files]
+    metadata_path = upload_to_s3(metadata_file, S3_BUCKET, f"uploads/{metadata_file.filename}")
 
     # Envoyer un email
     send_mail(
@@ -628,9 +640,7 @@ async def job_generate_music_from_theme(
                                          description="Fichier Excel avec les paramètres (thème, orientation, taille, etc.)"),
         email_notification: Optional[str] = Form("workinmusic.app@gmail.com")
 ):
-    metadata_path = os.path.join(TEMP_DIR, metadata_file.filename)
-    with open(metadata_path, "wb") as f:
-        shutil.copyfileobj(metadata_file.file, f)
+    metadata_path = upload_to_s3(metadata_file, S3_BUCKET, f"uploads/{metadata_file.filename}")
 
     # Envoyer un email
     send_mail(
