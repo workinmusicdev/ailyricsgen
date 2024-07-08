@@ -80,24 +80,9 @@ def process_music_from_docs(file_paths: List[str], metadata_path: str) -> Dict:
         upload_file_in_folder_to_gdrive(output_path, f"data.json", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
         outputs.append(tmp_dict)
 
-    zip_path = os.path.join(ZIP_OUTPUT_DIR, "outputs.zip")
-    with zipfile.ZipFile(zip_path, 'w') as zipf:
-        for root, _, files in os.walk(OUTPUT_DIR):
-            for file in files:
-                zipf.write(os.path.join(root, file), arcname=file)
 
-    for file in os.listdir(OUTPUT_DIR):
-        file_path = os.path.join(OUTPUT_DIR, file)
-        try:
-            if os.path.isfile(file_path) or os.path.islink(file_path):
-                os.unlink(file_path)
-            elif os.path.isdir(file_path):
-                shutil.rmtree(file_path)
-        except Exception as e:
-            print(f"Failed to delete {file_path}. Reason: {e}")
 
-    zip_url = f"/download/{os.path.basename(zip_path)}"
-    return {"download": zip_url, "data": outputs}
+    return { "data": outputs}
 
 
 def process_without_music_from_docs(file_paths: List[str], metadata_path: str) -> Dict:
@@ -160,24 +145,10 @@ def process_without_music_from_docs(file_paths: List[str], metadata_path: str) -
         upload_file_in_folder_to_gdrive(output_path, f"data.json", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
         outputs.append(tmp_dict)
 
-    zip_path = os.path.join(ZIP_OUTPUT_DIR, "outputs.zip")
-    with zipfile.ZipFile(zip_path, 'w') as zipf:
-        for root, _, files in os.walk(OUTPUT_DIR):
-            for file in files:
-                zipf.write(os.path.join(root, file), arcname=file)
 
-    for file in os.listdir(OUTPUT_DIR):
-        file_path = os.path.join(OUTPUT_DIR, file)
-        try:
-            if os.path.isfile(file_path) or os.path.islink(file_path):
-                os.unlink(file_path)
-            elif os.path.isdir(file_path):
-                shutil.rmtree(file_path)
-        except Exception as e:
-            print(f"Failed to delete {file_path}. Reason: {e}")
 
-    zip_url = f"/download/{os.path.basename(zip_path)}"
-    return {"download": zip_url, "data": outputs}
+
+    return {"data": outputs}
 
 
 def process_lyrics_from_theme(metadata_path: str) -> Dict:
@@ -234,21 +205,6 @@ def process_lyrics_from_theme(metadata_path: str) -> Dict:
         upload_file_in_folder_to_gdrive(output_path, f"data.json", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
         outputs.append(tmp_dict)
 
-    zip_path = os.path.join(ZIP_OUTPUT_DIR, "outputs.zip")
-    with zipfile.ZipFile(zip_path, 'w') as zipf:
-        for root, _, files in os.walk(OUTPUT_DIR):
-            for file in files:
-                zipf.write(os.path.join(root, file), arcname=file)
 
-    for file in os.listdir(OUTPUT_DIR):
-        file_path = os.path.join(OUTPUT_DIR, file)
-        try:
-            if os.path.isfile(file_path) or os.path.islink(file_path):
-                os.unlink(file_path)
-            elif os.path.isdir(file_path):
-                shutil.rmtree(file_path)
-        except Exception as e:
-            print(f"Failed to delete {file_path}. Reason: {e}")
 
-    zip_url = f"/download/{os.path.basename(zip_path)}"
-    return {"zip_url": zip_url, "data": outputs}
+    return { "data": outputs}

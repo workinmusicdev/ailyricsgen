@@ -4,6 +4,7 @@ import time
 import zipfile
 
 import aiofiles
+from pyunpack import Archive
 
 from utils.email_notifier import send_mail
 import pandas as pd
@@ -45,6 +46,8 @@ UPLOAD_DIR = "./uploads"
 UPLOAD_DIR = "./uploads"
 OUTPUT_DIR = "./output"
 ZIP_OUTPUT_DIR = "zip_outputs/"
+TEMP_DIR = "/media"
+os.makedirs(TEMP_DIR, exist_ok=True)
 # Créer le répertoire de téléchargement s'il n'existe pas
 os.makedirs(ZIP_OUTPUT_DIR, exist_ok=True)
 if not os.path.exists(UPLOAD_DIR):
@@ -545,27 +548,13 @@ async def download_file(file_name: str):
     return JSONResponse(content={"message": "File not found"}, status_code=404)
 
 
-
 def extract_files_from_zip(zip_path: str, extract_to: str) -> List[str]:
     with zipfile.ZipFile(zip_path, 'r') as zip_ref:
         zip_ref.extractall(extract_to)
     return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
 
 def extract_files_from_rar(rar_path: str, extract_to: str) -> List[str]:
-    subprocess.run(['unrar-free', '-x', rar_path, extract_to], check=True)
-    return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
-
-
-
-
-def extract_files_from_zip(zip_path: str, extract_to: str) -> List[str]:
-    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-        zip_ref.extractall(extract_to)
-    return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
-
-def extract_files_from_rar(rar_path: str, extract_to: str) -> List[str]:
-    with rarfile.RarFile(rar_path) as rar_ref:
-        rar_ref.extractall(extract_to)
+    Archive(rar_path).extractall(extract_to)
     return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
 
 @app.post("/job/generate_music_from_archive/", tags=['text to music (multiple)'])
@@ -574,10 +563,10 @@ async def job_generate_music_from_archive(
         metadata_file: UploadFile = File(..., description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc."),
         email_notification: Optional[str] = Form("workinmusic.app@gmail.com")
 ):
-    archive_extract_path = os.path.join(UPLOAD_DIR, "extracted_files")
+    archive_extract_path = os.path.join(TEMP_DIR, "extracted_files")
     os.makedirs(archive_extract_path, exist_ok=True)
 
-    archive_path = os.path.join(UPLOAD_DIR, archive_file.filename)
+    archive_path = os.path.join(TEMP_DIR, archive_file.filename)
     with open(archive_path, "wb") as f:
         shutil.copyfileobj(archive_file.file, f)
 
@@ -587,9 +576,9 @@ async def job_generate_music_from_archive(
     elif archive_path.endswith(".rar"):
         extracted_files = extract_files_from_rar(archive_path, archive_extract_path)
     else:
-        return {"error": "Unsupported file format. Please upload a zip or rar file."}
+        return JSONResponse(content={"error": "Unsupported file format. Please upload a zip or rar file."}, status_code=400)
 
-    metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
+    metadata_path = os.path.join(TEMP_DIR, metadata_file.filename)
     with open(metadata_path, "wb") as f:
         shutil.copyfileobj(metadata_file.file, f)
 
@@ -614,10 +603,10 @@ async def job_generate_music_from_archive_without_extraction(
         metadata_file: UploadFile = File(..., description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc."),
         email_notification: Optional[str] = Form("workinmusic.app@gmail.com")
 ):
-    archive_extract_path = os.path.join(UPLOAD_DIR, "extracted_files")
+    archive_extract_path = os.path.join(TEMP_DIR, "extracted_files")
     os.makedirs(archive_extract_path, exist_ok=True)
 
-    archive_path = os.path.join(UPLOAD_DIR, archive_file.filename)
+    archive_path = os.path.join(TEMP_DIR, archive_file.filename)
     with open(archive_path, "wb") as f:
         shutil.copyfileobj(archive_file.file, f)
 
@@ -627,9 +616,9 @@ async def job_generate_music_from_archive_without_extraction(
     elif archive_path.endswith(".rar"):
         extracted_files = extract_files_from_rar(archive_path, archive_extract_path)
     else:
-        return {"error": "Unsupported file format. Please upload a zip or rar file."}
+        return JSONResponse(content={"error": "Unsupported file format. Please upload a zip or rar file."}, status_code=400)
 
-    metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
+    metadata_path = os.path.join(TEMP_DIR, metadata_file.filename)
     with open(metadata_path, "wb") as f:
         shutil.copyfileobj(metadata_file.file, f)
 
@@ -653,7 +642,7 @@ async def job_generate_music_from_theme_archive(
         metadata_file: UploadFile = File(..., description="Fichier Excel avec les paramètres (thème, orientation, taille, etc.)"),
         email_notification: Optional[str] = Form("workinmusic.app@gmail.com")
 ):
-    metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
+    metadata_path = os.path.join(TEMP_DIR, metadata_file.filename)
     with open(metadata_path, "wb") as f:
         shutil.copyfileobj(metadata_file.file, f)
 
