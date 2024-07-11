@@ -563,28 +563,62 @@ async def download_file(file_name: str):
         return FileResponse(file_path, media_type='application/octet-stream', filename=file_name)
     return JSONResponse(content={"message": "File not found"}, status_code=404)
 
-
+# Fonction pour extraire les fichiers d'un ZIP
 def extract_files_from_zip(zip_path: str, extract_to: str) -> List[str]:
     with zipfile.ZipFile(zip_path, 'r') as zip_ref:
         zip_ref.extractall(extract_to)
     return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
 
-def extract_files_from_rar(rar_path: str, extract_to: str) -> List[str]:
-    Archive(rar_path).extractall(extract_to)
+
+# Fonction pour extraire les fichiers d'un ZIP
+def extract_files_from_zip(zip_path: str, extract_to: str) -> List[str]:
+    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+        zip_ref.extractall(extract_to)
     return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
 
 
-@app.post("/job/generate_music_from_docs/", tags=['text to music (multiple)'])
-async def job_generate_music_from_docs(
-        document_files: List[UploadFile] = File(...,
-                                                description="Les fichiers documents à traiter (Word, PDF, PowerPoint)"),
+# Fonction pour sauvegarder un fichier uploadé localement
+def save_upload_file(upload_file: UploadFile, destination: str) -> str:
+    try:
+        with open(destination, "wb") as buffer:
+            shutil.copyfileobj(upload_file.file, buffer)
+    finally:
+        upload_file.file.close()
+    return destination
+
+
+# Fonction pour envoyer un email (à implémenter)
+def send_mail(subject: str, message: str, recipient_email: str) -> None:
+    # Implémentation de l'envoi d'email
+    pass
+
+
+# Tâche pour traiter la musique à partir des documents (à implémenter)
+def process_music_from_docs(document_paths: List[str], metadata_path: str) -> None:
+    # Implémentation du traitement
+    pass
+
+
+@app.post("/job/generate_music_from_zip/", tags=['text to music (multiple)'])
+async def job_generate_music_from_zip(
+        document_zip: UploadFile = File(..., description="Le fichier ZIP contenant les documents à traiter"),
         metadata_file: UploadFile = File(...,
                                          description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc."),
         email_notification: Optional[str] = Form("workinmusic.app@gmail.com")
 ):
-    document_paths = [upload_to_s3(document_file, S3_BUCKET, f"uploads/{document_file.filename}") for document_file in
-                      document_files]
-    metadata_path = upload_to_s3(metadata_file, S3_BUCKET, f"uploads/{metadata_file.filename}")
+    # Sauvegarde du fichier ZIP localement
+    zip_path = f"uploads/{document_zip.filename}"
+    os.makedirs(os.path.dirname(zip_path), exist_ok=True)
+    save_upload_file(document_zip, zip_path)
+
+    # Extraction des fichiers du ZIP
+    extract_to = f"uploads/extracted/{os.path.splitext(document_zip.filename)[0]}"
+    os.makedirs(extract_to, exist_ok=True)
+    document_paths = extract_files_from_zip(zip_path, extract_to)
+
+    # Sauvegarde du fichier de métadonnées localement
+    metadata_path = f"uploads/{metadata_file.filename}"
+    save_upload_file(metadata_file, metadata_path)
 
     # Envoyer un email
     send_mail(
@@ -593,6 +627,7 @@ async def job_generate_music_from_docs(
         recipient_email=email_notification
     )
 
+    # Enfile la tâche dans la queue
     job_instance = task_queue.enqueue(
         process_music_from_docs, document_paths, metadata_path,
         job_timeout=172800, retry=Retry(max=3)
@@ -604,43 +639,15 @@ async def job_generate_music_from_docs(
     }
 
 
-@app.post("/job/generate_without_extraction_music_from_docs/", tags=['text to music (multiple)'])
-async def job_generate_music_from_docs_without_extraction(
-        document_files: List[UploadFile] = File(...,
-                                                description="Les fichiers documents à traiter (Word, PDF, PowerPoint)"),
-        metadata_file: UploadFile = File(...,
-                                         description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc."),
-        email_notification: Optional[str] = Form("workinmusic.app@gmail.com")
-):
-    document_paths = [upload_to_s3(document_file, S3_BUCKET, f"uploads/{document_file.filename}") for document_file in
-                      document_files]
-    metadata_path = upload_to_s3(metadata_file, S3_BUCKET, f"uploads/{metadata_file.filename}")
-
-    # Envoyer un email
-    send_mail(
-        subject="WIM Gen : Job start",
-        message=f"Your job has started with {len(document_paths)} files.",
-        recipient_email=email_notification
-    )
-
-    job_instance = task_queue.enqueue(
-        process_without_music_from_docs, document_paths, metadata_path,
-        job_timeout=172800, retry=Retry(max=3)
-    )
-
-    return {
-        "success": True,
-        "job_id": job_instance.id
-    }
-
-
+# Exemple d'utilisation de la route
 @app.post("/job/generate_music_from_theme/", tags=['text to music (multiple)'])
 async def job_generate_music_from_theme(
         metadata_file: UploadFile = File(...,
                                          description="Fichier Excel avec les paramètres (thème, orientation, taille, etc.)"),
         email_notification: Optional[str] = Form("workinmusic.app@gmail.com")
 ):
-    metadata_path = upload_to_s3(metadata_file, S3_BUCKET, f"uploads/{metadata_file.filename}")
+    metadata_path = f"uploads/{metadata_file.filename}"
+    save_upload_file(metadata_file, metadata_path)
 
     # Envoyer un email
     send_mail(
