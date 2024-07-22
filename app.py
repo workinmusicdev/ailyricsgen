@@ -97,6 +97,13 @@ async def job_generate_music_from_docs(
     os.makedirs(extract_to, exist_ok=True)
     document_paths = extract_files(archive_path, extract_to)
 
+    # Check if the files exist and print a message if they don't
+    for path in document_paths:
+        if not os.path.exists(path):
+            print(f"File not found: {path}")
+        else:
+            print(f"File exists: {path}")
+
     # Save the metadata file
     metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
     save_upload_file(metadata_file, metadata_path)
@@ -133,6 +140,13 @@ async def job_generate_music_without_docs(
     extract_to = os.path.join(UPLOAD_DIR, os.path.splitext(document_archive.filename)[0])
     os.makedirs(extract_to, exist_ok=True)
     document_paths = extract_files(archive_path, extract_to)
+
+    # Check if the files exist and print a message if they don't
+    for path in document_paths:
+        if not os.path.exists(path):
+            print(f"File not found: {path}")
+        else:
+            print(f"File exists: {path}")
 
     # Save the metadata file
     metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
