@@ -162,6 +162,39 @@ def save_upload_file(upload_file: UploadFile, destination: str) -> str:
     return destination
 
 @app.post("/job/generate_music_from_docs/", tags=['text to music (multiple)'])
+async def job_generate_music_docs_from_docs(
+        documents: List[UploadFile] = File(..., description="Les fichiers à traiter"),
+        metadata_file: UploadFile = File(..., description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc."),
+        email_notification: Optional[str] = Form("workinmusic.app@gmail.com")
+):
+    document_paths = []
+
+    for document in documents:
+        document_path = f"uploads/{document.filename}"
+        os.makedirs(os.path.dirname(document_path), exist_ok=True)
+        save_upload_file(document, document_path)
+        document_paths.append(document_path)
+
+    metadata_path = f"uploads/{metadata_file.filename}"
+    save_upload_file(metadata_file, metadata_path)
+
+    send_mail(
+        subject="WIM Gen : Job start",
+        message=f"Your job has started with {len(document_paths)} files.",
+        recipient_email=email_notification
+    )
+
+    job_instance = task_queue.enqueue(
+        process_music_from_docs, document_paths, metadata_path,
+        job_timeout=172800, retry=Retry(max=3)
+    )
+
+    return {
+        "success": True,
+        "job_id": job_instance.id
+    }
+
+@app.post("/job/generate_music_without_from_docs/", tags=['text to music (multiple)'])
 async def job_generate_music_without_docs_from_docs(
         documents: List[UploadFile] = File(..., description="Les fichiers à traiter"),
         metadata_file: UploadFile = File(..., description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc."),
@@ -185,7 +218,7 @@ async def job_generate_music_without_docs_from_docs(
     )
 
     job_instance = task_queue.enqueue(
-        process_without_music_from_docs(), document_paths, metadata_path,
+        process_without_music_from_docs, document_paths, metadata_path,
         job_timeout=172800, retry=Retry(max=3)
     )
 
