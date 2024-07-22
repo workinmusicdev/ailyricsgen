@@ -19,10 +19,10 @@ RUN pip install rq uvicorn
 WORKDIR /app
 
 # Copier les fichiers de dépendances
-COPY req.txt .
+COPY requirements.txt .
 
 # Installer les dépendances
-RUN pip install --no-cache-dir -r req.txt
+RUN pip install  -r requirements.txt
 
 # Copier le reste de l'application
 COPY . .
