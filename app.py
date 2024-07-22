@@ -6,7 +6,7 @@ import zipfile
 import aiofiles
 import boto3
 from botocore.exceptions import NoCredentialsError
-from pyunpack import Archive
+
 
 from utils.email_notifier import send_mail
 import pandas as pd
