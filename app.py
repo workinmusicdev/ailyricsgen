@@ -206,3 +206,16 @@ async def download_file(file_name: str):
     if os.path.exists(file_path):
         return FileResponse(file_path, media_type='application/octet-stream', filename=file_name)
     return JSONResponse(content={"message": "File not found"}, status_code=404)
+
+if __name__ == "__main__":
+    import uvicorn
+    import subprocess
+
+    # Start the worker in a separate process
+    worker_process = subprocess.Popen(["rq", "worker", "task_queue"])
+
+    # Start the FastAPI server
+    uvicorn.run(app, host="0.0.0.0", port=8080)
+
+    # Ensure the worker process is terminated when the main process exits
+    worker_process.wait()
