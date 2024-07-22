@@ -2,6 +2,7 @@ import json
 import subprocess
 import time
 import zipfile
+from pyunpack import Archive
 import aiofiles
 import boto3
 from botocore.exceptions import NoCredentialsError
@@ -30,6 +31,7 @@ from rq.registry import StartedJobRegistry, FinishedJobRegistry
 
 load_dotenv()
 app = FastAPI()
+
 # Lire les variables d'environnement pour la configuration de Redis
 redis_host = os.getenv("REDIS_HOST", "localhost")
 redis_port = int(os.getenv("REDIS_PORT", 6379))
@@ -44,16 +46,8 @@ TEMP_DIR = "/media"
 
 # Configure AWS S3
 S3_BUCKET = "wimbucketstorage"
-s3_client = boto3.client('s3', aws_access_key_id='AKIAZQ3DOIWH4GXKQBUP', aws_secret_access_key='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')
-
-def upload_to_s3(file_obj, bucket_name, object_name=None):
-    try:
-        if object_name is None:
-            object_name = file_obj.filename
-        s3_client.upload_fileobj(file_obj.file, bucket_name, object_name)
-        return f"s3://{bucket_name}/{object_name}"
-    except NoCredentialsError:
-        raise HTTPException(status_code=500, detail="Credentials not available")
+s3_client = boto3.client('s3', aws_access_key_id=os.getenv('AWS_ACCESS_KEY_ID'),
+                         aws_secret_access_key=os.getenv('AWS_SECRET_ACCESS_KEY'))
 
 os.makedirs(TEMP_DIR, exist_ok=True)
 os.makedirs(ZIP_OUTPUT_DIR, exist_ok=True)
@@ -69,6 +63,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
 def save_upload_file(upload_file: UploadFile, destination: str) -> str:
     try:
         with open(destination, "wb") as buffer:
@@ -80,19 +75,29 @@ def save_upload_file(upload_file: UploadFile, destination: str) -> str:
         upload_file.file.close()
     return destination
 
+
+def extract_files(archive_path: str, extract_to: str) -> List[str]:
+    Archive(archive_path).extractall(extract_to)
+    return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
+
+
 @app.post("/job/generate_music_from_docs/", tags=['text to music (multiple)'])
 async def job_generate_music_from_docs(
-        documents: List[UploadFile] = File(..., description="Les fichiers à traiter"),
-        metadata_file: UploadFile = File(..., description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc."),
+        document_archive: UploadFile = File(..., description="Le fichier ZIP ou RAR contenant les documents à traiter"),
+        metadata_file: UploadFile = File(...,
+                                         description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc."),
         email_notification: Optional[str] = Form("workinmusic.app@gmail.com")
 ):
-    document_paths = []
+    # Save the uploaded archive file
+    archive_path = os.path.join(UPLOAD_DIR, document_archive.filename)
+    save_upload_file(document_archive, archive_path)
 
-    for document in documents:
-        document_path = os.path.join(UPLOAD_DIR, document.filename)
-        save_upload_file(document, document_path)
-        document_paths.append(document_path)
+    # Extract the archive file
+    extract_to = os.path.join(UPLOAD_DIR, os.path.splitext(document_archive.filename)[0])
+    os.makedirs(extract_to, exist_ok=True)
+    document_paths = extract_files(archive_path, extract_to)
 
+    # Save the metadata file
     metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
     save_upload_file(metadata_file, metadata_path)
 
@@ -112,19 +117,24 @@ async def job_generate_music_from_docs(
         "job_id": job_instance.id
     }
 
+
 @app.post("/job/generate_music_without_docs/", tags=['text to music (multiple)'])
 async def job_generate_music_without_docs(
-        documents: List[UploadFile] = File(..., description="Les fichiers à traiter"),
-        metadata_file: UploadFile = File(..., description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc."),
+        document_archive: UploadFile = File(..., description="Le fichier ZIP ou RAR contenant les documents à traiter"),
+        metadata_file: UploadFile = File(...,
+                                         description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc."),
         email_notification: Optional[str] = Form("workinmusic.app@gmail.com")
 ):
-    document_paths = []
+    # Save the uploaded archive file
+    archive_path = os.path.join(UPLOAD_DIR, document_archive.filename)
+    save_upload_file(document_archive, archive_path)
 
-    for document in documents:
-        document_path = os.path.join(UPLOAD_DIR, document.filename)
-        save_upload_file(document, document_path)
-        document_paths.append(document_path)
+    # Extract the archive file
+    extract_to = os.path.join(UPLOAD_DIR, os.path.splitext(document_archive.filename)[0])
+    os.makedirs(extract_to, exist_ok=True)
+    document_paths = extract_files(archive_path, extract_to)
 
+    # Save the metadata file
     metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
     save_upload_file(metadata_file, metadata_path)
 
@@ -144,9 +154,11 @@ async def job_generate_music_without_docs(
         "job_id": job_instance.id
     }
 
+
 @app.post("/job/generate_music_from_theme/", tags=['text to music (multiple)'])
 async def job_generate_music_from_theme(
-        metadata_file: UploadFile = File(..., description="Fichier Excel avec les paramètres (thème, orientation, taille, etc.)"),
+        metadata_file: UploadFile = File(...,
+                                         description="Fichier Excel avec les paramètres (thème, orientation, taille, etc.)"),
         email_notification: Optional[str] = Form("workinmusic.app@gmail.com")
 ):
     metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
@@ -169,6 +181,7 @@ async def job_generate_music_from_theme(
         "job_id": job_instance.id
     }
 
+
 @app.get("/job/status/{job_id}", tags=["job"])
 async def get_job_status(job_id: str):
     try:
@@ -185,6 +198,7 @@ async def get_job_status(job_id: str):
     else:
         return {"status": job.get_status(), "result": None}
 
+
 @app.get("/queue/status", tags=["job"])
 async def get_queue_status():
     job_ids = task_queue.job_ids
@@ -200,12 +214,14 @@ async def get_queue_status():
         "queued_job_ids": task_queue.job_ids,
     }
 
+
 @app.get("/download/{file_name}", tags=['ressource'])
 async def download_file(file_name: str):
     file_path = os.path.join(ZIP_OUTPUT_DIR, file_name)
     if os.path.exists(file_path):
         return FileResponse(file_path, media_type='application/octet-stream', filename=file_name)
     return JSONResponse(content={"message": "File not found"}, status_code=404)
+
 
 if __name__ == "__main__":
     import uvicorn
