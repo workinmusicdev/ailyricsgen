@@ -1,5 +1,5 @@
 # Utiliser une image officielle Python 3.10 slim comme image de base
-FROM python:3.10-slim
+FROM python:3.9
 LABEL authors="princegedeon03"
 
 # Configurer le fuseau horaire
