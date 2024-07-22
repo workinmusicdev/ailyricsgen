@@ -9,7 +9,7 @@ RUN apt-get update && \
     ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Installer git, unrar et autres dépendances nécessaires
-RUN apt-get install -y git unrar-free && \
+RUN apt-get install -y git  && \
     apt-get clean
 
 # Installer rq (Redis Queue) et uvicorn
