@@ -14,8 +14,7 @@ from dotenv import load_dotenv
 from fastapi import FastAPI, File, UploadFile, Form, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List, Optional
-import tempfile
-import rarfile
+
 import shutil
 import os
 from redis import Redis
