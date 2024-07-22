@@ -1,11 +1,10 @@
 import os
 import shutil
 import time
-import zipfile
+
 import pandas as pd
 import json
 from typing import List, Dict
-import rarfile
 
 from inference.infer_extraction import inference, inference_by_theme, inference_without_rag
 from utils.extraction_ai import extraire_elements_key_from_context
@@ -13,7 +12,7 @@ from utils.googdrive.quickstart import upload_file_in_folder_to_gdrive
 from utils.music_generator_ai import generate_music_lyrics, download_file_by_url
 from utils.parsers_ai import MusicLyrics
 from utils.sunowrapper.generate_song import generate_music, fetch_feed
-from utils.tools import format_lyrics_single_refrain, format_lyrics
+from utils.tools import  format_lyrics
 
 UPLOAD_DIR = "./uploads"
 OUTPUT_DIR = "./output"
