@@ -66,9 +66,9 @@ def process_music_from_docs(file_paths: List[str], metadata_path: str) -> Dict:
 
             name = f"{doc_id}_{style}_{langue}_{matiere}_folder"
             dat["url_drive"] = upload_file_in_folder_to_gdrive(audio_url, f"{doc_id}_v{c}.mp3",
-                                                               '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
+                                                               '1G96vp0rMql5BvZ-es_-RGcNpI5Q6OGvm', name)
             dat["img_drive"] = upload_file_in_folder_to_gdrive(image_url, f"{doc_id}_v{c}.jpeg",
-                                                               '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
+                                                               '1G96vp0rMql5BvZ-es_-RGcNpI5Q6OGvm', name)
             tmp_dict['url'].append(dat)
             c += 1
 
@@ -76,7 +76,7 @@ def process_music_from_docs(file_paths: List[str], metadata_path: str) -> Dict:
 
         with open(output_path, "w", encoding="utf-8") as json_file:
             json.dump(tmp_dict, json_file, ensure_ascii=False, indent=4)
-        upload_file_in_folder_to_gdrive(output_path, f"data.json", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
+        upload_file_in_folder_to_gdrive(output_path, f"data.json", '1G96vp0rMql5BvZ-es_-RGcNpI5Q6OGvm', name)
         outputs.append(tmp_dict)
 
 
@@ -131,9 +131,9 @@ def process_without_music_from_docs(file_paths: List[str], metadata_path: str) -
 
             name = f"{doc_id}_without_{style}_{langue}_{matiere}_folder"
             dat["url_drive"] = upload_file_in_folder_to_gdrive(audio_url, f"{doc_id}_v{c}.mp3",
-                                                               '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
+                                                               '1G96vp0rMql5BvZ-es_-RGcNpI5Q6OGvm', name)
             dat["img_drive"] = upload_file_in_folder_to_gdrive(image_url, f"{doc_id}_v{c}.jpeg",
-                                                               '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
+                                                               '1G96vp0rMql5BvZ-es_-RGcNpI5Q6OGvm', name)
             tmp_dict['url'].append(dat)
             c += 1
 
@@ -141,7 +141,7 @@ def process_without_music_from_docs(file_paths: List[str], metadata_path: str) -
 
         with open(output_path, "w", encoding="utf-8") as json_file:
             json.dump(tmp_dict, json_file, ensure_ascii=False, indent=4)
-        upload_file_in_folder_to_gdrive(output_path, f"data.json", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
+        upload_file_in_folder_to_gdrive(output_path, f"data.json", '1G96vp0rMql5BvZ-es_-RGcNpI5Q6OGvm', name)
         outputs.append(tmp_dict)
 
 
@@ -190,10 +190,10 @@ def process_lyrics_from_theme(metadata_path: str) -> Dict:
             name += f"_{style}_{langue}_{matiere}"
             dat["url_drive"] = upload_file_in_folder_to_gdrive(audio_url,
                                                                f"{dat['title'].replace(' ', '').lower()}_v{c}.mp3",
-                                                               '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
+                                                               '1G96vp0rMql5BvZ-es_-RGcNpI5Q6OGvm', name)
             dat["img_drive"] = upload_file_in_folder_to_gdrive(image_url,
                                                                f"{dat['title'].replace(' ', '').lower()}_v{c}.jpeg",
-                                                               '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
+                                                               '1G96vp0rMql5BvZ-es_-RGcNpI5Q6OGvm', name)
             tmp_dict['url'].append(dat)
             c += 1
 
@@ -201,7 +201,7 @@ def process_lyrics_from_theme(metadata_path: str) -> Dict:
 
         with open(output_path, "w", encoding="utf-8") as json_file:
             json.dump(tmp_dict, json_file, ensure_ascii=False, indent=4)
-        upload_file_in_folder_to_gdrive(output_path, f"data.json", '1GKdhuP-dnsHQgmhgKoYAVDlscWbLZ-2s', name)
+        upload_file_in_folder_to_gdrive(output_path, f"data.json", '1G96vp0rMql5BvZ-es_-RGcNpI5Q6OGvm', name)
         outputs.append(tmp_dict)
 
 
