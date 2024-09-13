@@ -5,7 +5,7 @@ from utils.sunowrapper.constants import BASE_URL
 
 def generate_music(lyrics, title, style):
 
-    url = f"{BASE_URL}/generate"
+    url = f"{BASE_URL}/api/custom_generate"
 
     headers = {
         "Content-Type": "application/json"
@@ -64,8 +64,10 @@ def generate_music(lyrics, title, style):
         raise Exception(f"Failed to generate music: {response.status_code}, {response.text}")
 
 
+# fetch_feed function is used to fetch the generated music clips
 def fetch_feed(aid):
-    url = f"{BASE_URL}/feed/{aid}"
+    
+    url = f"{BASE_URL}/api/get?ids={aid}" # aid = clip_id
     headers = {
         "Content-Type": "application/json"
     }
@@ -79,11 +81,11 @@ def fetch_feed(aid):
             result = {
                 "video_url": item.get("video_url"),
                 "audio_url": item.get("audio_url"),
-                "image_large_url": item.get("image_large_url"),
+                "image_large_url": item.get("image_url"),
                 "title": item.get("title"),
                 "duration": item.get("metadata", {}).get("duration")
             }
-            results.append(result)
+            results.append(result)duration
         return results
     else:
         raise Exception(f"Failed to fetch feed: {response.status_code}, {response.text}")
