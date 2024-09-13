@@ -4,16 +4,52 @@ from utils.sunowrapper.constants import BASE_URL
 
 
 def generate_music(lyrics, title, style):
+
     url = f"{BASE_URL}/generate"
+
     headers = {
         "Content-Type": "application/json"
     }
+
+    # payload = {
+    #     "prompt": lyrics,
+    #     "mv": "chirp-v3-5",
+    #     "title": title,
+    #     "tags": style
+    # }
+
+    # Model: "chirp-v3-5|chirp-v3-0" (chirp-v3-5 is the default model, chirp-v3-0 is the model for the instrumental)
     payload = {
         "prompt": lyrics,
-        "mv": "chirp-v3-5",
+        "model": "chirp-v3-5|chirp-v3-0",
         "title": title,
-        "tags": style
+        "tags": style,
+        "make_instrumental": false,
+        "wait_audio": false
     }
+
+    # {
+    #     "prompt": "[Verse 1]\nCruel flames of war engulf this land\nBattlefields filled with death and dread\nInnocent souls in darkness, they rest\nMy heart trembles in this silent test\n\n[Verse 2]\nPeople weep for loved ones lost\nBattered bodies bear the cost\nSeeking peace and hope once known\nOur grief transforms to hearts of stone\n\n[Chorus]\nSilent battlegrounds, no birds' song\nShadows of war, where we don't belong\nMay flowers of peace bloom in this place\nLet's guard this precious dream with grace\n\n[Bridge]\nThrough the ashes, we will rise\nHand in hand, towards peaceful skies\nNo more sorrow, no more pain\nTogether, we'll break these chains\n\n[Chorus]\nSilent battlegrounds, no birds' song\nShadows of war, where we don't belong\nMay flowers of peace bloom in this place\nLet's guard this precious dream with grace\n\n[Outro]\nIn unity, our strength will grow\nA brighter future, we'll soon know\nFrom the ruins, hope will spring\nA new dawn, we'll together bring",
+    #     "tags": "pop metal male melancholic",
+    #     "title": "Silent Battlefield",
+    #     "make_instrumental": false,
+    #     "model": "chirp-v3-5|chirp-v3-0",
+    #     "wait_audio": false
+    # }
+
+    # {
+    #     "prompt": "A popular heavy metal song about war, sung by a deep-voiced male singer, slowly and melodiously. The lyrics depict the sorrow of people after the war.",
+    #     "make_instrumental": false,
+    #     "model": "chirp-v3-5|chirp-v3-0",
+    #     "wait_audio": false
+    # }
+
+    # {
+    #   "prompt": "A popular heavy metal song about war, sung by a deep-voiced male singer, slowly and melodiously. The lyrics depict the sorrow of people after the war.",
+    #   "make_instrumental": false,
+    #   "model": "chirp-v3-5|chirp-v3-0",
+    #   "wait_audio": false
+    # }
 
     response = requests.post(url, json=payload, headers=headers)
 
@@ -51,4 +87,3 @@ def fetch_feed(aid):
         return results
     else:
         raise Exception(f"Failed to fetch feed: {response.status_code}, {response.text}")
-
