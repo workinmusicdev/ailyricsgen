@@ -1,13 +1,10 @@
 {
   "type": "service_account",
-  "project_id": "inductive-choir-402619",
-  "private_key_id": "08e66c51104aa1f36d5760602ec3a8b280b48870",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC8Ko+fYn7jmPFw\nbPWLu1gDM+YxFHYE9/Bk3Zgf7m3Vld2KlcnVspXLEUqSlC41PAPcWdiSWG2gNH1t\ntjG0bdC7p4u4uARtYRodQnUe30e/NCVb6TIhJVWsYtMR1BaCp5i6Y4eu/RdFIS4Y\nvOXAw2r1FTV3NL9dAjQYt0aYk2x+mr07spX/C3sLs5+P37D5/t8o1ZzJvWhbxppD\nR8AzoLRpnvsQ5PeZP+Wmgu+csBow5Aol5udKlXQzY+IaIumKMMpwq5K5JXiimn+o\nxs4angNFh3fvlb8fDvtetcAS0UriWWpKr/4qJazNcUe+mtROZ+25jiGe02AFLn86\nMXH0OGKnAgMBAAECggEAA6mP1cfnIuszAhsIO+C44tFbozCgnkj+1dDkCT5/NH0r\nh/1s7q9uJqisf50Auc8YzLYkra7NgABTQTgevh2RD8X26hVXZCWc+BP3M+WfyN5/\nYxRvSzPcrpgfiG5NDdyHyy6j45K9yeup1Zf/oDhtfO/44gCoG7Tls4qX8+Ek+Zgc\nAajVcsf25v0fZu+qsc7NENrS9atuTgF8MyPGQcQBANkGO+Rdo+9hh3kwHzZmMlx+\ngJqZzzXBWxIu3v4uanUBqhFJqVhds8rjytVLG8SlpyWJGjWRCGdnD2p6AICND9Dq\nXqfe+qq5b1Uaet0qgfMpIkjP2+Q6w92K+JN0qYp7kQKBgQDqB+yh9jJ7QRlBou8G\ne6Y6Y+Uf04wC7897K2SX9ipWfCpz+FCZNpaxugJjIS8cZbQqZV6pkR1oKUNfbPdh\nXLKyJu0x99o7fOgB3huvB99hwY2KvSJIWkQKQ/5a0/XpFN6gom37hPxhUvfTMeUH\nddlkvGdaLRrkNWp99gygocgUSQKBgQDN1HJiqnA+MCY60iXd5AcLMUd0Z58fsXKf\nNisvJ++L8ewYs8SZuwT/vm2JDC+Zb+7gXPeSe/FwiUmqF4cNdDlnhNCUsaJb/mK6\nHOhCRLWSj+w6t2CM0oZMFYFaf5H8m5GSfrkfwKiZxDjP30Q/TfGL8EoLOUdyas/Z\nnpmaRmzfbwKBgHAK+y9PPzvjHsRdzTG9YQfza26hSRbe2OaPD8nxALQHHgwHhg7U\nI7FS7HGpIXTm/CqP/ZIQ95M2rhqxgH4Mc0D3gfe6QbDZS/oY7AgQLNIQaENT6WXa\nUVjY1J2HfOPqKeud2CnisTGnFx71dEDuGvYvfQufLJC1QhasBb+htLiBAoGAVMt7\n4CflG8mMRllC3lnNiQ/hJxR1WoIo/Ww8eC3UouukXzzX9pk0YwOZbodFqMmTOH00\nRPWorrrwTRFqQuGpsHrnzworIAj5tUCpcnuJ7fo60KmxLfKg/wExDA5YHyAb5aUt\nMOaWztomqYSKQiYjJ4pzhpIvW/Si8j1DfGoc+iMCgYEA0y2nc/uhTfIs9b4v7E7u\nFHkYLjuaiyO2mOnBAX3RQbiDPI8+dcBCNBJaEgZiR1OTWiqDpy9VsywCYRXDc8mB\nisqW8NtrO9rXrVgNyXozc354k8SdTlDflHXGpPSLhQaaWKM+nKIh0uC/FooAjkOd\nZYmzY6whwaN7rXe5bM0EuTE=\n-----END PRIVATE KEY-----\n",
-  "client_email": "192351572560-compute@developer.gserviceaccount.com",
-  "client_id": "115733161650430976247",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/192351572560-compute%40developer.gserviceaccount.com",
-  "universe_domain": "googleapis.com"
+  "client_id":"92655225164-dh0bcqotgk3asvgq0u0fqpv1qu1roh6f.apps.googleusercontent.com",
+  "project_id":"musicgeneration-435721",
+  "auth_uri":"https://accounts.google.com/o/oauth2/auth",
+  "token_uri":"https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
+  "client_secret":"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",
+  "redirect_uris":["http://localhost:8080","http://localhost:8002","https://api.workinmusic.fr/"]
 }

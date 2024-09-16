@@ -24,8 +24,8 @@ def generate_music(lyrics, title, style):
         "model": "chirp-v3-5|chirp-v3-0",
         "title": title,
         "tags": style,
-        "make_instrumental": false,
-        "wait_audio": false
+        "make_instrumental": False,
+        "wait_audio": False
     }
 
     # {
@@ -85,7 +85,7 @@ def fetch_feed(aid):
                 "title": item.get("title"),
                 "duration": item.get("metadata", {}).get("duration")
             }
-            results.append(result)duration
+            results.append(result)
         return results
     else:
         raise Exception(f"Failed to fetch feed: {response.status_code}, {response.text}")
