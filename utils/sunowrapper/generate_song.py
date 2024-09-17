@@ -28,6 +28,10 @@ def generate_music(lyrics, title, style):
         "wait_audio": False
     }
 
+    print("\n")
+    print(payload)
+    print("\n")
+
     # {
     #     "prompt": "[Verse 1]\nCruel flames of war engulf this land\nBattlefields filled with death and dread\nInnocent souls in darkness, they rest\nMy heart trembles in this silent test\n\n[Verse 2]\nPeople weep for loved ones lost\nBattered bodies bear the cost\nSeeking peace and hope once known\nOur grief transforms to hearts of stone\n\n[Chorus]\nSilent battlegrounds, no birds' song\nShadows of war, where we don't belong\nMay flowers of peace bloom in this place\nLet's guard this precious dream with grace\n\n[Bridge]\nThrough the ashes, we will rise\nHand in hand, towards peaceful skies\nNo more sorrow, no more pain\nTogether, we'll break these chains\n\n[Chorus]\nSilent battlegrounds, no birds' song\nShadows of war, where we don't belong\nMay flowers of peace bloom in this place\nLet's guard this precious dream with grace\n\n[Outro]\nIn unity, our strength will grow\nA brighter future, we'll soon know\nFrom the ruins, hope will spring\nA new dawn, we'll together bring",
     #     "tags": "pop metal male melancholic",
@@ -55,7 +59,12 @@ def generate_music(lyrics, title, style):
 
     if response.status_code == 200:
         data = response.json()
-        clip_ids = [clip["id"] for clip in data.get("clips", [])]
+        print("\n")
+        print(data)
+        print("\n")
+        print(data)
+        clip_ids = [clip["id"] for clip in data] # .get("clips", [])
+        print(clip_ids)
         if len(clip_ids) >= 2:
             return clip_ids[:2]
         else:
@@ -83,7 +92,7 @@ def fetch_feed(aid):
                 "audio_url": item.get("audio_url"),
                 "image_large_url": item.get("image_url"),
                 "title": item.get("title"),
-                "duration": item.get("metadata", {}).get("duration")
+                "duration": item.get("duration")
             }
             results.append(result)
         return results

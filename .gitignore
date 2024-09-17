@@ -7,5 +7,6 @@ output
 utils/googdrive/certificates.json
 utils/googdrive/credentials.json
 utils/googdrive/client_secrets.json
-
-
+.idea/
+__pycache__/
+venv.zip
