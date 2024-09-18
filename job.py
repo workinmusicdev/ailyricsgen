@@ -8,7 +8,7 @@ from typing import List, Dict
 
 from inference.infer_extraction import inference, inference_by_theme, inference_without_rag
 from utils.extraction_ai import extraire_elements_key_from_context
-from utils.googdrive.quickstart import upload_file_in_folder_to_gdrive
+from utils.googdrive.quickstart import upload_file_in_folder_to_gdrive, upload_file_to_s3
 from utils.music_generator_ai import generate_music_lyrics, download_file_by_url
 from utils.parsers_ai import MusicLyrics
 from utils.sunowrapper.generate_song import generate_music, fetch_feed
@@ -65,18 +65,16 @@ def process_music_from_docs(file_paths: List[str], metadata_path: str) -> Dict:
             image_url = download_file_by_url(dat['image_large_url'])
 
             name = f"{doc_id}_{style}_{langue}_{matiere}_folder"
-            dat["url_drive"] = upload_file_in_folder_to_gdrive(audio_url, f"{doc_id}_v{c}.mp3",
-                                                               '1G96vp0rMql5BvZ-es_-RGcNpI5Q6OGvm', name)
-            dat["img_drive"] = upload_file_in_folder_to_gdrive(image_url, f"{doc_id}_v{c}.jpeg",
-                                                               '1G96vp0rMql5BvZ-es_-RGcNpI5Q6OGvm', name)
+            dat["url_drive"] = upload_file_to_s3(audio_url, f"{doc_id}_v{c}.mp3", name)
+            dat["img_drive"] = upload_file_to_s3(image_url, f"{doc_id}_v{c}.jpeg", name)
             tmp_dict['url'].append(dat)
             c += 1
 
         output_path = os.path.join(OUTPUT_DIR, f"{doc_id}_output.json")
 
-        with open(output_path, "w", encoding="utf-8") as json_file:
+        with open(output_path, "w", encoding="utf-8") as json_file: # 1tIK3iYywsTc_gDLs0DP8kOe7OjYwLhMT
             json.dump(tmp_dict, json_file, ensure_ascii=False, indent=4)
-        upload_file_in_folder_to_gdrive(output_path, f"data.json", '1G96vp0rMql5BvZ-es_-RGcNpI5Q6OGvm', name)
+        upload_file_to_s3(output_path, f"data.json",  name)
         outputs.append(tmp_dict)
 
 
@@ -130,10 +128,8 @@ def process_without_music_from_docs(file_paths: List[str], metadata_path: str) -
             image_url = download_file_by_url(dat['image_large_url'])
 
             name = f"{doc_id}_without_{style}_{langue}_{matiere}_folder"
-            dat["url_drive"] = upload_file_in_folder_to_gdrive(audio_url, f"{doc_id}_v{c}.mp3",
-                                                               '1G96vp0rMql5BvZ-es_-RGcNpI5Q6OGvm', name)
-            dat["img_drive"] = upload_file_in_folder_to_gdrive(image_url, f"{doc_id}_v{c}.jpeg",
-                                                               '1G96vp0rMql5BvZ-es_-RGcNpI5Q6OGvm', name)
+            dat["url_drive"] = upload_file_to_s3(audio_url, f"{doc_id}_v{c}.mp3", name)
+            dat["img_drive"] = upload_file_to_s3(image_url, f"{doc_id}_v{c}.jpeg", name)
             tmp_dict['url'].append(dat)
             c += 1
 
@@ -141,7 +137,7 @@ def process_without_music_from_docs(file_paths: List[str], metadata_path: str) -
 
         with open(output_path, "w", encoding="utf-8") as json_file:
             json.dump(tmp_dict, json_file, ensure_ascii=False, indent=4)
-        upload_file_in_folder_to_gdrive(output_path, f"data.json", '1G96vp0rMql5BvZ-es_-RGcNpI5Q6OGvm', name)
+        upload_file_to_s3(output_path, f"data.json", name)
         outputs.append(tmp_dict)
 
 
@@ -188,12 +184,8 @@ def process_lyrics_from_theme(metadata_path: str) -> Dict:
             image_url = download_file_by_url(dat['image_large_url'])
             name = dat["title"].replace(' ', '').lower()
             name += f"_{style}_{langue}_{matiere}"
-            dat["url_drive"] = upload_file_in_folder_to_gdrive(audio_url,
-                                                               f"{dat['title'].replace(' ', '').lower()}_v{c}.mp3",
-                                                               '1G96vp0rMql5BvZ-es_-RGcNpI5Q6OGvm', name)
-            dat["img_drive"] = upload_file_in_folder_to_gdrive(image_url,
-                                                               f"{dat['title'].replace(' ', '').lower()}_v{c}.jpeg",
-                                                               '1G96vp0rMql5BvZ-es_-RGcNpI5Q6OGvm', name)
+            dat["url_drive"] = upload_file_to_s3(audio_url,f"{dat['title'].replace(' ', '').lower()}_v{c}.mp3", name)
+            dat["img_drive"] = upload_file_to_s3(image_url,f"{dat['title'].replace(' ', '').lower()}_v{c}.jpeg",name)
             tmp_dict['url'].append(dat)
             c += 1
 
@@ -201,7 +193,7 @@ def process_lyrics_from_theme(metadata_path: str) -> Dict:
 
         with open(output_path, "w", encoding="utf-8") as json_file:
             json.dump(tmp_dict, json_file, ensure_ascii=False, indent=4)
-        upload_file_in_folder_to_gdrive(output_path, f"data.json", '1G96vp0rMql5BvZ-es_-RGcNpI5Q6OGvm', name)
+        upload_file_to_s3(output_path, f"data.json", name)
         outputs.append(tmp_dict)
 
 

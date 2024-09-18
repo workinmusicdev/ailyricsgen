@@ -10,3 +10,5 @@ utils/googdrive/client_secrets.json
 .idea/
 __pycache__/
 venv.zip
+.test_upload.py
+venv2/
