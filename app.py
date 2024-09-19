@@ -101,9 +101,9 @@ async def job_generate_music_from_docs(
     # Check if the files exist and print a message if they don't
     for path in document_paths:
         if not os.path.exists(path):
-            print(f"File not found: {path}")
+            print(f"**** File not found: {path}")
         else:
-            print(f"File exists: {path}")
+            print(f"**** File exists: {path}")
 
     # Save the metadata file
     metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
