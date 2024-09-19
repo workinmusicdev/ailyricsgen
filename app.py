@@ -29,6 +29,7 @@ from utils.sunowrapper.generate_song import fetch_feed, generate_music
 from utils.tools import format_lyrics_single_refrain, format_lyrics_single_refrain
 from rq.job import Job, Retry
 from rq.registry import StartedJobRegistry, FinishedJobRegistry
+import logging
 
 load_dotenv()
 app = FastAPI()
@@ -39,6 +40,7 @@ redis_port = int(os.getenv("REDIS_PORT", 6379))
 
 redis_conn = Redis(host=redis_host, port=redis_port)
 task_queue = Queue("task_queue", connection=redis_conn, default_timeout=172800)
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 UPLOAD_DIR = "./uploads"
 OUTPUT_DIR = "./output"
@@ -66,64 +68,82 @@ app.add_middleware(
 
 
 def save_upload_file(upload_file: UploadFile, destination: str) -> str:
+    logging.info(f"Saving file '{upload_file.filename}' to {destination}")
     try:
         with open(destination, "wb") as buffer:
             shutil.copyfileobj(upload_file.file, buffer)
-        print(f"File saved to {destination}")  # Ajoutez cette ligne pour vérifier que le fichier est sauvegardé
+        logging.info(f"File '{upload_file.filename}' successfully saved to {destination}")
     except Exception as e:
-        print(f"Error saving file {upload_file.filename}: {e}")
+        logging.error(f"Error saving file '{upload_file.filename}': {e}")
     finally:
         upload_file.file.close()
     return destination
 
 
 def extract_files(archive_path: str, extract_to: str) -> List[str]:
-    Archive(archive_path).extractall(extract_to)
+    logging.info(f"Extracting archive '{archive_path}' to {extract_to}")
+    try:
+        Archive(archive_path).extractall(extract_to)
+        logging.info(f"Archive '{archive_path}' successfully extracted to {extract_to}")
+    except Exception as e:
+        logging.error(f"Error extracting archive '{archive_path}': {e}")
+        raise e  # Raise the exception to ensure the error is propagated
     return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
 
 
 @app.post("/job/generate_music_from_docs/", tags=['text to music (multiple)'])
 async def job_generate_music_from_docs(
         document_archive: UploadFile = File(..., description="Le fichier ZIP ou RAR contenant les documents à traiter"),
-        metadata_file: UploadFile = File(...,
-                                         description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc."),
+        metadata_file: UploadFile = File(..., description="Fichier Excel ou CSV avec les paramètres d'orientation, taille, style, etc."),
         email_notification: Optional[str] = Form("workinmusic.app@gmail.com")
 ):
+    logging.info("Job 'generate_music_from_docs' started")
+    
     # Save the uploaded archive file
     archive_path = os.path.join(UPLOAD_DIR, document_archive.filename)
+    logging.info(f"Saving uploaded archive to '{archive_path}'")
     save_upload_file(document_archive, archive_path)
 
     # Extract the archive file
     extract_to = os.path.join(UPLOAD_DIR, os.path.splitext(document_archive.filename)[0])
     os.makedirs(extract_to, exist_ok=True)
+    logging.info(f"Extracting archive to '{extract_to}'")
     document_paths = extract_files(archive_path, extract_to)
 
-    # Check if the files exist and print a message if they don't
+    # Check if the files exist and log the result
     for path in document_paths:
         if not os.path.exists(path):
-            print(f"**** File not found: {path}")
+            logging.warning(f"File not found: {path}")
         else:
-            print(f"**** File exists: {path}")
+            logging.info(f"File exists: {path}")
 
     # Save the metadata file
     metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
+    logging.info(f"Saving metadata file to '{metadata_path}'")
     save_upload_file(metadata_file, metadata_path)
 
+    # Send email notification
+    logging.info(f"Sending start job notification to '{email_notification}'")
     send_mail(
         subject="WIM Gen : Job start",
         message=f"Your job has started with {len(document_paths)} files.",
         recipient_email=email_notification
     )
 
+    # Enqueue the job
+    logging.info(f"Enqueuing job for processing")
     job_instance = task_queue.enqueue(
         process_music_from_docs, document_paths, metadata_path,
         job_timeout=172800, retry=Retry(max=3)
     )
 
+    logging.info(f"Job successfully enqueued with ID '{job_instance.id}'")
+
     return {
         "success": True,
         "job_id": job_instance.id
     }
+
 
 
 @app.post("/job/generate_music_without_docs/", tags=['text to music (multiple)'])
