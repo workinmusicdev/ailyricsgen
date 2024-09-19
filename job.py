@@ -39,28 +39,53 @@ def process_music_from_docs(file_paths: List[str], metadata_path: str) -> Dict:
         niveau = row['niveau']
         matiere = row['matiere']
 
+        #
+        print("doc_id, orientation, style, langue, niveau, matiere")
+        print(doc_id, orientation, style, langue, niveau, matiere)
+        print("doc_id, orientation, style, langue, niveau, matiere")
+
         file_path = next((path for path in file_paths if os.path.basename(path).startswith(doc_id)), None)
         print(file_path)
         if not file_path:
+            print("No file found !")
             continue
 
         data = inference(file_path, orientation=orientation, langue=langue, niveau=niveau, matiere=matiere,
                          k=niv_detail)
+        
+        print('data')
         print(data)
         print('data')
+
         os.remove(file_path)
         elements = data['answer']
         data = generate_music_lyrics(elements=elements, style=style, orientation=orientation, langue=langue)
 
+        print("data")
+        print(data)
+
         out = MusicLyrics.parse_obj(data)
+        print(out)
+
         tmp_dict = out.to_dict()
+        print("tmp_dict")
+        print(tmp_dict)
+        print("tmp_dict")
+
+
         tmp_dict['url'] = []
         tmp_dict['langue'] = langue
         tmp_dict["music"] = generate_music(format_lyrics(out.lyrics), out.title, out.style)
+
+        print("tmp_dict")
+        print(tmp_dict)
+        print("tmp_dict")
+        print("BEFORE THE SLEEPING  <-------------> STEP 1 achieved")
         time.sleep(300)
 
         c = 1
         name = ""
+
         for music_id in tmp_dict["music"]:
             print(music_id)
             print('fetching feed')
