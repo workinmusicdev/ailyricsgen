@@ -12,3 +12,4 @@ __pycache__/
 venv.zip
 .test_upload.py
 venv2/
+uploads/

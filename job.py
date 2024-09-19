@@ -40,11 +40,14 @@ def process_music_from_docs(file_paths: List[str], metadata_path: str) -> Dict:
         matiere = row['matiere']
 
         file_path = next((path for path in file_paths if os.path.basename(path).startswith(doc_id)), None)
+        print(file_path)
         if not file_path:
             continue
 
         data = inference(file_path, orientation=orientation, langue=langue, niveau=niveau, matiere=matiere,
                          k=niv_detail)
+        print(data)
+        print('data')
         os.remove(file_path)
         elements = data['answer']
         data = generate_music_lyrics(elements=elements, style=style, orientation=orientation, langue=langue)
@@ -59,12 +62,15 @@ def process_music_from_docs(file_paths: List[str], metadata_path: str) -> Dict:
         c = 1
         name = ""
         for music_id in tmp_dict["music"]:
+            print(music_id)
+            print('fetching feed')
             dat = fetch_feed(music_id)[0]
 
             audio_url = download_file_by_url(dat['audio_url'])
             image_url = download_file_by_url(dat['image_large_url'])
 
             name = f"{doc_id}_{style}_{langue}_{matiere}_folder"
+            print(name)
             dat["url_drive"] = upload_file_to_s3(audio_url, f"{doc_id}_v{c}.mp3", name)
             dat["img_drive"] = upload_file_to_s3(image_url, f"{doc_id}_v{c}.jpeg", name)
             tmp_dict['url'].append(dat)
