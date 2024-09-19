@@ -80,7 +80,7 @@ def save_upload_file(upload_file: UploadFile, destination: str) -> str:
     return destination
 
 
-def extract_files(archive_path: str, extract_to: str) -> List[str]:
+def extract_files(archive_path: str, extract_to: str, filename: str) -> List[str]:
     logging.info(f"Extracting archive '{archive_path}' to {extract_to}")
     try:
         Archive(archive_path).extractall(extract_to)
@@ -88,6 +88,8 @@ def extract_files(archive_path: str, extract_to: str) -> List[str]:
     except Exception as e:
         logging.error(f"Error extracting archive '{archive_path}': {e}")
         raise e  # Raise the exception to ensure the error is propagated
+    
+    extract_to = os.path.join(extract_to, filename)
     return [os.path.join(extract_to, file) for file in os.listdir(extract_to)]
 
 
@@ -108,7 +110,7 @@ async def job_generate_music_from_docs(
     extract_to = os.path.join(UPLOAD_DIR, os.path.splitext(document_archive.filename)[0])
     os.makedirs(extract_to, exist_ok=True)
     logging.info(f"Extracting archive to '{extract_to}'")
-    document_paths = extract_files(archive_path, extract_to)
+    document_paths = extract_files(archive_path, extract_to,os.path.splitext(document_archive.filename)[0])
 
     # Check if the files exist and log the result
     for path in document_paths:
@@ -160,7 +162,7 @@ async def job_generate_music_without_docs(
     # Extract the archive file
     extract_to = os.path.join(UPLOAD_DIR, os.path.splitext(document_archive.filename)[0])
     os.makedirs(extract_to, exist_ok=True)
-    document_paths = extract_files(archive_path, extract_to)
+    document_paths = extract_files(archive_path, extract_to, os.path.splitext(document_archive.filename)[0])
 
     # Check if the files exist and print a message if they don't
     for path in document_paths:
