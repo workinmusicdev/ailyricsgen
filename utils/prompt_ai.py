@@ -68,7 +68,11 @@ def get_lyrics_generator_prompt(mode, langue):
     
     if str(langue).lower == "anglais":
 
-        music_template = """En te basant entièrement sur les informations suivantes : {elements},
+        print("##################")
+        print(langue)
+        print("##################")
+
+        music_template = r"""En te basant entièrement sur les informations suivantes : {elements},
         Génère des paroles en {langue} et en français, abordant essentiellement {orientation} dans le style {style}, avec un refrain et plusieurs couplets dont tu détermineras automatiquement le nombre en fonction du contenu.
         L'objectif est d'aider un élève francophone à apprendre l'anglais à travers une combinaison harmonieuse des deux langues dans la chanson. Le français doit être utilisé comme soutien pour introduire ou clarifier des concepts en anglais, de manière fluide et naturelle.
 
@@ -107,12 +111,14 @@ def get_lyrics_generator_prompt(mode, langue):
                 \n{format_instruction}
                 """
 
-# Si la langue est anglais, ne génère
+    # Si la langue est anglais, ne génère pas de paroles en français
 
     music_prompt_template = PromptTemplate(
         template=music_template,
         input_variables=['elements', 'style', 'num_verses', 'taille','orientation'],
         partial_variables={'format_instruction': music_lyrics_parser.get_format_instructions()}
     )
+
+    print(music_prompt_template)
 
     return music_prompt_template
