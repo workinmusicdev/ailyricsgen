@@ -8,7 +8,14 @@ from utils.parsers_ai import MusicLyrics, music_lyrics_parser
 from utils.prompt_ai import get_lyrics_generator_prompt
 
 def generate_music_lyrics(elements, style, orientation,num_verses=3, taille=1500,mode="auto",langue="français"):
+
+    print("##################")
+    print(langue)
+    print("##################")
     prompt = get_lyrics_generator_prompt(mode, langue)
+    print("##################")
+    print(prompt)
+    print("##################")
     llm = ChatOpenAI(temperature=0.05, model_name="gpt-4o",)
     chain = prompt | llm | music_lyrics_parser
 

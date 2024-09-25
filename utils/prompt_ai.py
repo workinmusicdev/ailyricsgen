@@ -69,7 +69,7 @@ def get_lyrics_generator_prompt(mode, langue):
     if str(langue).lower == "anglais":
 
         music_template = """En te basant entièrement sur les informations suivantes : {elements},
-        Génère des paroles en anglais et en français, abordant essentiellement {orientation} dans le style {style}, avec un refrain et plusieurs couplets dont tu détermineras automatiquement le nombre en fonction du contenu.
+        Génère des paroles en {langue} et en français, abordant essentiellement {orientation} dans le style {style}, avec un refrain et plusieurs couplets dont tu détermineras automatiquement le nombre en fonction du contenu.
         L'objectif est d'aider un élève francophone à apprendre l'anglais à travers une combinaison harmonieuse des deux langues dans la chanson. Le français doit être utilisé comme soutien pour introduire ou clarifier des concepts en anglais, de manière fluide et naturelle.
 
         La chanson doit comporter :
