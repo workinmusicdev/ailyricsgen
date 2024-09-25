@@ -63,14 +63,14 @@ def prompt_format_to_human_lyrics():
 
     return prompt
 
-def get_lyrics_generator_prompt(mode, langue):
+def get_lyrics_generator_prompt(mode, langue:str):
 
     print("################## ***")
-    print(str(langue).lower)
+    print(langue.lower)
     print("################## ***")
 
     
-    if str(langue).lower == "anglais":
+    if langue.lower == "anglais":
 
         print("##################")
         print(langue,"anglais mode") 
@@ -94,7 +94,7 @@ def get_lyrics_generator_prompt(mode, langue):
         print("##################")
         print(langue,"français mode") 
         print("##################")
-        
+
         if mode=="auto":
             music_template = r""""
                         En te basant entièrement sur les informations suivantes : {elements},
