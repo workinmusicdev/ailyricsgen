@@ -63,31 +63,51 @@ def prompt_format_to_human_lyrics():
 
     return prompt
 
-def get_lyrics_generator_prompt(mode):
-    if mode=="auto":
-        music_template = r""""
-                    En te basant entièrement sur les informations suivantes : {elements},
-                    Générez lyrics en {langue} abordant essentiellement {orientation}  dans le style {style} avec un refrain et des couplets dont tu déterminenras automatiquement le nombre en fonction du contenu.
-                    La chanson doit comporter :
-                    1. Un refrain répétitif et mémorable, résumant les idées principales.
-                    2. plusieurs  couplets dont tu détermineras le nombre.
-                    3. Chaque couplet, refrain et pont doit contenir au minimum 4 vers.Et chaque vers séparé par \n"
-                    4. La taille minimum est 1500 caractères.
-                    
-                    \n{format_instruction}
-                    """
+def get_lyrics_generator_prompt(mode, langue):
+
+    
+    if str(langue).lower == "anglais":
+
+        music_template = """En te basant entièrement sur les informations suivantes : {elements},
+        Génère des paroles en anglais et en français, abordant essentiellement {orientation} dans le style {style}, avec un refrain et plusieurs couplets dont tu détermineras automatiquement le nombre en fonction du contenu.
+        L'objectif est d'aider un élève francophone à apprendre l'anglais à travers une combinaison harmonieuse des deux langues dans la chanson. Le français doit être utilisé comme soutien pour introduire ou clarifier des concepts en anglais, de manière fluide et naturelle.
+
+        La chanson doit comporter :
+
+        1. Un refrain répétitif et mémorable, où l'anglais et le français se complètent pour renforcer la mémorisation des idées principales.
+        2. Plusieurs couplets dont tu détermineras le nombre, avec une alternance fluide entre l'anglais et le français dans chaque couplet pour aider à comprendre le vocabulaire et les structures anglaises.
+        3. Chaque couplet, refrain et pont doit contenir au minimum 4 vers, avec une combinaison naturelle des deux langues, et chaque vers séparé par un \n.
+        4. La taille minimum est de 1500 caractères.
+        \n{format_instruction}
+        """
+    
     else:
-        music_template = r""""
-            En te basant entièrement sur les informations suivantes : {elements},
-            Générez lyrics en {langue} abordant essentiellement {orientation}  dans le style {style} avec un refrain, {num_verses} couplets et un pont.
-            La chanson doit comporter :
-            1. Un refrain répétitif et mémorable, résumant les idées principales.
-            2. {num_verses} couplets.
-            3. Chaque couplet, refrain et pont doit contenir au minimum 4 vers.Et chaque vers séparé par \n"
-            4. La taille minimum est 1200 caractères et au maximum 1400 caraactères.
-            
-            \n{format_instruction}
-            """
+        if mode=="auto":
+            music_template = r""""
+                        En te basant entièrement sur les informations suivantes : {elements},
+                        Générez lyrics en {langue} abordant essentiellement {orientation}  dans le style {style} avec un refrain et des couplets dont tu déterminenras automatiquement le nombre en fonction du contenu.
+                        La chanson doit comporter :
+                        1. Un refrain répétitif et mémorable, résumant les idées principales.
+                        2. plusieurs  couplets dont tu détermineras le nombre.
+                        3. Chaque couplet, refrain et pont doit contenir au minimum 4 vers.Et chaque vers séparé par \n"
+                        4. La taille minimum est 1500 caractères.
+                        
+                        \n{format_instruction}
+                        """
+        else:
+            music_template = r""""
+                En te basant entièrement sur les informations suivantes : {elements},
+                Générez lyrics en {langue} abordant essentiellement {orientation}  dans le style {style} avec un refrain, {num_verses} couplets et un pont.
+                La chanson doit comporter :
+                1. Un refrain répétitif et mémorable, résumant les idées principales.
+                2. {num_verses} couplets.
+                3. Chaque couplet, refrain et pont doit contenir au minimum 4 vers.Et chaque vers séparé par \n"
+                4. La taille minimum est 1200 caractères et au maximum 1400 caraactères.
+                
+                \n{format_instruction}
+                """
+
+# Si la langue est anglais, ne génère
 
     music_prompt_template = PromptTemplate(
         template=music_template,
