@@ -85,6 +85,9 @@ def fetch_feed(aid):
 
     if response.status_code == 200:
         data = response.json()
+        print("data")
+        print(data)
+        print("data")
         results = []
         for item in data:
             result = {

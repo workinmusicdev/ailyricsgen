@@ -81,7 +81,7 @@ def process_music_from_docs(file_paths: List[str], metadata_path: str) -> Dict:
         print(tmp_dict)
         print("tmp_dict")
         print("BEFORE THE SLEEPING  <-------------> STEP 1 achieved")
-        time.sleep(300)
+        time.sleep(500)
 
         c = 1
         name = ""
