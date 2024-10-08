@@ -148,7 +148,7 @@ def process_without_music_from_docs(file_paths: List[str], metadata_path: str) -
         tmp_dict['url'] = []
         tmp_dict['langue'] = langue
         tmp_dict["music"] = generate_music(format_lyrics(out.lyrics), out.title, out.style)
-        time.sleep(300)
+        time.sleep(500)
 
         c = 1
         name = ""
@@ -200,12 +200,15 @@ def process_lyrics_from_theme(metadata_path: str) -> Dict:
         tmp = extraire_elements_key_from_context(a, orientation)
 
         data = generate_music_lyrics(elements=tmp.content, style=style, langue=langue, orientation=orientation)
+        print("------------------------------")
+        print(data)
+        print('------------------------------')
         out = MusicLyrics.parse_obj(data)
         tmp_dict = out.to_dict()
         tmp_dict['url'] = []
         tmp_dict['langue'] = langue
         tmp_dict["music"] = generate_music(format_lyrics(out.lyrics), out.title, out.style)
-        time.sleep(300)
+        time.sleep(500)
 
         c = 1
         name = ""
