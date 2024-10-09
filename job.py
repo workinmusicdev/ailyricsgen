@@ -189,6 +189,8 @@ def process_lyrics_from_theme(metadata_path: str) -> Dict:
     outputs = []
 
     for index, row in df.iterrows():
+        
+        id_row = str(row.get('id', ''))
         theme = row['theme']
         orientation = row['orientation']
         style = row['style']
@@ -216,7 +218,7 @@ def process_lyrics_from_theme(metadata_path: str) -> Dict:
             dat = fetch_feed(music_id)[0]
             audio_url = download_file_by_url(dat['audio_url'])
             image_url = download_file_by_url(dat['image_large_url'])
-            name = dat["title"].replace(' ', '').lower()
+            name = id_row + '_' + dat["title"].replace(' ', '').lower()
             name += f"_{style}_{langue}_{matiere}"
             dat["url_drive"] = upload_file_to_s3(audio_url,f"{dat['title'].replace(' ', '').lower()}_v{c}.mp3", name)
             dat["img_drive"] = upload_file_to_s3(image_url,f"{dat['title'].replace(' ', '').lower()}_v{c}.jpeg",name)
