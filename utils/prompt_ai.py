@@ -102,25 +102,23 @@ Exemple de structure :
 
 Hello, hello, what's your name?
 
-(Bonjour, bonjour, comment tu t’appelles ?)
+Bonjour, bonjour, comment tu t’appelles ?
 
 
 Hello, hello, what's your name?
 
-(Bonjour, bonjour, comment tu t’appelles ?)
+Bonjour, bonjour, comment tu t’appelles ?
 
 
 
 My name is... 
 
-(Je m’appelle...)
-
+Je m’appelle...
 
 
 My name is... 
 
-(Je m’appelle...)
-
+Je m’appelle...
 
 
 Refrain :
@@ -129,11 +127,11 @@ Refrain :
 
 Nice to meet you, how are you?
 
-(Enchanté, comment vas-tu ?)
+Enchanté, comment vas-tu ?
 
 Nice to meet you, how are you?
 
-(Enchanté, comment vas-tu ?)
+Enchanté, comment vas-tu ?
 
 Couplet 2
 
@@ -141,25 +139,25 @@ Couplet 2
 
 I’m fine, thank you!
 
-(Je vais bien, merci !)
+Je vais bien, merci !
 
 
 
 I’m fine, thank you!
 
-(Je vais bien, merci !)
+Je vais bien, merci !
 
 
 
 And you? How are you?
 
-(Et toi ? Comment vas-tu ?)
+Et toi ? Comment vas-tu ?
 
 
 
 And you? How are you?
 
-(Et toi ? Comment vas-tu ?)
+Et toi ? Comment vas-tu ?
 
 
 
@@ -169,11 +167,11 @@ Refrain :
 
 Nice to meet you, how are you?
 
-(Enchanté, comment vas-tu ?)
+Enchanté, comment vas-tu ?
 
 Nice to meet you, how are you?
 
-(Enchanté, comment vas-tu ?)
+Enchanté, comment vas-tu ?
 
 \n{format_instruction}
 """
