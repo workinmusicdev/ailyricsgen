@@ -94,6 +94,7 @@ def get_lyrics_generator_prompt(mode, langue:str):
         Génère des lyrics sous forme de conversation pour une chanson éducative conçue pour aider des élèves débutants à apprendre l'{langue}. Ces élèves n'ont aucune connaissance préalable de l'anglais et leur langue maternelle est le français. La chanson doit suivre un format de dialogue entre deux personnes, l'un posant des questions et l'autre répondant, en se concentrant sur cette orientation ({orientation})  dans le style suivant {style}. Le but est de permettre aux élèves d'apprendre {orientation}, tout en rendant les mots et les phrases facilement reconnaissables et mémorables.
 
 Chaque ligne ou phrase en anglais doit être accompagnée de sa traduction en français pour établir une association linguistique claire. Le dialogue doit être répétitif et amical, avec un rythme modéré pour faciliter l'apprentissage. Des répétitions doivent être utilisées pour renforcer la mémorisation, et le ton doit être ludique et encourageant pour rendre l'expérience d'apprentissage agréable. Je veux juste le lyric, pas d'autres textes , c'est pour générer de musique.Évite des caractères qui vont être mal interprétés par le modèle ou le formattage. Met les personnages sans : ou - ou autre.
+\n{format_instruction}
 """
 
 #         music_template = r"""En te basant entièrement sur les informations suivantes : {elements},
