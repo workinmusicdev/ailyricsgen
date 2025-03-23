@@ -191,7 +191,7 @@ def process_lyrics_from_theme(metadata_path: str) -> Dict:
     for index, row in df.iterrows():
         
         id_row = str(row.get('id', ''))
-        theme = row['theme']
+        theme = id_row +'_'+ row['theme']
         orientation = row['orientation']
         style = row['style']
         langue = row['langue']
@@ -199,38 +199,48 @@ def process_lyrics_from_theme(metadata_path: str) -> Dict:
         matiere = row['matiere']
 
         a = inference_by_theme(theme, orientation, niveau=niveau, matiere=matiere, langue=langue)
+
+        print("------------------------------ A")
+        print(a)
+        print('------------------------------ A')
         tmp = extraire_elements_key_from_context(a, orientation)
 
-        data = generate_music_lyrics(elements=tmp.content, style=style, langue=langue, orientation=orientation)
+        data = generate_music_lyrics(elements=tmp.content, style=style, langue=langue, orientation=orientation, theme=theme, niveau=niveau)
         print("------------------------------")
         print(data)
         print('------------------------------')
+
         out = MusicLyrics.parse_obj(data)
         tmp_dict = out.to_dict()
         tmp_dict['url'] = []
         tmp_dict['langue'] = langue
-        tmp_dict["music"] = generate_music(format_lyrics(out.lyrics), out.title, out.style)
-        time.sleep(500)
+        resultat = generate_music(format_lyrics(out.lyrics), out.title, out.style)
 
-        c = 1
-        name = ""
-        for music_id in tmp_dict["music"]:
-            dat = fetch_feed(music_id)[0]
-            audio_url = download_file_by_url(dat['audio_url'])
-            image_url = download_file_by_url(dat['image_large_url'])
-            name = id_row + '_' + dat["title"].replace(' ', '').lower()
-            name += f"_{style}_{langue}_{matiere}"
-            dat["url_drive"] = upload_file_to_s3(audio_url,f"{dat['title'].replace(' ', '').lower()}_v{c}.mp3", name)
-            dat["img_drive"] = upload_file_to_s3(image_url,f"{dat['title'].replace(' ', '').lower()}_v{c}.jpeg",name)
-            tmp_dict['url'].append(dat)
-            c += 1
+        print(f"resultat Gen {id_row} ------------------ Done :")
+        print(resultat)
+        print(f"resultat Gen {id_row} ------------------ Done :")
 
-        output_path = os.path.join(OUTPUT_DIR, f"{theme.replace(' ', '')}_output.json")
+        time.sleep(5)
 
-        with open(output_path, "w", encoding="utf-8") as json_file:
-            json.dump(tmp_dict, json_file, ensure_ascii=False, indent=4)
-        upload_file_to_s3(output_path, f"data.json", name)
-        outputs.append(tmp_dict)
+        # c = 1
+        # name = ""
+        # for music_id in tmp_dict["music"]:
+        #     dat = fetch_feed(music_id)[0]
+        #     audio_url = download_file_by_url(dat['audio_url'])
+        #     image_url = download_file_by_url(dat['image_large_url'])
+        #     name = id_row + '_' + dat["title"].replace(' ', '').lower()
+        #     name += f"_{style}_{langue}_{matiere}"
+        #     dat["url_drive"] = upload_file_to_s3(audio_url,f"{dat['title'].replace(' ', '').lower()}_v{c}.mp3", name)
+        #     dat["img_drive"] = upload_file_to_s3(image_url,f"{dat['title'].replace(' ', '').lower()}_v{c}.jpeg",name)
+        #     tmp_dict['url'].append(dat)
+        #     c += 1
+
+        # output_path = os.path.join(OUTPUT_DIR, f"{theme.replace(' ', '')}_output.json")
+
+        # with open(output_path, "w", encoding="utf-8") as json_file:
+        #     json.dump(tmp_dict, json_file, ensure_ascii=False, indent=4)
+        # upload_file_to_s3(output_path, f"data.json", name)
+        # outputs.append(tmp_dict)
 
 
 

@@ -22,7 +22,7 @@ from inference.infer_extraction import inference, inference_by_theme
 from job import process_music_from_docs, process_lyrics_from_theme, process_without_music_from_docs
 from models.data_input import GenerateMusicRequest
 from utils.extraction_ai import extraire_elements_key_from_context, format_to_human
-from utils.googdrive.quickstart import upload_file_to_gdrive, upload_file_in_folder_to_gdrive
+from utils.googdrive.quickstart import upload_file_to_gdrive, upload_file_in_folder_to_gdrive, upload_file_to_s3
 from utils.music_generator_ai import generate_music_lyrics, download_file_by_url
 from utils.parsers_ai import MusicLyrics, Lyrics
 from utils.sunowrapper.generate_song import fetch_feed, generate_music
@@ -192,6 +192,7 @@ async def job_generate_music_without_docs(
     }
 
 
+# Here first 
 @app.post("/job/generate_music_from_theme/", tags=['text to music (multiple)'])
 async def job_generate_music_from_theme(
         metadata_file: UploadFile = File(...,
@@ -260,9 +261,99 @@ async def download_file(file_name: str):
     return JSONResponse(content={"message": "File not found"}, status_code=404)
 
 
+@app.post("/generation/callback", tags=["debug"])
+async def handle_generation_callback(body: dict):
+    # Affiche le contenu du body dans la console
+    print(body)
+
+    data = {
+        'code': 200,
+        'data': {
+            'callbackType': 'complete',
+            'data': [
+                {
+                    'audio_url': 'https://apiboxfiles.erweima.ai/NmZlYmU5MTAtMWJiMi00Nzc2LWJmMGItMmQ1MDJlODczNGE2.mp3',
+                    'createTime': 1742560422458,
+                    'duration': 99.0,
+                    'id': '6febe910-1bb2-4776-bf0b-2d502e8734a6',
+                    'image_url': 'https://apiboxfiles.erweima.ai/NmZlYmU5MTAtMWJiMi00Nzc2LWJmMGItMmQ1MDJlODczNGE2.jpeg',
+                    'model_name': 'chirp-v4',
+                    'prompt': "Introduction\nA: Apprendre à dire son nom en anglais est simple.\nB: Oui, c'est facile et amusant !\n\nRefrain\nA: Répétez après moi, 'My name is Jean'.\nB: Répétez après moi, 'My name is Jean'.\nA: C'est facile, n'est-ce pas ?\nB: Oui, c'est facile, n'est-ce pas ?\n\nCouplet 1\nA: Pour dire votre nom, utilisez 'My name is...'.\nB: Pour dire votre nom, utilisez 'My name is...'.\nA: Par exemple, 'My name is Jean'.\nB: Par exemple, 'My name is Jean'.\n\nRefrain\nA: Répétez après moi, 'My name is Jean'.\nB: Répétez après moi, 'My name is Jean'.\nA: C'est facile, n'est-ce pas ?\nB: Oui, c'est facile, n'est-ce pas ?\n\nCouplet 2\nA: Une autre façon est de dire 'I'm...', suivi de votre nom.\nB: Une autre façon est de dire 'I'm...', suivi de votre nom.\nA: Par exemple, 'I'm Jean'.\nB: Par exemple, 'I'm Jean'.\n\nRefrain\nA: Répétez après moi, 'My name is Jean'.\nB: Répétez après moi, 'My name is Jean'.\nA: C'est facile, n'est-ce pas ?\nB: Oui, c'est facile, n'est-ce pas ?\n\nPont\nA: Pratiquez avec votre propre nom, par exemple, 'I'm Jean'.\nB: Pratiquez avec votre propre nom, par exemple, 'I'm Jean'.\nA: Essayez avec vos amis aussi !\nB: Essayez avec vos amis aussi !\n\nRefrain\nA: Répétez après moi, 'My name is Jean'.\nB: Répétez après moi, 'My name is Jean'.\nA: C'est facile, n'est-ce pas ?\nB: Oui, c'est facile, n'est-ce pas ?\n\nConclusion\nA: Maintenant, vous savez comment vous présenter en anglais.\nB: Maintenant, vous savez comment vous présenter en anglais.\nA: Bravo, vous avez appris !\nB: Bravo, vous avez appris !\n\nRefrain\nA: Répétez après moi, 'My name is Jean'.\nB: Répétez après moi, 'My name is Jean'.\nA: C'est facile, n'est-ce pas ?\nB: Oui, c'est facile, n'est-ce pas ?",
+                    'source_audio_url': 'https://cdn1.suno.ai/6febe910-1bb2-4776-bf0b-2d502e8734a6.mp3',
+                    'source_image_url': 'https://cdn2.suno.ai/image_6febe910-1bb2-4776-bf0b-2d502e8734a6.jpeg',
+                    'source_stream_audio_url': 'https://cdn1.suno.ai/6febe910-1bb2-4776-bf0b-2d502e8734a6.mp3',
+                    'stream_audio_url': 'https://mfile.erweima.ai/NmZlYmU5MTAtMWJiMi00Nzc2LWJmMGItMmQ1MDJlODczNGE2',
+                    'tags': 'Pop éducatif',
+                    'title': 'Apprendre à dire son nom en anglais'
+                }
+            ],
+            'task_id': 'aa9861e8b098d1d8678b42ba44abde69'
+        },
+        'msg': 'All generated successfully.'
+    }
+
+    data = body['data']['data']
+
+
+
+    c = 1
+
+    for music in data:
+
+        tmp_dict = {}
+        tmp_dict['url'] = []
+        tmp_dict['langue'] = music.get('langue', "")
+        tmp_dict['title'] = music.get('title', "")
+        tmp_dict['tags'] = music.get('tags', "")
+        tmp_dict['prompt'] = music.get('prompt', "")
+        tmp_dict['source_audio_url'] = music.get('source_audio_url', "")
+        tmp_dict['source_image_url'] = music.get('source_image_url', "")
+        tmp_dict['stream_audio_url'] = music.get('stream_audio_url', "")
+        tmp_dict['source_stream_audio_url'] = music.get('source_stream_audio_url', "")
+        tmp_dict['duration'] = music.get('duration', "")
+        tmp_dict['model_name'] = music.get('model_name', "")
+
+        audio_url = download_file_by_url(music['audio_url'])
+        image_url = download_file_by_url(music['image_url'])  # <-- Corrected here
+
+        name = music['title']
+        url_drive = upload_file_to_s3(audio_url, f"{music['title'].replace(' ', '').lower()}_{c}.mp3", name)
+        img_drive = upload_file_to_s3(image_url, f"{music['title'].replace(' ', '').lower()}_{c}.jpeg", name)
+
+        tmp_dict['url'].append({
+            "url_drive": url_drive,
+            "img_drive": img_drive,
+            "audio_url": music['audio_url'],
+            "image_url": music['image_url'],  # <-- Corrected here as well
+            "title": music['title'],
+            "duration": music['duration'],
+        })
+
+        output_path = os.path.join(OUTPUT_DIR, f"{name.replace(' ', '')}_output.json")
+
+        c += 1
+
+
+        
+
+        with open(output_path, "w", encoding="utf-8") as json_file:
+            json.dump(tmp_dict, json_file, ensure_ascii=False, indent=4)
+        upload_file_to_s3(output_path, f"data.json", name)
+
+
 if __name__ == "__main__":
     import uvicorn
     import subprocess
+
+    from redis import Redis
+    from rq import Queue
+
+    redis_conn = Redis(host="localhost", port=6379)
+    task_queue = Queue("task_queue", connection=redis_conn)
+
+    # Vider la file d'attente
+    task_queue.empty()
+    print("File d'attente vidée avec succès")
 
     # Start the worker in a separate process
     worker_process = subprocess.Popen(["rq", "worker", "task_queue"])

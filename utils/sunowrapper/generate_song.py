@@ -1,15 +1,18 @@
 import requests
-
+import json
 from utils.sunowrapper.constants import BASE_URL
+import http.client
 
 
 def generate_music(lyrics, title, style):
 
     url = f"{BASE_URL}/api/custom_generate"
 
-    headers = {
-        "Content-Type": "application/json"
-    }
+    conn = http.client.HTTPSConnection("apibox.erweima.ai")
+
+    # headers = {
+    #     "Content-Type": "application/json"
+    # }
 
     # payload = {
     #     "prompt": lyrics,
@@ -19,17 +22,34 @@ def generate_music(lyrics, title, style):
     # }
 
     # Model: "chirp-v3-5|chirp-v3-0" (chirp-v3-5 is the default model, chirp-v3-0 is the model for the instrumental)
-    payload = {
-        "prompt": lyrics,
-        "model": "chirp-v3-5|chirp-v3-0",
-        "title": title,
-        "tags": style,
-        "make_instrumental": False,
-        "wait_audio": False
+    # payload = {
+    #     "prompt": lyrics,
+    #     "model": "chirp-v3-5|chirp-v3-0",
+    #     "title": title,
+    #     "tags": style,
+    #     "make_instrumental": False,
+    #     "wait_audio": False
+    # }
+
+    headers = {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Authorization': 'Bearer 3e3b3746d5f20b1508e9ee73d43af21d'
     }
 
+    payload_new = json.dumps({
+        "prompt": lyrics, # ...
+        "style": style, # ...
+        "title": title, # ...
+        "customMode": True, # ...
+        "instrumental": False, # ...
+        "model": "V4", # V3_5
+        # "negativeTags": "Relaxing Piano",
+        "callBackUrl": "https://29c4-41-85-181-247.ngrok-free.app/generation/callback"
+        })
+
     print("\n")
-    print(payload)
+    print(payload_new)
     print("\n")
 
     # {
@@ -55,22 +75,33 @@ def generate_music(lyrics, title, style):
     #   "wait_audio": false
     # }
 
-    response = requests.post(url, json=payload, headers=headers)
+    conn.request("POST", "/api/v1/generate", payload_new, headers)
+    res = conn.getresponse()
+    data = res.read()
+    print(data.decode("utf-8"))
 
-    if response.status_code == 200:
-        data = response.json()
-        print("\n")
-        print(data)
-        print("\n")
-        print(data)
-        clip_ids = [clip["id"] for clip in data] # .get("clips", [])
-        print(clip_ids)
-        if len(clip_ids) >= 2:
-            return clip_ids[:2]
-        else:
-            return clip_ids  # Retourner autant de clips que disponibles
-    else:
-        raise Exception(f"Failed to generate music: {response.status_code}, {response.text}")
+    # raise Exception(f"Failed to generate music: {res.status}, {data}")
+
+    return data.decode("utf-8")
+
+
+    # Here to end the first part of the code of generation of music
+    # response = requests.post(url, json=payload, headers=headers)
+
+    # if response.status_code == 200:
+    #     data = response.json()
+    #     print("\n")
+    #     print(data)
+    #     print("\n")
+    #     print(data)
+    #     clip_ids = [clip["id"] for clip in data] # .get("clips", [])
+    #     print(clip_ids)
+    #     if len(clip_ids) >= 2:
+    #         return clip_ids[:2]
+    #     else:
+    #         return clip_ids  # Retourner autant de clips que disponibles
+    # else:
+    #     raise Exception(f"Failed to generate music: {response.status_code}, {response.text}")
 
 
 # fetch_feed function is used to fetch the generated music clips

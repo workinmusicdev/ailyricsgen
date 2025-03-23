@@ -2,9 +2,10 @@ from dotenv import load_dotenv
 from langchain import hub
 from langchain.agents import create_tool_calling_agent, AgentExecutor, create_react_agent, create_openai_functions_agent
 from langchain.chains.llm_math.base import LLMMathChain
-
+import requests
 from langchain_community.utilities import WikipediaAPIWrapper, GooglePlacesAPIWrapper, SerpAPIWrapper
-
+import os
+import json
 from langchain_core.tools import Tool
 
 from langchain_openai import ChatOpenAI
@@ -46,3 +47,32 @@ def setup_agent():
 
     return agent_executor
 
+# Méthode pour faire une requête directe vers l'API OpenAI avec requests
+def request_openai(prompt: str, model: str = "gpt-4", temperature: float = 0.1) -> dict:
+    api_key = os.getenv("OPENAI_API_KEY")
+    url = "https://api.openai.com/v1/chat/completions"
+
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json"
+    }
+
+    data = {
+        "model": model,
+        "messages": [
+            {"role": "user", "content": prompt}
+        ],
+        "temperature": temperature
+    }
+
+    response = requests.post(url, headers=headers, data=json.dumps(data))
+    print("response.text")
+    print(response.text)
+    print("response.text")
+
+
+
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return {"error": response.text}

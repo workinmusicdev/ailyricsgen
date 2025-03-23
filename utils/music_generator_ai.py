@@ -7,7 +7,7 @@ from langchain_openai import ChatOpenAI
 from utils.parsers_ai import MusicLyrics, music_lyrics_parser
 from utils.prompt_ai import get_lyrics_generator_prompt
 
-def generate_music_lyrics(elements, style, orientation,num_verses=3, taille=1500, mode="auto", langue="français"):
+def generate_music_lyrics(elements, style, orientation,num_verses=3, taille=1500, mode="auto", langue="français", theme="", niveau=""):
 
     print("##################")
     print(langue)
@@ -21,11 +21,10 @@ def generate_music_lyrics(elements, style, orientation,num_verses=3, taille=1500
 
     res = chain.invoke({
         "elements": elements,
-        "style": style,
-        "num_verses": num_verses,
-        "taille": taille,
+        "niveau": niveau,
         "orientation":orientation,
-        "langue":langue,
+        "style": style,
+        "theme": theme,
     })
 
     return res

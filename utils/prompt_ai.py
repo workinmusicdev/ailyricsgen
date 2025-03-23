@@ -90,98 +90,32 @@ def get_lyrics_generator_prompt(mode, langue:str):
         # """
         # être adaptée au thème spécifique suivant ({{thème}}) et
 
-        music_template = r"""En te basant entièrement sur les informations suivantes : {elements},
-        Génère des lyrics sous forme de conversation pour une chanson éducative conçue pour aider des élèves débutants à apprendre l'{langue}. Ces élèves n'ont aucune connaissance préalable de l'anglais et leur langue maternelle est le français. La chanson doit suivre un format de dialogue entre deux personnes, l'un posant des questions et l'autre répondant, en se concentrant sur cette orientation ({orientation})  dans le style suivant {style}. Le but est de permettre aux élèves d'apprendre {orientation}, tout en rendant les mots et les phrases facilement reconnaissables et mémorables.
-
-Chaque ligne ou phrase en anglais doit être accompagnée de sa traduction en français pour établir une association linguistique claire. Le dialogue doit être répétitif et amical, avec un rythme modéré pour faciliter l'apprentissage. Des répétitions doivent être utilisées pour renforcer la mémorisation, et le ton doit être ludique et encourageant pour rendre l'expérience d'apprentissage agréable. Aucune mention de "personne 1", "personne 2", "réponse A", "réponse B" ou autres termes similaires ne doit être utilisée dans les lyrics générés.
-\n{format_instruction}
-"""
-
 #         music_template = r"""En te basant entièrement sur les informations suivantes : {elements},
-#         Génère des lyrics pour une chanson éducative conçue pour aider des élèves débutants à apprendre l'{langue}. Ces élèves n'ont aucune connaissance préalable de l'anglais et leur langue maternelle est le français. La chanson doit avoir cette orientation ({orientation})  dans le style {style}, indiquant ce que l'on veut que les élèves apprennent à partir de ces informations.
+#         Génère des lyrics sous forme de conversation pour une chanson éducative conçue pour aider des élèves débutants à apprendre l'{langue}. Ces élèves n'ont aucune connaissance préalable de l'anglais et leur langue maternelle est le français. La chanson doit suivre un format de dialogue entre deux personnes, l'un posant des questions et l'autre répondant, en se concentrant sur cette orientation ({orientation})  dans le style suivant {style}. Le but est de permettre aux élèves d'apprendre {orientation}, tout en rendant les mots et les phrases facilement reconnaissables et mémorables.
 
-# Le but est de rendre les mots et les phrases facilement reconnaissables et mémorables pour les élèves. Utilise un style musical simple et répétitif avec un rythme modéré, idéal pour l'apprentissage de nouveaux mots.
-
-# Chaque ligne ou phrase en anglais doit être accompagnée de sa traduction en français pour aider à établir des associations linguistiques claires. Le thème précis doit être respecté tout au long de la chanson, et des répétitions doivent être utilisées pour renforcer la mémorisation. Le ton doit être amical et encourageant.
-
-# Exemple de structure :
-
-
-# Hello, hello, what's your name?
-
-# Bonjour, bonjour, comment tu t’appelles ?
-
-
-# Hello, hello, what's your name?
-
-# Bonjour, bonjour, comment tu t’appelles ?
-
-
-
-# My name is... 
-
-# Je m’appelle...
-
-
-# My name is... 
-
-# Je m’appelle...
-
-
-# Refrain :
-
-
-
-# Nice to meet you, how are you?
-
-# Enchanté, comment vas-tu ?
-
-# Nice to meet you, how are you?
-
-# Enchanté, comment vas-tu ?
-
-# Couplet 2
-
-
-
-# I’m fine, thank you!
-
-# Je vais bien, merci !
-
-
-
-# I’m fine, thank you!
-
-# Je vais bien, merci !
-
-
-
-# And you? How are you?
-
-# Et toi ? Comment vas-tu ?
-
-
-
-# And you? How are you?
-
-# Et toi ? Comment vas-tu ?
-
-
-
-# Refrain :
-
-
-
-# Nice to meet you, how are you?
-
-# Enchanté, comment vas-tu ?
-
-# Nice to meet you, how are you?
-
-# Enchanté, comment vas-tu ?
-
+# Chaque ligne ou phrase en anglais doit être accompagnée de sa traduction en français pour établir une association linguistique claire. Le dialogue doit être répétitif et amical, avec un rythme modéré pour faciliter l'apprentissage. Des répétitions doivent être utilisées pour renforcer la mémorisation, et le ton doit être ludique et encourageant pour rendre l'expérience d'apprentissage agréable. Aucune mention de "personne 1", "personne 2", "réponse A", "réponse B" ou autres termes similaires ne doit être utilisée dans les lyrics générés.
 # \n{format_instruction}
 # """
+
+
+# (elements, style, orientation,num_verses=3, taille=1500, mode="auto", langue="français", theme="", niveau="")
+        music_template = r"""Tu es un expert en création de lyrics éducatifs pour apprendre l'anglais à travers la musique. Ta mission est de générer une chanson courte, succincte et précise qui se concentre exclusivement sur l'objectif pédagogique indiqué, sans digressions inutiles, et qui intègre des exemples concrets issus de la vie réelle pour illustrer le terme enseigné. Le niveau de l'élève (par exemple : A1, A2, etc.) doit être pris en compte pour adapter le vocabulaire et la complexité des phrases.
+En te basant entièrement sur les informations suivantes : {elements},
+Respecte strictement les consignes suivantes :
+
+Thème précis : {theme}. Ce sera le concept central à enseigner.
+Orientation pédagogique : {orientation}. L'objectif est d'enseigner ou d'expliquer comment utiliser ou comprendre ce terme. Chaque section doit inclure au moins un exemple concret issu de la vie réelle pour mieux illustrer le concept.
+Niveau de l'élève : {niveau}. Adapte la complexité du vocabulaire et des phrases en fonction du niveau de l'élève.
+Style musical : {style}. Adapte le ton, le rythme et la structure musicale en conséquence.
+Structure interactive : Utilise une structure en dialogues (rôles "A" et "B" ou sections telles que "Introduction", "Couplet", "Refrain", etc.) pour rendre l'apprentissage ludique et interactif, tout en restant concis.
+Bilinguisme : Chaque phrase en anglais doit être immédiatement suivie de sa traduction en français. Pour tout contenu spécifique (par exemple : "Red Rouge"), assure-toi que l'équivalent en français apparaisse directement après.
+Dynamisme et clarté : Utilise un langage simple, rythmé et engageant. La chanson doit être courte et se concentrer uniquement sur l'essentiel pour enseigner le thème, en intégrant des exemples concrets pour aider l'élève à mieux appréhender le terme.
+Génère les lyrics en respectant strictement ces consignes et en intégrant les paramètres spécifiques indiqués.
+\n{format_instruction}
+"""
+# Chaque couplet, refrain et pont doit contenir au minimum 4 vers.Et chaque vers séparé par '\n'. La taille minimum est 1500 caractères.
+# entre parenthèses
+
     
     else:
 
@@ -218,7 +152,7 @@ Chaque ligne ou phrase en anglais doit être accompagnée de sa traduction en fr
 
     music_prompt_template = PromptTemplate(
         template=music_template,
-        input_variables=['elements', 'style', 'num_verses', 'taille','orientation'],
+        input_variables=['elements','theme','orientation', 'niveau','style'],
         partial_variables={'format_instruction': music_lyrics_parser.get_format_instructions()}
     )
 

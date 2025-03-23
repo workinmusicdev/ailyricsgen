@@ -2,7 +2,7 @@ from langchain.agents import AgentExecutor
 from langchain_community.document_loaders import PyPDFLoader, Docx2txtLoader
 from langchain_text_splitters import CharacterTextSplitter
 
-from utils.agents_ai import setup_agent
+from utils.agents_ai import request_openai, setup_agent
 from utils.embeddings_ai import load_embedding_openai
 from utils.extraction_ai import extraire_elements_pertinents
 from utils.loader_ai import load_document_and_save_on_vectorbd
@@ -57,4 +57,14 @@ def inference_by_theme(theme,orientation,niveau="",langue="français",matiere="F
     question=f"J'aimerais en apprendre sur {theme} en te basant {orientation}"
     response = agent_executor.invoke({"input":question})
 
+    print("response")
     print(response)
+    print("response")
+
+    response2 = request_openai(prompt=question, model="gpt-4", temperature=0.1)
+    print("response2")
+    print(response2)
+    print("response2")
+
+    # Add the retrieved data to the output
+    return response
