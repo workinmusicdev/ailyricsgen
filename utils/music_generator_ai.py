@@ -39,7 +39,8 @@ def download_file_by_url(url, path=Path.cwd()/"temp"):
 
         # Extraire le nom du fichier de l'URL
         file_name = url.split("/")[-1]
-        file_path = f"{p.absolute()}/{file_name}"
+        file_path = f"{p.absolute()}/{file_name.strip().replace(' ', '_')}"
+        print(file_path)
 
         # Ouvrir un fichier en mode binaire pour l'écriture
         with open(file_path, 'wb') as file:

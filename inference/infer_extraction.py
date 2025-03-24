@@ -55,16 +55,16 @@ def inference_by_theme(theme,orientation,niveau="",langue="français",matiere="F
     orientation+=f" en {langue}"
     #Optimiser
     question=f"J'aimerais en apprendre sur {theme} en te basant {orientation}"
-    response = agent_executor.invoke({"input":question})
+    # response = agent_executor.invoke({"input":question})
 
-    print("response")
-    print(response)
-    print("response")
+    # print("response")
+    # print(response)
+    # print("response")
 
-    response2 = request_openai(prompt=question, model="gpt-4", temperature=0.1)
+    response2 = request_openai(prompt=question, model="gpt-4o", temperature=0.1)
     print("response2")
     print(response2)
     print("response2")
 
     # Add the retrieved data to the output
-    return response
+    return response2

@@ -26,8 +26,8 @@ def setup_agent():
 
     # Définition des outils
     tools = [
-        Tool(name="Search", func=search.run,
-             description="Effectue des recherches sur des informations générales, des thèmes en général et concepts éducatifs"),
+        # Tool(name="Search", func=search.run,
+        #      description="Effectue des recherches sur des informations générales, des thèmes en général et concepts éducatifs"),
         Tool(name="Calculator", func=llm_math_chain.run,
              description="Propose des outils de calcul mathématique."),
         #Tool(name="Wikipedia", func=wikipedia.run,

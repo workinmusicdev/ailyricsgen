@@ -70,11 +70,11 @@ def get_lyrics_generator_prompt(mode, langue:str):
     print("################## ***")
 
     
-    if langue.lower() == "anglais":
+    # if langue.lower() == "anglais":
 
-        print("################## 00000")
-        print(langue,"anglais mode")
-        print("################## 00000")
+    #     print("################## 00000")
+    #     print(langue,"anglais mode")
+    #     print("################## 00000")
 
         # music_template = r"""En te basant entièrement sur les informations suivantes : {elements},
         # Génère des paroles en {langue} et en français, abordant essentiellement {orientation} dans le style {style}, avec un refrain et plusieurs couplets dont tu détermineras automatiquement le nombre en fonction du contenu.
@@ -90,16 +90,17 @@ def get_lyrics_generator_prompt(mode, langue:str):
         # """
         # être adaptée au thème spécifique suivant ({{thème}}) et
 
-#         music_template = r"""En te basant entièrement sur les informations suivantes : {elements},
-#         Génère des lyrics sous forme de conversation pour une chanson éducative conçue pour aider des élèves débutants à apprendre l'{langue}. Ces élèves n'ont aucune connaissance préalable de l'anglais et leur langue maternelle est le français. La chanson doit suivre un format de dialogue entre deux personnes, l'un posant des questions et l'autre répondant, en se concentrant sur cette orientation ({orientation})  dans le style suivant {style}. Le but est de permettre aux élèves d'apprendre {orientation}, tout en rendant les mots et les phrases facilement reconnaissables et mémorables.
+        #         music_template = r"""En te basant entièrement sur les informations suivantes : {elements},
+        #         Génère des lyrics sous forme de conversation pour une chanson éducative conçue pour aider des élèves débutants à apprendre l'{langue}. Ces élèves n'ont aucune connaissance préalable de l'anglais et leur langue maternelle est le français. La chanson doit suivre un format de dialogue entre deux personnes, l'un posant des questions et l'autre répondant, en se concentrant sur cette orientation ({orientation})  dans le style suivant {style}. Le but est de permettre aux élèves d'apprendre {orientation}, tout en rendant les mots et les phrases facilement reconnaissables et mémorables.
 
-# Chaque ligne ou phrase en anglais doit être accompagnée de sa traduction en français pour établir une association linguistique claire. Le dialogue doit être répétitif et amical, avec un rythme modéré pour faciliter l'apprentissage. Des répétitions doivent être utilisées pour renforcer la mémorisation, et le ton doit être ludique et encourageant pour rendre l'expérience d'apprentissage agréable. Aucune mention de "personne 1", "personne 2", "réponse A", "réponse B" ou autres termes similaires ne doit être utilisée dans les lyrics générés.
-# \n{format_instruction}
-# """
+        # Chaque ligne ou phrase en anglais doit être accompagnée de sa traduction en français pour établir une association linguistique claire. Le dialogue doit être répétitif et amical, avec un rythme modéré pour faciliter l'apprentissage. Des répétitions doivent être utilisées pour renforcer la mémorisation, et le ton doit être ludique et encourageant pour rendre l'expérience d'apprentissage agréable. Aucune mention de "personne 1", "personne 2", "réponse A", "réponse B" ou autres termes similaires ne doit être utilisée dans les lyrics générés.
+        # \n{format_instruction}
+        # """
 
 
-# (elements, style, orientation,num_verses=3, taille=1500, mode="auto", langue="français", theme="", niveau="")
-        music_template = r"""Tu es un expert en création de lyrics éducatifs pour apprendre l'anglais à travers la musique. Ta mission est de générer une chanson courte, succincte et précise qui se concentre exclusivement sur l'objectif pédagogique indiqué, sans digressions inutiles, et qui intègre des exemples concrets issus de la vie réelle pour illustrer le terme enseigné. Le niveau de l'élève (par exemple : A1, A2, etc.) doit être pris en compte pour adapter le vocabulaire et la complexité des phrases.
+        # (elements, style, orientation,num_verses=3, taille=1500, mode="auto", langue="français", theme="", niveau="")
+        
+    music_template = r"""Tu es un expert en création de lyrics éducatifs pour apprendre l'anglais à travers la musique. Ta mission est de générer une chanson courte, succincte et précise qui se concentre exclusivement sur l'objectif pédagogique indiqué, sans digressions inutiles, et qui intègre des exemples concrets issus de la vie réelle pour illustrer le terme enseigné. Le niveau de l'élève (par exemple : A1, A2, etc.) doit être pris en compte pour adapter le vocabulaire et la complexité des phrases.
 En te basant entièrement sur les informations suivantes : {elements},
 Respecte strictement les consignes suivantes :
 
@@ -117,36 +118,36 @@ Génère les lyrics en respectant strictement ces consignes et en intégrant les
 # entre parenthèses
 
     
-    else:
+    # else:
 
-        print("##################")
-        print(langue,"français mode") 
-        print("##################")
+    #     print("##################")
+    #     print(langue,"français mode") 
+    #     print("##################")
 
-        if mode=="auto":
-            music_template = r""""
-                        En te basant entièrement sur les informations suivantes : {elements},
-                        Générez lyrics en {langue} abordant essentiellement {orientation}  dans le style {style} avec un refrain et des couplets dont tu déterminenras automatiquement le nombre en fonction du contenu.
-                        La chanson doit comporter :
-                        1. Un refrain répétitif et mémorable, résumant les idées principales.
-                        2. plusieurs  couplets dont tu détermineras le nombre.
-                        3. Chaque couplet, refrain et pont doit contenir au minimum 4 vers.Et chaque vers séparé par \n"
-                        4. La taille minimum est 1500 caractères.
+    #     if mode=="auto":
+    #         music_template = r""""
+    #                     En te basant entièrement sur les informations suivantes : {elements},
+    #                     Générez lyrics en {langue} abordant essentiellement {orientation}  dans le style {style} avec un refrain et des couplets dont tu déterminenras automatiquement le nombre en fonction du contenu.
+    #                     La chanson doit comporter :
+    #                     1. Un refrain répétitif et mémorable, résumant les idées principales.
+    #                     2. plusieurs  couplets dont tu détermineras le nombre.
+    #                     3. Chaque couplet, refrain et pont doit contenir au minimum 4 vers.Et chaque vers séparé par \n"
+    #                     4. La taille minimum est 1500 caractères.
                         
-                        \n{format_instruction}
-                        """
-        else:
-            music_template = r""""
-                En te basant entièrement sur les informations suivantes : {elements},
-                Générez lyrics en {langue} abordant essentiellement {orientation}  dans le style {style} avec un refrain, {num_verses} couplets et un pont.
-                La chanson doit comporter :
-                1. Un refrain répétitif et mémorable, résumant les idées principales.
-                2. {num_verses} couplets.
-                3. Chaque couplet, refrain et pont doit contenir au minimum 4 vers.Et chaque vers séparé par \n"
-                4. La taille minimum est 1200 caractères et au maximum 1400 caraactères.
+    #                     \n{format_instruction}
+    #                     """
+    #     else:
+    #         music_template = r""""
+    #             En te basant entièrement sur les informations suivantes : {elements},
+    #             Générez lyrics en {langue} abordant essentiellement {orientation}  dans le style {style} avec un refrain, {num_verses} couplets et un pont.
+    #             La chanson doit comporter :
+    #             1. Un refrain répétitif et mémorable, résumant les idées principales.
+    #             2. {num_verses} couplets.
+    #             3. Chaque couplet, refrain et pont doit contenir au minimum 4 vers.Et chaque vers séparé par \n"
+    #             4. La taille minimum est 1200 caractères et au maximum 1400 caraactères.
                 
-                \n{format_instruction}
-                """
+    #             \n{format_instruction}
+    #             """
 
     # Si la langue est anglais, ne génère pas de paroles en français
 

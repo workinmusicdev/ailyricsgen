@@ -266,35 +266,7 @@ async def handle_generation_callback(body: dict):
     # Affiche le contenu du body dans la console
     print(body)
 
-    data = {
-        'code': 200,
-        'data': {
-            'callbackType': 'complete',
-            'data': [
-                {
-                    'audio_url': 'https://apiboxfiles.erweima.ai/NmZlYmU5MTAtMWJiMi00Nzc2LWJmMGItMmQ1MDJlODczNGE2.mp3',
-                    'createTime': 1742560422458,
-                    'duration': 99.0,
-                    'id': '6febe910-1bb2-4776-bf0b-2d502e8734a6',
-                    'image_url': 'https://apiboxfiles.erweima.ai/NmZlYmU5MTAtMWJiMi00Nzc2LWJmMGItMmQ1MDJlODczNGE2.jpeg',
-                    'model_name': 'chirp-v4',
-                    'prompt': "Introduction\nA: Apprendre à dire son nom en anglais est simple.\nB: Oui, c'est facile et amusant !\n\nRefrain\nA: Répétez après moi, 'My name is Jean'.\nB: Répétez après moi, 'My name is Jean'.\nA: C'est facile, n'est-ce pas ?\nB: Oui, c'est facile, n'est-ce pas ?\n\nCouplet 1\nA: Pour dire votre nom, utilisez 'My name is...'.\nB: Pour dire votre nom, utilisez 'My name is...'.\nA: Par exemple, 'My name is Jean'.\nB: Par exemple, 'My name is Jean'.\n\nRefrain\nA: Répétez après moi, 'My name is Jean'.\nB: Répétez après moi, 'My name is Jean'.\nA: C'est facile, n'est-ce pas ?\nB: Oui, c'est facile, n'est-ce pas ?\n\nCouplet 2\nA: Une autre façon est de dire 'I'm...', suivi de votre nom.\nB: Une autre façon est de dire 'I'm...', suivi de votre nom.\nA: Par exemple, 'I'm Jean'.\nB: Par exemple, 'I'm Jean'.\n\nRefrain\nA: Répétez après moi, 'My name is Jean'.\nB: Répétez après moi, 'My name is Jean'.\nA: C'est facile, n'est-ce pas ?\nB: Oui, c'est facile, n'est-ce pas ?\n\nPont\nA: Pratiquez avec votre propre nom, par exemple, 'I'm Jean'.\nB: Pratiquez avec votre propre nom, par exemple, 'I'm Jean'.\nA: Essayez avec vos amis aussi !\nB: Essayez avec vos amis aussi !\n\nRefrain\nA: Répétez après moi, 'My name is Jean'.\nB: Répétez après moi, 'My name is Jean'.\nA: C'est facile, n'est-ce pas ?\nB: Oui, c'est facile, n'est-ce pas ?\n\nConclusion\nA: Maintenant, vous savez comment vous présenter en anglais.\nB: Maintenant, vous savez comment vous présenter en anglais.\nA: Bravo, vous avez appris !\nB: Bravo, vous avez appris !\n\nRefrain\nA: Répétez après moi, 'My name is Jean'.\nB: Répétez après moi, 'My name is Jean'.\nA: C'est facile, n'est-ce pas ?\nB: Oui, c'est facile, n'est-ce pas ?",
-                    'source_audio_url': 'https://cdn1.suno.ai/6febe910-1bb2-4776-bf0b-2d502e8734a6.mp3',
-                    'source_image_url': 'https://cdn2.suno.ai/image_6febe910-1bb2-4776-bf0b-2d502e8734a6.jpeg',
-                    'source_stream_audio_url': 'https://cdn1.suno.ai/6febe910-1bb2-4776-bf0b-2d502e8734a6.mp3',
-                    'stream_audio_url': 'https://mfile.erweima.ai/NmZlYmU5MTAtMWJiMi00Nzc2LWJmMGItMmQ1MDJlODczNGE2',
-                    'tags': 'Pop éducatif',
-                    'title': 'Apprendre à dire son nom en anglais'
-                }
-            ],
-            'task_id': 'aa9861e8b098d1d8678b42ba44abde69'
-        },
-        'msg': 'All generated successfully.'
-    }
-
-    data = body['data']['data']
-
-
+    data = body.get('data', {}).get('data', [])
 
     c = 1
 
@@ -313,32 +285,37 @@ async def handle_generation_callback(body: dict):
         tmp_dict['duration'] = music.get('duration', "")
         tmp_dict['model_name'] = music.get('model_name', "")
 
-        audio_url = download_file_by_url(music['audio_url'])
-        image_url = download_file_by_url(music['image_url'])  # <-- Corrected here
+        # Si audio_url est manquant, utiliser stream_audio_url
+        audio_url_original = music.get('audio_url') or music.get('stream_audio_url')
+        audio_url = download_file_by_url(audio_url_original)
 
-        name = music['title']
-        url_drive = upload_file_to_s3(audio_url, f"{music['title'].replace(' ', '').lower()}_{c}.mp3", name)
-        img_drive = upload_file_to_s3(image_url, f"{music['title'].replace(' ', '').lower()}_{c}.jpeg", name)
+        image_url_original = music.get('image_url') or music.get('source_image_url')
+        image_url = download_file_by_url(image_url_original)
+
+        name = music.get('title', f"music_{c}")
+        safe_name = name.replace(' ', '').lower()
+
+        url_drive = upload_file_to_s3(audio_url, f"{safe_name}_{c}.mp3", name)
+        img_drive = upload_file_to_s3(image_url, f"{safe_name}_{c}.jpeg", name)
 
         tmp_dict['url'].append({
             "url_drive": url_drive,
             "img_drive": img_drive,
-            "audio_url": music['audio_url'],
-            "image_url": music['image_url'],  # <-- Corrected here as well
-            "title": music['title'],
-            "duration": music['duration'],
+            "audio_url": audio_url_original,
+            "image_url": image_url_original,
+            "title": music.get('title', ""),
+            "duration": music.get('duration', ""),
         })
 
-        output_path = os.path.join(OUTPUT_DIR, f"{name.replace(' ', '')}_output.json")
+        output_path = os.path.join(OUTPUT_DIR, f"{safe_name}_output.json")
 
         c += 1
 
-
-        
-
         with open(output_path, "w", encoding="utf-8") as json_file:
             json.dump(tmp_dict, json_file, ensure_ascii=False, indent=4)
+
         upload_file_to_s3(output_path, f"data.json", name)
+
 
 
 if __name__ == "__main__":
