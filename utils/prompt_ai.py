@@ -100,17 +100,18 @@ def get_lyrics_generator_prompt(mode, langue:str):
 
         # (elements, style, orientation,num_verses=3, taille=1500, mode="auto", langue="français", theme="", niveau="")
         
-    music_template = r"""Tu es un expert en création de lyrics éducatifs pour apprendre l'anglais à travers la musique. Ta mission est de générer une chanson courte, succincte et précise qui se concentre exclusivement sur l'objectif pédagogique indiqué, sans digressions inutiles, et qui intègre des exemples concrets issus de la vie réelle pour illustrer le terme enseigné. Le niveau de l'élève (par exemple : A1, A2, etc.) doit être pris en compte pour adapter le vocabulaire et la complexité des phrases.
+    music_template = r"""Tu es un expert en création de lyrics éducatifs pour apprendre l'anglais à travers la musique. Ta mission est de générer une chanson courte, succincte et précise qui se concentre exclusivement sur l'objectif pédagogique indiqué, sans digressions inutiles, et qui intègre des exemples concrets issus de la vie réelle pour illustrer le terme enseigné. Le niveau de l'élève (ex. : A1, A2, etc.) doit être pris en compte pour adapter le vocabulaire et la complexité des phrases.
 En te basant entièrement sur les informations suivantes : {elements},
 Respecte strictement les consignes suivantes :
 
 Thème précis : {theme}. Ce sera le concept central à enseigner.
-Orientation pédagogique : {orientation}. L'objectif est d'enseigner ou d'expliquer comment utiliser ou comprendre ce terme. Chaque section doit inclure au moins un exemple concret issu de la vie réelle pour mieux illustrer le concept.
+Orientation pédagogique : {orientation}. L'objectif est d'enseigner ou d'expliquer comment utiliser ou comprendre ce terme. Chaque section doit inclure au moins un exemple concret issu de la vie réelle (exemples précis de phrases quotidiennes, par exemple : "My name is John (Je m'appelle John)" ou "Please, can you pass the salt? (S'il vous plaît, peux-tu me passer le sel ?)") pour mieux illustrer le concept.
 Niveau de l'élève : {niveau}. Adapte la complexité du vocabulaire et des phrases en fonction du niveau de l'élève.
 Style musical : {style}. Adapte le ton, le rythme et la structure musicale en conséquence.
-Structure interactive : Utilise une structure en dialogues (rôles "A" et "B" ou sections telles que "Introduction", "Couplet", "Refrain", etc.) pour rendre l'apprentissage ludique et interactif, tout en restant concis.
-Bilinguisme : Chaque phrase en anglais doit être immédiatement suivie de sa traduction en français. Pour tout contenu spécifique (par exemple : "Red Rouge"), assure-toi que l'équivalent en français apparaisse directement après.
-Dynamisme et clarté : Utilise un langage simple, rythmé et engageant. La chanson doit être courte et se concentrer uniquement sur l'essentiel pour enseigner le thème, en intégrant des exemples concrets pour aider l'élève à mieux appréhender le terme.
+Structure interactive : La chanson doit être organisée en dialogues interactifs (rôles "A" et "B" ou sections telles que "Introduction", "Couplet", "Refrain", etc.). Intègre plusieurs échanges interactifs afin de favoriser l'interaction, et évite les phrases incomplètes ou génériques (par exemple, ne pas utiliser des constructions comme "Je m'appelle ton 'NOM'", mais fournir un exemple réel).
+Bilinguisme : Chaque phrase en anglais doit être immédiatement suivie de sa traduction en français entre parenthèses. Veille à ce que l'usage du français soit limité à la traduction, afin de ne pas surcharger le contenu de français.
+Dynamisme et clarté : Utilise un langage simple, rythmé et engageant. La chanson doit être courte et se concentrer uniquement sur l'essentiel pour enseigner le thème, sans ajouter de contenu superflu.
+Longueur adaptée : La chanson doit être brève et contenir uniquement l'information nécessaire à l'apprentissage du terme.
 Génère les lyrics en respectant strictement ces consignes et en intégrant les paramètres spécifiques indiqués.
 \n{format_instruction}
 """
