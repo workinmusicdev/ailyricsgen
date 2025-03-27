@@ -70,8 +70,6 @@ def request_openai(prompt: str, model: str = "gpt-4", temperature: float = 0.1) 
     print(response.text)
     print("response.text")
 
-
-
     if response.status_code == 200:
         return response.json()
     else:

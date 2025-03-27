@@ -61,7 +61,7 @@ def inference_by_theme(theme,orientation,niveau="",langue="français",matiere="F
     # print(response)
     # print("response")
 
-    response2 = request_openai(prompt=question, model="gpt-4o", temperature=0.1)
+    response2 = request_openai(prompt=question, model="gpt-4o", temperature=0.0)
     print("response2")
     print(response2)
     print("response2")
