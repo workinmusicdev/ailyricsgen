@@ -172,55 +172,111 @@ def process_without_music_from_docs(file_paths: List[str], metadata_path: str) -
         outputs.append(tmp_dict)
 
 
-
-
     return {"data": outputs}
 
 
-def process_lyrics_from_theme(metadata_path: str) -> Dict:
+
+import os
+import pandas as pd
+from typing import Dict
+
+def process_lyrics_from_theme(metadata_path: str) -> None:
     if not os.path.exists(metadata_path):
         raise FileNotFoundError(f"The file {metadata_path} does not exist.")
 
-    if metadata_path.endswith(".xlsx"):
-        df = pd.read_excel(metadata_path)
-    else:
+    if not metadata_path.endswith(".xlsx"):
         raise ValueError("Le fichier doit être au format Excel (.xlsx)")
+    
+    output_path = "output.xlsx"
+    # Vérifier et forcer l'extension .xlsx pour output_path
+    # if not output_path.endswith(".xlsx"):
+    #     output_path += ".xlsx"
 
-    outputs = []
+    df = pd.read_excel(metadata_path)
+    df.insert(0, "id", range(1,len(df)+1))  # Ajout de la colonne id
+    df["lyrics"] = ""  # Initialisation de la colonne lyrics
 
+    save_interval = 10  # Sauvegarde toutes les 10 entrées
+    
     for index, row in df.iterrows():
+        try:
+            id_row = str(row["id"])  # La colonne id existe maintenant
+            theme = row["theme"]
+            orientation = row["orientation"]
+            style = row["style"]
+            langue = row["langue"]
+            niveau = row["niveau"]
+            matiere = row["matiere"]
+
+            a = inference_by_theme(theme, orientation, niveau=niveau, matiere=matiere, langue=langue)
+            tmp = extraire_elements_key_from_context(a, orientation)
+            data = generate_music_lyrics(elements=tmp.content, style=style, langue=langue, orientation=orientation, theme=theme, niveau=niveau)
+            out = MusicLyrics.parse_obj(data)
+            
+            df.at[index, "lyrics"] = out.lyrics  # Ajout des lyrics dans la colonne
+            
+            print(f"Résultat généré pour {id_row} - Lyrics ajoutés")
         
-        id_row = str(row.get('id', ''))
-        theme = id_row +'_'+ row['theme']
-        orientation = row['orientation']
-        style = row['style']
-        langue = row['langue']
-        niveau = row['niveau']
-        matiere = row['matiere']
+        except Exception as e:
+            print(f"Erreur lors du traitement de l'entrée {index}: {e}")
+        
+        if (index + 1) % save_interval == 0:
+            df.to_excel(output_path, index=False)  # Sauvegarde périodique
+            print(f"Progression sauvegardée à {output_path}")
+    
+    df.to_excel(output_path, index=False)  # Enregistrement final
+    print(f"Fichier final sauvegardé : {output_path}")
 
-        a = inference_by_theme(theme, orientation, niveau=niveau, matiere=matiere, langue=langue)
 
-        print("------------------------------ A")
-        print(a)
-        print('------------------------------ A')
-        tmp = extraire_elements_key_from_context(a, orientation)
 
-        data = generate_music_lyrics(elements=tmp.content, style=style, langue=langue, orientation=orientation, theme=theme, niveau=niveau)
-        print("------------------------------")
-        print(data)
-        print('------------------------------')
 
-        out = MusicLyrics.parse_obj(data)
-        tmp_dict = out.to_dict()
-        tmp_dict['url'] = []
-        tmp_dict['langue'] = langue
-        resultat = generate_music(format_lyrics(out.lyrics), out.title, out.style)
+# The one which generate songs from themes
+# def process_lyrics_from_theme(metadata_path: str) -> Dict:
+#     if not os.path.exists(metadata_path):
+#         raise FileNotFoundError(f"The file {metadata_path} does not exist.")
 
-        print(f"resultat Gen {id_row} ------------------ Done :")
-        print(resultat)
-        print(f"resultat Gen {id_row} ------------------ Done :")
+#     if metadata_path.endswith(".xlsx"):
+#         df = pd.read_excel(metadata_path)
+#     else:
+#         raise ValueError("Le fichier doit être au format Excel (.xlsx)")
 
-        time.sleep(5)
+#     outputs = []
+
+#     for index, row in df.iterrows():
+        
+#         id_row = str(row.get('id', ''))
+#         theme = id_row +'_'+ row['theme']
+#         orientation = row['orientation']
+#         style = row['style']
+#         langue = row['langue']
+#         niveau = row['niveau']
+#         matiere = row['matiere']
+
+#         a = inference_by_theme(theme, orientation, niveau=niveau, matiere=matiere, langue=langue)
+
+#         print("------------------------------ A")
+#         print(a)
+#         print('------------------------------ A')
+#         tmp = extraire_elements_key_from_context(a, orientation)
+
+#         data = generate_music_lyrics(elements=tmp.content, style=style, langue=langue, orientation=orientation, theme=theme, niveau=niveau)
+#         print("------------------------------")
+#         print(data)
+#         print('------------------------------')
+
+#         out = MusicLyrics.parse_obj(data)
+#         tmp_dict = out.to_dict()
+#         tmp_dict['url'] = []
+#         tmp_dict['langue'] = langue
+
+
+#         # resultat = generate_music(format_lyrics(out.lyrics), out.title, out.style)
+
+#         print(f"resultat Gen {id_row} ------------------ Done :")
+#         # print(resultat)
+#         print(f"resultat Gen {id_row} ------------------ Done :")
+
+#         time.sleep(5)
 
         # c = 1
         # name = ""
@@ -244,4 +300,4 @@ def process_lyrics_from_theme(metadata_path: str) -> Dict:
 
 
 
-    return { "data": outputs}
+    # return { "data": outputs}

@@ -201,7 +201,7 @@ async def job_generate_music_from_theme(
 ):
     metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
     save_upload_file(metadata_file, metadata_path)
-    os.makedirs("uploads/extracted/", exist_ok=True)
+    # os.makedirs("generated_step1.xlsx", exist_ok=True)
 
     send_mail(
         subject="WIM Gen : Job start",
