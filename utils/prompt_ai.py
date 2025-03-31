@@ -100,32 +100,57 @@ def get_lyrics_generator_prompt(mode, langue:str):
 
         # (elements, style, orientation,num_verses=3, taille=1500, mode="auto", langue="français", theme="", niveau="")
         
-    music_template = r"""Tu es un expert en création de lyrics éducatifs pour apprendre l’anglais à travers la musique. Ta mission est de générer une chanson très courte, précise, claire et bien condensée, qui se concentre exclusivement sur l'objectif pédagogique indiqué, sans aucune digression inutile. Le contenu doit être essentiellement interactif et présenté sous forme de dialogues réels pour faciliter l’apprentissage.
+    music_template = r"""Tu es un expert en création de lyrics éducatifs pour apprendre l’anglais à travers la musique. Ta mission est de générer une chanson très courte, claire et extrêmement précise, exclusivement axée sur l'objectif pédagogique indiqué. Chaque phrase doit directement contribuer à faciliter l'apprentissage du thème, sans aucune digression inutile. La pédagogie est centrale et primordiale : il s'agit d'aider à apprendre un cours par la musique.
 
 En te basant entièrement sur les informations suivantes : {elements},
 
-Respecte strictement les consignes suivantes :
+Respecte rigoureusement ces consignes spécifiques :
 
-Thème précis : {theme}. Ce sera le concept central à enseigner.
+Thème précis : {theme}.
+Ce thème sera le cœur de l’apprentissage.
 
-Orientation pédagogique : {orientation}. L’objectif est d’enseigner clairement comment utiliser ou comprendre ce terme. Chaque phrase doit impérativement être utile à la compréhension directe du thème.
+Orientation pédagogique : {orientation}.
+L’objectif est d’expliquer clairement comment utiliser ou comprendre ce terme. Chaque phrase doit impérativement être utile à la compréhension directe du thème enseigné.
 
-Niveau de l'élève : {niveau}. Adapte strictement la complexité du vocabulaire et des phrases au niveau indiqué de l'élève.
+Niveau de l'élève : {niveau}.
+Adapte strictement le vocabulaire, la complexité grammaticale et la longueur des phrases au niveau indiqué de l’élève.
 
-Style musical : {style}. Le ton, le rythme et la structure doivent être strictement adaptés au style demandé.
+Style musical : {style}.
+Adapte précisément le ton, le rythme et la structure musicale selon le style demandé.
 
-Structure interactive (très important) :
-La chanson doit impérativement être structurée sous forme de dialogues courts et dynamiques (entre deux rôles distincts, clairement indiqués : Personnage A et Personnage B).
-Intègre dans chaque échange un exemple concret et précis issu de situations réelles de la vie quotidienne pour illustrer directement le terme enseigné.
-Évite absolument les phrases génériques ou incomplètes (exemple à ne pas suivre : « Je m'appelle TON NOM » ; bon exemple à suivre : « My name is Anna (Je m'appelle Anna) »).
+Structure interactive et pédagogique (très important) :
+La chanson doit obligatoirement suivre cette structure précise :
 
-Bilinguisme :
-Chaque phrase en anglais doit immédiatement être suivie de sa traduction complète en français entre parenthèses. Pour chaque mot ou expression spécifique enseigné, la traduction française doit être directement accolée au mot anglais (par exemple : « Thank you (Merci) »).
+Introduction : très courte, présentant simplement le thème de façon attractive pour capter l’attention immédiatement.
 
-Dynamisme et clarté :
-Utilise uniquement un langage simple, court, rythmé et très engageant. La chanson doit rester extrêmement concise, en se focalisant exclusivement sur l’essentiel du thème indiqué.
+Refrain (très important) :
 
-Génère les lyrics en respectant strictement ces consignes et en intégrant les paramètres spécifiques indiqués.
+C'est la partie centrale et essentielle.
+
+Le refrain doit être extrêmement court, rythmé, accrocheur et facile à mémoriser.
+
+Il doit résumer clairement les éléments clés du thème à retenir absolument.
+
+Couplet sous forme de dialogue :
+
+Présenté sous forme de dialogue dynamique entre deux personnages clairement identifiés (Personnage A et Personnage B).
+
+Chaque échange du dialogue doit absolument montrer l’utilisation concrète et réelle du thème dans une situation quotidienne réelle.
+
+Chaque phrase doit contenir un exemple concret tiré de la vie réelle, pour illustrer précisément le thème enseigné (par exemple, "My name is Anna (Je m’appelle Anna)", ou "Please pass the salt (S'il te plaît, passe-moi le sel)").
+
+Évite toute phrase générique ou incomplète (par exemple, ne dis pas "Je m'appelle TON NOM", utilise plutôt un exemple réel : "My name is Paul (Je m'appelle Paul)").
+
+Refrain (répété à l’identique) : pour renforcer la mémorisation des éléments essentiels.
+
+Bilinguisme (important) :
+Chaque phrase anglaise doit être immédiatement suivie de sa traduction complète en français entre parenthèses. Pour chaque expression spécifique enseignée, la traduction française doit apparaître directement après le mot anglais (exemple : "Thank you (Merci)").
+
+Dynamisme, clarté et concision :
+Utilise uniquement un langage simple, direct, très court, rythmé et engageant.
+La chanson doit rester très concise et focalisée exclusivement sur l’essentiel pédagogique indiqué.
+
+Génère les lyrics en respectant strictement ces consignes et en intégrant précisément tous les paramètres spécifiés.
 
 {format_instruction}
 """
