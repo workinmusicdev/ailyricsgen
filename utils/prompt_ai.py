@@ -100,7 +100,7 @@ def get_lyrics_generator_prompt(mode, langue:str):
 
         # (elements, style, orientation,num_verses=3, taille=1500, mode="auto", langue="français", theme="", niveau="")
         
-    music_template = r"""Tu es un expert en création de lyrics éducatifs pour apprendre l’anglais à travers la musique. Ta mission est de générer une chanson très courte, claire et extrêmement précise, exclusivement axée sur l'objectif pédagogique indiqué. Chaque phrase doit directement contribuer à faciliter l'apprentissage du thème, sans aucune digression inutile. La pédagogie est centrale et primordiale : il s'agit d'aider à apprendre un cours par la musique.
+    music_template = r"""Tu es un expert en création de lyrics éducatifs pour apprendre l’anglais à travers la musique. Ta mission est de générer une chanson pédagogique claire et précise, suffisamment développée pour illustrer clairement l'objectif pédagogique indiqué, sans aucune digression inutile, mais assez longue pour offrir plusieurs exemples concrets permettant une compréhension approfondie du thème enseigné.
 
 En te basant entièrement sur les informations suivantes : {elements},
 
@@ -118,39 +118,44 @@ Adapte strictement le vocabulaire, la complexité grammaticale et la longueur de
 Style musical : {style}.
 Adapte précisément le ton, le rythme et la structure musicale selon le style demandé.
 
-Structure interactive et pédagogique (très important) :
+Structure interactive et pédagogique détaillée (très important) :
 La chanson doit obligatoirement suivre cette structure précise :
 
-Introduction : très courte, présentant simplement le thème de façon attractive pour capter l’attention immédiatement.
+1. Introduction (courte et motivante) :
 
-Refrain (très important) :
+Présente brièvement et clairement le thème pour capter immédiatement l’attention de l'élève.
 
-C'est la partie centrale et essentielle.
+2. Refrain (essentiel, répété plusieurs fois pour favoriser la mémorisation) :
 
-Le refrain doit être extrêmement court, rythmé, accrocheur et facile à mémoriser.
+Le refrain doit être court, rythmé, accrocheur et facile à mémoriser.
 
-Il doit résumer clairement les éléments clés du thème à retenir absolument.
+Il résume de manière très claire et explicite les éléments essentiels du thème à retenir absolument.
 
-Couplet sous forme de dialogue :
+3. Couplet sous forme de dialogue interactif (développé et concret) :
 
-Présenté sous forme de dialogue dynamique entre deux personnages clairement identifiés (Personnage A et Personnage B).
+Structuré en dialogues dynamiques et réalistes entre deux personnages clairement identifiés (Personnage A et Personnage B).
 
-Chaque échange du dialogue doit absolument montrer l’utilisation concrète et réelle du thème dans une situation quotidienne réelle.
+Chaque échange doit obligatoirement inclure un exemple précis et concret tiré directement de situations réelles quotidiennes, illustrant clairement l'utilisation pratique du thème enseigné.
 
-Chaque phrase doit contenir un exemple concret tiré de la vie réelle, pour illustrer précisément le thème enseigné (par exemple, "My name is Anna (Je m’appelle Anna)", ou "Please pass the salt (S'il te plaît, passe-moi le sel)").
+Assure-toi d'avoir suffisamment d'échanges interactifs (au moins 3 ou 4 échanges) pour bien illustrer et approfondir le thème de manière vivante et efficace.
 
-Évite toute phrase générique ou incomplète (par exemple, ne dis pas "Je m'appelle TON NOM", utilise plutôt un exemple réel : "My name is Paul (Je m'appelle Paul)").
+Évite absolument toute phrase générique ou incomplète. Utilise toujours des exemples concrets précis et réalistes (par exemple : "My name is Anna (Je m'appelle Anna)", ou "Could you open the window, please? (Peux-tu ouvrir la fenêtre, s'il te plaît ?)").
 
-Refrain (répété à l’identique) : pour renforcer la mémorisation des éléments essentiels.
+4. Refrain (répété à l’identique, essentiel à la mémorisation) :
 
-Bilinguisme (important) :
-Chaque phrase anglaise doit être immédiatement suivie de sa traduction complète en français entre parenthèses. Pour chaque expression spécifique enseignée, la traduction française doit apparaître directement après le mot anglais (exemple : "Thank you (Merci)").
+Ce refrain doit être strictement identique au premier pour renforcer efficacement l’apprentissage et la mémorisation des éléments clés du thème.
 
-Dynamisme, clarté et concision :
-Utilise uniquement un langage simple, direct, très court, rythmé et engageant.
-La chanson doit rester très concise et focalisée exclusivement sur l’essentiel pédagogique indiqué.
+Bilinguisme précis et équilibré :
 
-Génère les lyrics en respectant strictement ces consignes et en intégrant précisément tous les paramètres spécifiés.
+Chaque phrase anglaise doit être immédiatement suivie de sa traduction complète en français entre parenthèses. Pour chaque expression ou terme spécifique enseigné, la traduction française doit apparaître directement accolée après le mot anglais (par exemple : "Thank you (Merci)").
+
+Dynamisme, clarté et pertinence pédagogique :
+
+Utilise exclusivement un langage simple, direct, rythmé, clair et engageant.
+
+La chanson doit être concise mais suffisamment longue pour contenir plusieurs exemples utiles et réalistes, tout en restant strictement focalisée sur l’essentiel pédagogique.
+
+Génère les lyrics en respectant rigoureusement ces consignes, tout en intégrant précisément et explicitement tous les paramètres spécifiés.
 
 {format_instruction}
 """
