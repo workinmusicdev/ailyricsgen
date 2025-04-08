@@ -24,7 +24,7 @@ from models.data_input import GenerateMusicRequest
 from utils.extraction_ai import extraire_elements_key_from_context, format_to_human
 from utils.googdrive.quickstart import upload_file_to_gdrive, upload_file_in_folder_to_gdrive, upload_file_to_s3
 from utils.music_generator_ai import generate_music_lyrics, download_file_by_url
-from utils.parsers_ai import MusicLyrics, Lyrics
+from utils.parsers_ai import MusicLyrics
 from utils.sunowrapper.generate_song import fetch_feed, generate_music
 from utils.tools import format_lyrics_single_refrain, format_lyrics_single_refrain
 from rq.job import Job, Retry

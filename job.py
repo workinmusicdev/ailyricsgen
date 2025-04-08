@@ -200,7 +200,7 @@ def process_lyrics_from_theme(metadata_path: str) -> None:
     
     for index, row in df.iterrows():
         try:
-            id_row = str(row["id"])  # La colonne id existe maintenant
+            # id_row = str(row["id"])  # La colonne id existe maintenant
             theme = row["theme"]
             orientation = row["orientation"]
             style = row["style"]
@@ -215,9 +215,10 @@ def process_lyrics_from_theme(metadata_path: str) -> None:
             
             df.at[index, "lyrics"] = out.lyrics  # Ajout des lyrics dans la colonne
             
-            print(f"Résultat généré pour {id_row} - Lyrics ajoutés")
-        
+            print(f"Résultat généré pour {index} - Lyrics ajoutés")
+    
         except Exception as e:
+            print(e)
             print(f"Erreur lors du traitement de l'entrée {index}: {e}")
         
         if (index + 1) % save_interval == 0:

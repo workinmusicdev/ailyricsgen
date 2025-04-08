@@ -1,7 +1,7 @@
 
 from langchain_core.prompts import ChatPromptTemplate, PromptTemplate
 
-from utils.parsers_ai import music_lyrics_parser, lyrics_parser
+from utils.parsers_ai import music_lyrics_parser
 
 
 def load_extraction_prompt():
@@ -100,65 +100,108 @@ def get_lyrics_generator_prompt(mode, langue:str):
 
         # (elements, style, orientation,num_verses=3, taille=1500, mode="auto", langue="français", theme="", niveau="")
         
-    music_template = r"""Tu es un expert en création de lyrics éducatifs pour apprendre l’anglais à travers la musique. Ta mission est de générer une chanson pédagogique claire et précise, suffisamment développée pour illustrer clairement l'objectif pédagogique indiqué, sans aucune digression inutile, mais assez longue pour offrir plusieurs exemples concrets permettant une compréhension approfondie du thème enseigné.
+    music_template = r"""Tu es un expert en création de chansons éducatives pour apprendre l’espagnol à travers la musique.
 
-En te basant entièrement sur les informations suivantes : {elements},
+Tu travailles avec ChatGPT (OpenAI) pour générer une chanson claire, progressive, interactive, et adaptée à des apprenants de niveau A1.
 
-Respecte rigoureusement ces consignes spécifiques :
+Chaque chanson est centrée sur un objectif pédagogique concret, atteint grâce à une structure musicale répétitive, dialoguée, et basée sur des situations de la vie réelle.
 
-Thème précis : {theme}.
-Ce thème sera le cœur de l’apprentissage.
 
-Orientation pédagogique : {orientation}.
-L’objectif est d’expliquer clairement comment utiliser ou comprendre ce terme. Chaque phrase doit impérativement être utile à la compréhension directe du thème enseigné.
 
-Niveau de l'élève : {niveau}.
-Adapte strictement le vocabulaire, la complexité grammaticale et la longueur des phrases au niveau indiqué de l’élève.
+La langue utilisée est l’espagnol, avec une traduction complète en français (entre parenthèses) immédiatement après chaque phrase espagnole.
 
-Style musical : {style}.
-Adapte précisément le ton, le rythme et la structure musicale selon le style demandé.
+🔧 Informations à renseigner (à insérer dans les champs entre accolades) :
+Langue d’apprentissage : Espagnol (avec traduction en français)
 
-Structure interactive et pédagogique détaillée (très important) :
-La chanson doit obligatoirement suivre cette structure précise :
+{elements} : Contexte pédagogique général ou module (ex. : “Module 2 – Leçon 4 : les expressions de politesse”)
 
-1. Introduction (courte et motivante) :
+{theme} : Thème principal de la chanson (ex. : “Exprimer ce qu’on aime”, “Saluer”, “Parler des couleurs primaires”, etc.)
 
-Présente brièvement et clairement le thème pour capter immédiatement l’attention de l'élève.
+{orientation} : Objectif pédagogique clair (ex. : “À la fin de la chanson, l’élève doit savoir dire ce qu’il aime ou n’aime pas.”)
 
-2. Refrain (essentiel, répété plusieurs fois pour favoriser la mémorisation) :
+{niveau} : Niveau CECRL visé → A1
 
-Le refrain doit être court, rythmé, accrocheur et facile à mémoriser.
+{style} : Style musical souhaité (ex. : Pop, Rap)
 
-Il résume de manière très claire et explicite les éléments essentiels du thème à retenir absolument.
+{format_instruction} : Précision sur le format attendu. Ex. : “Génère les lyrics avec la structure demandée + une fiche technique à part.”
 
-3. Couplet sous forme de dialogue interactif (développé et concret) :
+🎶 STRUCTURE MUSICALE OBLIGATOIRE (à respecter strictement) :
+[Introduction – tous ensemble]
 
-Structuré en dialogues dynamiques et réalistes entre deux personnages clairement identifiés (Personnage A et Personnage B).
+➤ Introduction très courte qui annonce clairement le thème.
 
-Chaque échange doit obligatoirement inclure un exemple précis et concret tiré directement de situations réelles quotidiennes, illustrant clairement l'utilisation pratique du thème enseigné.
+[Refrain – ensemble]
 
-Assure-toi d'avoir suffisamment d'échanges interactifs (au moins 3 ou 4 échanges) pour bien illustrer et approfondir le thème de manière vivante et efficace.
+➤ Obligatoire : ce refrain doit absolument apparaître deux fois à l’identique dans la chanson (une première fois ici, puis une deuxième fois après le couplet).
 
-Évite absolument toute phrase générique ou incomplète. Utilise toujours des exemples concrets précis et réalistes (par exemple : "My name is Anna (Je m'appelle Anna)", ou "Could you open the window, please? (Peux-tu ouvrir la fenêtre, s'il te plaît ?)").
+➤ Il est court, rythmé, répétable, mémorisable, et résume les éléments clés de la leçon.
 
-4. Refrain (répété à l’identique, essentiel à la mémorisation) :
+[Couplet – dialogue A & B]
 
-Ce refrain doit être strictement identique au premier pour renforcer efficacement l’apprentissage et la mémorisation des éléments clés du thème.
+➤ Dialogue entre deux personnages (“A” et “B”).
 
-Bilinguisme précis et équilibré :
+➤ Minimum 3 à 5 échanges réels avec utilisation concrète du vocabulaire ou des structures en contexte.
 
-Chaque phrase anglaise doit être immédiatement suivie de sa traduction complète en français entre parenthèses. Pour chaque expression ou terme spécifique enseigné, la traduction française doit apparaître directement accolée après le mot anglais (par exemple : "Thank you (Merci)").
+➤ Les phrases sont très simples, courtes, et adaptées au niveau A1 strict.
 
-Dynamisme, clarté et pertinence pédagogique :
+➤ Utilise des exemples concrets de la vie quotidienne.
 
-Utilise exclusivement un langage simple, direct, rythmé, clair et engageant.
+➤ Tu peux réutiliser du vocabulaire vu précédemment pour créer des ponts pédagogiques.
 
-La chanson doit être concise mais suffisamment longue pour contenir plusieurs exemples utiles et réalistes, tout en restant strictement focalisée sur l’essentiel pédagogique.
+[Refrain – identique]
 
-Génère les lyrics en respectant rigoureusement ces consignes, tout en intégrant précisément et explicitement tous les paramètres spécifiés.
+➤ Exactement le même que précédemment. Il doit être copié-collé à l’identique.
 
-{format_instruction}
-"""
+➤ Il sert à renforcer la mémorisation.
+
+[Mini-dialogue – optionnel]
+
+➤ Une reprise courte ou une variation ludique.
+
+[Outro – optionnel]
+
+➤ Une dernière ligne simple, de type au revoir ou félicitation.
+
+🗣️ BILINGUISME (à respecter absolument) :
+Chaque phrase en espagnol est suivie immédiatement de sa traduction complète en français entre parenthèses.
+
+➤ Exemple : "Me gusta la pizza." (J’aime la pizza.)
+
+Ne pas surcharger en français. Utiliser le français uniquement pour la compréhension.
+
+🎯 OBJECTIF PÉDAGOGIQUE :
+Le texte vise un objectif précis et atteignable à la fin de la chanson (ex. : savoir dire ce qu’on aime, saluer quelqu’un, utiliser des couleurs, etc.).
+
+La pédagogie est prioritaire sur le rythme musical : le texte doit être lisible à haute voix en classe, simple, et immédiatement compréhensible pour des élèves débutants.
+
+📄 FICHE TECHNIQUE À FOURNIR AVEC LA CHANSON :
+Titre de la chanson
+
+Langue cible : Espagnol
+
+Objectif CECRL : ex. A1 – se présenter, parler de ses goûts…
+
+Objectif pédagogique de la chanson
+
+Vocabulaire cible
+
+Structures grammaticales utilisées
+
+Compétence(s) visée(s) : CO (Compréhension orale), PO (Production orale), CE (Compréhension écrite), etc."""
+
+
+
+# 📄 Fiche technique à générer avec chaque chanson :
+
+# À fournir en complément du texte (séparément ou après les lyrics) :
+
+# Titre de la chanson
+# Langue cible : ex. Espagnol
+# Objectif CECRL : ex. A1 – se présenter / décrire
+# Objectif pédagogique de la chanson
+# Vocabulaire cible
+# Structures grammaticales utilisées
+# Compétence(s) visée(s) : CO (Compréhension orale), PO (Production orale), etc.
 # Chaque couplet, refrain et pont doit contenir au minimum 4 vers.Et chaque vers séparé par '\n'. La taille minimum est 1500 caractères.
 # entre parenthèses
 

@@ -4,7 +4,7 @@ from langchain.chains.retrieval_qa.base import RetrievalQA
 from langchain_core.output_parsers import StrOutputParser
 from langchain_openai import OpenAI, ChatOpenAI
 
-from utils.parsers_ai import Lyrics, lyrics_parser
+from utils.parsers_ai import music_lyrics_parser
 from utils.prompt_ai import load_extraction_prompt, load_extraction_prompt_from_context, prompt_format_to_human_lyrics
 
 
@@ -37,7 +37,7 @@ def extraire_elements_key_from_context(context,orientation,nbr_caratères=2500,)
 def format_to_human(lyrics):
     prompt = prompt_format_to_human_lyrics()
     llm = ChatOpenAI(temperature=0, model_name="gpt-4o", )
-    chain = prompt | llm | lyrics_parser
+    chain = prompt | llm | music_lyrics_parser
 
     res = chain.invoke({
         "elements": lyrics,
