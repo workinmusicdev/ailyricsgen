@@ -179,6 +179,7 @@ def process_without_music_from_docs(file_paths: List[str], metadata_path: str) -
 import os
 import pandas as pd
 from typing import Dict
+import time
 
 def process_lyrics_from_theme(metadata_path: str) -> None:
     if not os.path.exists(metadata_path):
@@ -194,39 +195,49 @@ def process_lyrics_from_theme(metadata_path: str) -> None:
 
     df = pd.read_excel(metadata_path)
     df.insert(0, "id", range(1,len(df)+1))  # Ajout de la colonne id
-    df["lyrics"] = ""  # Initialisation de la colonne lyrics
+    # df["lyrics"] = ""  # Initialisation de la colonne lyrics
 
-    save_interval = 10  # Sauvegarde toutes les 10 entrées
+    # save_interval = 10  # Sauvegarde toutes les 10 entrées
     
     for index, row in df.iterrows():
         try:
             # id_row = str(row["id"])  # La colonne id existe maintenant
-            theme = row["theme"]
-            orientation = row["orientation"]
-            style = row["style"]
-            langue = row["langue"]
-            niveau = row["niveau"]
-            matiere = row["matiere"]
+            theme = row["Titre"]
+            # orientation = row["orientation"]
+            # style = row["style"]
+            # langue = row["langue"]
+            # niveau = row["niveau"]
+            # matiere = row["matiere"]
+            lyric = row["Lyric"]
+           
+            style = row["Style de musique"]
 
-            a = inference_by_theme(theme, orientation, niveau=niveau, matiere=matiere, langue=langue)
-            tmp = extraire_elements_key_from_context(a, orientation)
-            data = generate_music_lyrics(elements=tmp.content, style=style, langue=langue, orientation=orientation, theme=theme, niveau=niveau)
-            out = MusicLyrics.parse_obj(data)
+            # a = inference_by_theme(theme, orientation, niveau=niveau, matiere=matiere, langue=langue)
+            # tmp = extraire_elements_key_from_context(a, orientation)
+
+            # data = generate_music_lyrics(elements=tmp.content, style=style, langue=langue, orientation=orientation, theme=theme, niveau=niveau)
+            # out = MusicLyrics.parse_obj(data)
             
-            df.at[index, "lyrics"] = out.lyrics  # Ajout des lyrics dans la colonne
+            # df.at[index, "lyrics"] = out.lyrics  # Ajout des lyrics dans la colonne
             
-            print(f"Résultat généré pour {index} - Lyrics ajoutés")
+            # print(f"Résultat généré pour {index} - Lyrics ajoutés")
+
+            generate_music(lyric, theme, style)
+
+            print(f"Musique généré pour {index} - {theme} - {style}")
+
+            time.sleep(5)  # Pause de 5 secondes entre les requêtes pour éviter de surcharger le serveur
     
         except Exception as e:
             print(e)
             print(f"Erreur lors du traitement de l'entrée {index}: {e}")
         
-        if (index + 1) % save_interval == 0:
-            df.to_excel(output_path, index=False)  # Sauvegarde périodique
-            print(f"Progression sauvegardée à {output_path}")
+        # if (index + 1) % save_interval == 0:
+        #     df.to_excel(output_path, index=False)  # Sauvegarde périodique
+        #     print(f"Progression sauvegardée à {output_path}")
     
-    df.to_excel(output_path, index=False)  # Enregistrement final
-    print(f"Fichier final sauvegardé : {output_path}")
+    # df.to_excel(output_path, index=False)  # Enregistrement final
+    # print(f"Fichier final sauvegardé : {output_path}")
 
 
 

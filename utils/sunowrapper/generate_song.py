@@ -34,7 +34,7 @@ def generate_music(lyrics, title, style):
     headers = {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-        'Authorization': 'Bearer ed15eadf40ec83c60017e1dfc9913443',
+        'Authorization': 'Bearer cad1dab497c8d5c64df38b1ddcfdeae1',
     }
 
     payload_new = json.dumps({
@@ -45,7 +45,7 @@ def generate_music(lyrics, title, style):
         "instrumental": False, # ...
         "model": "V4", # V3_5
         # "negativeTags": "Relaxing Piano",
-        "callBackUrl": "https://9ed5-137-255-65-21.ngrok-free.app/generation/callback"
+        "callBackUrl": "https://5de5-41-85-181-54.ngrok-free.app/generation/callback"
         })
 
     print("\n")
