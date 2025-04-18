@@ -66,7 +66,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
 def save_upload_file(upload_file: UploadFile, destination: str) -> str:
     logging.info(f"Saving file '{upload_file.filename}' to {destination}")
     try:
@@ -335,7 +334,6 @@ if __name__ == "__main__":
     # Start the worker in a separate process
     worker_process = subprocess.Popen(["rq", "worker", "task_queue"])
     # worker_process = subprocess.Popen([sys.executable, "-m", "rq", "worker", "task_queue"])
-
 
     # Start the FastAPI server
     uvicorn.run(app, host="0.0.0.0", port=8080)
