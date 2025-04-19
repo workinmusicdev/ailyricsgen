@@ -1,0 +1,22 @@
+{
+    "url": [
+        {
+            "url_drive": null,
+            "img_drive": null,
+            "audio_url": "https://apiboxfiles.erweima.ai/ZDhjNDIwMTYtMGZlYS00NjhlLWE4MjMtYzZlNTdmYjQzMTQ2.mp3",
+            "image_url": "https://apiboxfiles.erweima.ai/ZDhjNDIwMTYtMGZlYS00NjhlLWE4MjMtYzZlNTdmYjQzMTQ2.jpeg",
+            "title": "🎶 JE VOUDRAIS COMMANDER",
+            "duration": 109.16
+        }
+    ],
+    "langue": "",
+    "title": "🎶 JE VOUDRAIS COMMANDER",
+    "tags": "POP CLASSIQUE",
+    "prompt": "Introduction – tous ensemble]\nDans cette chanson, tu vas apprendre à commander un repas ou une boisson en anglais, simplement et poliment !\n[Refrain – ensemble]\nCan I see the menu? (Puis-je voir la carte ?)\nI would like a pizza. (Je voudrais une pizza.)\nFor me, some water. (Po[ur moi, de l’eau.)\nAnd a coffee, please. (Et un café, s’il vous plaît.)\nCan I see the menu? (Puis-je voir la carte ?)\nI would like a pizza. (Je voudrais une pizza.)\nFor me, some water. (Pour moi, de l’eau.)\nAnd a coffee, please. (Et un café, s’il vous plaît.)\n[Couplet – dialogue A & B]\nA: Hello! Are you ready to order? (Bonjour ! Êtes-vous prêt à commander ?)\nB: Yes, can I see the menu? (Oui, puis-je voir la carte ?)\nA: Here it is. (La voici.)\nB: Thank you. I would like a salad. (Merci. Je voudrais une salade.)\nA: Anything to drink? (Quelque chose à boire ?)\nB: Yes, some water and a tea. (Oui, de l’eau et un thé.)\nA: OK, one salad, water and tea. (D’accord, une salade, de l’eau et un thé.)\nB: Yes, please! (Oui, s’il vous plaît !)\n[Refrain – ensemble] \nCan I see the menu? (Puis-je voir la carte ?)\nI would like a pizza. (Je voudrais une pizza.)\nFor me, some water. (Pour moi, de l’eau.)\nAnd a coffee, please. (Et un café, s’il vous plaît.)\nCan I see the menu? (Puis-je voir la carte ?)\nI would like a pizza. (Je voudrais une pizza.)\nFor me, some water. (Pour moi, de l’eau.)\nAnd a coffee, please. (Et un café, s’il vous plaît.)",
+    "source_audio_url": "https://cdn1.suno.ai/d8c42016-0fea-468e-a823-c6e57fb43146.mp3",
+    "source_image_url": "https://cdn2.suno.ai/image_d8c42016-0fea-468e-a823-c6e57fb43146.jpeg",
+    "stream_audio_url": "https://mfile.erweima.ai/ZDhjNDIwMTYtMGZlYS00NjhlLWE4MjMtYzZlNTdmYjQzMTQ2",
+    "source_stream_audio_url": "https://cdn1.suno.ai/d8c42016-0fea-468e-a823-c6e57fb43146.mp3",
+    "duration": 109.16,
+    "model_name": "chirp-v4"
+}

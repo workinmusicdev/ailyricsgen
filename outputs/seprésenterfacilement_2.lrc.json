@@ -1,0 +1,4633 @@
+{
+  "code": 200,
+  "msg": "success",
+  "data": {
+    "alignedWords": [
+      {
+        "word": "[INTRODUCTION – tous ensemble]\nDans ",
+        "success": true,
+        "startS": 0.4787234042553192,
+        "endS": 0.7180851063829787,
+        "palign": 0
+      },
+      {
+        "word": "cette ",
+        "success": true,
+        "startS": 0.8138297872340425,
+        "endS": 1.196808510638298,
+        "palign": 0
+      },
+      {
+        "word": "chanson, ",
+        "success": true,
+        "startS": 1.2367021276595747,
+        "endS": 2.393617021276596,
+        "palign": 0
+      },
+      {
+        "word": "tu ",
+        "success": true,
+        "startS": 2.473404255319149,
+        "endS": 2.5531914893617023,
+        "palign": 0
+      },
+      {
+        "word": "vas ",
+        "success": true,
+        "startS": 2.6595744680851063,
+        "endS": 2.872340425531915,
+        "palign": 0
+      },
+      {
+        "word": "apprendre ",
+        "success": true,
+        "startS": 2.925531914893617,
+        "endS": 3.271276595744681,
+        "palign": 0
+      },
+      {
+        "word": "à ",
+        "success": true,
+        "startS": 3.4308510638297873,
+        "endS": 3.5106382978723403,
+        "palign": 0
+      },
+      {
+        "word": "te ",
+        "success": true,
+        "startS": 3.63031914893617,
+        "endS": 3.75,
+        "palign": 0
+      },
+      {
+        "word": "présenter ",
+        "success": true,
+        "startS": 3.789893617021277,
+        "endS": 4.468085106382979,
+        "palign": 0
+      },
+      {
+        "word": "simplement ",
+        "success": true,
+        "startS": 4.547872340425532,
+        "endS": 5.1861702127659575,
+        "palign": 0
+      },
+      {
+        "word": "en ",
+        "success": true,
+        "startS": 5.26595744680851,
+        "endS": 5.345744680851064,
+        "palign": 0
+      },
+      {
+        "word": "anglais : ",
+        "success": true,
+        "startS": 5.452127659574469,
+        "endS": 7.1010638297872335,
+        "palign": 0
+      },
+      {
+        "word": "dire ",
+        "success": true,
+        "startS": 7.14095744680851,
+        "endS": 7.26063829787234,
+        "palign": 0
+      },
+      {
+        "word": "ton ",
+        "success": true,
+        "startS": 7.340425531914893,
+        "endS": 7.5,
+        "palign": 0
+      },
+      {
+        "word": "prénom, ",
+        "success": true,
+        "startS": 7.539893617021276,
+        "endS": 8.457446808510639,
+        "palign": 0
+      },
+      {
+        "word": "ta ",
+        "success": true,
+        "startS": 8.537234042553191,
+        "endS": 8.617021276595745,
+        "palign": 0
+      },
+      {
+        "word": "nationalité, ",
+        "success": true,
+        "startS": 8.710106382978724,
+        "endS": 10.345744680851062,
+        "palign": 0
+      },
+      {
+        "word": "pourquoi ",
+        "success": true,
+        "startS": 10.398936170212766,
+        "endS": 10.77127659574468,
+        "palign": 0
+      },
+      {
+        "word": "tu ",
+        "success": true,
+        "startS": 10.89095744680851,
+        "endS": 11.01063829787234,
+        "palign": 0
+      },
+      {
+        "word": "es ",
+        "success": true,
+        "startS": 11.090425531914892,
+        "endS": 11.170212765957446,
+        "palign": 0
+      },
+      {
+        "word": "là.\n",
+        "success": true,
+        "startS": 11.289893617021276,
+        "endS": 14.40159574468085,
+        "palign": 0
+      },
+      {
+        "word": "C’",
+        "success": true,
+        "startS": 14.441489361702128,
+        "endS": 14.441489361702128,
+        "palign": 0
+      },
+      {
+        "word": "est ",
+        "success": true,
+        "startS": 14.52127659574468,
+        "endS": 14.680851063829788,
+        "palign": 0
+      },
+      {
+        "word": "le ",
+        "success": true,
+        "startS": 14.720744680851064,
+        "endS": 14.76063829787234,
+        "palign": 0
+      },
+      {
+        "word": "premier ",
+        "success": true,
+        "startS": 14.840425531914894,
+        "endS": 15.319148936170214,
+        "palign": 0
+      },
+      {
+        "word": "pas ",
+        "success": true,
+        "startS": 15.425531914893618,
+        "endS": 15.957446808510639,
+        "palign": 0
+      },
+      {
+        "word": "pour ",
+        "success": true,
+        "startS": 16.017287234042556,
+        "endS": 16.1968085106383,
+        "palign": 0
+      },
+      {
+        "word": "parler ",
+        "success": true,
+        "startS": 16.289893617021278,
+        "endS": 16.914893617021278,
+        "palign": 0
+      },
+      {
+        "word": "avec ",
+        "success": true,
+        "startS": 16.974734042553195,
+        "endS": 17.154255319148938,
+        "palign": 0
+      },
+      {
+        "word": "quelqu’",
+        "success": true,
+        "startS": 17.23404255319149,
+        "endS": 17.5531914893617,
+        "palign": 0
+      },
+      {
+        "word": "un ",
+        "success": true,
+        "startS": 17.632978723404257,
+        "endS": 18.111702127659573,
+        "palign": 0
+      },
+      {
+        "word": "en ",
+        "success": true,
+        "startS": 18.231382978723403,
+        "endS": 18.51063829787234,
+        "palign": 0
+      },
+      {
+        "word": "voyage.\n",
+        "success": true,
+        "startS": 18.63031914893617,
+        "endS": 21.648936170212767,
+        "palign": 0
+      },
+      {
+        "word": "My ",
+        "success": true,
+        "startS": 21.75531914893617,
+        "endS": 21.861702127659576,
+        "palign": 0
+      },
+      {
+        "word": "name ",
+        "success": true,
+        "startS": 21.961436170212767,
+        "endS": 22.26063829787234,
+        "palign": 0
+      },
+      {
+        "word": "is ",
+        "success": true,
+        "startS": 22.38031914893617,
+        "endS": 22.73936170212766,
+        "palign": 0
+      },
+      {
+        "word": "Anna. (",
+        "success": true,
+        "startS": 22.85904255319149,
+        "endS": 23.537234042553195,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 23.57712765957447,
+        "endS": 23.617021276595747,
+        "palign": 0
+      },
+      {
+        "word": "m’",
+        "success": true,
+        "startS": 23.6968085106383,
+        "endS": 23.6968085106383,
+        "palign": 0
+      },
+      {
+        "word": "appelle ",
+        "success": true,
+        "startS": 23.856382978723403,
+        "endS": 24.335106382978722,
+        "palign": 0
+      },
+      {
+        "word": "Anna.)\n",
+        "success": true,
+        "startS": 24.454787234042552,
+        "endS": 24.867021276595747,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 24.893617021276597,
+        "endS": 24.893617021276597,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 24.97340425531915,
+        "endS": 25.0531914893617,
+        "palign": 0
+      },
+      {
+        "word": "French ",
+        "success": true,
+        "startS": 25.09308510638298,
+        "endS": 25.29255319148936,
+        "palign": 0
+      },
+      {
+        "word": "and ",
+        "success": true,
+        "startS": 25.398936170212767,
+        "endS": 25.611702127659576,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 25.69148936170213,
+        "endS": 25.69148936170213,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 25.77127659574468,
+        "endS": 26.01063829787234,
+        "palign": 0
+      },
+      {
+        "word": "a ",
+        "success": true,
+        "startS": 26.170212765957448,
+        "endS": 26.25,
+        "palign": 0
+      },
+      {
+        "word": "tourist. (",
+        "success": true,
+        "startS": 26.329787234042552,
+        "endS": 26.94148936170213,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 26.96808510638298,
+        "endS": 27.04787234042553,
+        "palign": 0
+      },
+      {
+        "word": "suis ",
+        "success": true,
+        "startS": 27.04787234042553,
+        "endS": 27.20744680851064,
+        "palign": 0
+      },
+      {
+        "word": "française ",
+        "success": true,
+        "startS": 27.247340425531917,
+        "endS": 27.68617021276596,
+        "palign": 0
+      },
+      {
+        "word": "et ",
+        "success": true,
+        "startS": 27.68617021276596,
+        "endS": 27.845744680851062,
+        "palign": 0
+      },
+      {
+        "word": "je ",
+        "success": true,
+        "startS": 27.965425531914892,
+        "endS": 28.085106382978722,
+        "palign": 0
+      },
+      {
+        "word": "suis ",
+        "success": true,
+        "startS": 28.14494680851064,
+        "endS": 28.324468085106382,
+        "palign": 0
+      },
+      {
+        "word": "touriste.)\n",
+        "success": true,
+        "startS": 28.3843085106383,
+        "endS": 29.414893617021278,
+        "palign": 0
+      },
+      {
+        "word": "Nice ",
+        "success": true,
+        "startS": 29.481382978723403,
+        "endS": 29.680851063829788,
+        "palign": 0
+      },
+      {
+        "word": "to ",
+        "success": true,
+        "startS": 29.800531914893618,
+        "endS": 30.0,
+        "palign": 0
+      },
+      {
+        "word": "meet ",
+        "success": true,
+        "startS": 30.09973404255319,
+        "endS": 30.398936170212767,
+        "palign": 0
+      },
+      {
+        "word": "you! (",
+        "success": true,
+        "startS": 30.50531914893617,
+        "endS": 30.83776595744681,
+        "palign": 0
+      },
+      {
+        "word": "Enchanté !)\n",
+        "success": true,
+        "startS": 30.897606382978722,
+        "endS": 31.629939209726444,
+        "palign": 0
+      },
+      {
+        "word": "What’",
+        "success": true,
+        "startS": 31.641337386018236,
+        "endS": 31.675531914893618,
+        "palign": 0
+      },
+      {
+        "word": "s ",
+        "success": true,
+        "startS": 31.75531914893617,
+        "endS": 31.835106382978722,
+        "palign": 0
+      },
+      {
+        "word": "your ",
+        "success": true,
+        "startS": 31.875,
+        "endS": 31.99468085106383,
+        "palign": 0
+      },
+      {
+        "word": "name? (",
+        "success": true,
+        "startS": 32.09441489361702,
+        "endS": 32.898936170212764,
+        "palign": 0
+      },
+      {
+        "word": "Comment ",
+        "success": true,
+        "startS": 32.952127659574465,
+        "endS": 33.27127659574468,
+        "palign": 0
+      },
+      {
+        "word": "tu ",
+        "success": true,
+        "startS": 33.351063829787236,
+        "endS": 33.430851063829785,
+        "palign": 0
+      },
+      {
+        "word": "t’",
+        "success": true,
+        "startS": 33.51063829787234,
+        "endS": 33.51063829787234,
+        "palign": 0
+      },
+      {
+        "word": "appelles ?)\n",
+        "success": true,
+        "startS": 33.75,
+        "endS": 36.68617021276596,
+        "palign": 0
+      },
+      {
+        "word": "My ",
+        "success": true,
+        "startS": 36.734042553191486,
+        "endS": 36.78191489361702,
+        "palign": 0
+      },
+      {
+        "word": "name ",
+        "success": true,
+        "startS": 36.88164893617021,
+        "endS": 37.180851063829785,
+        "palign": 0
+      },
+      {
+        "word": "is ",
+        "success": true,
+        "startS": 37.30053191489361,
+        "endS": 37.659574468085104,
+        "palign": 0
+      },
+      {
+        "word": "Anna. (",
+        "success": true,
+        "startS": 37.77925531914893,
+        "endS": 38.537234042553195,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 38.577127659574465,
+        "endS": 38.61702127659574,
+        "palign": 0
+      },
+      {
+        "word": "m’",
+        "success": true,
+        "startS": 38.6968085106383,
+        "endS": 38.6968085106383,
+        "palign": 0
+      },
+      {
+        "word": "appelle ",
+        "success": true,
+        "startS": 38.8563829787234,
+        "endS": 39.33510638297872,
+        "palign": 0
+      },
+      {
+        "word": "Anna.)\n",
+        "success": true,
+        "startS": 39.41489361702128,
+        "endS": 39.787234042553195,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 39.81382978723404,
+        "endS": 39.81382978723404,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 39.8936170212766,
+        "endS": 40.0531914893617,
+        "palign": 0
+      },
+      {
+        "word": "French ",
+        "success": true,
+        "startS": 40.07313829787234,
+        "endS": 40.212765957446805,
+        "palign": 0
+      },
+      {
+        "word": "and ",
+        "success": true,
+        "startS": 40.29255319148936,
+        "endS": 40.611702127659576,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 40.691489361702125,
+        "endS": 40.691489361702125,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 40.77127659574468,
+        "endS": 41.01063829787234,
+        "palign": 0
+      },
+      {
+        "word": "a ",
+        "success": true,
+        "startS": 41.090425531914896,
+        "endS": 41.090425531914896,
+        "palign": 0
+      },
+      {
+        "word": "tourist. (",
+        "success": true,
+        "startS": 41.13031914893617,
+        "endS": 42.00797872340425,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 42.06781914893617,
+        "endS": 42.12765957446808,
+        "palign": 0
+      },
+      {
+        "word": "suis ",
+        "success": true,
+        "startS": 42.16755319148936,
+        "endS": 42.287234042553195,
+        "palign": 0
+      },
+      {
+        "word": "française ",
+        "success": true,
+        "startS": 42.30718085106383,
+        "endS": 42.765957446808514,
+        "palign": 0
+      },
+      {
+        "word": "et ",
+        "success": true,
+        "startS": 42.84574468085107,
+        "endS": 42.92553191489362,
+        "palign": 0
+      },
+      {
+        "word": "je ",
+        "success": true,
+        "startS": 43.045212765957444,
+        "endS": 43.16489361702128,
+        "palign": 0
+      },
+      {
+        "word": "suis ",
+        "success": true,
+        "startS": 43.224734042553195,
+        "endS": 43.40425531914894,
+        "palign": 0
+      },
+      {
+        "word": "touriste.)\n",
+        "success": true,
+        "startS": 43.464095744680854,
+        "endS": 44.49468085106383,
+        "palign": 0
+      },
+      {
+        "word": "Nice ",
+        "success": true,
+        "startS": 44.56117021276596,
+        "endS": 44.76063829787234,
+        "palign": 0
+      },
+      {
+        "word": "to ",
+        "success": true,
+        "startS": 44.88031914893617,
+        "endS": 45.0,
+        "palign": 0
+      },
+      {
+        "word": "meet ",
+        "success": true,
+        "startS": 45.099734042553195,
+        "endS": 45.398936170212764,
+        "palign": 0
+      },
+      {
+        "word": "you! (",
+        "success": true,
+        "startS": 45.50531914893617,
+        "endS": 45.837765957446805,
+        "palign": 0
+      },
+      {
+        "word": "Enchanté !)\n",
+        "success": true,
+        "startS": 45.89760638297872,
+        "endS": 46.709726443769,
+        "palign": 0
+      },
+      {
+        "word": "What’",
+        "success": true,
+        "startS": 46.72112462006079,
+        "endS": 46.755319148936174,
+        "palign": 0
+      },
+      {
+        "word": "s ",
+        "success": true,
+        "startS": 46.83510638297872,
+        "endS": 46.91489361702128,
+        "palign": 0
+      },
+      {
+        "word": "your ",
+        "success": true,
+        "startS": 46.954787234042556,
+        "endS": 47.07446808510638,
+        "palign": 0
+      },
+      {
+        "word": "name? (",
+        "success": true,
+        "startS": 47.174202127659576,
+        "endS": 47.898936170212764,
+        "palign": 0
+      },
+      {
+        "word": "Comment ",
+        "success": true,
+        "startS": 47.952127659574465,
+        "endS": 48.27127659574468,
+        "palign": 0
+      },
+      {
+        "word": "tu ",
+        "success": true,
+        "startS": 48.351063829787236,
+        "endS": 48.430851063829785,
+        "palign": 0
+      },
+      {
+        "word": "t’",
+        "success": true,
+        "startS": 48.51063829787234,
+        "endS": 48.51063829787234,
+        "palign": 0
+      },
+      {
+        "word": "appelles ?)\n\n[",
+        "success": true,
+        "startS": 48.75,
+        "endS": 49.99934331494615,
+        "palign": 0
+      },
+      {
+        "word": "REFRAIN – ",
+        "success": true,
+        "startS": 50.00985027580772,
+        "endS": 50.10441292356186,
+        "palign": 0
+      },
+      {
+        "word": "ensemble] (x2)\n",
+        "success": true,
+        "startS": 50.11491988442343,
+        "endS": 50.26201733648542,
+        "palign": 0
+      },
+      {
+        "word": "My ",
+        "success": true,
+        "startS": 50.27252429734699,
+        "endS": 50.293538219070136,
+        "palign": 0
+      },
+      {
+        "word": "name ",
+        "success": true,
+        "startS": 50.304045179931705,
+        "endS": 50.34607302337799,
+        "palign": 0
+      },
+      {
+        "word": "is ",
+        "success": true,
+        "startS": 50.35657998423956,
+        "endS": 50.3775939059627,
+        "palign": 0
+      },
+      {
+        "word": "Anna. (",
+        "success": true,
+        "startS": 50.388100866824274,
+        "endS": 50.4511426319937,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 50.46164959285527,
+        "endS": 50.482663514578405,
+        "palign": 0
+      },
+      {
+        "word": "m’",
+        "success": true,
+        "startS": 50.49317047543998,
+        "endS": 50.50367743630155,
+        "palign": 0
+      },
+      {
+        "word": "appelle ",
+        "success": true,
+        "startS": 50.51418439716312,
+        "endS": 50.58773312319412,
+        "palign": 0
+      },
+      {
+        "word": "Anna.)\n",
+        "success": true,
+        "startS": 50.59824008405569,
+        "endS": 50.66128184922511,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 50.67178881008668,
+        "endS": 50.68229577094825,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 50.69280273180983,
+        "endS": 50.7033096926714,
+        "palign": 0
+      },
+      {
+        "word": "French ",
+        "success": true,
+        "startS": 50.713816653532966,
+        "endS": 50.77685841870239,
+        "palign": 0
+      },
+      {
+        "word": "and ",
+        "success": true,
+        "startS": 50.78736537956396,
+        "endS": 50.81888626214867,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 50.82939322301024,
+        "endS": 50.83990018387182,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 50.85040714473339,
+        "endS": 50.86091410559496,
+        "palign": 0
+      },
+      {
+        "word": "a ",
+        "success": true,
+        "startS": 50.87142106645653,
+        "endS": 50.8819280273181,
+        "palign": 0
+      },
+      {
+        "word": "tourist. (",
+        "success": true,
+        "startS": 50.89243498817967,
+        "endS": 50.986997635933804,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 50.99750459679538,
+        "endS": 51.01851851851852,
+        "palign": 0
+      },
+      {
+        "word": "suis ",
+        "success": true,
+        "startS": 51.02902547938009,
+        "endS": 51.07105332282637,
+        "palign": 0
+      },
+      {
+        "word": "française ",
+        "success": true,
+        "startS": 51.08156028368794,
+        "endS": 51.17612293144208,
+        "palign": 0
+      },
+      {
+        "word": "et ",
+        "success": true,
+        "startS": 51.18662989230365,
+        "endS": 51.207643814026795,
+        "palign": 0
+      },
+      {
+        "word": "je ",
+        "success": true,
+        "startS": 51.218150774888365,
+        "endS": 51.2391646966115,
+        "palign": 0
+      },
+      {
+        "word": "suis ",
+        "success": true,
+        "startS": 51.24967165747308,
+        "endS": 51.29169950091936,
+        "palign": 0
+      },
+      {
+        "word": "touriste.)\n",
+        "success": true,
+        "startS": 51.30220646178093,
+        "endS": 51.40727607039664,
+        "palign": 0
+      },
+      {
+        "word": "Nice ",
+        "success": true,
+        "startS": 51.41778303125821,
+        "endS": 51.459810874704495,
+        "palign": 0
+      },
+      {
+        "word": "to ",
+        "success": true,
+        "startS": 51.470317835566064,
+        "endS": 51.4913317572892,
+        "palign": 0
+      },
+      {
+        "word": "meet ",
+        "success": true,
+        "startS": 51.50183871815077,
+        "endS": 51.543866561597056,
+        "palign": 0
+      },
+      {
+        "word": "you! (",
+        "success": true,
+        "startS": 51.55437352245863,
+        "endS": 51.60690832676649,
+        "palign": 0
+      },
+      {
+        "word": "Enchanté !)\n",
+        "success": true,
+        "startS": 51.617415287628056,
+        "endS": 51.73299185710533,
+        "palign": 0
+      },
+      {
+        "word": "What’",
+        "success": true,
+        "startS": 51.7434988179669,
+        "endS": 51.785526661413186,
+        "palign": 0
+      },
+      {
+        "word": "s ",
+        "success": true,
+        "startS": 51.796033622274756,
+        "endS": 51.806540583136325,
+        "palign": 0
+      },
+      {
+        "word": "your ",
+        "success": true,
+        "startS": 51.8170475439979,
+        "endS": 51.85907538744418,
+        "palign": 0
+      },
+      {
+        "word": "name? (",
+        "success": true,
+        "startS": 51.869582348305755,
+        "endS": 51.93262411347518,
+        "palign": 0
+      },
+      {
+        "word": "Comment ",
+        "success": true,
+        "startS": 51.94313107433675,
+        "endS": 52.01667980036775,
+        "palign": 0
+      },
+      {
+        "word": "tu ",
+        "success": true,
+        "startS": 52.027186761229316,
+        "endS": 52.048200682952455,
+        "palign": 0
+      },
+      {
+        "word": "t’",
+        "success": true,
+        "startS": 52.058707643814024,
+        "endS": 52.0692146046756,
+        "palign": 0
+      },
+      {
+        "word": "appelles ?)\n ",
+        "success": true,
+        "startS": 52.07972156553717,
+        "endS": 52.205805095876016,
+        "palign": 0
+      },
+      {
+        "word": "[COUPLET – Dialogue A & B]\nA: ",
+        "success": true,
+        "startS": 52.216312056737586,
+        "endS": 52.59308510638298,
+        "palign": 0
+      },
+      {
+        "word": "Hello! ",
+        "success": true,
+        "startS": 52.68617021276596,
+        "endS": 53.170212765957444,
+        "palign": 0
+      },
+      {
+        "word": "What’",
+        "success": true,
+        "startS": 53.202127659574465,
+        "endS": 53.297872340425535,
+        "palign": 0
+      },
+      {
+        "word": "s ",
+        "success": true,
+        "startS": 53.37765957446808,
+        "endS": 53.45744680851064,
+        "palign": 0
+      },
+      {
+        "word": "your ",
+        "success": true,
+        "startS": 53.517287234042556,
+        "endS": 53.6968085106383,
+        "palign": 0
+      },
+      {
+        "word": "name? (",
+        "success": true,
+        "startS": 53.756648936170215,
+        "endS": 54.03191489361702,
+        "palign": 0
+      },
+      {
+        "word": "Bonjour ! ",
+        "success": true,
+        "startS": 54.079787234042556,
+        "endS": 54.804964539007095,
+        "palign": 0
+      },
+      {
+        "word": "Comment ",
+        "success": true,
+        "startS": 54.840425531914896,
+        "endS": 55.0531914893617,
+        "palign": 0
+      },
+      {
+        "word": "tu ",
+        "success": true,
+        "startS": 55.09308510638298,
+        "endS": 55.13297872340426,
+        "palign": 0
+      },
+      {
+        "word": "t’",
+        "success": true,
+        "startS": 55.212765957446805,
+        "endS": 55.212765957446805,
+        "palign": 0
+      },
+      {
+        "word": "appelles ?)\n",
+        "success": true,
+        "startS": 55.37234042553192,
+        "endS": 55.861037234042556,
+        "palign": 0
+      },
+      {
+        "word": "B: ",
+        "success": true,
+        "startS": 55.890957446808514,
+        "endS": 55.950797872340424,
+        "palign": 0
+      },
+      {
+        "word": "My ",
+        "success": true,
+        "startS": 55.98071808510638,
+        "endS": 56.01063829787234,
+        "palign": 0
+      },
+      {
+        "word": "name ",
+        "success": true,
+        "startS": 56.07047872340426,
+        "endS": 56.25,
+        "palign": 0
+      },
+      {
+        "word": "is ",
+        "success": true,
+        "startS": 56.36968085106383,
+        "endS": 56.48936170212766,
+        "palign": 0
+      },
+      {
+        "word": "Thomas. ",
+        "success": true,
+        "startS": 56.52925531914894,
+        "endS": 57.087765957446805,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 57.12765957446808,
+        "endS": 57.12765957446808,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 57.20744680851064,
+        "endS": 57.36702127659574,
+        "palign": 0
+      },
+      {
+        "word": "French. (",
+        "success": true,
+        "startS": 57.40691489361702,
+        "endS": 57.765957446808514,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 57.805851063829785,
+        "endS": 57.84574468085106,
+        "palign": 0
+      },
+      {
+        "word": "m’",
+        "success": true,
+        "startS": 57.92553191489362,
+        "endS": 57.92553191489362,
+        "palign": 0
+      },
+      {
+        "word": "appelle ",
+        "success": true,
+        "startS": 58.08510638297872,
+        "endS": 58.32446808510638,
+        "palign": 0
+      },
+      {
+        "word": "Thomas. ",
+        "success": true,
+        "startS": 58.36436170212766,
+        "endS": 58.75,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 58.776595744680854,
+        "endS": 58.8031914893617,
+        "palign": 0
+      },
+      {
+        "word": "suis ",
+        "success": true,
+        "startS": 58.86303191489362,
+        "endS": 59.04255319148936,
+        "palign": 0
+      },
+      {
+        "word": "français.)\n",
+        "success": true,
+        "startS": 59.08244680851064,
+        "endS": 59.52127659574468,
+        "palign": 0
+      },
+      {
+        "word": "A: ",
+        "success": true,
+        "startS": 59.601063829787236,
+        "endS": 59.640957446808514,
+        "palign": 0
+      },
+      {
+        "word": "Are ",
+        "success": true,
+        "startS": 59.68085106382979,
+        "endS": 59.76063829787234,
+        "palign": 0
+      },
+      {
+        "word": "you ",
+        "success": true,
+        "startS": 59.840425531914896,
+        "endS": 60.0,
+        "palign": 0
+      },
+      {
+        "word": "a ",
+        "success": true,
+        "startS": 60.159574468085104,
+        "endS": 60.23936170212766,
+        "palign": 0
+      },
+      {
+        "word": "tourist? (",
+        "success": true,
+        "startS": 60.299202127659576,
+        "endS": 61.07712765957447,
+        "palign": 0
+      },
+      {
+        "word": "Tu ",
+        "success": true,
+        "startS": 61.13696808510638,
+        "endS": 61.1968085106383,
+        "palign": 0
+      },
+      {
+        "word": "es ",
+        "success": true,
+        "startS": 61.25,
+        "endS": 61.3563829787234,
+        "palign": 0
+      },
+      {
+        "word": "touriste ?)\n",
+        "success": true,
+        "startS": 61.3563829787234,
+        "endS": 62.4468085106383,
+        "palign": 0
+      },
+      {
+        "word": "B: ",
+        "success": true,
+        "startS": 62.49113475177305,
+        "endS": 62.579787234042556,
+        "palign": 0
+      },
+      {
+        "word": "Yes! ",
+        "success": true,
+        "startS": 62.62411347517731,
+        "endS": 62.73936170212766,
+        "palign": 0
+      },
+      {
+        "word": "It’",
+        "success": true,
+        "startS": 62.765957446808514,
+        "endS": 62.79255319148936,
+        "palign": 0
+      },
+      {
+        "word": "s ",
+        "success": true,
+        "startS": 62.87234042553192,
+        "endS": 63.03191489361702,
+        "palign": 0
+      },
+      {
+        "word": "my ",
+        "success": true,
+        "startS": 63.15159574468085,
+        "endS": 63.27127659574468,
+        "palign": 0
+      },
+      {
+        "word": "first ",
+        "success": true,
+        "startS": 63.319148936170215,
+        "endS": 63.51063829787234,
+        "palign": 0
+      },
+      {
+        "word": "time ",
+        "success": true,
+        "startS": 63.590425531914896,
+        "endS": 63.829787234042556,
+        "palign": 0
+      },
+      {
+        "word": "here. (",
+        "success": true,
+        "startS": 63.92952127659575,
+        "endS": 64.32446808510639,
+        "palign": 0
+      },
+      {
+        "word": "Oui ! ",
+        "success": true,
+        "startS": 64.37234042553192,
+        "endS": 64.52127659574468,
+        "palign": 0
+      },
+      {
+        "word": "C’",
+        "success": true,
+        "startS": 64.54787234042553,
+        "endS": 64.54787234042553,
+        "palign": 0
+      },
+      {
+        "word": "est ",
+        "success": true,
+        "startS": 64.62765957446808,
+        "endS": 64.7872340425532,
+        "palign": 0
+      },
+      {
+        "word": "ma ",
+        "success": true,
+        "startS": 64.82712765957447,
+        "endS": 64.86702127659575,
+        "palign": 0
+      },
+      {
+        "word": "première ",
+        "success": true,
+        "startS": 64.8936170212766,
+        "endS": 65.26595744680851,
+        "palign": 0
+      },
+      {
+        "word": "fois ",
+        "success": true,
+        "startS": 65.34574468085107,
+        "endS": 65.58510638297872,
+        "palign": 0
+      },
+      {
+        "word": "ici.)\n",
+        "success": true,
+        "startS": 65.66489361702128,
+        "endS": 65.98404255319149,
+        "palign": 0
+      },
+      {
+        "word": "A: ",
+        "success": true,
+        "startS": 66.06382978723404,
+        "endS": 66.10372340425532,
+        "palign": 0
+      },
+      {
+        "word": "Where ",
+        "success": true,
+        "startS": 66.1436170212766,
+        "endS": 66.30319148936171,
+        "palign": 0
+      },
+      {
+        "word": "are ",
+        "success": true,
+        "startS": 66.38297872340426,
+        "endS": 66.54255319148936,
+        "palign": 0
+      },
+      {
+        "word": "you ",
+        "success": true,
+        "startS": 66.62234042553192,
+        "endS": 66.78191489361703,
+        "palign": 0
+      },
+      {
+        "word": "from ",
+        "success": true,
+        "startS": 66.88164893617022,
+        "endS": 67.18085106382979,
+        "palign": 0
+      },
+      {
+        "word": "in ",
+        "success": true,
+        "startS": 67.30053191489361,
+        "endS": 67.5,
+        "palign": 0
+      },
+      {
+        "word": "France? (",
+        "success": true,
+        "startS": 67.57978723404256,
+        "endS": 68.49734042553192,
+        "palign": 0
+      },
+      {
+        "word": "Tu ",
+        "success": true,
+        "startS": 68.55718085106383,
+        "endS": 68.61702127659575,
+        "palign": 0
+      },
+      {
+        "word": "viens ",
+        "success": true,
+        "startS": 68.66489361702128,
+        "endS": 68.8563829787234,
+        "palign": 0
+      },
+      {
+        "word": "d’",
+        "success": true,
+        "startS": 68.93617021276596,
+        "endS": 68.93617021276596,
+        "palign": 0
+      },
+      {
+        "word": "où ",
+        "success": true,
+        "startS": 69.01595744680851,
+        "endS": 69.09574468085107,
+        "palign": 0
+      },
+      {
+        "word": "en ",
+        "success": true,
+        "startS": 69.21542553191489,
+        "endS": 69.33510638297872,
+        "palign": 0
+      },
+      {
+        "word": "France ?)\n",
+        "success": true,
+        "startS": 69.375,
+        "endS": 69.78191489361703,
+        "palign": 0
+      },
+      {
+        "word": "B: ",
+        "success": true,
+        "startS": 69.87765957446808,
+        "endS": 70.2127659574468,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 70.29255319148936,
+        "endS": 70.29255319148936,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 70.37234042553192,
+        "endS": 70.53191489361703,
+        "palign": 0
+      },
+      {
+        "word": "from ",
+        "success": true,
+        "startS": 70.59175531914894,
+        "endS": 70.77127659574468,
+        "palign": 0
+      },
+      {
+        "word": "Lyon. ",
+        "success": true,
+        "startS": 70.85106382978724,
+        "endS": 71.26994680851064,
+        "palign": 0
+      },
+      {
+        "word": "And ",
+        "success": true,
+        "startS": 71.36968085106383,
+        "endS": 71.56914893617021,
+        "palign": 0
+      },
+      {
+        "word": "you? (",
+        "success": true,
+        "startS": 71.67553191489361,
+        "endS": 72.4468085106383,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 72.48670212765957,
+        "endS": 72.52659574468085,
+        "palign": 0
+      },
+      {
+        "word": "viens ",
+        "success": true,
+        "startS": 72.55851063829788,
+        "endS": 72.68617021276596,
+        "palign": 0
+      },
+      {
+        "word": "de ",
+        "success": true,
+        "startS": 72.80585106382978,
+        "endS": 72.92553191489361,
+        "palign": 0
+      },
+      {
+        "word": "Lyon. ",
+        "success": true,
+        "startS": 73.08510638297872,
+        "endS": 73.6968085106383,
+        "palign": 0
+      },
+      {
+        "word": "Et ",
+        "success": true,
+        "startS": 73.75,
+        "endS": 73.80319148936171,
+        "palign": 0
+      },
+      {
+        "word": "toi ?)\n",
+        "success": true,
+        "startS": 73.88297872340426,
+        "endS": 74.10239361702128,
+        "palign": 0
+      },
+      {
+        "word": "A: ",
+        "success": true,
+        "startS": 74.12234042553192,
+        "endS": 74.14893617021276,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 74.17553191489363,
+        "endS": 74.20212765957447,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 74.20212765957447,
+        "endS": 74.36170212765957,
+        "palign": 0
+      },
+      {
+        "word": "from ",
+        "success": true,
+        "startS": 74.46143617021276,
+        "endS": 74.76063829787235,
+        "palign": 0
+      },
+      {
+        "word": "Paris. ",
+        "success": true,
+        "startS": 74.85638297872342,
+        "endS": 75.63829787234043,
+        "palign": 0
+      },
+      {
+        "word": "Nice ",
+        "success": true,
+        "startS": 75.71808510638299,
+        "endS": 75.95744680851064,
+        "palign": 0
+      },
+      {
+        "word": "to ",
+        "success": true,
+        "startS": 76.07712765957447,
+        "endS": 76.19680851063829,
+        "palign": 0
+      },
+      {
+        "word": "meet ",
+        "success": true,
+        "startS": 76.27659574468085,
+        "endS": 76.51595744680851,
+        "palign": 0
+      },
+      {
+        "word": "you! (",
+        "success": true,
+        "startS": 76.62234042553192,
+        "endS": 77.03457446808511,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 77.09441489361701,
+        "endS": 77.15425531914893,
+        "palign": 0
+      },
+      {
+        "word": "viens ",
+        "success": true,
+        "startS": 77.20212765957446,
+        "endS": 77.3936170212766,
+        "palign": 0
+      },
+      {
+        "word": "de ",
+        "success": true,
+        "startS": 77.51329787234042,
+        "endS": 77.63297872340425,
+        "palign": 0
+      },
+      {
+        "word": "Paris. ",
+        "success": true,
+        "startS": 77.72872340425532,
+        "endS": 78.35106382978724,
+        "palign": 0
+      },
+      {
+        "word": "Enchanté !)\n",
+        "success": true,
+        "startS": 78.43085106382979,
+        "endS": 79.36835106382979,
+        "palign": 0
+      },
+      {
+        "word": "B: ",
+        "success": true,
+        "startS": 79.46808510638299,
+        "endS": 79.51595744680851,
+        "palign": 0
+      },
+      {
+        "word": "Nice ",
+        "success": true,
+        "startS": 79.56382978723404,
+        "endS": 79.70744680851064,
+        "palign": 0
+      },
+      {
+        "word": "to ",
+        "success": true,
+        "startS": 79.82712765957447,
+        "endS": 79.94680851063829,
+        "palign": 0
+      },
+      {
+        "word": "meet ",
+        "success": true,
+        "startS": 80.02659574468085,
+        "endS": 80.26595744680851,
+        "palign": 0
+      },
+      {
+        "word": "you ",
+        "success": true,
+        "startS": 80.37234042553192,
+        "endS": 80.58510638297872,
+        "palign": 0
+      },
+      {
+        "word": "too! (",
+        "success": true,
+        "startS": 80.69148936170212,
+        "endS": 81.42287234042553,
+        "palign": 0
+      },
+      {
+        "word": "Enchanté ",
+        "success": true,
+        "startS": 81.48271276595744,
+        "endS": 82.5,
+        "palign": 0
+      },
+      {
+        "word": "aussi !)\n",
+        "success": true,
+        "startS": 82.59574468085107,
+        "endS": 83.60106382978724,
+        "palign": 0
+      },
+      {
+        "word": "My ",
+        "success": true,
+        "startS": 83.64893617021278,
+        "endS": 83.6968085106383,
+        "palign": 0
+      },
+      {
+        "word": "name ",
+        "success": true,
+        "startS": 83.7965425531915,
+        "endS": 84.17553191489361,
+        "palign": 0
+      },
+      {
+        "word": "is ",
+        "success": true,
+        "startS": 84.29521276595744,
+        "endS": 84.57446808510639,
+        "palign": 0
+      },
+      {
+        "word": "Anna. (",
+        "success": true,
+        "startS": 84.69414893617022,
+        "endS": 85.37234042553192,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 85.4122340425532,
+        "endS": 85.45212765957447,
+        "palign": 0
+      },
+      {
+        "word": "m’",
+        "success": true,
+        "startS": 85.53191489361703,
+        "endS": 85.53191489361703,
+        "palign": 0
+      },
+      {
+        "word": "appelle ",
+        "success": true,
+        "startS": 85.69148936170212,
+        "endS": 86.25,
+        "palign": 0
+      },
+      {
+        "word": "Anna.)\n",
+        "success": true,
+        "startS": 86.32978723404256,
+        "endS": 86.70212765957447,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 86.72872340425532,
+        "endS": 86.72872340425532,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 86.80851063829788,
+        "endS": 86.88829787234043,
+        "palign": 0
+      },
+      {
+        "word": "French ",
+        "success": true,
+        "startS": 86.94813829787235,
+        "endS": 87.20744680851064,
+        "palign": 0
+      },
+      {
+        "word": "and ",
+        "success": true,
+        "startS": 87.2872340425532,
+        "endS": 87.4468085106383,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 87.6063829787234,
+        "endS": 87.6063829787234,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 87.68617021276596,
+        "endS": 87.84574468085107,
+        "palign": 0
+      },
+      {
+        "word": "a ",
+        "success": true,
+        "startS": 88.00531914893617,
+        "endS": 88.08510638297872,
+        "palign": 0
+      },
+      {
+        "word": "tourist. (",
+        "success": true,
+        "startS": 88.18484042553192,
+        "endS": 88.77659574468086,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 88.80319148936171,
+        "endS": 88.88297872340425,
+        "palign": 0
+      },
+      {
+        "word": "suis ",
+        "success": true,
+        "startS": 88.92287234042553,
+        "endS": 89.04255319148936,
+        "palign": 0
+      },
+      {
+        "word": "française ",
+        "success": true,
+        "startS": 89.09574468085107,
+        "endS": 89.60106382978724,
+        "palign": 0
+      },
+      {
+        "word": "et ",
+        "success": true,
+        "startS": 89.68085106382979,
+        "endS": 89.76063829787235,
+        "palign": 0
+      },
+      {
+        "word": "je ",
+        "success": true,
+        "startS": 89.88031914893617,
+        "endS": 90.0,
+        "palign": 0
+      },
+      {
+        "word": "suis ",
+        "success": true,
+        "startS": 90.05984042553192,
+        "endS": 90.23936170212767,
+        "palign": 0
+      },
+      {
+        "word": "touriste.)\n",
+        "success": true,
+        "startS": 90.29920212765958,
+        "endS": 91.32978723404256,
+        "palign": 0
+      },
+      {
+        "word": "Nice ",
+        "success": true,
+        "startS": 91.3962765957447,
+        "endS": 91.59574468085107,
+        "palign": 0
+      },
+      {
+        "word": "to ",
+        "success": true,
+        "startS": 91.71542553191489,
+        "endS": 91.83510638297872,
+        "palign": 0
+      },
+      {
+        "word": "meet ",
+        "success": true,
+        "startS": 91.93484042553192,
+        "endS": 92.23404255319149,
+        "palign": 0
+      },
+      {
+        "word": "you! (",
+        "success": true,
+        "startS": 92.34042553191489,
+        "endS": 92.67287234042553,
+        "palign": 0
+      },
+      {
+        "word": "Enchanté !)\n",
+        "success": true,
+        "startS": 92.73271276595744,
+        "endS": 93.54483282674772,
+        "palign": 0
+      },
+      {
+        "word": "What’",
+        "success": true,
+        "startS": 93.55623100303951,
+        "endS": 93.59042553191489,
+        "palign": 0
+      },
+      {
+        "word": "s ",
+        "success": true,
+        "startS": 93.67021276595744,
+        "endS": 93.75,
+        "palign": 0
+      },
+      {
+        "word": "your ",
+        "success": true,
+        "startS": 93.78989361702128,
+        "endS": 93.90957446808511,
+        "palign": 0
+      },
+      {
+        "word": "name? (",
+        "success": true,
+        "startS": 94.0093085106383,
+        "endS": 94.73404255319149,
+        "palign": 0
+      },
+      {
+        "word": "Comment ",
+        "success": true,
+        "startS": 94.7872340425532,
+        "endS": 95.1063829787234,
+        "palign": 0
+      },
+      {
+        "word": "tu ",
+        "success": true,
+        "startS": 95.18617021276596,
+        "endS": 95.26595744680851,
+        "palign": 0
+      },
+      {
+        "word": "t’",
+        "success": true,
+        "startS": 95.34574468085107,
+        "endS": 95.34574468085107,
+        "palign": 0
+      },
+      {
+        "word": "appelles ?)\n\n[",
+        "success": true,
+        "startS": 95.42553191489361,
+        "endS": 96.23480243161094,
+        "palign": 0
+      },
+      {
+        "word": "REFRAIN – ",
+        "success": true,
+        "startS": 96.26899696048633,
+        "endS": 96.78191489361703,
+        "palign": 0
+      },
+      {
+        "word": "ensemble] (x2)\n",
+        "success": true,
+        "startS": 96.86170212765958,
+        "endS": 99.33510638297872,
+        "palign": 0
+      },
+      {
+        "word": "My ",
+        "success": true,
+        "startS": 99.49468085106383,
+        "endS": 99.73404255319149,
+        "palign": 0
+      },
+      {
+        "word": "name ",
+        "success": true,
+        "startS": 99.73404255319149,
+        "endS": 99.97340425531915,
+        "palign": 0
+      },
+      {
+        "word": "is ",
+        "success": true,
+        "startS": 100.05319148936171,
+        "endS": 100.13297872340425,
+        "palign": 0
+      },
+      {
+        "word": "Anna. (",
+        "success": true,
+        "startS": 100.2127659574468,
+        "endS": 100.50531914893618,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 100.53191489361703,
+        "endS": 100.61170212765957,
+        "palign": 0
+      },
+      {
+        "word": "m’",
+        "success": true,
+        "startS": 100.65159574468085,
+        "endS": 100.69148936170212,
+        "palign": 0
+      },
+      {
+        "word": "appelle ",
+        "success": true,
+        "startS": 100.69148936170212,
+        "endS": 101.25,
+        "palign": 0
+      },
+      {
+        "word": "Anna.)\n",
+        "success": true,
+        "startS": 101.32978723404256,
+        "endS": 101.62234042553192,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 101.64893617021276,
+        "endS": 101.64893617021276,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 101.72872340425532,
+        "endS": 101.72872340425532,
+        "palign": 0
+      },
+      {
+        "word": "French ",
+        "success": true,
+        "startS": 101.7686170212766,
+        "endS": 102.2872340425532,
+        "palign": 0
+      },
+      {
+        "word": "and ",
+        "success": true,
+        "startS": 102.36702127659575,
+        "endS": 102.52659574468085,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 102.6063829787234,
+        "endS": 102.6063829787234,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 102.68617021276596,
+        "endS": 102.92553191489361,
+        "palign": 0
+      },
+      {
+        "word": "a ",
+        "success": true,
+        "startS": 103.08510638297872,
+        "endS": 103.16489361702128,
+        "palign": 0
+      },
+      {
+        "word": "tourist. (",
+        "success": true,
+        "startS": 103.26462765957447,
+        "endS": 103.8563829787234,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 103.88297872340425,
+        "endS": 103.9627659574468,
+        "palign": 0
+      },
+      {
+        "word": "suis ",
+        "success": true,
+        "startS": 104.00265957446808,
+        "endS": 104.12234042553192,
+        "palign": 0
+      },
+      {
+        "word": "française ",
+        "success": true,
+        "startS": 104.14893617021276,
+        "endS": 104.60106382978724,
+        "palign": 0
+      },
+      {
+        "word": "et ",
+        "success": true,
+        "startS": 104.68085106382979,
+        "endS": 104.76063829787235,
+        "palign": 0
+      },
+      {
+        "word": "je ",
+        "success": true,
+        "startS": 104.88031914893617,
+        "endS": 105.0,
+        "palign": 0
+      },
+      {
+        "word": "suis ",
+        "success": true,
+        "startS": 105.05984042553192,
+        "endS": 105.23936170212767,
+        "palign": 0
+      },
+      {
+        "word": "touriste.)\n",
+        "success": true,
+        "startS": 105.29920212765958,
+        "endS": 106.32978723404256,
+        "palign": 0
+      },
+      {
+        "word": "Nice ",
+        "success": true,
+        "startS": 106.3962765957447,
+        "endS": 106.59574468085107,
+        "palign": 0
+      },
+      {
+        "word": "to ",
+        "success": true,
+        "startS": 106.71542553191489,
+        "endS": 106.91489361702128,
+        "palign": 0
+      },
+      {
+        "word": "meet ",
+        "success": true,
+        "startS": 107.01462765957447,
+        "endS": 107.31382978723404,
+        "palign": 0
+      },
+      {
+        "word": "you! (",
+        "success": true,
+        "startS": 107.42021276595744,
+        "endS": 107.7127659574468,
+        "palign": 0
+      },
+      {
+        "word": "Enchanté !)\n",
+        "success": true,
+        "startS": 107.75265957446808,
+        "endS": 108.54483282674772,
+        "palign": 0
+      },
+      {
+        "word": "What’",
+        "success": true,
+        "startS": 108.55623100303951,
+        "endS": 108.59042553191489,
+        "palign": 0
+      },
+      {
+        "word": "s ",
+        "success": true,
+        "startS": 108.67021276595744,
+        "endS": 108.75,
+        "palign": 0
+      },
+      {
+        "word": "your ",
+        "success": true,
+        "startS": 108.78989361702128,
+        "endS": 108.90957446808511,
+        "palign": 0
+      },
+      {
+        "word": "name? (",
+        "success": true,
+        "startS": 109.0093085106383,
+        "endS": 109.81382978723404,
+        "palign": 0
+      },
+      {
+        "word": "Comment ",
+        "success": true,
+        "startS": 109.86702127659575,
+        "endS": 110.18617021276596,
+        "palign": 0
+      },
+      {
+        "word": "tu ",
+        "success": true,
+        "startS": 110.26595744680851,
+        "endS": 110.34574468085107,
+        "palign": 0
+      },
+      {
+        "word": "t’",
+        "success": true,
+        "startS": 110.42553191489361,
+        "endS": 110.42553191489361,
+        "palign": 0
+      },
+      {
+        "word": "appelles ?)\n\n[",
+        "success": true,
+        "startS": 110.66489361702128,
+        "endS": 127.00059101654846,
+        "palign": 0
+      },
+      {
+        "word": "REFRAIN – ",
+        "success": true,
+        "startS": 127.01241134751773,
+        "endS": 127.11879432624113,
+        "palign": 0
+      },
+      {
+        "word": "ensemble] (x2)\n",
+        "success": true,
+        "startS": 127.1306146572104,
+        "endS": 127.29609929078013,
+        "palign": 0
+      },
+      {
+        "word": "My ",
+        "success": true,
+        "startS": 127.3079196217494,
+        "endS": 127.33156028368795,
+        "palign": 0
+      },
+      {
+        "word": "name ",
+        "success": true,
+        "startS": 127.3433806146572,
+        "endS": 127.39066193853428,
+        "palign": 0
+      },
+      {
+        "word": "is ",
+        "success": true,
+        "startS": 127.40248226950355,
+        "endS": 127.42612293144208,
+        "palign": 0
+      },
+      {
+        "word": "Anna. (",
+        "success": true,
+        "startS": 127.43794326241135,
+        "endS": 127.50886524822695,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 127.52068557919621,
+        "endS": 127.54432624113475,
+        "palign": 0
+      },
+      {
+        "word": "m’",
+        "success": true,
+        "startS": 127.55614657210403,
+        "endS": 127.56796690307328,
+        "palign": 0
+      },
+      {
+        "word": "appelle ",
+        "success": true,
+        "startS": 127.57978723404256,
+        "endS": 127.66252955082743,
+        "palign": 0
+      },
+      {
+        "word": "Anna.)\n",
+        "success": true,
+        "startS": 127.67434988179669,
+        "endS": 127.74527186761229,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 127.75709219858156,
+        "endS": 127.76891252955083,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 127.78073286052009,
+        "endS": 127.79255319148936,
+        "palign": 0
+      },
+      {
+        "word": "French ",
+        "success": true,
+        "startS": 127.80437352245863,
+        "endS": 127.87529550827423,
+        "palign": 0
+      },
+      {
+        "word": "and ",
+        "success": true,
+        "startS": 127.8871158392435,
+        "endS": 127.92257683215131,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 127.93439716312056,
+        "endS": 127.94621749408984,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 127.95803782505911,
+        "endS": 127.96985815602837,
+        "palign": 0
+      },
+      {
+        "word": "a ",
+        "success": true,
+        "startS": 127.98167848699764,
+        "endS": 127.99349881796691,
+        "palign": 0
+      },
+      {
+        "word": "tourist. (",
+        "success": true,
+        "startS": 128.00531914893617,
+        "endS": 128.11170212765958,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 128.12352245862886,
+        "endS": 128.14716312056737,
+        "palign": 0
+      },
+      {
+        "word": "suis ",
+        "success": true,
+        "startS": 128.15898345153664,
+        "endS": 128.20626477541373,
+        "palign": 0
+      },
+      {
+        "word": "française ",
+        "success": true,
+        "startS": 128.21808510638297,
+        "endS": 128.3244680851064,
+        "palign": 0
+      },
+      {
+        "word": "et ",
+        "success": true,
+        "startS": 128.33628841607566,
+        "endS": 128.35992907801418,
+        "palign": 0
+      },
+      {
+        "word": "je ",
+        "success": true,
+        "startS": 128.37174940898345,
+        "endS": 128.395390070922,
+        "palign": 0
+      },
+      {
+        "word": "suis ",
+        "success": true,
+        "startS": 128.40721040189126,
+        "endS": 128.45449172576832,
+        "palign": 0
+      },
+      {
+        "word": "touriste.)\n",
+        "success": true,
+        "startS": 128.4663120567376,
+        "endS": 128.58451536643025,
+        "palign": 0
+      },
+      {
+        "word": "Nice ",
+        "success": true,
+        "startS": 128.59633569739952,
+        "endS": 128.6436170212766,
+        "palign": 0
+      },
+      {
+        "word": "to ",
+        "success": true,
+        "startS": 128.65543735224588,
+        "endS": 128.6790780141844,
+        "palign": 0
+      },
+      {
+        "word": "meet ",
+        "success": true,
+        "startS": 128.69089834515367,
+        "endS": 128.73817966903073,
+        "palign": 0
+      },
+      {
+        "word": "you! (",
+        "success": true,
+        "startS": 128.75,
+        "endS": 128.80910165484633,
+        "palign": 0
+      },
+      {
+        "word": "Enchanté !)\n",
+        "success": true,
+        "startS": 128.8209219858156,
+        "endS": 128.95094562647756,
+        "palign": 0
+      },
+      {
+        "word": "What’",
+        "success": true,
+        "startS": 128.9627659574468,
+        "endS": 129.0100472813239,
+        "palign": 0
+      },
+      {
+        "word": "s ",
+        "success": true,
+        "startS": 129.02186761229316,
+        "endS": 129.0336879432624,
+        "palign": 0
+      },
+      {
+        "word": "your ",
+        "success": true,
+        "startS": 129.04550827423168,
+        "endS": 129.09278959810877,
+        "palign": 0
+      },
+      {
+        "word": "name? (",
+        "success": true,
+        "startS": 129.10460992907804,
+        "endS": 129.17553191489364,
+        "palign": 0
+      },
+      {
+        "word": "Comment ",
+        "success": true,
+        "startS": 129.18735224586288,
+        "endS": 129.27009456264776,
+        "palign": 0
+      },
+      {
+        "word": "tu ",
+        "success": true,
+        "startS": 129.28191489361703,
+        "endS": 129.30555555555557,
+        "palign": 0
+      },
+      {
+        "word": "t’",
+        "success": true,
+        "startS": 129.31737588652484,
+        "endS": 129.3291962174941,
+        "palign": 0
+      },
+      {
+        "word": "appelles ?)\n ",
+        "success": true,
+        "startS": 129.34101654846336,
+        "endS": 129.48286052009456,
+        "palign": 0
+      },
+      {
+        "word": "[COUPLET – Dialogue A & B]\nA: ",
+        "success": true,
+        "startS": 129.49468085106383,
+        "endS": 129.8936170212766,
+        "palign": 0
+      },
+      {
+        "word": "Hello! ",
+        "success": true,
+        "startS": 129.97340425531917,
+        "endS": 130.30851063829786,
+        "palign": 0
+      },
+      {
+        "word": "What’",
+        "success": true,
+        "startS": 130.3244680851064,
+        "endS": 130.37234042553192,
+        "palign": 0
+      },
+      {
+        "word": "s ",
+        "success": true,
+        "startS": 130.45212765957447,
+        "endS": 130.53191489361703,
+        "palign": 0
+      },
+      {
+        "word": "your ",
+        "success": true,
+        "startS": 130.59175531914894,
+        "endS": 130.7712765957447,
+        "palign": 0
+      },
+      {
+        "word": "name? (",
+        "success": true,
+        "startS": 130.8710106382979,
+        "endS": 131.22340425531914,
+        "palign": 0
+      },
+      {
+        "word": "Bonjour ! ",
+        "success": true,
+        "startS": 131.25,
+        "endS": 131.6090425531915,
+        "palign": 0
+      },
+      {
+        "word": "Comment ",
+        "success": true,
+        "startS": 131.62898936170214,
+        "endS": 132.20744680851064,
+        "palign": 0
+      },
+      {
+        "word": "tu ",
+        "success": true,
+        "startS": 132.24734042553192,
+        "endS": 132.2872340425532,
+        "palign": 0
+      },
+      {
+        "word": "t’",
+        "success": true,
+        "startS": 132.36702127659575,
+        "endS": 132.36702127659575,
+        "palign": 0
+      },
+      {
+        "word": "appelles ?)\n",
+        "success": true,
+        "startS": 132.4468085106383,
+        "endS": 132.80585106382978,
+        "palign": 0
+      },
+      {
+        "word": "B: ",
+        "success": true,
+        "startS": 132.84574468085106,
+        "endS": 132.89893617021275,
+        "palign": 0
+      },
+      {
+        "word": "My ",
+        "success": true,
+        "startS": 132.95212765957447,
+        "endS": 133.00531914893617,
+        "palign": 0
+      },
+      {
+        "word": "name ",
+        "success": true,
+        "startS": 133.04521276595744,
+        "endS": 133.16489361702128,
+        "palign": 0
+      },
+      {
+        "word": "is ",
+        "success": true,
+        "startS": 133.2845744680851,
+        "endS": 133.40425531914894,
+        "palign": 0
+      },
+      {
+        "word": "Thomas. ",
+        "success": true,
+        "startS": 133.44414893617022,
+        "endS": 134.00265957446808,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 134.04255319148936,
+        "endS": 134.04255319148936,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 134.12234042553192,
+        "endS": 134.28191489361703,
+        "palign": 0
+      },
+      {
+        "word": "French. (",
+        "success": true,
+        "startS": 134.3218085106383,
+        "endS": 134.72074468085106,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 134.7406914893617,
+        "endS": 134.76063829787233,
+        "palign": 0
+      },
+      {
+        "word": "m’",
+        "success": true,
+        "startS": 134.8404255319149,
+        "endS": 134.8404255319149,
+        "palign": 0
+      },
+      {
+        "word": "appelle ",
+        "success": true,
+        "startS": 135.0,
+        "endS": 135.23936170212767,
+        "palign": 0
+      },
+      {
+        "word": "Thomas. ",
+        "success": true,
+        "startS": 135.31914893617022,
+        "endS": 135.74468085106383,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 135.77127659574467,
+        "endS": 135.79787234042553,
+        "palign": 0
+      },
+      {
+        "word": "suis ",
+        "success": true,
+        "startS": 135.8377659574468,
+        "endS": 135.95744680851064,
+        "palign": 0
+      },
+      {
+        "word": "français.)\n",
+        "success": true,
+        "startS": 135.99734042553192,
+        "endS": 136.43617021276594,
+        "palign": 0
+      },
+      {
+        "word": "A: ",
+        "success": true,
+        "startS": 136.5159574468085,
+        "endS": 136.55585106382978,
+        "palign": 0
+      },
+      {
+        "word": "Are ",
+        "success": true,
+        "startS": 136.59574468085106,
+        "endS": 136.6755319148936,
+        "palign": 0
+      },
+      {
+        "word": "you ",
+        "success": true,
+        "startS": 136.75531914893617,
+        "endS": 136.91489361702128,
+        "palign": 0
+      },
+      {
+        "word": "a ",
+        "success": true,
+        "startS": 137.0744680851064,
+        "endS": 137.15425531914894,
+        "palign": 0
+      },
+      {
+        "word": "tourist? (",
+        "success": true,
+        "startS": 137.21409574468086,
+        "endS": 137.99202127659575,
+        "palign": 0
+      },
+      {
+        "word": "Tu ",
+        "success": true,
+        "startS": 138.05186170212767,
+        "endS": 138.11170212765958,
+        "palign": 0
+      },
+      {
+        "word": "es ",
+        "success": true,
+        "startS": 138.16489361702128,
+        "endS": 138.2712765957447,
+        "palign": 0
+      },
+      {
+        "word": "touriste ?)\n",
+        "success": true,
+        "startS": 138.2712765957447,
+        "endS": 139.0159574468085,
+        "palign": 0
+      },
+      {
+        "word": "B: ",
+        "success": true,
+        "startS": 139.07801418439715,
+        "endS": 139.20212765957447,
+        "palign": 0
+      },
+      {
+        "word": "Yes! ",
+        "success": true,
+        "startS": 139.26418439716312,
+        "endS": 139.41489361702128,
+        "palign": 0
+      },
+      {
+        "word": "It’",
+        "success": true,
+        "startS": 139.4414893617021,
+        "endS": 139.46808510638297,
+        "palign": 0
+      },
+      {
+        "word": "s ",
+        "success": true,
+        "startS": 139.54787234042553,
+        "endS": 139.70744680851064,
+        "palign": 0
+      },
+      {
+        "word": "my ",
+        "success": true,
+        "startS": 139.82712765957447,
+        "endS": 139.9468085106383,
+        "palign": 0
+      },
+      {
+        "word": "first ",
+        "success": true,
+        "startS": 140.01063829787233,
+        "endS": 140.2659574468085,
+        "palign": 0
+      },
+      {
+        "word": "time ",
+        "success": true,
+        "startS": 140.3656914893617,
+        "endS": 140.66489361702128,
+        "palign": 0
+      },
+      {
+        "word": "here. (",
+        "success": true,
+        "startS": 140.76462765957447,
+        "endS": 141.23936170212764,
+        "palign": 0
+      },
+      {
+        "word": "Oui ! ",
+        "success": true,
+        "startS": 141.2872340425532,
+        "endS": 141.43617021276594,
+        "palign": 0
+      },
+      {
+        "word": "C’",
+        "success": true,
+        "startS": 141.4627659574468,
+        "endS": 141.4627659574468,
+        "palign": 0
+      },
+      {
+        "word": "est ",
+        "success": true,
+        "startS": 141.54255319148936,
+        "endS": 141.70212765957447,
+        "palign": 0
+      },
+      {
+        "word": "ma ",
+        "success": true,
+        "startS": 141.74202127659575,
+        "endS": 141.78191489361703,
+        "palign": 0
+      },
+      {
+        "word": "première ",
+        "success": true,
+        "startS": 141.8085106382979,
+        "endS": 142.18085106382978,
+        "palign": 0
+      },
+      {
+        "word": "fois ",
+        "success": true,
+        "startS": 142.26063829787233,
+        "endS": 142.5,
+        "palign": 0
+      },
+      {
+        "word": "ici.)\n",
+        "success": true,
+        "startS": 142.60638297872342,
+        "endS": 143.02659574468086,
+        "palign": 0
+      },
+      {
+        "word": "A: ",
+        "success": true,
+        "startS": 143.0505319148936,
+        "endS": 143.09840425531917,
+        "palign": 0
+      },
+      {
+        "word": "Where ",
+        "success": true,
+        "startS": 143.12234042553192,
+        "endS": 143.21808510638297,
+        "palign": 0
+      },
+      {
+        "word": "are ",
+        "success": true,
+        "startS": 143.29787234042553,
+        "endS": 143.45744680851064,
+        "palign": 0
+      },
+      {
+        "word": "you ",
+        "success": true,
+        "startS": 143.5372340425532,
+        "endS": 143.6968085106383,
+        "palign": 0
+      },
+      {
+        "word": "from ",
+        "success": true,
+        "startS": 143.77659574468086,
+        "endS": 144.0159574468085,
+        "palign": 0
+      },
+      {
+        "word": "in ",
+        "success": true,
+        "startS": 144.13563829787233,
+        "endS": 144.33510638297872,
+        "palign": 0
+      },
+      {
+        "word": "France? (",
+        "success": true,
+        "startS": 144.41489361702128,
+        "endS": 145.4122340425532,
+        "palign": 0
+      },
+      {
+        "word": "Tu ",
+        "success": true,
+        "startS": 145.4720744680851,
+        "endS": 145.53191489361703,
+        "palign": 0
+      },
+      {
+        "word": "viens ",
+        "success": true,
+        "startS": 145.56382978723406,
+        "endS": 145.69148936170214,
+        "palign": 0
+      },
+      {
+        "word": "d’",
+        "success": true,
+        "startS": 145.7712765957447,
+        "endS": 145.7712765957447,
+        "palign": 0
+      },
+      {
+        "word": "où ",
+        "success": true,
+        "startS": 145.85106382978722,
+        "endS": 146.01063829787233,
+        "palign": 0
+      },
+      {
+        "word": "en ",
+        "success": true,
+        "startS": 146.13031914893617,
+        "endS": 146.25,
+        "palign": 0
+      },
+      {
+        "word": "France ?)\n",
+        "success": true,
+        "startS": 146.32978723404256,
+        "endS": 146.9224924012158,
+        "palign": 0
+      },
+      {
+        "word": "B: ",
+        "success": true,
+        "startS": 146.93389057750758,
+        "endS": 146.95668693009117,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 146.96808510638297,
+        "endS": 146.96808510638297,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 147.04787234042553,
+        "endS": 147.20744680851064,
+        "palign": 0
+      },
+      {
+        "word": "from ",
+        "success": true,
+        "startS": 147.26728723404256,
+        "endS": 147.4468085106383,
+        "palign": 0
+      },
+      {
+        "word": "Lyon. ",
+        "success": true,
+        "startS": 147.56648936170214,
+        "endS": 147.98537234042553,
+        "palign": 0
+      },
+      {
+        "word": "And ",
+        "success": true,
+        "startS": 148.04521276595744,
+        "endS": 148.16489361702128,
+        "palign": 0
+      },
+      {
+        "word": "you? (",
+        "success": true,
+        "startS": 148.2712765957447,
+        "endS": 149.1622340425532,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 149.2220744680851,
+        "endS": 149.28191489361703,
+        "palign": 0
+      },
+      {
+        "word": "viens ",
+        "success": true,
+        "startS": 149.32978723404256,
+        "endS": 149.5212765957447,
+        "palign": 0
+      },
+      {
+        "word": "de ",
+        "success": true,
+        "startS": 149.60106382978722,
+        "endS": 149.68085106382978,
+        "palign": 0
+      },
+      {
+        "word": "Lyon. ",
+        "success": true,
+        "startS": 149.76063829787233,
+        "endS": 150.07978723404256,
+        "palign": 0
+      },
+      {
+        "word": "Et ",
+        "success": true,
+        "startS": 150.1595744680851,
+        "endS": 150.23936170212767,
+        "palign": 0
+      },
+      {
+        "word": "toi ?)\n",
+        "success": true,
+        "startS": 150.26595744680853,
+        "endS": 150.61835106382978,
+        "palign": 0
+      },
+      {
+        "word": "A: ",
+        "success": true,
+        "startS": 150.71808510638297,
+        "endS": 151.15691489361703,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 151.1968085106383,
+        "endS": 151.1968085106383,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 151.27659574468086,
+        "endS": 151.59574468085106,
+        "palign": 0
+      },
+      {
+        "word": "from ",
+        "success": true,
+        "startS": 151.69547872340425,
+        "endS": 152.0744680851064,
+        "palign": 0
+      },
+      {
+        "word": "Paris. ",
+        "success": true,
+        "startS": 152.17021276595744,
+        "endS": 152.87234042553192,
+        "palign": 0
+      },
+      {
+        "word": "Nice ",
+        "success": true,
+        "startS": 152.95212765957447,
+        "endS": 153.19148936170214,
+        "palign": 0
+      },
+      {
+        "word": "to ",
+        "success": true,
+        "startS": 153.31117021276594,
+        "endS": 153.51063829787233,
+        "palign": 0
+      },
+      {
+        "word": "meet ",
+        "success": true,
+        "startS": 153.57047872340425,
+        "endS": 153.75,
+        "palign": 0
+      },
+      {
+        "word": "you! (",
+        "success": true,
+        "startS": 153.85638297872342,
+        "endS": 154.34840425531917,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 154.40824468085106,
+        "endS": 154.46808510638297,
+        "palign": 0
+      },
+      {
+        "word": "viens ",
+        "success": true,
+        "startS": 154.5159574468085,
+        "endS": 154.70744680851064,
+        "palign": 0
+      },
+      {
+        "word": "de ",
+        "success": true,
+        "startS": 154.7872340425532,
+        "endS": 154.86702127659575,
+        "palign": 0
+      },
+      {
+        "word": "Paris. ",
+        "success": true,
+        "startS": 154.9627659574468,
+        "endS": 155.4787234042553,
+        "palign": 0
+      },
+      {
+        "word": "Enchanté !)\n",
+        "success": true,
+        "startS": 155.53191489361703,
+        "endS": 156.09574468085106,
+        "palign": 0
+      },
+      {
+        "word": "B: ",
+        "success": true,
+        "startS": 156.1595744680851,
+        "endS": 156.22340425531914,
+        "palign": 0
+      },
+      {
+        "word": "Nice ",
+        "success": true,
+        "startS": 156.3031914893617,
+        "endS": 156.54255319148936,
+        "palign": 0
+      },
+      {
+        "word": "to ",
+        "success": true,
+        "startS": 156.6622340425532,
+        "endS": 156.78191489361703,
+        "palign": 0
+      },
+      {
+        "word": "meet ",
+        "success": true,
+        "startS": 156.84175531914894,
+        "endS": 157.0212765957447,
+        "palign": 0
+      },
+      {
+        "word": "you ",
+        "success": true,
+        "startS": 157.12765957446808,
+        "endS": 157.42021276595744,
+        "palign": 0
+      },
+      {
+        "word": "too! (",
+        "success": true,
+        "startS": 157.52659574468086,
+        "endS": 158.29787234042553,
+        "palign": 0
+      },
+      {
+        "word": "Enchanté ",
+        "success": true,
+        "startS": 158.3377659574468,
+        "endS": 159.09574468085106,
+        "palign": 0
+      },
+      {
+        "word": "aussi !)\n\n[",
+        "success": true,
+        "startS": 159.13563829787233,
+        "endS": 159.68844984802433,
+        "palign": 0
+      },
+      {
+        "word": "REFRAIN – ",
+        "success": true,
+        "startS": 159.71124620060792,
+        "endS": 160.0531914893617,
+        "palign": 0
+      },
+      {
+        "word": "ensemble] (x2)\n",
+        "success": true,
+        "startS": 160.13297872340425,
+        "endS": 160.93085106382978,
+        "palign": 0
+      },
+      {
+        "word": "My ",
+        "success": true,
+        "startS": 161.01063829787233,
+        "endS": 161.0904255319149,
+        "palign": 0
+      },
+      {
+        "word": "name ",
+        "success": true,
+        "startS": 161.0904255319149,
+        "endS": 161.4095744680851,
+        "palign": 0
+      },
+      {
+        "word": "is ",
+        "success": true,
+        "startS": 161.48936170212767,
+        "endS": 161.56914893617022,
+        "palign": 0
+      },
+      {
+        "word": "Anna. (",
+        "success": true,
+        "startS": 161.6090425531915,
+        "endS": 162.36702127659575,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 162.40691489361703,
+        "endS": 162.4468085106383,
+        "palign": 0
+      },
+      {
+        "word": "m’",
+        "success": true,
+        "startS": 162.52659574468086,
+        "endS": 162.52659574468086,
+        "palign": 0
+      },
+      {
+        "word": "appelle ",
+        "success": true,
+        "startS": 162.68617021276597,
+        "endS": 163.16489361702128,
+        "palign": 0
+      },
+      {
+        "word": "Anna.)\n",
+        "success": true,
+        "startS": 163.2845744680851,
+        "endS": 163.61702127659575,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 163.6436170212766,
+        "endS": 163.6436170212766,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 163.72340425531914,
+        "endS": 163.88297872340425,
+        "palign": 0
+      },
+      {
+        "word": "French ",
+        "success": true,
+        "startS": 163.92287234042553,
+        "endS": 164.12234042553192,
+        "palign": 0
+      },
+      {
+        "word": "and ",
+        "success": true,
+        "startS": 164.20212765957447,
+        "endS": 164.36170212765958,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 164.44148936170214,
+        "endS": 164.44148936170214,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 164.5212765957447,
+        "endS": 164.76063829787233,
+        "palign": 0
+      },
+      {
+        "word": "a ",
+        "success": true,
+        "startS": 164.92021276595744,
+        "endS": 165.0,
+        "palign": 0
+      },
+      {
+        "word": "tourist. (",
+        "success": true,
+        "startS": 165.0997340425532,
+        "endS": 165.6914893617021,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 165.71808510638297,
+        "endS": 165.79787234042553,
+        "palign": 0
+      },
+      {
+        "word": "suis ",
+        "success": true,
+        "startS": 165.8377659574468,
+        "endS": 165.95744680851064,
+        "palign": 0
+      },
+      {
+        "word": "française ",
+        "success": true,
+        "startS": 166.01728723404256,
+        "endS": 166.43617021276597,
+        "palign": 0
+      },
+      {
+        "word": "et ",
+        "success": true,
+        "startS": 166.55585106382978,
+        "endS": 166.6755319148936,
+        "palign": 0
+      },
+      {
+        "word": "je ",
+        "success": true,
+        "startS": 166.79521276595744,
+        "endS": 166.91489361702128,
+        "palign": 0
+      },
+      {
+        "word": "suis ",
+        "success": true,
+        "startS": 166.9747340425532,
+        "endS": 167.15425531914894,
+        "palign": 0
+      },
+      {
+        "word": "touriste.)\n",
+        "success": true,
+        "startS": 167.21409574468086,
+        "endS": 168.24468085106383,
+        "palign": 0
+      },
+      {
+        "word": "Nice ",
+        "success": true,
+        "startS": 168.31117021276594,
+        "endS": 168.51063829787233,
+        "palign": 0
+      },
+      {
+        "word": "to ",
+        "success": true,
+        "startS": 168.63031914893617,
+        "endS": 168.75,
+        "palign": 0
+      },
+      {
+        "word": "meet ",
+        "success": true,
+        "startS": 168.8497340425532,
+        "endS": 169.14893617021278,
+        "palign": 0
+      },
+      {
+        "word": "you! (",
+        "success": true,
+        "startS": 169.25531914893617,
+        "endS": 169.5877659574468,
+        "palign": 0
+      },
+      {
+        "word": "Enchanté !)\n",
+        "success": true,
+        "startS": 169.64760638297872,
+        "endS": 170.4141337386018,
+        "palign": 0
+      },
+      {
+        "word": "What’",
+        "success": true,
+        "startS": 170.43693009118542,
+        "endS": 170.50531914893617,
+        "palign": 0
+      },
+      {
+        "word": "s ",
+        "success": true,
+        "startS": 170.58510638297872,
+        "endS": 170.66489361702128,
+        "palign": 0
+      },
+      {
+        "word": "your ",
+        "success": true,
+        "startS": 170.7247340425532,
+        "endS": 170.90425531914894,
+        "palign": 0
+      },
+      {
+        "word": "name? (",
+        "success": true,
+        "startS": 171.00398936170214,
+        "endS": 171.64893617021278,
+        "palign": 0
+      },
+      {
+        "word": "Comment ",
+        "success": true,
+        "startS": 171.70212765957447,
+        "endS": 172.0212765957447,
+        "palign": 0
+      },
+      {
+        "word": "tu ",
+        "success": true,
+        "startS": 172.10106382978722,
+        "endS": 172.18085106382978,
+        "palign": 0
+      },
+      {
+        "word": "t’",
+        "success": true,
+        "startS": 172.26063829787233,
+        "endS": 172.26063829787233,
+        "palign": 0
+      },
+      {
+        "word": "appelles ?)\n",
+        "success": true,
+        "startS": 172.5,
+        "endS": 175.43617021276597,
+        "palign": 0
+      },
+      {
+        "word": "My ",
+        "success": true,
+        "startS": 175.4840425531915,
+        "endS": 175.53191489361703,
+        "palign": 0
+      },
+      {
+        "word": "name ",
+        "success": true,
+        "startS": 175.63164893617022,
+        "endS": 176.01063829787233,
+        "palign": 0
+      },
+      {
+        "word": "is ",
+        "success": true,
+        "startS": 176.13031914893617,
+        "endS": 176.48936170212767,
+        "palign": 0
+      },
+      {
+        "word": "Anna. (",
+        "success": true,
+        "startS": 176.6090425531915,
+        "endS": 177.2872340425532,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 177.32712765957447,
+        "endS": 177.36702127659575,
+        "palign": 0
+      },
+      {
+        "word": "m’",
+        "success": true,
+        "startS": 177.4468085106383,
+        "endS": 177.4468085106383,
+        "palign": 0
+      },
+      {
+        "word": "appelle ",
+        "success": true,
+        "startS": 177.68617021276597,
+        "endS": 178.08510638297872,
+        "palign": 0
+      },
+      {
+        "word": "Anna.)\n",
+        "success": true,
+        "startS": 178.20478723404256,
+        "endS": 178.61702127659575,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 178.6436170212766,
+        "endS": 178.6436170212766,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 178.72340425531914,
+        "endS": 178.8031914893617,
+        "palign": 0
+      },
+      {
+        "word": "French ",
+        "success": true,
+        "startS": 178.84308510638297,
+        "endS": 179.04255319148936,
+        "palign": 0
+      },
+      {
+        "word": "and ",
+        "success": true,
+        "startS": 179.14893617021278,
+        "endS": 179.36170212765958,
+        "palign": 0
+      },
+      {
+        "word": "I’",
+        "success": true,
+        "startS": 179.44148936170214,
+        "endS": 179.44148936170214,
+        "palign": 0
+      },
+      {
+        "word": "m ",
+        "success": true,
+        "startS": 179.5212765957447,
+        "endS": 179.76063829787233,
+        "palign": 0
+      },
+      {
+        "word": "a ",
+        "success": true,
+        "startS": 179.92021276595744,
+        "endS": 180.0,
+        "palign": 0
+      },
+      {
+        "word": "tourist. (",
+        "success": true,
+        "startS": 180.0997340425532,
+        "endS": 180.6914893617021,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 180.71808510638297,
+        "endS": 180.79787234042553,
+        "palign": 0
+      },
+      {
+        "word": "suis ",
+        "success": true,
+        "startS": 180.79787234042553,
+        "endS": 180.95744680851064,
+        "palign": 0
+      },
+      {
+        "word": "française ",
+        "success": true,
+        "startS": 180.99734042553192,
+        "endS": 181.43617021276597,
+        "palign": 0
+      },
+      {
+        "word": "et ",
+        "success": true,
+        "startS": 181.5159574468085,
+        "endS": 181.59574468085106,
+        "palign": 0
+      },
+      {
+        "word": "je ",
+        "success": true,
+        "startS": 181.7154255319149,
+        "endS": 181.83510638297872,
+        "palign": 0
+      },
+      {
+        "word": "suis ",
+        "success": true,
+        "startS": 181.89494680851064,
+        "endS": 182.0744680851064,
+        "palign": 0
+      },
+      {
+        "word": "touriste.)\n",
+        "success": true,
+        "startS": 182.1343085106383,
+        "endS": 183.16489361702128,
+        "palign": 0
+      },
+      {
+        "word": "Nice ",
+        "success": true,
+        "startS": 183.2313829787234,
+        "endS": 183.43085106382978,
+        "palign": 0
+      },
+      {
+        "word": "to ",
+        "success": true,
+        "startS": 183.5505319148936,
+        "endS": 183.75,
+        "palign": 0
+      },
+      {
+        "word": "meet ",
+        "success": true,
+        "startS": 183.82978723404256,
+        "endS": 184.06914893617022,
+        "palign": 0
+      },
+      {
+        "word": "you! (",
+        "success": true,
+        "startS": 184.1755319148936,
+        "endS": 184.50797872340425,
+        "palign": 0
+      },
+      {
+        "word": "Enchanté !)\n",
+        "success": true,
+        "startS": 184.56781914893617,
+        "endS": 185.37993920972644,
+        "palign": 0
+      },
+      {
+        "word": "What’",
+        "success": true,
+        "startS": 185.39133738601822,
+        "endS": 185.4255319148936,
+        "palign": 0
+      },
+      {
+        "word": "s ",
+        "success": true,
+        "startS": 185.50531914893617,
+        "endS": 185.58510638297872,
+        "palign": 0
+      },
+      {
+        "word": "your ",
+        "success": true,
+        "startS": 185.64494680851064,
+        "endS": 185.8244680851064,
+        "palign": 0
+      },
+      {
+        "word": "name? (",
+        "success": true,
+        "startS": 185.92420212765958,
+        "endS": 186.63120567375887,
+        "palign": 0
+      },
+      {
+        "word": "Comment ",
+        "success": true,
+        "startS": 186.6755319148936,
+        "endS": 186.94148936170214,
+        "palign": 0
+      },
+      {
+        "word": "tu ",
+        "success": true,
+        "startS": 187.06117021276594,
+        "endS": 187.18085106382978,
+        "palign": 0
+      },
+      {
+        "word": "t’",
+        "success": true,
+        "startS": 187.26063829787233,
+        "endS": 187.26063829787233,
+        "palign": 0
+      },
+      {
+        "word": "appelles ?)\n\n",
+        "success": true,
+        "startS": 187.5,
+        "endS": 188.29787234042553,
+        "palign": 0
+      }
+    ],
+    "waveformData": [
+      1e-05,
+      0.04948,
+      0.07744,
+      0.07913,
+      0.06249,
+      0.0701,
+      0.07399,
+      0.07411,
+      0.07749,
+      0.06823,
+      0.04109,
+      0.05958,
+      0.08934,
+      0.08436,
+      0.06517,
+      0.06338,
+      0.07278,
+      0.06433,
+      0.05218,
+      0.0744,
+      0.07749,
+      0.0705,
+      0.07262,
+      0.06791,
+      0.07604,
+      0.06727,
+      0.07516,
+      0.07136,
+      0.08116,
+      0.07842,
+      0.05724,
+      0.03999,
+      0.02395,
+      0.02157,
+      0.01681,
+      0.06226,
+      0.0659,
+      0.05766,
+      0.07599,
+      0.06789,
+      0.05364,
+      0.03802,
+      0.07144,
+      0.0715,
+      0.06495,
+      0.07887,
+      0.06765,
+      0.05817,
+      0.09641,
+      0.08181,
+      0.05623,
+      0.05413,
+      0.06264,
+      0.06544,
+      0.07513,
+      0.07857,
+      0.07731,
+      0.07787,
+      0.07481,
+      0.05811,
+      0.04741,
+      0.02092,
+      0.01587,
+      0.02364,
+      0.03747,
+      0.02648,
+      0.03125,
+      0.06259,
+      0.03663,
+      0.03682,
+      0.01877,
+      0.0519,
+      0.08322,
+      0.06686,
+      0.09344,
+      0.07826,
+      0.0867,
+      0.06404,
+      0.04521,
+      0.05087,
+      0.06,
+      0.093,
+      0.07709,
+      0.0827,
+      0.06956,
+      0.07761,
+      0.09234,
+      0.06455,
+      0.1018,
+      0.09396,
+      0.09204,
+      0.09389,
+      0.08502,
+      0.08191,
+      0.09667,
+      0.10606,
+      0.08825,
+      0.08802,
+      0.08492,
+      0.08955,
+      0.08547,
+      0.08513,
+      0.0821,
+      0.08148,
+      0.14308,
+      0.12018,
+      0.15793,
+      0.12184,
+      0.11233,
+      0.10583,
+      0.09218,
+      0.13841,
+      0.16207,
+      0.19275,
+      0.26434,
+      0.1539,
+      0.27313,
+      0.14333,
+      0.25571,
+      0.19367,
+      0.16618,
+      0.24818,
+      0.1736,
+      0.27869,
+      0.19315,
+      0.24257,
+      0.18453,
+      0.16354,
+      0.2692,
+      0.14686,
+      0.25906,
+      0.18203,
+      0.25248,
+      0.21177,
+      0.18296,
+      0.27257,
+      0.13102,
+      0.27325,
+      0.16699,
+      0.2281,
+      0.20561,
+      0.15638,
+      0.26722,
+      0.16775,
+      0.25875,
+      0.12482,
+      0.24516,
+      0.21497,
+      0.13788,
+      0.29076,
+      0.14016,
+      0.25997,
+      0.15506,
+      0.21446,
+      0.21863,
+      0.12192,
+      0.27367,
+      0.13442,
+      0.25585,
+      0.17799,
+      0.21815,
+      0.23223,
+      0.16158,
+      0.26571,
+      0.14137,
+      0.26364,
+      0.18131,
+      0.20831,
+      0.22394,
+      0.17554,
+      0.10017,
+      0.09448,
+      0.0972,
+      0.10104,
+      0.06385,
+      0.08194,
+      0.05219,
+      0.07521,
+      0.10841,
+      0.05476,
+      0.03835,
+      0.10838,
+      0.07499,
+      0.12011,
+      0.10342,
+      0.10147,
+      0.11228,
+      0.12062,
+      0.18445,
+      0.26335,
+      0.15925,
+      0.26987,
+      0.14375,
+      0.25257,
+      0.20179,
+      0.17642,
+      0.25194,
+      0.16157,
+      0.27405,
+      0.19385,
+      0.23574,
+      0.19186,
+      0.18522,
+      0.26397,
+      0.17169,
+      0.26132,
+      0.1796,
+      0.25321,
+      0.21619,
+      0.1934,
+      0.26127,
+      0.14101,
+      0.27409,
+      0.17102,
+      0.22633,
+      0.2083,
+      0.14456,
+      0.26264,
+      0.16421,
+      0.26376,
+      0.12852,
+      0.24855,
+      0.21649,
+      0.14545,
+      0.27365,
+      0.13302,
+      0.26079,
+      0.16684,
+      0.21606,
+      0.20725,
+      0.12857,
+      0.27299,
+      0.14632,
+      0.25053,
+      0.16546,
+      0.22412,
+      0.22209,
+      0.16517,
+      0.26524,
+      0.14663,
+      0.26229,
+      0.17763,
+      0.20424,
+      0.22451,
+      0.16997,
+      0.10585,
+      0.11571,
+      0.11391,
+      0.10564,
+      0.08488,
+      0.08801,
+      0.09105,
+      0.08483,
+      0.14153,
+      0.09698,
+      0.08114,
+      0.13492,
+      0.0855,
+      0.14836,
+      0.10097,
+      0.14369,
+      0.11278,
+      0.11572,
+      0.18164,
+      0.24544,
+      0.12945,
+      0.27479,
+      0.13762,
+      0.24013,
+      0.1883,
+      0.17867,
+      0.24849,
+      0.1397,
+      0.28196,
+      0.15861,
+      0.23868,
+      0.17487,
+      0.17238,
+      0.24937,
+      0.13104,
+      0.25221,
+      0.15267,
+      0.23492,
+      0.1918,
+      0.14938,
+      0.25734,
+      0.11628,
+      0.26013,
+      0.15028,
+      0.21915,
+      0.19862,
+      0.1359,
+      0.26018,
+      0.13172,
+      0.26529,
+      0.13386,
+      0.22563,
+      0.20094,
+      0.15048,
+      0.26299,
+      0.11575,
+      0.25925,
+      0.15802,
+      0.21569,
+      0.20024,
+      0.123,
+      0.2576,
+      0.12728,
+      0.24545,
+      0.15457,
+      0.20426,
+      0.229,
+      0.15192,
+      0.26769,
+      0.11591,
+      0.26208,
+      0.17021,
+      0.20542,
+      0.22084,
+      0.14846,
+      0.27399,
+      0.12831,
+      0.25223,
+      0.19294,
+      0.18241,
+      0.23958,
+      0.116,
+      0.26223,
+      0.1508,
+      0.08359,
+      0.09675,
+      0.14664,
+      0.11862,
+      0.13979,
+      0.1232,
+      0.1403,
+      0.12409,
+      0.12275,
+      0.19053,
+      0.23822,
+      0.13032,
+      0.26772,
+      0.13595,
+      0.24625,
+      0.18873,
+      0.17301,
+      0.2412,
+      0.15546,
+      0.26824,
+      0.14605,
+      0.23849,
+      0.17624,
+      0.17783,
+      0.25269,
+      0.13565,
+      0.25923,
+      0.15946,
+      0.23546,
+      0.20404,
+      0.1675,
+      0.25024,
+      0.11756,
+      0.26539,
+      0.14629,
+      0.21742,
+      0.19946,
+      0.1448,
+      0.26459,
+      0.13724,
+      0.26784,
+      0.14343,
+      0.2351,
+      0.19685,
+      0.13248,
+      0.24126,
+      0.13982,
+      0.25127,
+      0.15209,
+      0.20588,
+      0.19172,
+      0.1339,
+      0.25371,
+      0.09844,
+      0.25121,
+      0.14948,
+      0.21603,
+      0.21624,
+      0.13463,
+      0.26249,
+      0.12725,
+      0.25114,
+      0.17898,
+      0.21307,
+      0.2155,
+      0.15752,
+      0.10273,
+      0.11461,
+      0.14493,
+      0.12721,
+      0.1399,
+      0.11792,
+      0.12824,
+      0.0869,
+      0.16525,
+      0.11042,
+      0.07819,
+      0.14769,
+      0.10343,
+      0.13953,
+      0.13292,
+      0.15191,
+      0.13399,
+      0.08569,
+      0.09478,
+      0.12524,
+      0.13398,
+      0.12722,
+      0.13319,
+      0.1288,
+      0.10801,
+      0.1268,
+      0.11493,
+      0.09314,
+      0.27792,
+      0.16484,
+      0.23925,
+      0.16428,
+      0.1935,
+      0.23935,
+      0.15896,
+      0.24262,
+      0.16696,
+      0.24171,
+      0.18996,
+      0.17207,
+      0.24486,
+      0.13824,
+      0.25598,
+      0.15449,
+      0.2217,
+      0.19652,
+      0.16119,
+      0.25421,
+      0.17131,
+      0.26601,
+      0.1422,
+      0.24351,
+      0.22083,
+      0.15043,
+      0.24681,
+      0.15914,
+      0.24277,
+      0.16746,
+      0.22025,
+      0.19379,
+      0.14973,
+      0.24695,
+      0.15193,
+      0.24327,
+      0.16156,
+      0.21586,
+      0.20782,
+      0.1324,
+      0.25476,
+      0.1317,
+      0.25366,
+      0.16906,
+      0.20048,
+      0.20436,
+      0.14976,
+      0.2653,
+      0.14486,
+      0.24819,
+      0.14752,
+      0.21313,
+      0.2151,
+      0.14806,
+      0.25473,
+      0.15682,
+      0.1158,
+      0.11681,
+      0.10781,
+      0.0885,
+      0.10042,
+      0.07542,
+      0.08019,
+      0.07758,
+      0.1349,
+      0.14728,
+      0.0689,
+      0.1099,
+      0.08208,
+      0.14639,
+      0.11216,
+      0.12957,
+      0.12809,
+      0.11177,
+      0.10602,
+      0.26618,
+      0.15856,
+      0.22983,
+      0.16277,
+      0.18699,
+      0.22935,
+      0.15141,
+      0.23403,
+      0.16161,
+      0.22722,
+      0.18339,
+      0.1683,
+      0.22204,
+      0.1411,
+      0.25006,
+      0.16735,
+      0.22049,
+      0.19674,
+      0.16255,
+      0.24148,
+      0.16811,
+      0.25225,
+      0.14024,
+      0.23217,
+      0.19216,
+      0.15903,
+      0.22934,
+      0.13598,
+      0.23701,
+      0.15001,
+      0.2079,
+      0.17837,
+      0.12127,
+      0.24648,
+      0.15302,
+      0.23524,
+      0.1461,
+      0.21409,
+      0.20017,
+      0.14923,
+      0.24372,
+      0.12441,
+      0.24318,
+      0.15458,
+      0.19514,
+      0.18975,
+      0.15582,
+      0.25306,
+      0.14882,
+      0.23231,
+      0.1402,
+      0.19311,
+      0.20711,
+      0.1502,
+      0.23232,
+      0.1786,
+      0.11701,
+      0.10275,
+      0.10829,
+      0.08655,
+      0.10482,
+      0.07303,
+      0.08502,
+      0.08109,
+      0.11136,
+      0.11294,
+      0.08547,
+      0.10801,
+      0.08319,
+      0.10604,
+      0.08754,
+      0.12644,
+      0.11858,
+      0.08578,
+      0.10761,
+      0.29882,
+      0.1325,
+      0.26912,
+      0.14454,
+      0.2061,
+      0.24601,
+      0.1271,
+      0.27514,
+      0.10752,
+      0.26231,
+      0.14434,
+      0.17863,
+      0.24661,
+      0.12954,
+      0.29003,
+      0.12347,
+      0.26459,
+      0.18771,
+      0.16913,
+      0.26479,
+      0.13024,
+      0.29591,
+      0.1445,
+      0.25836,
+      0.17633,
+      0.18574,
+      0.27326,
+      0.12509,
+      0.27322,
+      0.15336,
+      0.26331,
+      0.19874,
+      0.16449,
+      0.27387,
+      0.13098,
+      0.289,
+      0.1507,
+      0.25895,
+      0.19886,
+      0.13419,
+      0.28647,
+      0.1187,
+      0.28225,
+      0.12338,
+      0.22822,
+      0.19473,
+      0.13387,
+      0.28811,
+      0.13819,
+      0.27686,
+      0.14425,
+      0.23071,
+      0.20967,
+      0.11343,
+      0.29478,
+      0.12388,
+      0.26915,
+      0.15764,
+      0.23469,
+      0.20532,
+      0.12404,
+      0.2876,
+      0.16191,
+      0.2823,
+      0.14687,
+      0.24091,
+      0.21898,
+      0.16563,
+      0.28054,
+      0.1586,
+      0.28201,
+      0.18627,
+      0.12279,
+      0.06447,
+      0.10247,
+      0.11982,
+      0.13573,
+      0.1245,
+      0.12143,
+      0.10366,
+      0.11202,
+      0.12626,
+      0.12035,
+      0.11433,
+      0.11173,
+      0.11294,
+      0.09366,
+      0.09173,
+      0.09632,
+      0.11497,
+      0.11945,
+      0.10984,
+      0.10883,
+      0.09085,
+      0.12134,
+      0.13975,
+      0.13018,
+      0.11901,
+      0.12869,
+      0.14825,
+      0.1455,
+      0.14258,
+      0.16796,
+      0.16137,
+      0.14411,
+      0.15886,
+      0.14524,
+      0.14096,
+      0.14824,
+      0.15546,
+      0.14823,
+      0.13915,
+      0.1429,
+      0.12136,
+      0.12494,
+      0.10754,
+      0.12753,
+      0.12959,
+      0.1303,
+      0.14094,
+      0.15812,
+      0.16492,
+      0.15031,
+      0.14467,
+      0.14985,
+      0.14457,
+      0.13193,
+      0.13466,
+      0.1229,
+      0.12006,
+      0.12645,
+      0.13133,
+      0.1303,
+      0.11952,
+      0.11092,
+      0.11763,
+      0.14154,
+      0.14478,
+      0.15624,
+      0.14453,
+      0.13793,
+      0.13312,
+      0.14383,
+      0.13369,
+      0.12893,
+      0.12686,
+      0.12798,
+      0.12879,
+      0.12669,
+      0.14421,
+      0.11758,
+      0.11001,
+      0.13318,
+      0.138,
+      0.12999,
+      0.12116,
+      0.13225,
+      0.12067,
+      0.12791,
+      0.13986,
+      0.13518,
+      0.14647,
+      0.1442,
+      0.12743,
+      0.11968,
+      0.12944,
+      0.11369,
+      0.11897,
+      0.14384,
+      0.13486,
+      0.14877,
+      0.13139,
+      0.14626,
+      0.14188,
+      0.15117,
+      0.14465,
+      0.14507,
+      0.13487,
+      0.16908,
+      0.15498,
+      0.15183,
+      0.16321,
+      0.1681,
+      0.15772,
+      0.16896,
+      0.17059,
+      0.15604,
+      0.16568,
+      0.15934,
+      0.15495,
+      0.16272,
+      0.16539,
+      0.16312,
+      0.15483,
+      0.12351,
+      0.11151,
+      0.11277,
+      0.16396,
+      0.16173,
+      0.16794,
+      0.14978,
+      0.13739,
+      0.13151,
+      0.1208,
+      0.12189,
+      0.13085,
+      0.13654,
+      0.14074,
+      0.14402,
+      0.15028,
+      0.15078,
+      0.13602,
+      0.13308,
+      0.14677,
+      0.1644,
+      0.14017,
+      0.08881,
+      0.04311,
+      0.08224,
+      0.07027,
+      0.08801,
+      0.07376,
+      0.10493,
+      0.0713,
+      0.08162,
+      0.26294,
+      0.13239,
+      0.22745,
+      0.16766,
+      0.19194,
+      0.20683,
+      0.14404,
+      0.2354,
+      0.13535,
+      0.22928,
+      0.17124,
+      0.16588,
+      0.20818,
+      0.12587,
+      0.24018,
+      0.14354,
+      0.21968,
+      0.16782,
+      0.15925,
+      0.21598,
+      0.14025,
+      0.24378,
+      0.11662,
+      0.22017,
+      0.15737,
+      0.14198,
+      0.23025,
+      0.12666,
+      0.23296,
+      0.14769,
+      0.21591,
+      0.16616,
+      0.13249,
+      0.23377,
+      0.12563,
+      0.23379,
+      0.15089,
+      0.20542,
+      0.17369,
+      0.13438,
+      0.23603,
+      0.09794,
+      0.23814,
+      0.13199,
+      0.20674,
+      0.17383,
+      0.12675,
+      0.23814,
+      0.14625,
+      0.23217,
+      0.13889,
+      0.21263,
+      0.19705,
+      0.13738,
+      0.23049,
+      0.15361,
+      0.2326,
+      0.15585,
+      0.18954,
+      0.19989,
+      0.12861,
+      0.23503,
+      0.15668,
+      0.23015,
+      0.16163,
+      0.13441,
+      0.10476,
+      0.10148,
+      0.07095,
+      0.11586,
+      0.06698,
+      0.09942,
+      0.07794,
+      0.07017,
+      0.12768,
+      0.05113,
+      0.08389,
+      0.1006,
+      0.13049,
+      0.12897,
+      0.08219,
+      0.11724,
+      0.11433,
+      0.07676,
+      0.23638,
+      0.16884,
+      0.15546,
+      0.21658,
+      0.11278,
+      0.23257,
+      0.13286,
+      0.2152,
+      0.16531,
+      0.15518,
+      0.21029,
+      0.14462,
+      0.24544,
+      0.11227,
+      0.2232,
+      0.15679,
+      0.14186,
+      0.22805,
+      0.13638,
+      0.23606,
+      0.15198,
+      0.21034,
+      0.18705,
+      0.13445,
+      0.22434,
+      0.13327,
+      0.23363,
+      0.14816,
+      0.20983,
+      0.17191,
+      0.13194,
+      0.23155,
+      0.10377,
+      0.24144,
+      0.14439,
+      0.20744,
+      0.17078,
+      0.12913,
+      0.24647,
+      0.14419,
+      0.23188,
+      0.14047,
+      0.205,
+      0.20012,
+      0.1495,
+      0.24081,
+      0.14432,
+      0.23499,
+      0.16099,
+      0.1948,
+      0.19979,
+      0.12189,
+      0.2331,
+      0.15403,
+      0.23045,
+      0.17205,
+      0.144,
+      0.09506,
+      0.05633,
+      0.03028,
+      0.02129,
+      0.01797,
+      0.01548,
+      0.01353,
+      0.01086,
+      0.00886,
+      0.00764,
+      0.00566,
+      0.00444,
+      0.00409,
+      0.00338,
+      0.00261,
+      0.0024,
+      0.00188,
+      0.00096,
+      0.00032,
+      0.00034,
+      0.00039
+    ],
+    "hootCer": 0.9658792650918635,
+    "isStreamed": false
+  }
+}

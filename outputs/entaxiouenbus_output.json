@@ -1,0 +1,22 @@
+{
+    "url": [
+        {
+            "url_drive": null,
+            "img_drive": null,
+            "audio_url": "https://apiboxfiles.erweima.ai/NjIwYjE4MGItNzcwOS00YzU2LTk4ZDctZDdjY2I4OTM0YmI0.mp3",
+            "image_url": "https://apiboxfiles.erweima.ai/NjIwYjE4MGItNzcwOS00YzU2LTk4ZDctZDdjY2I4OTM0YmI0.jpeg",
+            "title": "EN TAXI OU EN BUS",
+            "duration": 195.6
+        }
+    ],
+    "langue": "",
+    "title": "EN TAXI OU EN BUS",
+    "tags": "POP CLASSIQUE",
+    "prompt": "Introduction – tous ensemble]\nAujourd’hui, on apprend à prendre un taxi, un bus ou un métro en anglais, comme un vrai voyageur autonome !\n[Refrain – ensemble] (x2)\nTaxi! Taxi! (Taxi ! Taxi !)\nCan you take me to the hotel? (Pouvez-vous m’emmener à l’hôtel ?)\nHow much is it? (Combien ça coûte ?)\nPlease stop here. (Arrêtez ici, s’il vous plaît.)\nBus or metro, ticket please! (Bus ou métro, un ticket s’il vous plaît !)\nWhere is the station? (Où est la station ?)\nIs this going to the centre? (Ce bus va-t-il au centre ?)\nThank you, driver! (Merci, chauffeur !)\n[Couplet – dialogue A & B]\nA: Hello! Taxi? (Bonjour ! Taxi ?)\nB: Yes,Yes, where are you going?? (Oui, où allez-vous ?)\nA: To the city centre, please. (Au centre-ville, s’il vous plaît.)\nB: OK! Sit down. (D’accord ! Asseyez-vous.)\nA: How much is it? (Combien ça coûte ?)\nB: Fifteen dollars. (Quinze dollars.)\nA: Please stop here. (Arrêtez ici, s’il vous plaît.)\nB: Here you are. (Voilà.)\nA: Thank you very much! (Merci beaucoup !)\nB: Have a nice day! (Bonne journée !)\n[Refrain – ensemble] (x2)\nTaxi! Taxi! (Taxi ! Taxi !)\nCan you take me to the hotel? (Pouvez-vous m’emmener à l’hôtel ?)\nHow much is it? (Combien ça coûte ?)\nPlease stop here. (Arrêtez ici, s’il vous plaît.)\nBus or metro, ticket please! (Bus ou métro, un ticket s’il vous plaît !)\nWhere is the station? (Où est la station ?)\nIs this going to the centre? (Ce bus va-t-il au centre ?)\nThank you, driver! (Merci, chauffeur !)\n",
+    "source_audio_url": "https://cdn1.suno.ai/620b180b-7709-4c56-98d7-d7ccb8934bb4.mp3",
+    "source_image_url": "https://cdn2.suno.ai/image_620b180b-7709-4c56-98d7-d7ccb8934bb4.jpeg",
+    "stream_audio_url": "https://mfile.erweima.ai/NjIwYjE4MGItNzcwOS00YzU2LTk4ZDctZDdjY2I4OTM0YmI0",
+    "source_stream_audio_url": "https://cdn1.suno.ai/620b180b-7709-4c56-98d7-d7ccb8934bb4.mp3",
+    "duration": 195.6,
+    "model_name": "chirp-v4"
+}

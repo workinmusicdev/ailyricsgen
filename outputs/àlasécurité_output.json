@@ -1,0 +1,22 @@
+{
+    "url": [
+        {
+            "url_drive": null,
+            "img_drive": null,
+            "audio_url": "https://apiboxfiles.erweima.ai/NzM2ZTY5N2YtNDI4OC00MmQ3LTg5ODgtZjAxMDM5ZWUwODQ5.mp3",
+            "image_url": "https://apiboxfiles.erweima.ai/NzM2ZTY5N2YtNDI4OC00MmQ3LTg5ODgtZjAxMDM5ZWUwODQ5.jpeg",
+            "title": "À LA SÉCURITÉ",
+            "duration": 143.56
+        }
+    ],
+    "langue": "",
+    "title": "À LA SÉCURITÉ",
+    "tags": "POP CLASSIQUE",
+    "prompt": "[Introduction – tous ensemble]\nDans cette chanson, on apprend à passer le contrôle de sécurité et la douane à l’aéroport sans stress !\n[Refrain – ensemble]\nTake off your shoes. (Enlevez vos chaussures.)\nPut your bag on the belt. (Posez votre sac sur le tapis.)\nHere is my passport. (Voici mon passeport.)\nI have nothing to declare. (Je n’ai rien à déclarer.)\nTake off your shoes. (Enlevez vos chaussures.)\nPut your bag on the belt. (Posez votre sac sur le tapis.)\nHere is my boarding pass. (Voici ma carte d’embarquement.)\nI have nothing to declare. (Je n’ai rien à déclarer.)\n[Couplet – dialogue A & B]\nA: Good morning. Boarding pass, please. (Bonjour. Carte d’embarquement, s’il vous plaît.)\nB: Here is my boarding pass. (Voici ma carte d’embarquement.)\nA: Do you have liquids in your bag? (Avez-vous des liquides dans votre sac ?)\nB: No, I don’t. (Non, je n’en ai pas.)\nA: Please take off your shoes. (Veuillez enlever vos chaussures.)\nB: OK, no problem. (D’accord, pas de problème.)\nA: Anything to declare? (Quelque chose à déclarer ?)\nB: No, nothing to declare. (Non, rien à déclarer.)\nA: You can go. Have a nice flight! (Vous pouvez y aller. Bon vol !)\nB: Thank you! (Merci !)\n[Refrain – ensemble] \nTake off your shoes. (Enlevez vos chaussures.)\nPut your bag on the belt. (Posez votre sac sur le tapis.)\nHere is my passport. (Voici mon passeport.)\nI have nothing to declare. (Je n’ai rien à déclarer.)\nTake off your shoes. (Enlevez vos chaussures.)\nPut your bag on the belt. (Posez votre sac sur le tapis.)\nHere is my boarding pass. (Voici ma carte d’embarquement.)\nI have nothing to declare. (Je n’ai rien à déclarer.)\n",
+    "source_audio_url": "https://cdn1.suno.ai/736e697f-4288-42d7-8988-f01039ee0849.mp3",
+    "source_image_url": "https://cdn2.suno.ai/image_736e697f-4288-42d7-8988-f01039ee0849.jpeg",
+    "stream_audio_url": "https://mfile.erweima.ai/NzM2ZTY5N2YtNDI4OC00MmQ3LTg5ODgtZjAxMDM5ZWUwODQ5",
+    "source_stream_audio_url": "https://cdn1.suno.ai/736e697f-4288-42d7-8988-f01039ee0849.mp3",
+    "duration": 143.56,
+    "model_name": "chirp-v4"
+}

@@ -1,0 +1,22 @@
+{
+    "url": [
+        {
+            "url_drive": null,
+            "img_drive": null,
+            "audio_url": "https://apiboxfiles.erweima.ai/YTkyYTE1NDctZDMzNy00NDE2LWJlZDktYzUzODJiZDQwYjEx.mp3",
+            "image_url": "https://apiboxfiles.erweima.ai/YTkyYTE1NDctZDMzNy00NDE2LWJlZDktYzUzODJiZDQwYjEx.jpeg",
+            "title": "🎶 IL Y A UN PROBLÈME DANS LA CHAMBRE",
+            "duration": 166.0
+        }
+    ],
+    "langue": "",
+    "title": "🎶 IL Y A UN PROBLÈME DANS LA CHAMBRE",
+    "tags": "POP CLASSIQUE",
+    "prompt": "[Introduction – tous ensemble]\nDans cette chanson, on apprend à dire qu’il y a un problème dans la chambre, et comment demander de l’aide simplement.\n[Refrain – ensemble] (x2)\nThere is a problem. (Il y a un problème.)\nThe shower is not working. (La douche ne fonctionne pas.)\nIt’s too cold. (Il fait trop froid.)\nCan you fix it, please? (Pouvez-vous réparer, s’il vous plaît ?)\nThere is a problem. (Il y a un problème.)\nThe light is broken. (La lumière est cassée.)\nI need towels. (J’ai besoin de serviettes.)\nCan you help me, please? (Pouvez-vous m’aider, s’il vous plaît ?)\n[Couplet – dialogue A & B]\nA: Hello, reception? (Bonjour, la réception ?)\nB: Yes, how can I help you? (Oui, que puis-je faire pour vous ?)\nA: There is a problem with the shower. (Il y a un problème avec la douche.)\nB: Is it cold? (Est-ce qu’elle est froide ?)\nA: No, it’s not working. (Non, elle ne fonctionne pas.)\nB: OK, we will send someone. (D’accord, nous allons envoyer quelqu’un.)\nA: Also, I need two towels. (Aussi, j’ai besoin de deux serviettes.)\nB: No problem. (Pas de problème.)\nA: Thank you for your help. (Merci pour votre aide.)\nB: You’re welcome! (Je vous en prie !)\n[Refrain – ensemble] (x2)\n\n\nThere is a problem. (Il y a un problème.)\nThe shower is not working. (La douche ne fonctionne pas.)\nIt’s too cold. (Il fait trop froid.)\nCan you fix it, please? (Pouvez-vous réparer, s’il vous plaît ?)\nThere is a problem. (Il y a un problème.)\nThe light is broken. (La lumière est cassée.)\nI need towels. (J’ai besoin de serviettes.)\nCan you help me, please? (Pouvez-vous m’aider, s’il vous plaît ?)\n",
+    "source_audio_url": "https://cdn1.suno.ai/a92a1547-d337-4416-bed9-c5382bd40b11.mp3",
+    "source_image_url": "https://cdn2.suno.ai/image_a92a1547-d337-4416-bed9-c5382bd40b11.jpeg",
+    "stream_audio_url": "https://mfile.erweima.ai/YTkyYTE1NDctZDMzNy00NDE2LWJlZDktYzUzODJiZDQwYjEx",
+    "source_stream_audio_url": "https://cdn1.suno.ai/a92a1547-d337-4416-bed9-c5382bd40b11.mp3",
+    "duration": 166.0,
+    "model_name": "chirp-v4"
+}

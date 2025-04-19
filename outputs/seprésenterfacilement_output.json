@@ -1,0 +1,22 @@
+{
+    "url": [
+        {
+            "url_drive": null,
+            "img_drive": null,
+            "audio_url": "https://apiboxfiles.erweima.ai/NmY1YTcxZTEtODlkNS00ZGM1LWIwOTItNzE0ZWNkZDJjZTRm.mp3",
+            "image_url": "https://apiboxfiles.erweima.ai/NmY1YTcxZTEtODlkNS00ZGM1LWIwOTItNzE0ZWNkZDJjZTRm.jpeg",
+            "title": "Se présenter facilement",
+            "duration": 192.0
+        }
+    ],
+    "langue": "",
+    "title": "Se présenter facilement",
+    "tags": "POP CLASSIQUE",
+    "prompt": " [INTRODUCTION – tous ensemble]\nDans cette chanson, tu vas apprendre à te présenter simplement en anglais : dire ton prénom, ta nationalité, pourquoi tu es là.\nC’est le premier pas pour parler avec quelqu’un en voyage.\n[REFRAIN – ensemble] (x2)\nMy name is Anna. (Je m’appelle Anna.)\nI’m French and I’m a tourist. (Je suis française et je suis touriste.)\nNice to meet you! (Enchanté !)\nWhat’s your name? (Comment tu t’appelles ?)\n [COUPLET – Dialogue A & B]\nA: Hello! What’s your name? (Bonjour ! Comment tu t’appelles ?)\nB: My name is Thomas. I’m French. (Je m’appelle Thomas. Je suis français.)\nA: Are you a tourist? (Tu es touriste ?)\nB: Yes! It’s my first time here. (Oui ! C’est ma première fois ici.)\nA: Where are you from in France? (Tu viens d’où en France ?)\nB: I’m from Lyon. And you? (Je viens de Lyon. Et toi ?)\nA: I’m from Paris. Nice to meet you! (Je viens de Paris. Enchanté !)\nB: Nice to meet you too! (Enchanté aussi !)\n [REFRAIN – ensemble] (x2)\nMy name is Anna. (Je m’appelle Anna.)\nI’m French and I’m a tourist. (Je suis française et je suis touriste.)\nNice to meet you! (Enchanté !)\nWhat’s your name? (Comment tu t’appelles ?)\n",
+    "source_audio_url": "https://cdn1.suno.ai/6f5a71e1-89d5-4dc5-b092-714ecdd2ce4f.mp3",
+    "source_image_url": "https://cdn2.suno.ai/image_6f5a71e1-89d5-4dc5-b092-714ecdd2ce4f.jpeg",
+    "stream_audio_url": "https://mfile.erweima.ai/NmY1YTcxZTEtODlkNS00ZGM1LWIwOTItNzE0ZWNkZDJjZTRm",
+    "source_stream_audio_url": "https://cdn1.suno.ai/6f5a71e1-89d5-4dc5-b092-714ecdd2ce4f.mp3",
+    "duration": 192.0,
+    "model_name": "chirp-v4"
+}

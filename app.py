@@ -31,6 +31,11 @@ from rq.job import Job, Retry
 from rq.registry import StartedJobRegistry, FinishedJobRegistry
 import logging
 
+import os
+import json
+import requests
+import re
+
 load_dotenv()
 app = FastAPI()
 
@@ -259,18 +264,74 @@ async def download_file(file_name: str):
         return FileResponse(file_path, media_type='application/octet-stream', filename=file_name)
     return JSONResponse(content={"message": "File not found"}, status_code=404)
 
+OUTPUT_DIR = "outputs"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+def download_file_by_url(url):
+    # Simule le téléchargement d'un fichier
+    return url
+
+# def upload_file_to_s3(file_path, file_name, title):
+#     # Simule l'upload sur S3
+#     return f"https://s3.fake/{title}/{file_name}"
+
+def convert_json_to_lrc_grouped(json_file_path, output_lrc_path):
+    with open(json_file_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    if not data or "data" not in data or not data["data"] or "alignedWords" not in data["data"]:
+        print(f"❌ Données invalides dans {json_file_path}. Clé 'alignedWords' manquante.")
+        return
+
+    words = data["data"]["alignedWords"]
+    grouped_lines = []
+    current_line = ""
+    line_start = None
+
+    for word_info in words:
+        word = word_info["word"].strip().replace("\n", " ")
+        if re.fullmatch(r"\[.*?\]", word):
+            continue
+        word = re.sub(r"\[.*?\]", "", word).strip()
+        if not word:
+            continue
+
+        start = word_info["startS"]
+
+        if current_line == "":
+            line_start = start
+
+        current_line += word + " "
+
+        if re.search(r"[.?!)]$", word):
+            mins = int(line_start // 60)
+            secs = int(line_start % 60)
+            hundredths = int((line_start - int(line_start)) * 100)
+            timestamp = f"[{mins:02d}:{secs:02d}.{hundredths:02d}]"
+            grouped_lines.append(f"{timestamp} {current_line.strip()}")
+            current_line = ""
+
+    if current_line:
+        mins = int(line_start // 60)
+        secs = int(line_start % 60)
+        hundredths = int((line_start - int(line_start)) * 100)
+        timestamp = f"[{mins:02d}:{secs:02d}.{hundredths:02d}]"
+        grouped_lines.append(f"{timestamp} {current_line.strip()}")
+
+    with open(output_lrc_path, "w", encoding="utf-8") as f:
+        for line in grouped_lines:
+            f.write(line + "\n")
+
+    print(f"✅ Fichier .lrc nettoyé généré : {output_lrc_path}")
 
 @app.post("/generation/callback", tags=["debug"])
 async def handle_generation_callback(body: dict):
-    # Affiche le contenu du body dans la console
     print(body)
 
     data = body.get('data', {}).get('data', [])
-
     c = 1
 
     for music in data:
-
         tmp_dict = {}
         tmp_dict['url'] = []
         tmp_dict['langue'] = music.get('langue', "")
@@ -284,7 +345,6 @@ async def handle_generation_callback(body: dict):
         tmp_dict['duration'] = music.get('duration', "")
         tmp_dict['model_name'] = music.get('model_name', "")
 
-        # Si audio_url est manquant, utiliser stream_audio_url
         audio_url_original = music.get('audio_url') or music.get('stream_audio_url')
         audio_url = download_file_by_url(audio_url_original)
 
@@ -302,20 +362,48 @@ async def handle_generation_callback(body: dict):
             "img_drive": img_drive,
             "audio_url": audio_url_original,
             "image_url": image_url_original,
-            "title": music.get('title', ""),
-            "duration": music.get('duration', ""),
+            "title": name,
+            "duration": music.get('duration', "")
         })
 
+        lrc_payload = json.dumps({
+            "taskId": body.get("data", {}).get("task_id"),
+            "audioId": music.get("id"),
+            "musicIndex": 0
+        })
+
+        lrc_headers = {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'Authorization': 'Bearer cad1dab497c8d5c64df38b1ddcfdeae1'
+        }
+
+        lrc_response = requests.post(
+            "https://apibox.erweima.ai/api/v1/generate/get-timestamped-lyrics",
+            headers=lrc_headers,
+            data=lrc_payload
+        )
+
+        if lrc_response.status_code == 200:
+            lrc_data = lrc_response.json()
+            lrc_filename = f"{safe_name}_{c}.lrc.json"
+            lrc_path = os.path.join(OUTPUT_DIR, lrc_filename)
+
+            with open(lrc_path, "w", encoding="utf-8") as f:
+                json.dump(lrc_data, f, ensure_ascii=False, indent=2)
+
+            # upload_file_to_s3(lrc_path, lrc_filename, name)
+
+            lrc_clean_path = os.path.join(OUTPUT_DIR, f"{safe_name}_{c}.lrc")
+            convert_json_to_lrc_grouped(lrc_path, lrc_clean_path)
+            upload_file_to_s3(lrc_clean_path, f"{safe_name}_{c}.lrc", name)
+
         output_path = os.path.join(OUTPUT_DIR, f"{safe_name}_output.json")
-
-        c += 1
-
         with open(output_path, "w", encoding="utf-8") as json_file:
             json.dump(tmp_dict, json_file, ensure_ascii=False, indent=4)
 
         upload_file_to_s3(output_path, f"data.json", name)
-
-
+        c += 1
 
 if __name__ == "__main__":
     import uvicorn

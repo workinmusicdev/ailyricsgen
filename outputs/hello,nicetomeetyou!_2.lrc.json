@@ -1,0 +1,2159 @@
+{
+  "code": 200,
+  "msg": "success",
+  "data": {
+    "alignedWords": [
+      {
+        "word": "[Introduction – tous ensemble]\nAujourd’",
+        "success": true,
+        "startS": 0.2393617021276596,
+        "endS": 0.5585106382978724,
+        "palign": 0
+      },
+      {
+        "word": "hui, ",
+        "success": true,
+        "startS": 0.6382978723404256,
+        "endS": 1.7952127659574468,
+        "palign": 0
+      },
+      {
+        "word": "apprenons ",
+        "success": true,
+        "startS": 1.8351063829787235,
+        "endS": 2.632978723404255,
+        "palign": 0
+      },
+      {
+        "word": "comment ",
+        "success": true,
+        "startS": 2.701367781155015,
+        "endS": 3.1117021276595747,
+        "palign": 0
+      },
+      {
+        "word": "saluer ",
+        "success": true,
+        "startS": 3.1914893617021276,
+        "endS": 3.9893617021276597,
+        "palign": 0
+      },
+      {
+        "word": "simplement ",
+        "success": true,
+        "startS": 4.055851063829787,
+        "endS": 4.627659574468085,
+        "palign": 0
+      },
+      {
+        "word": "en ",
+        "success": true,
+        "startS": 4.707446808510639,
+        "endS": 4.787234042553192,
+        "palign": 0
+      },
+      {
+        "word": "anglais !\n\n",
+        "success": true,
+        "startS": 4.893617021276596,
+        "endS": 7.519258987527513,
+        "palign": 0
+      },
+      {
+        "word": "[Refrain – ensemble]\nHello, ",
+        "success": true,
+        "startS": 7.552274394717535,
+        "endS": 8.470744680851064,
+        "palign": 0
+      },
+      {
+        "word": "hello! (",
+        "success": true,
+        "startS": 8.563829787234043,
+        "endS": 9.430851063829788,
+        "palign": 0
+      },
+      {
+        "word": "Bonjour, ",
+        "success": true,
+        "startS": 9.47872340425532,
+        "endS": 9.85372340425532,
+        "palign": 0
+      },
+      {
+        "word": "bonjour !)\n",
+        "success": true,
+        "startS": 9.893617021276597,
+        "endS": 10.702887537993922,
+        "palign": 0
+      },
+      {
+        "word": "Nice ",
+        "success": true,
+        "startS": 10.759878419452887,
+        "endS": 10.930851063829788,
+        "palign": 0
+      },
+      {
+        "word": "to ",
+        "success": true,
+        "startS": 11.050531914893618,
+        "endS": 11.25,
+        "palign": 0
+      },
+      {
+        "word": "meet ",
+        "success": true,
+        "startS": 11.349734042553191,
+        "endS": 11.648936170212766,
+        "palign": 0
+      },
+      {
+        "word": "you! (",
+        "success": true,
+        "startS": 11.75531914893617,
+        "endS": 12.167553191489361,
+        "palign": 0
+      },
+      {
+        "word": "Enchanté !)\n",
+        "success": true,
+        "startS": 12.227393617021276,
+        "endS": 13.24468085106383,
+        "palign": 0
+      },
+      {
+        "word": "Please ",
+        "success": true,
+        "startS": 13.297872340425533,
+        "endS": 13.563829787234043,
+        "palign": 0
+      },
+      {
+        "word": "and ",
+        "success": true,
+        "startS": 13.670212765957448,
+        "endS": 13.882978723404255,
+        "palign": 0
+      },
+      {
+        "word": "thank ",
+        "success": true,
+        "startS": 13.962765957446809,
+        "endS": 14.28191489361702,
+        "palign": 0
+      },
+      {
+        "word": "you, (",
+        "success": true,
+        "startS": 14.388297872340425,
+        "endS": 14.654255319148938,
+        "palign": 0
+      },
+      {
+        "word": "S’",
+        "success": true,
+        "startS": 14.680851063829788,
+        "endS": 14.680851063829788,
+        "palign": 0
+      },
+      {
+        "word": "il ",
+        "success": true,
+        "startS": 14.76063829787234,
+        "endS": 14.840425531914894,
+        "palign": 0
+      },
+      {
+        "word": "vous ",
+        "success": true,
+        "startS": 14.88031914893617,
+        "endS": 15.0,
+        "palign": 0
+      },
+      {
+        "word": "plaît ",
+        "success": true,
+        "startS": 15.02659574468085,
+        "endS": 15.159574468085106,
+        "palign": 0
+      },
+      {
+        "word": "et ",
+        "success": true,
+        "startS": 15.279255319148936,
+        "endS": 15.398936170212766,
+        "palign": 0
+      },
+      {
+        "word": "merci,)\n",
+        "success": true,
+        "startS": 15.452127659574469,
+        "endS": 15.904255319148936,
+        "palign": 0
+      },
+      {
+        "word": "Goodbye, ",
+        "success": true,
+        "startS": 15.957446808510639,
+        "endS": 16.53590425531915,
+        "palign": 0
+      },
+      {
+        "word": "see ",
+        "success": true,
+        "startS": 16.63563829787234,
+        "endS": 16.99468085106383,
+        "palign": 0
+      },
+      {
+        "word": "you ",
+        "success": true,
+        "startS": 17.101063829787233,
+        "endS": 17.393617021276597,
+        "palign": 0
+      },
+      {
+        "word": "soon! (",
+        "success": true,
+        "startS": 17.493351063829788,
+        "endS": 17.83244680851064,
+        "palign": 0
+      },
+      {
+        "word": "Au ",
+        "success": true,
+        "startS": 17.852393617021278,
+        "endS": 17.872340425531917,
+        "palign": 0
+      },
+      {
+        "word": "revoir, ",
+        "success": true,
+        "startS": 17.912234042553195,
+        "endS": 18.27127659574468,
+        "palign": 0
+      },
+      {
+        "word": "à ",
+        "success": true,
+        "startS": 18.351063829787233,
+        "endS": 18.351063829787233,
+        "palign": 0
+      },
+      {
+        "word": "bientôt !)\n",
+        "success": true,
+        "startS": 18.430851063829785,
+        "endS": 20.53523936170213,
+        "palign": 0
+      },
+      {
+        "word": "Hello, ",
+        "success": true,
+        "startS": 20.625,
+        "endS": 21.31648936170213,
+        "palign": 0
+      },
+      {
+        "word": "hello! (",
+        "success": true,
+        "startS": 21.409574468085108,
+        "endS": 22.27659574468085,
+        "palign": 0
+      },
+      {
+        "word": "Bonjour, ",
+        "success": true,
+        "startS": 22.324468085106385,
+        "endS": 22.699468085106382,
+        "palign": 0
+      },
+      {
+        "word": "bonjour !)\n",
+        "success": true,
+        "startS": 22.73936170212766,
+        "endS": 23.548632218844986,
+        "palign": 0
+      },
+      {
+        "word": "Nice ",
+        "success": true,
+        "startS": 23.60562310030395,
+        "endS": 23.77659574468085,
+        "palign": 0
+      },
+      {
+        "word": "to ",
+        "success": true,
+        "startS": 23.89627659574468,
+        "endS": 24.175531914893618,
+        "palign": 0
+      },
+      {
+        "word": "meet ",
+        "success": true,
+        "startS": 24.25531914893617,
+        "endS": 24.49468085106383,
+        "palign": 0
+      },
+      {
+        "word": "you! (",
+        "success": true,
+        "startS": 24.601063829787233,
+        "endS": 25.013297872340427,
+        "palign": 0
+      },
+      {
+        "word": "Enchanté !)\n",
+        "success": true,
+        "startS": 25.07313829787234,
+        "endS": 26.090425531914896,
+        "palign": 0
+      },
+      {
+        "word": "Please ",
+        "success": true,
+        "startS": 26.143617021276597,
+        "endS": 26.409574468085108,
+        "palign": 0
+      },
+      {
+        "word": "and ",
+        "success": true,
+        "startS": 26.51595744680851,
+        "endS": 26.72872340425532,
+        "palign": 0
+      },
+      {
+        "word": "thank ",
+        "success": true,
+        "startS": 26.80851063829787,
+        "endS": 27.127659574468087,
+        "palign": 0
+      },
+      {
+        "word": "you, (",
+        "success": true,
+        "startS": 27.23404255319149,
+        "endS": 27.5,
+        "palign": 0
+      },
+      {
+        "word": "S’",
+        "success": true,
+        "startS": 27.52659574468085,
+        "endS": 27.52659574468085,
+        "palign": 0
+      },
+      {
+        "word": "il ",
+        "success": true,
+        "startS": 27.606382978723403,
+        "endS": 27.68617021276596,
+        "palign": 0
+      },
+      {
+        "word": "vous ",
+        "success": true,
+        "startS": 27.726063829787236,
+        "endS": 27.845744680851062,
+        "palign": 0
+      },
+      {
+        "word": "plaît ",
+        "success": true,
+        "startS": 27.872340425531913,
+        "endS": 28.085106382978722,
+        "palign": 0
+      },
+      {
+        "word": "et ",
+        "success": true,
+        "startS": 28.164893617021278,
+        "endS": 28.24468085106383,
+        "palign": 0
+      },
+      {
+        "word": "merci,)\n",
+        "success": true,
+        "startS": 28.29787234042553,
+        "endS": 28.75,
+        "palign": 0
+      },
+      {
+        "word": "Goodbye, ",
+        "success": true,
+        "startS": 28.8031914893617,
+        "endS": 29.461436170212767,
+        "palign": 0
+      },
+      {
+        "word": "see ",
+        "success": true,
+        "startS": 29.56117021276596,
+        "endS": 29.840425531914892,
+        "palign": 0
+      },
+      {
+        "word": "you ",
+        "success": true,
+        "startS": 29.9468085106383,
+        "endS": 30.159574468085108,
+        "palign": 0
+      },
+      {
+        "word": "soon! (",
+        "success": true,
+        "startS": 30.319148936170212,
+        "endS": 30.53191489361702,
+        "palign": 0
+      },
+      {
+        "word": "Au ",
+        "success": true,
+        "startS": 30.55851063829787,
+        "endS": 30.71808510638298,
+        "palign": 0
+      },
+      {
+        "word": "revoir, ",
+        "success": true,
+        "startS": 30.797872340425535,
+        "endS": 31.117021276595743,
+        "palign": 0
+      },
+      {
+        "word": "à ",
+        "success": true,
+        "startS": 31.1968085106383,
+        "endS": 31.1968085106383,
+        "palign": 0
+      },
+      {
+        "word": "bientôt !)\n\n",
+        "success": true,
+        "startS": 31.236702127659576,
+        "endS": 31.83027079303675,
+        "palign": 0
+      },
+      {
+        "word": "[Couplet – dialogue A & B]\nA: ",
+        "success": true,
+        "startS": 31.868955512572533,
+        "endS": 32.952127659574465,
+        "palign": 0
+      },
+      {
+        "word": "Hello! ",
+        "success": true,
+        "startS": 33.04787234042553,
+        "endS": 34.22872340425532,
+        "palign": 0
+      },
+      {
+        "word": "Good ",
+        "success": true,
+        "startS": 34.308510638297875,
+        "endS": 34.547872340425535,
+        "palign": 0
+      },
+      {
+        "word": "morning! (",
+        "success": true,
+        "startS": 34.63905775075988,
+        "endS": 35.52127659574468,
+        "palign": 0
+      },
+      {
+        "word": "Bonjour ! ",
+        "success": true,
+        "startS": 35.569148936170215,
+        "endS": 36.57446808510638,
+        "palign": 0
+      },
+      {
+        "word": "Bonne ",
+        "success": true,
+        "startS": 36.590425531914896,
+        "endS": 36.78191489361702,
+        "palign": 0
+      },
+      {
+        "word": "matinée !)\n",
+        "success": true,
+        "startS": 36.83510638297872,
+        "endS": 38.31963249516441,
+        "palign": 0
+      },
+      {
+        "word": "B: ",
+        "success": true,
+        "startS": 38.406673114119926,
+        "endS": 38.58075435203095,
+        "palign": 0
+      },
+      {
+        "word": "Hello! ",
+        "success": true,
+        "startS": 38.66779497098646,
+        "endS": 39.398936170212764,
+        "palign": 0
+      },
+      {
+        "word": "Good ",
+        "success": true,
+        "startS": 39.462765957446805,
+        "endS": 39.65425531914894,
+        "palign": 0
+      },
+      {
+        "word": "morning! (",
+        "success": true,
+        "startS": 39.745440729483285,
+        "endS": 40.70744680851064,
+        "palign": 0
+      },
+      {
+        "word": "Bonjour ! ",
+        "success": true,
+        "startS": 40.755319148936174,
+        "endS": 41.680851063829785,
+        "palign": 0
+      },
+      {
+        "word": "Bonne ",
+        "success": true,
+        "startS": 41.6968085106383,
+        "endS": 41.888297872340424,
+        "palign": 0
+      },
+      {
+        "word": "matinée !)\n",
+        "success": true,
+        "startS": 41.941489361702125,
+        "endS": 42.726063829787236,
+        "palign": 0
+      },
+      {
+        "word": "A: ",
+        "success": true,
+        "startS": 42.765957446808514,
+        "endS": 42.84574468085106,
+        "palign": 0
+      },
+      {
+        "word": "My ",
+        "success": true,
+        "startS": 42.88563829787234,
+        "endS": 42.92553191489362,
+        "palign": 0
+      },
+      {
+        "word": "name ",
+        "success": true,
+        "startS": 43.005319148936174,
+        "endS": 43.24468085106383,
+        "palign": 0
+      },
+      {
+        "word": "is ",
+        "success": true,
+        "startS": 43.36436170212767,
+        "endS": 43.56382978723404,
+        "palign": 0
+      },
+      {
+        "word": "Julie. (",
+        "success": true,
+        "startS": 43.6436170212766,
+        "endS": 45.15957446808511,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 45.19946808510638,
+        "endS": 45.23936170212766,
+        "palign": 0
+      },
+      {
+        "word": "m’",
+        "success": true,
+        "startS": 45.319148936170215,
+        "endS": 45.319148936170215,
+        "palign": 0
+      },
+      {
+        "word": "appelle ",
+        "success": true,
+        "startS": 45.47872340425532,
+        "endS": 45.797872340425535,
+        "palign": 0
+      },
+      {
+        "word": "Julie.)\n",
+        "success": true,
+        "startS": 45.87765957446808,
+        "endS": 47.6241134751773,
+        "palign": 0
+      },
+      {
+        "word": "B: ",
+        "success": true,
+        "startS": 47.659574468085104,
+        "endS": 47.73049645390071,
+        "palign": 0
+      },
+      {
+        "word": "Nice ",
+        "success": true,
+        "startS": 47.765957446808514,
+        "endS": 47.87234042553192,
+        "palign": 0
+      },
+      {
+        "word": "to ",
+        "success": true,
+        "startS": 47.95212765957447,
+        "endS": 48.03191489361702,
+        "palign": 0
+      },
+      {
+        "word": "meet ",
+        "success": true,
+        "startS": 48.111702127659576,
+        "endS": 48.351063829787236,
+        "palign": 0
+      },
+      {
+        "word": "you, ",
+        "success": true,
+        "startS": 48.45744680851064,
+        "endS": 48.71010638297872,
+        "palign": 0
+      },
+      {
+        "word": "Julie! (",
+        "success": true,
+        "startS": 48.75,
+        "endS": 49.52127659574468,
+        "palign": 0
+      },
+      {
+        "word": "Enchanté, ",
+        "success": true,
+        "startS": 49.57446808510638,
+        "endS": 50.14627659574468,
+        "palign": 0
+      },
+      {
+        "word": "Julie !)\n",
+        "success": true,
+        "startS": 50.18617021276596,
+        "endS": 50.76063829787234,
+        "palign": 0
+      },
+      {
+        "word": "A: ",
+        "success": true,
+        "startS": 50.79255319148936,
+        "endS": 50.82446808510638,
+        "palign": 0
+      },
+      {
+        "word": "What's ",
+        "success": true,
+        "startS": 50.84441489361702,
+        "endS": 50.98404255319149,
+        "palign": 0
+      },
+      {
+        "word": "your ",
+        "success": true,
+        "startS": 51.02393617021277,
+        "endS": 51.1436170212766,
+        "palign": 0
+      },
+      {
+        "word": "name? (",
+        "success": true,
+        "startS": 51.24335106382979,
+        "endS": 51.91489361702128,
+        "palign": 0
+      },
+      {
+        "word": "Comment ",
+        "success": true,
+        "startS": 51.94148936170213,
+        "endS": 52.101063829787236,
+        "palign": 0
+      },
+      {
+        "word": "t’",
+        "success": true,
+        "startS": 52.180851063829785,
+        "endS": 52.180851063829785,
+        "palign": 0
+      },
+      {
+        "word": "appelles-tu ?)\n",
+        "success": true,
+        "startS": 52.340425531914896,
+        "endS": 52.99867021276596,
+        "palign": 0
+      },
+      {
+        "word": "B: ",
+        "success": true,
+        "startS": 53.058510638297875,
+        "endS": 53.111702127659576,
+        "palign": 0
+      },
+      {
+        "word": "My ",
+        "success": true,
+        "startS": 53.16489361702128,
+        "endS": 53.21808510638298,
+        "palign": 0
+      },
+      {
+        "word": "name ",
+        "success": true,
+        "startS": 53.297872340425535,
+        "endS": 53.537234042553195,
+        "palign": 0
+      },
+      {
+        "word": "is ",
+        "success": true,
+        "startS": 53.65691489361703,
+        "endS": 53.8563829787234,
+        "palign": 0
+      },
+      {
+        "word": "Paul. (",
+        "success": true,
+        "startS": 53.9561170212766,
+        "endS": 55.53191489361702,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 55.5718085106383,
+        "endS": 55.611702127659576,
+        "palign": 0
+      },
+      {
+        "word": "m’",
+        "success": true,
+        "startS": 55.691489361702125,
+        "endS": 55.691489361702125,
+        "palign": 0
+      },
+      {
+        "word": "appelle ",
+        "success": true,
+        "startS": 55.930851063829785,
+        "endS": 56.25,
+        "palign": 0
+      },
+      {
+        "word": "Paul.)\n",
+        "success": true,
+        "startS": 56.349734042553195,
+        "endS": 57.101063829787236,
+        "palign": 0
+      },
+      {
+        "word": "A: ",
+        "success": true,
+        "startS": 57.20744680851064,
+        "endS": 57.25303951367781,
+        "palign": 0
+      },
+      {
+        "word": "Please, ",
+        "success": true,
+        "startS": 57.298632218844986,
+        "endS": 57.566489361702125,
+        "palign": 0
+      },
+      {
+        "word": "sit ",
+        "success": true,
+        "startS": 57.6063829787234,
+        "endS": 57.92553191489362,
+        "palign": 0
+      },
+      {
+        "word": "here. (",
+        "success": true,
+        "startS": 57.965425531914896,
+        "endS": 58.547872340425535,
+        "palign": 0
+      },
+      {
+        "word": "Assieds-toi ",
+        "success": true,
+        "startS": 58.579787234042556,
+        "endS": 59.28191489361702,
+        "palign": 0
+      },
+      {
+        "word": "ici, ",
+        "success": true,
+        "startS": 59.308510638297875,
+        "endS": 59.40159574468085,
+        "palign": 0
+      },
+      {
+        "word": "s'il ",
+        "success": true,
+        "startS": 59.441489361702125,
+        "endS": 59.52127659574468,
+        "palign": 0
+      },
+      {
+        "word": "te ",
+        "success": true,
+        "startS": 59.56117021276596,
+        "endS": 59.601063829787236,
+        "palign": 0
+      },
+      {
+        "word": "plaît.)\n",
+        "success": true,
+        "startS": 59.640957446808514,
+        "endS": 60.11968085106383,
+        "palign": 0
+      },
+      {
+        "word": "B: ",
+        "success": true,
+        "startS": 60.21941489361702,
+        "endS": 60.319148936170215,
+        "palign": 0
+      },
+      {
+        "word": "Thank ",
+        "success": true,
+        "startS": 60.36702127659575,
+        "endS": 60.558510638297875,
+        "palign": 0
+      },
+      {
+        "word": "you ",
+        "success": true,
+        "startS": 60.63829787234043,
+        "endS": 60.797872340425535,
+        "palign": 0
+      },
+      {
+        "word": "very ",
+        "success": true,
+        "startS": 60.89760638297872,
+        "endS": 61.1968085106383,
+        "palign": 0
+      },
+      {
+        "word": "much! (",
+        "success": true,
+        "startS": 61.21675531914894,
+        "endS": 61.329787234042556,
+        "palign": 0
+      },
+      {
+        "word": "Merci ",
+        "success": true,
+        "startS": 61.3563829787234,
+        "endS": 62.71276595744681,
+        "palign": 0
+      },
+      {
+        "word": "beaucoup !)\n\n",
+        "success": true,
+        "startS": 62.80252659574468,
+        "endS": 64.34574468085107,
+        "palign": 0
+      },
+      {
+        "word": "[Refrain – ensemble]\nHello, ",
+        "success": true,
+        "startS": 64.375,
+        "endS": 65.19946808510639,
+        "palign": 0
+      },
+      {
+        "word": "hello! (",
+        "success": true,
+        "startS": 65.29255319148936,
+        "endS": 66.11702127659575,
+        "palign": 0
+      },
+      {
+        "word": "Bonjour, ",
+        "success": true,
+        "startS": 66.1436170212766,
+        "endS": 66.58244680851064,
+        "palign": 0
+      },
+      {
+        "word": "bonjour !)\n",
+        "success": true,
+        "startS": 66.62234042553192,
+        "endS": 67.46580547112463,
+        "palign": 0
+      },
+      {
+        "word": "Nice ",
+        "success": true,
+        "startS": 67.53419452887539,
+        "endS": 67.73936170212767,
+        "palign": 0
+      },
+      {
+        "word": "to ",
+        "success": true,
+        "startS": 67.8590425531915,
+        "endS": 68.05851063829788,
+        "palign": 0
+      },
+      {
+        "word": "meet ",
+        "success": true,
+        "startS": 68.15824468085107,
+        "endS": 68.45744680851064,
+        "palign": 0
+      },
+      {
+        "word": "you! (",
+        "success": true,
+        "startS": 68.56382978723404,
+        "endS": 68.89627659574468,
+        "palign": 0
+      },
+      {
+        "word": "Enchanté !)\n",
+        "success": true,
+        "startS": 68.9561170212766,
+        "endS": 70.02659574468085,
+        "palign": 0
+      },
+      {
+        "word": "Please ",
+        "success": true,
+        "startS": 70.0709219858156,
+        "endS": 70.29255319148936,
+        "palign": 0
+      },
+      {
+        "word": "and ",
+        "success": true,
+        "startS": 70.39893617021276,
+        "endS": 70.61170212765957,
+        "palign": 0
+      },
+      {
+        "word": "thank ",
+        "success": true,
+        "startS": 70.70744680851064,
+        "endS": 71.09042553191489,
+        "palign": 0
+      },
+      {
+        "word": "you, (",
+        "success": true,
+        "startS": 71.19680851063829,
+        "endS": 71.46276595744682,
+        "palign": 0
+      },
+      {
+        "word": "S’",
+        "success": true,
+        "startS": 71.48936170212767,
+        "endS": 71.48936170212767,
+        "palign": 0
+      },
+      {
+        "word": "il ",
+        "success": true,
+        "startS": 71.56914893617021,
+        "endS": 71.64893617021276,
+        "palign": 0
+      },
+      {
+        "word": "vous ",
+        "success": true,
+        "startS": 71.68882978723404,
+        "endS": 71.80851063829788,
+        "palign": 0
+      },
+      {
+        "word": "plaît ",
+        "success": true,
+        "startS": 71.83510638297872,
+        "endS": 71.96808510638299,
+        "palign": 0
+      },
+      {
+        "word": "et ",
+        "success": true,
+        "startS": 72.04787234042553,
+        "endS": 72.12765957446808,
+        "palign": 0
+      },
+      {
+        "word": "merci,)\n",
+        "success": true,
+        "startS": 72.20744680851064,
+        "endS": 72.63297872340425,
+        "palign": 0
+      },
+      {
+        "word": "Goodbye, ",
+        "success": true,
+        "startS": 72.68617021276596,
+        "endS": 73.34441489361703,
+        "palign": 0
+      },
+      {
+        "word": "see ",
+        "success": true,
+        "startS": 73.44414893617022,
+        "endS": 73.80319148936171,
+        "palign": 0
+      },
+      {
+        "word": "you ",
+        "success": true,
+        "startS": 73.90957446808511,
+        "endS": 74.12234042553192,
+        "palign": 0
+      },
+      {
+        "word": "soon! (",
+        "success": true,
+        "startS": 74.22207446808511,
+        "endS": 74.64095744680851,
+        "palign": 0
+      },
+      {
+        "word": "Au ",
+        "success": true,
+        "startS": 74.66090425531915,
+        "endS": 74.68085106382979,
+        "palign": 0
+      },
+      {
+        "word": "revoir, ",
+        "success": true,
+        "startS": 74.76063829787233,
+        "endS": 75.07978723404256,
+        "palign": 0
+      },
+      {
+        "word": "à ",
+        "success": true,
+        "startS": 75.15957446808511,
+        "endS": 75.15957446808511,
+        "palign": 0
+      },
+      {
+        "word": "bientôt !)\n",
+        "success": true,
+        "startS": 75.23936170212767,
+        "endS": 77.34375,
+        "palign": 0
+      },
+      {
+        "word": "Hello, ",
+        "success": true,
+        "startS": 77.43351063829788,
+        "endS": 78.125,
+        "palign": 0
+      },
+      {
+        "word": "hello! (",
+        "success": true,
+        "startS": 78.21808510638299,
+        "endS": 79.05319148936171,
+        "palign": 0
+      },
+      {
+        "word": "Bonjour, ",
+        "success": true,
+        "startS": 79.08510638297872,
+        "endS": 79.50797872340426,
+        "palign": 0
+      },
+      {
+        "word": "bonjour !)\n",
+        "success": true,
+        "startS": 79.54787234042553,
+        "endS": 80.35714285714286,
+        "palign": 0
+      },
+      {
+        "word": "Nice ",
+        "success": true,
+        "startS": 80.41413373860182,
+        "endS": 80.58510638297872,
+        "palign": 0
+      },
+      {
+        "word": "to ",
+        "success": true,
+        "startS": 80.70478723404256,
+        "endS": 80.90425531914893,
+        "palign": 0
+      },
+      {
+        "word": "meet ",
+        "success": true,
+        "startS": 81.00398936170212,
+        "endS": 81.30319148936171,
+        "palign": 0
+      },
+      {
+        "word": "you! (",
+        "success": true,
+        "startS": 81.40957446808511,
+        "endS": 81.8218085106383,
+        "palign": 0
+      },
+      {
+        "word": "Enchanté !)\n",
+        "success": true,
+        "startS": 81.88164893617021,
+        "endS": 82.93882978723406,
+        "palign": 0
+      },
+      {
+        "word": "Please ",
+        "success": true,
+        "startS": 83.00531914893618,
+        "endS": 83.21808510638299,
+        "palign": 0
+      },
+      {
+        "word": "and ",
+        "success": true,
+        "startS": 83.32446808510639,
+        "endS": 83.5372340425532,
+        "palign": 0
+      },
+      {
+        "word": "thank ",
+        "success": true,
+        "startS": 83.61702127659575,
+        "endS": 83.93617021276596,
+        "palign": 0
+      },
+      {
+        "word": "you, (",
+        "success": true,
+        "startS": 84.04255319148936,
+        "endS": 84.30851063829788,
+        "palign": 0
+      },
+      {
+        "word": "S’",
+        "success": true,
+        "startS": 84.33510638297872,
+        "endS": 84.33510638297872,
+        "palign": 0
+      },
+      {
+        "word": "il ",
+        "success": true,
+        "startS": 84.41489361702128,
+        "endS": 84.49468085106383,
+        "palign": 0
+      },
+      {
+        "word": "vous ",
+        "success": true,
+        "startS": 84.53457446808511,
+        "endS": 84.65425531914893,
+        "palign": 0
+      },
+      {
+        "word": "plaît ",
+        "success": true,
+        "startS": 84.68085106382978,
+        "endS": 84.81382978723404,
+        "palign": 0
+      },
+      {
+        "word": "et ",
+        "success": true,
+        "startS": 84.93351063829788,
+        "endS": 85.05319148936171,
+        "palign": 0
+      },
+      {
+        "word": "merci,)\n",
+        "success": true,
+        "startS": 85.1063829787234,
+        "endS": 85.50531914893617,
+        "palign": 0
+      },
+      {
+        "word": "Goodbye, ",
+        "success": true,
+        "startS": 85.5718085106383,
+        "endS": 86.19015957446808,
+        "palign": 0
+      },
+      {
+        "word": "see ",
+        "success": true,
+        "startS": 86.28989361702128,
+        "endS": 86.64893617021276,
+        "palign": 0
+      },
+      {
+        "word": "you ",
+        "success": true,
+        "startS": 86.75531914893617,
+        "endS": 87.04787234042553,
+        "palign": 0
+      },
+      {
+        "word": "soon! (",
+        "success": true,
+        "startS": 87.10771276595744,
+        "endS": 87.33282674772038,
+        "palign": 0
+      },
+      {
+        "word": "Au ",
+        "success": true,
+        "startS": 87.35562310030396,
+        "endS": 87.40121580547113,
+        "palign": 0
+      },
+      {
+        "word": "revoir, ",
+        "success": true,
+        "startS": 87.42401215805472,
+        "endS": 87.53799392097264,
+        "palign": 0
+      },
+      {
+        "word": "à ",
+        "success": true,
+        "startS": 87.54939209726443,
+        "endS": 87.56079027355622,
+        "palign": 0
+      },
+      {
+        "word": "bientôt !)\n\n",
+        "success": true,
+        "startS": 87.57218844984803,
+        "endS": 87.73345153664303,
+        "palign": 0
+      },
+      {
+        "word": "[Outro – optionnel]\nNow ",
+        "success": true,
+        "startS": 87.74527186761229,
+        "endS": 88.00531914893617,
+        "palign": 0
+      },
+      {
+        "word": "you ",
+        "success": true,
+        "startS": 88.11170212765957,
+        "endS": 88.32446808510639,
+        "palign": 0
+      },
+      {
+        "word": "can ",
+        "success": true,
+        "startS": 88.43085106382979,
+        "endS": 88.6436170212766,
+        "palign": 0
+      },
+      {
+        "word": "say ",
+        "success": true,
+        "startS": 88.75,
+        "endS": 89.12234042553192,
+        "palign": 0
+      },
+      {
+        "word": "hello, (",
+        "success": true,
+        "startS": 89.21808510638299,
+        "endS": 90.29255319148936,
+        "palign": 0
+      },
+      {
+        "word": "Maintenant ",
+        "success": true,
+        "startS": 90.31914893617021,
+        "endS": 90.87765957446808,
+        "palign": 0
+      },
+      {
+        "word": "tu ",
+        "success": true,
+        "startS": 90.99734042553192,
+        "endS": 91.11702127659575,
+        "palign": 0
+      },
+      {
+        "word": "peux ",
+        "success": true,
+        "startS": 91.21675531914894,
+        "endS": 91.59574468085107,
+        "palign": 0
+      },
+      {
+        "word": "dire ",
+        "success": true,
+        "startS": 91.65558510638299,
+        "endS": 91.83510638297872,
+        "palign": 0
+      },
+      {
+        "word": "bonjour,)\n",
+        "success": true,
+        "startS": 91.94148936170212,
+        "endS": 92.99202127659575,
+        "palign": 0
+      },
+      {
+        "word": "Be ",
+        "success": true,
+        "startS": 93.05186170212765,
+        "endS": 93.11170212765957,
+        "palign": 0
+      },
+      {
+        "word": "polite ",
+        "success": true,
+        "startS": 93.16489361702128,
+        "endS": 93.59042553191489,
+        "palign": 0
+      },
+      {
+        "word": "and ",
+        "success": true,
+        "startS": 93.69680851063829,
+        "endS": 93.90957446808511,
+        "palign": 0
+      },
+      {
+        "word": "friendly ",
+        "success": true,
+        "startS": 93.98936170212767,
+        "endS": 94.7872340425532,
+        "palign": 0
+      },
+      {
+        "word": "too. (",
+        "success": true,
+        "startS": 94.8936170212766,
+        "endS": 95.45212765957447,
+        "palign": 0
+      },
+      {
+        "word": "Être ",
+        "success": true,
+        "startS": 95.50531914893617,
+        "endS": 95.66489361702128,
+        "palign": 0
+      },
+      {
+        "word": "poli ",
+        "success": true,
+        "startS": 95.71808510638299,
+        "endS": 96.06382978723404,
+        "palign": 0
+      },
+      {
+        "word": "et ",
+        "success": true,
+        "startS": 96.1436170212766,
+        "endS": 96.22340425531915,
+        "palign": 0
+      },
+      {
+        "word": "sympa ",
+        "success": true,
+        "startS": 96.28324468085107,
+        "endS": 96.94148936170212,
+        "palign": 0
+      },
+      {
+        "word": "aussi.)\n",
+        "success": true,
+        "startS": 97.0372340425532,
+        "endS": 97.93085106382979,
+        "palign": 0
+      },
+      {
+        "word": "It's ",
+        "success": true,
+        "startS": 97.94680851063829,
+        "endS": 98.13829787234043,
+        "palign": 0
+      },
+      {
+        "word": "easy ",
+        "success": true,
+        "startS": 98.21808510638299,
+        "endS": 98.6968085106383,
+        "palign": 0
+      },
+      {
+        "word": "and ",
+        "success": true,
+        "startS": 98.80319148936171,
+        "endS": 99.01595744680851,
+        "palign": 0
+      },
+      {
+        "word": "fun ",
+        "success": true,
+        "startS": 99.12234042553192,
+        "endS": 99.49468085106383,
+        "palign": 0
+      },
+      {
+        "word": "to ",
+        "success": true,
+        "startS": 99.61436170212767,
+        "endS": 99.97340425531915,
+        "palign": 0
+      },
+      {
+        "word": "do, (",
+        "success": true,
+        "startS": 100.09308510638297,
+        "endS": 100.42553191489363,
+        "palign": 0
+      },
+      {
+        "word": "C’",
+        "success": true,
+        "startS": 100.45212765957447,
+        "endS": 100.45212765957447,
+        "palign": 0
+      },
+      {
+        "word": "est ",
+        "success": true,
+        "startS": 100.53191489361703,
+        "endS": 100.69148936170212,
+        "palign": 0
+      },
+      {
+        "word": "facile ",
+        "success": true,
+        "startS": 100.81117021276596,
+        "endS": 101.17021276595744,
+        "palign": 0
+      },
+      {
+        "word": "et ",
+        "success": true,
+        "startS": 101.25,
+        "endS": 101.32978723404256,
+        "palign": 0
+      },
+      {
+        "word": "amusant ",
+        "success": true,
+        "startS": 101.40957446808511,
+        "endS": 101.88829787234043,
+        "palign": 0
+      },
+      {
+        "word": "à ",
+        "success": true,
+        "startS": 102.04787234042553,
+        "endS": 102.12765957446808,
+        "palign": 0
+      },
+      {
+        "word": "faire,)\n",
+        "success": true,
+        "startS": 102.22340425531915,
+        "endS": 103.68794326241135,
+        "palign": 0
+      },
+      {
+        "word": "Goodbye, ",
+        "success": true,
+        "startS": 103.75,
+        "endS": 104.22207446808511,
+        "palign": 0
+      },
+      {
+        "word": "see ",
+        "success": true,
+        "startS": 104.3218085106383,
+        "endS": 104.68085106382979,
+        "palign": 0
+      },
+      {
+        "word": "you ",
+        "success": true,
+        "startS": 104.7872340425532,
+        "endS": 105.07978723404256,
+        "palign": 0
+      },
+      {
+        "word": "soon! (",
+        "success": true,
+        "startS": 105.17952127659575,
+        "endS": 105.63829787234043,
+        "palign": 0
+      },
+      {
+        "word": "Au ",
+        "success": true,
+        "startS": 105.67819148936171,
+        "endS": 105.71808510638299,
+        "palign": 0
+      },
+      {
+        "word": "revoir, ",
+        "success": true,
+        "startS": 105.75797872340425,
+        "endS": 106.11702127659575,
+        "palign": 0
+      },
+      {
+        "word": "à ",
+        "success": true,
+        "startS": 106.1968085106383,
+        "endS": 106.1968085106383,
+        "palign": 0
+      },
+      {
+        "word": "bientôt !)\n\n",
+        "success": true,
+        "startS": 106.27659574468086,
+        "endS": 107.07446808510639,
+        "palign": 0
+      }
+    ],
+    "waveformData": [
+      1e-05,
+      0.00107,
+      0.05657,
+      0.09016,
+      0.08392,
+      0.03993,
+      0.028,
+      0.02769,
+      0.06348,
+      0.06706,
+      0.08821,
+      0.05136,
+      0.03338,
+      0.08494,
+      0.07361,
+      0.0822,
+      0.0761,
+      0.0904,
+      0.06463,
+      0.0952,
+      0.09324,
+      0.09089,
+      0.10631,
+      0.08497,
+      0.09336,
+      0.12157,
+      0.10956,
+      0.10445,
+      0.09583,
+      0.06173,
+      0.01156,
+      0.00571,
+      0.00414,
+      0.03497,
+      0.0248,
+      0.01315,
+      0.08217,
+      0.18305,
+      0.17209,
+      0.19149,
+      0.09533,
+      0.07556,
+      0.10375,
+      0.13985,
+      0.16576,
+      0.15793,
+      0.11021,
+      0.11216,
+      0.10234,
+      0.15376,
+      0.2501,
+      0.19179,
+      0.19321,
+      0.13176,
+      0.07844,
+      0.13837,
+      0.18815,
+      0.17758,
+      0.17034,
+      0.13168,
+      0.17757,
+      0.20682,
+      0.15202,
+      0.20808,
+      0.20364,
+      0.18845,
+      0.14439,
+      0.0955,
+      0.06233,
+      0.1885,
+      0.18413,
+      0.16487,
+      0.11487,
+      0.0917,
+      0.12308,
+      0.14971,
+      0.16734,
+      0.18094,
+      0.15881,
+      0.1019,
+      0.12164,
+      0.08767,
+      0.11979,
+      0.12417,
+      0.10756,
+      0.10444,
+      0.07809,
+      0.09926,
+      0.2357,
+      0.16623,
+      0.17072,
+      0.24923,
+      0.11155,
+      0.11956,
+      0.18739,
+      0.21051,
+      0.14661,
+      0.13403,
+      0.22881,
+      0.08507,
+      0.07284,
+      0.24159,
+      0.1559,
+      0.16232,
+      0.25631,
+      0.07357,
+      0.12512,
+      0.1993,
+      0.18337,
+      0.16358,
+      0.14259,
+      0.23589,
+      0.10179,
+      0.09879,
+      0.26819,
+      0.20282,
+      0.2153,
+      0.259,
+      0.08983,
+      0.13424,
+      0.25063,
+      0.21834,
+      0.19559,
+      0.20667,
+      0.26025,
+      0.20893,
+      0.14348,
+      0.27406,
+      0.21047,
+      0.21852,
+      0.26142,
+      0.0964,
+      0.13319,
+      0.23426,
+      0.20642,
+      0.19613,
+      0.25948,
+      0.14813,
+      0.16128,
+      0.2027,
+      0.25694,
+      0.16962,
+      0.12412,
+      0.14807,
+      0.08913,
+      0.11482,
+      0.0994,
+      0.1179,
+      0.15916,
+      0.1703,
+      0.15663,
+      0.19629,
+      0.15913,
+      0.292,
+      0.17964,
+      0.1641,
+      0.28166,
+      0.1464,
+      0.19516,
+      0.2908,
+      0.16543,
+      0.08257,
+      0.29014,
+      0.12691,
+      0.1793,
+      0.23022,
+      0.23696,
+      0.17708,
+      0.16836,
+      0.25403,
+      0.11432,
+      0.10614,
+      0.27239,
+      0.1944,
+      0.20391,
+      0.27626,
+      0.0811,
+      0.1312,
+      0.26312,
+      0.1994,
+      0.20772,
+      0.13755,
+      0.27543,
+      0.12588,
+      0.08072,
+      0.28446,
+      0.19678,
+      0.2169,
+      0.27067,
+      0.05115,
+      0.12612,
+      0.25715,
+      0.18793,
+      0.21436,
+      0.20079,
+      0.24227,
+      0.12205,
+      0.1135,
+      0.29243,
+      0.24082,
+      0.23066,
+      0.26141,
+      0.08492,
+      0.13132,
+      0.26939,
+      0.18496,
+      0.19991,
+      0.22917,
+      0.1862,
+      0.10805,
+      0.09298,
+      0.27561,
+      0.22439,
+      0.21889,
+      0.26464,
+      0.16218,
+      0.21777,
+      0.28946,
+      0.18617,
+      0.17455,
+      0.26964,
+      0.14735,
+      0.12264,
+      0.16595,
+      0.25219,
+      0.17807,
+      0.15427,
+      0.26292,
+      0.09285,
+      0.1737,
+      0.26836,
+      0.18023,
+      0.18159,
+      0.25265,
+      0.13736,
+      0.08724,
+      0.22311,
+      0.23471,
+      0.23155,
+      0.20194,
+      0.26166,
+      0.15325,
+      0.22362,
+      0.26865,
+      0.2021,
+      0.16549,
+      0.30608,
+      0.14564,
+      0.12155,
+      0.22934,
+      0.18391,
+      0.19517,
+      0.21091,
+      0.22313,
+      0.16773,
+      0.21943,
+      0.26062,
+      0.1808,
+      0.16526,
+      0.25514,
+      0.14099,
+      0.20975,
+      0.28628,
+      0.13147,
+      0.20583,
+      0.24141,
+      0.17417,
+      0.17447,
+      0.13935,
+      0.2758,
+      0.1773,
+      0.15492,
+      0.2666,
+      0.13331,
+      0.14165,
+      0.26852,
+      0.13542,
+      0.17567,
+      0.26359,
+      0.1041,
+      0.14262,
+      0.19689,
+      0.25542,
+      0.1863,
+      0.14973,
+      0.28801,
+      0.12851,
+      0.10414,
+      0.2853,
+      0.19592,
+      0.20961,
+      0.28696,
+      0.09009,
+      0.20078,
+      0.24655,
+      0.2374,
+      0.2072,
+      0.20834,
+      0.28209,
+      0.17862,
+      0.12236,
+      0.29397,
+      0.20981,
+      0.20659,
+      0.26167,
+      0.09264,
+      0.23408,
+      0.18725,
+      0.21429,
+      0.20016,
+      0.19284,
+      0.18213,
+      0.10106,
+      0.10033,
+      0.12548,
+      0.1096,
+      0.1054,
+      0.151,
+      0.08047,
+      0.19328,
+      0.27022,
+      0.1746,
+      0.15651,
+      0.23894,
+      0.24309,
+      0.16017,
+      0.18577,
+      0.28205,
+      0.17717,
+      0.14269,
+      0.2968,
+      0.15185,
+      0.17377,
+      0.27306,
+      0.20434,
+      0.20496,
+      0.2736,
+      0.21807,
+      0.16185,
+      0.20307,
+      0.28993,
+      0.19423,
+      0.15483,
+      0.30104,
+      0.13447,
+      0.22651,
+      0.28696,
+      0.22322,
+      0.23672,
+      0.29846,
+      0.18821,
+      0.18776,
+      0.21657,
+      0.27822,
+      0.20183,
+      0.16134,
+      0.29282,
+      0.20722,
+      0.22347,
+      0.26738,
+      0.18364,
+      0.18397,
+      0.32267,
+      0.16158,
+      0.21121,
+      0.26191,
+      0.21442,
+      0.18442,
+      0.19379,
+      0.26498,
+      0.17555,
+      0.24611,
+      0.27986,
+      0.16196,
+      0.13534,
+      0.29485,
+      0.11069,
+      0.16485,
+      0.25293,
+      0.15685,
+      0.12602,
+      0.17786,
+      0.24648,
+      0.18336,
+      0.16647,
+      0.27754,
+      0.15995,
+      0.14651,
+      0.29229,
+      0.16032,
+      0.13164,
+      0.24628,
+      0.15743,
+      0.13527,
+      0.23687,
+      0.21304,
+      0.17382,
+      0.1916,
+      0.29199,
+      0.20313,
+      0.20291,
+      0.2876,
+      0.18328,
+      0.1433,
+      0.26787,
+      0.17703,
+      0.17339,
+      0.27943,
+      0.16967,
+      0.18267,
+      0.20908,
+      0.27034,
+      0.20813,
+      0.20948,
+      0.28479,
+      0.16955,
+      0.20452,
+      0.27589,
+      0.17701,
+      0.15598,
+      0.27988,
+      0.19015,
+      0.17667,
+      0.21414,
+      0.20465,
+      0.1472,
+      0.12871,
+      0.08073,
+      0.07808,
+      0.08727,
+      0.09058,
+      0.10062,
+      0.09402,
+      0.09377,
+      0.07509,
+      0.14672,
+      0.2395,
+      0.17238,
+      0.16872,
+      0.19111,
+      0.25625,
+      0.09267,
+      0.07994,
+      0.25628,
+      0.15331,
+      0.133,
+      0.27896,
+      0.14939,
+      0.16676,
+      0.26502,
+      0.16176,
+      0.18749,
+      0.2344,
+      0.23525,
+      0.10599,
+      0.08043,
+      0.27838,
+      0.21117,
+      0.21865,
+      0.27961,
+      0.17122,
+      0.21523,
+      0.25714,
+      0.17079,
+      0.18181,
+      0.24941,
+      0.19342,
+      0.09929,
+      0.08183,
+      0.27179,
+      0.21144,
+      0.21012,
+      0.26836,
+      0.15783,
+      0.18839,
+      0.23829,
+      0.19717,
+      0.15955,
+      0.31606,
+      0.13503,
+      0.1,
+      0.17158,
+      0.26465,
+      0.19168,
+      0.20442,
+      0.25423,
+      0.22167,
+      0.23584,
+      0.26815,
+      0.14108,
+      0.14287,
+      0.29729,
+      0.10465,
+      0.08966,
+      0.22103,
+      0.17229,
+      0.1531,
+      0.13533,
+      0.27408,
+      0.1626,
+      0.14493,
+      0.26099,
+      0.18813,
+      0.1479,
+      0.29067,
+      0.11086,
+      0.08443,
+      0.24953,
+      0.17956,
+      0.21724,
+      0.23812,
+      0.23469,
+      0.20761,
+      0.22271,
+      0.23024,
+      0.22242,
+      0.09121,
+      0.08606,
+      0.07812,
+      0.06596,
+      0.16867,
+      0.20614,
+      0.19818,
+      0.1227,
+      0.06573,
+      0.0803,
+      0.08389,
+      0.24624,
+      0.21933,
+      0.15537,
+      0.1479,
+      0.14879,
+      0.15927,
+      0.18381,
+      0.19737,
+      0.19728,
+      0.20871,
+      0.1947,
+      0.21718,
+      0.19094,
+      0.08483,
+      0.06976,
+      0.05119,
+      0.03846,
+      0.02401,
+      0.04506,
+      0.06319,
+      0.0397,
+      0.02137,
+      0.02326,
+      0.03492,
+      0.01859,
+      0.03495,
+      0.07852,
+      0.04381,
+      0.04862,
+      0.03512,
+      0.02916,
+      0.03804,
+      0.05492,
+      0.03552,
+      0.02581,
+      0.04248,
+      0.03522,
+      0.01749,
+      0.04173,
+      0.07272,
+      0.05081,
+      0.05075,
+      0.03244,
+      0.02911,
+      0.03746,
+      0.04897,
+      0.03429,
+      0.03702,
+      0.03344,
+      0.03133,
+      0.05846,
+      0.08148,
+      0.08501,
+      0.07822,
+      0.05586,
+      0.06016,
+      0.06059,
+      0.04581,
+      0.05594,
+      0.02953,
+      0.0417,
+      0.05522,
+      0.04766,
+      0.06984,
+      0.07663,
+      0.09311,
+      0.07262,
+      0.05841,
+      0.04853,
+      0.03614,
+      0.02587,
+      0.01545,
+      0.00862,
+      0.0053,
+      0.00282,
+      0.00254,
+      0.00061,
+      0.00011,
+      4e-05,
+      0.0
+    ],
+    "hootCer": 0.3576388888888889,
+    "isStreamed": false
+  }
+}

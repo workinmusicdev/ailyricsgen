@@ -1,0 +1,10 @@
+{
+  "code": 200,
+  "msg": "success",
+  "data": {
+    "alignedWords": [],
+    "waveformData": null,
+    "hootCer": null,
+    "isStreamed": false
+  }
+}

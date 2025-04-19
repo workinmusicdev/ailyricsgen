@@ -1,0 +1,22 @@
+{
+    "url": [
+        {
+            "url_drive": null,
+            "img_drive": null,
+            "audio_url": "https://apiboxfiles.erweima.ai/ZWJhY2ZjOWYtYjk2OC00MjQ3LThjMGUtOWQ4YzFjZDYxNDMx.mp3",
+            "image_url": "https://apiboxfiles.erweima.ai/ZWJhY2ZjOWYtYjk2OC00MjQ3LThjMGUtOWQ4YzFjZDYxNDMx.jpeg",
+            "title": "🎶 JE VEUX UNE CHAMBRE",
+            "duration": 157.52
+        }
+    ],
+    "langue": "",
+    "title": "🎶 JE VEUX UNE CHAMBRE",
+    "tags": "POP CLASSIQUE",
+    "prompt": "[Introduction – tous ensemble]\nAujourd’hui, on apprend à réserver une chambre à l’hôtel en anglais, simplement et poliment.\n[Refrain – ensemble] \nI would like a room. (Je voudrais une chambre.)\nFor one night, please. (Pour une nuit, s’il vous plaît.)\nDo you have Wi-Fi? (Avez-vous le Wi-Fi ?)\nIs breakfast included? (Le petit-déjeuner est-il inclus ?)\nI would like a room. (Je voudrais une chambre.)\nFor one night, please. (Pour une nuit, s’il vous plaît.)\nDo you have Wi-Fi? (Avez-vous le Wi-Fi ?)\nIs breakfast included? (Le petit-déjeuner est-il inclus ?)\n[Couplet – dialogue A & B]\nA: Good evening! Welcome! (Bonsoir ! Bienvenue !)\nB: Hello! I would like a room. (Bonjour ! Je voudrais une chambre.)\nA: For one night or two? (Pour une nuit ou deux ?)\nB: Two nights, please. (Deux nuits, s’il vous plaît.)\nA: Single or double bed? (Lit simple ou lit double ?)\nB: Double bed, please. (Lit double, s’il vous plaît.)\nA: Wi-Fi is included. (Le Wi-Fi est inclus.)\nB: Great! And breakfast? (Super ! Et le petit-déjeuner ?)\nA: Yes, breakfast is included too. (Oui, le petit-déjeuner est aussi inclus.)\nB: Perfect, thank you! (Parfait, merci !)\n[Refrain – ensemble] \nI would like a room. (Je voudrais une chambre.)\nFor one night, please. (Pour une nuit, s’il vous plaît.)\nDo you have Wi-Fi? (Avez-vous le Wi-Fi ?)\nIs breakfast included? (Le petit-déjeuner est-il inclus ?)\nI would like a room. (Je voudrais une chambre.)\nFor one night, please. (Pour une nuit, s’il vous plaît.)\nDo you have Wi-Fi? (Avez-vous le Wi-Fi ?)\nIs breakfast included? (Le petit-déjeuner est-il inclus ?)",
+    "source_audio_url": "https://cdn1.suno.ai/ebacfc9f-b968-4247-8c0e-9d8c1cd61431.mp3",
+    "source_image_url": "https://cdn2.suno.ai/image_ebacfc9f-b968-4247-8c0e-9d8c1cd61431.jpeg",
+    "stream_audio_url": "https://mfile.erweima.ai/ZWJhY2ZjOWYtYjk2OC00MjQ3LThjMGUtOWQ4YzFjZDYxNDMx",
+    "source_stream_audio_url": "https://cdn1.suno.ai/ebacfc9f-b968-4247-8c0e-9d8c1cd61431.mp3",
+    "duration": 157.52,
+    "model_name": "chirp-v4"
+}

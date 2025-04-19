@@ -1,0 +1,2187 @@
+{
+  "code": 200,
+  "msg": "success",
+  "data": {
+    "alignedWords": [
+      {
+        "word": "[Introduction – tous ensemble]\nApprenons ",
+        "success": true,
+        "startS": 0.3191489361702128,
+        "endS": 0.7978723404255319,
+        "palign": 0
+      },
+      {
+        "word": "aujourd’",
+        "success": true,
+        "startS": 0.8377659574468085,
+        "endS": 1.0372340425531914,
+        "palign": 0
+      },
+      {
+        "word": "hui ",
+        "success": true,
+        "startS": 1.1170212765957448,
+        "endS": 1.3563829787234043,
+        "palign": 0
+      },
+      {
+        "word": "à ",
+        "success": true,
+        "startS": 1.5159574468085106,
+        "endS": 1.5957446808510638,
+        "palign": 0
+      },
+      {
+        "word": "dire ",
+        "success": true,
+        "startS": 1.6555851063829787,
+        "endS": 1.8351063829787235,
+        "palign": 0
+      },
+      {
+        "word": "que ",
+        "success": true,
+        "startS": 1.8617021276595747,
+        "endS": 1.9148936170212767,
+        "palign": 0
+      },
+      {
+        "word": "l’",
+        "success": true,
+        "startS": 1.9946808510638299,
+        "endS": 1.9946808510638299,
+        "palign": 0
+      },
+      {
+        "word": "on ",
+        "success": true,
+        "startS": 2.074468085106383,
+        "endS": 2.2340425531914896,
+        "palign": 0
+      },
+      {
+        "word": "ne ",
+        "success": true,
+        "startS": 2.3138297872340425,
+        "endS": 2.393617021276596,
+        "palign": 0
+      },
+      {
+        "word": "comprend ",
+        "success": true,
+        "startS": 2.446808510638298,
+        "endS": 2.872340425531915,
+        "palign": 0
+      },
+      {
+        "word": "pas ",
+        "success": true,
+        "startS": 2.925531914893617,
+        "endS": 3.0319148936170213,
+        "palign": 0
+      },
+      {
+        "word": "en ",
+        "success": true,
+        "startS": 3.151595744680851,
+        "endS": 3.271276595744681,
+        "palign": 0
+      },
+      {
+        "word": "anglais, ",
+        "success": true,
+        "startS": 3.351063829787234,
+        "endS": 3.6968085106382977,
+        "palign": 0
+      },
+      {
+        "word": "et ",
+        "success": true,
+        "startS": 3.8031914893617023,
+        "endS": 4.2287234042553195,
+        "palign": 0
+      },
+      {
+        "word": "à ",
+        "success": true,
+        "startS": 4.388297872340425,
+        "endS": 4.468085106382979,
+        "palign": 0
+      },
+      {
+        "word": "demander ",
+        "success": true,
+        "startS": 4.521276595744681,
+        "endS": 5.1861702127659575,
+        "palign": 0
+      },
+      {
+        "word": "gentiment ",
+        "success": true,
+        "startS": 5.285904255319149,
+        "endS": 5.74468085106383,
+        "palign": 0
+      },
+      {
+        "word": "qu’",
+        "success": true,
+        "startS": 5.784574468085106,
+        "endS": 5.824468085106383,
+        "palign": 0
+      },
+      {
+        "word": "on ",
+        "success": true,
+        "startS": 5.904255319148937,
+        "endS": 6.0638297872340425,
+        "palign": 0
+      },
+      {
+        "word": "répète ",
+        "success": true,
+        "startS": 6.1037234042553195,
+        "endS": 6.622340425531915,
+        "palign": 0
+      },
+      {
+        "word": "ou ",
+        "success": true,
+        "startS": 6.702127659574469,
+        "endS": 6.781914893617022,
+        "palign": 0
+      },
+      {
+        "word": "qu’",
+        "success": true,
+        "startS": 6.821808510638299,
+        "endS": 6.861702127659575,
+        "palign": 0
+      },
+      {
+        "word": "on ",
+        "success": true,
+        "startS": 6.941489361702128,
+        "endS": 7.0212765957446805,
+        "palign": 0
+      },
+      {
+        "word": "parle ",
+        "success": true,
+        "startS": 7.1010638297872335,
+        "endS": 7.420212765957447,
+        "palign": 0
+      },
+      {
+        "word": "plus ",
+        "success": true,
+        "startS": 7.460106382978724,
+        "endS": 7.579787234042553,
+        "palign": 0
+      },
+      {
+        "word": "lentement.\n\n",
+        "success": true,
+        "startS": 7.659574468085107,
+        "endS": 12.559840425531915,
+        "palign": 0
+      },
+      {
+        "word": "[Refrain – ensemble]\nI ",
+        "success": true,
+        "startS": 12.576462765957446,
+        "endS": 12.925531914893616,
+        "palign": 0
+      },
+      {
+        "word": "don’",
+        "success": true,
+        "startS": 12.952127659574467,
+        "endS": 13.00531914893617,
+        "palign": 0
+      },
+      {
+        "word": "t ",
+        "success": true,
+        "startS": 13.085106382978724,
+        "endS": 13.643617021276595,
+        "palign": 0
+      },
+      {
+        "word": "understand. (",
+        "success": true,
+        "startS": 13.699468085106382,
+        "endS": 14.308510638297873,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 14.361702127659575,
+        "endS": 14.441489361702128,
+        "palign": 0
+      },
+      {
+        "word": "ne ",
+        "success": true,
+        "startS": 14.441489361702128,
+        "endS": 14.52127659574468,
+        "palign": 0
+      },
+      {
+        "word": "comprends ",
+        "success": true,
+        "startS": 14.601063829787234,
+        "endS": 14.920212765957446,
+        "palign": 0
+      },
+      {
+        "word": "pas.)\n",
+        "success": true,
+        "startS": 15.02659574468085,
+        "endS": 15.893617021276595,
+        "palign": 0
+      },
+      {
+        "word": "Can ",
+        "success": true,
+        "startS": 15.941489361702127,
+        "endS": 16.03723404255319,
+        "palign": 0
+      },
+      {
+        "word": "you ",
+        "success": true,
+        "startS": 16.143617021276594,
+        "endS": 16.51595744680851,
+        "palign": 0
+      },
+      {
+        "word": "repeat, ",
+        "success": true,
+        "startS": 16.595744680851062,
+        "endS": 17.06306990881459,
+        "palign": 0
+      },
+      {
+        "word": "please? (",
+        "success": true,
+        "startS": 17.13145896656535,
+        "endS": 17.5531914893617,
+        "palign": 0
+      },
+      {
+        "word": "Peux-tu ",
+        "success": true,
+        "startS": 17.59308510638298,
+        "endS": 17.872340425531917,
+        "palign": 0
+      },
+      {
+        "word": "répéter, ",
+        "success": true,
+        "startS": 17.912234042553195,
+        "endS": 18.31117021276596,
+        "palign": 0
+      },
+      {
+        "word": "s’",
+        "success": true,
+        "startS": 18.351063829787233,
+        "endS": 18.351063829787233,
+        "palign": 0
+      },
+      {
+        "word": "il ",
+        "success": true,
+        "startS": 18.430851063829788,
+        "endS": 18.590425531914892,
+        "palign": 0
+      },
+      {
+        "word": "te ",
+        "success": true,
+        "startS": 18.670212765957444,
+        "endS": 18.75,
+        "palign": 0
+      },
+      {
+        "word": "plaît ?)\n",
+        "success": true,
+        "startS": 18.77659574468085,
+        "endS": 19.158909574468083,
+        "palign": 0
+      },
+      {
+        "word": "Could ",
+        "success": true,
+        "startS": 19.18882978723404,
+        "endS": 19.30851063829787,
+        "palign": 0
+      },
+      {
+        "word": "you ",
+        "success": true,
+        "startS": 19.414893617021278,
+        "endS": 19.627659574468087,
+        "palign": 0
+      },
+      {
+        "word": "speak ",
+        "success": true,
+        "startS": 19.72340425531915,
+        "endS": 20.106382978723403,
+        "palign": 0
+      },
+      {
+        "word": "slowly? (",
+        "success": true,
+        "startS": 20.199468085106382,
+        "endS": 20.95744680851064,
+        "palign": 0
+      },
+      {
+        "word": "Peux-tu ",
+        "success": true,
+        "startS": 20.98404255319149,
+        "endS": 21.3031914893617,
+        "palign": 0
+      },
+      {
+        "word": "parler ",
+        "success": true,
+        "startS": 21.382978723404253,
+        "endS": 21.78191489361702,
+        "palign": 0
+      },
+      {
+        "word": "lentement ?)\n",
+        "success": true,
+        "startS": 21.861702127659576,
+        "endS": 22.79635258358663,
+        "palign": 0
+      },
+      {
+        "word": "What ",
+        "success": true,
+        "startS": 22.8419452887538,
+        "endS": 22.97872340425532,
+        "palign": 0
+      },
+      {
+        "word": "does ",
+        "success": true,
+        "startS": 23.038563829787236,
+        "endS": 23.21808510638298,
+        "palign": 0
+      },
+      {
+        "word": "it ",
+        "success": true,
+        "startS": 23.33776595744681,
+        "endS": 23.53723404255319,
+        "palign": 0
+      },
+      {
+        "word": "mean? (",
+        "success": true,
+        "startS": 23.636968085106382,
+        "endS": 24.13563829787234,
+        "palign": 0
+      },
+      {
+        "word": "Qu’",
+        "success": true,
+        "startS": 24.15558510638298,
+        "endS": 24.175531914893618,
+        "palign": 0
+      },
+      {
+        "word": "est-ce ",
+        "success": true,
+        "startS": 24.25531914893617,
+        "endS": 24.49468085106383,
+        "palign": 0
+      },
+      {
+        "word": "que ",
+        "success": true,
+        "startS": 24.54787234042553,
+        "endS": 24.654255319148938,
+        "palign": 0
+      },
+      {
+        "word": "ça ",
+        "success": true,
+        "startS": 24.73404255319149,
+        "endS": 24.81382978723404,
+        "palign": 0
+      },
+      {
+        "word": "veut ",
+        "success": true,
+        "startS": 24.85372340425532,
+        "endS": 24.97340425531915,
+        "palign": 0
+      },
+      {
+        "word": "dire ?)\n",
+        "success": true,
+        "startS": 25.07313829787234,
+        "endS": 25.77127659574468,
+        "palign": 0
+      },
+      {
+        "word": "I ",
+        "success": true,
+        "startS": 25.851063829787233,
+        "endS": 25.851063829787233,
+        "palign": 0
+      },
+      {
+        "word": "don’",
+        "success": true,
+        "startS": 25.877659574468083,
+        "endS": 25.930851063829788,
+        "palign": 0
+      },
+      {
+        "word": "t ",
+        "success": true,
+        "startS": 26.01063829787234,
+        "endS": 26.648936170212767,
+        "palign": 0
+      },
+      {
+        "word": "understand. (",
+        "success": true,
+        "startS": 26.6968085106383,
+        "endS": 27.20744680851064,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 27.247340425531917,
+        "endS": 27.28723404255319,
+        "palign": 0
+      },
+      {
+        "word": "ne ",
+        "success": true,
+        "startS": 27.367021276595743,
+        "endS": 27.4468085106383,
+        "palign": 0
+      },
+      {
+        "word": "comprends ",
+        "success": true,
+        "startS": 27.52659574468085,
+        "endS": 27.925531914893618,
+        "palign": 0
+      },
+      {
+        "word": "pas.)\n",
+        "success": true,
+        "startS": 28.03191489361702,
+        "endS": 28.77127659574468,
+        "palign": 0
+      },
+      {
+        "word": "Can ",
+        "success": true,
+        "startS": 28.835106382978726,
+        "endS": 28.96276595744681,
+        "palign": 0
+      },
+      {
+        "word": "you ",
+        "success": true,
+        "startS": 29.069148936170212,
+        "endS": 29.52127659574468,
+        "palign": 0
+      },
+      {
+        "word": "repeat, ",
+        "success": true,
+        "startS": 29.58776595744681,
+        "endS": 29.977203647416413,
+        "palign": 0
+      },
+      {
+        "word": "please? (",
+        "success": true,
+        "startS": 30.034194528875382,
+        "endS": 30.398936170212764,
+        "palign": 0
+      },
+      {
+        "word": "Peux-tu ",
+        "success": true,
+        "startS": 30.43882978723404,
+        "endS": 30.79787234042553,
+        "palign": 0
+      },
+      {
+        "word": "répéter, ",
+        "success": true,
+        "startS": 30.877659574468083,
+        "endS": 31.236702127659576,
+        "palign": 0
+      },
+      {
+        "word": "s’",
+        "success": true,
+        "startS": 31.27659574468085,
+        "endS": 31.27659574468085,
+        "palign": 0
+      },
+      {
+        "word": "il ",
+        "success": true,
+        "startS": 31.356382978723406,
+        "endS": 31.51595744680851,
+        "palign": 0
+      },
+      {
+        "word": "te ",
+        "success": true,
+        "startS": 31.595744680851062,
+        "endS": 31.675531914893618,
+        "palign": 0
+      },
+      {
+        "word": "plaît ?)\n",
+        "success": true,
+        "startS": 31.70212765957447,
+        "endS": 32.14428191489362,
+        "palign": 0
+      },
+      {
+        "word": "Speak ",
+        "success": true,
+        "startS": 32.194148936170215,
+        "endS": 32.3936170212766,
+        "palign": 0
+      },
+      {
+        "word": "slowly, ",
+        "success": true,
+        "startS": 32.486702127659576,
+        "endS": 33.111702127659576,
+        "palign": 0
+      },
+      {
+        "word": "please. (",
+        "success": true,
+        "startS": 33.191489361702125,
+        "endS": 33.704407294832826,
+        "palign": 0
+      },
+      {
+        "word": "Parle ",
+        "success": true,
+        "startS": 33.76139817629179,
+        "endS": 33.98936170212766,
+        "palign": 0
+      },
+      {
+        "word": "lentement, ",
+        "success": true,
+        "startS": 34.069148936170215,
+        "endS": 34.66755319148936,
+        "palign": 0
+      },
+      {
+        "word": "s’",
+        "success": true,
+        "startS": 34.70744680851064,
+        "endS": 34.70744680851064,
+        "palign": 0
+      },
+      {
+        "word": "il ",
+        "success": true,
+        "startS": 34.787234042553195,
+        "endS": 34.9468085106383,
+        "palign": 0
+      },
+      {
+        "word": "te ",
+        "success": true,
+        "startS": 35.066489361702125,
+        "endS": 35.18617021276596,
+        "palign": 0
+      },
+      {
+        "word": "plaît.)\n",
+        "success": true,
+        "startS": 35.21276595744681,
+        "endS": 35.691489361702125,
+        "palign": 0
+      },
+      {
+        "word": "What ",
+        "success": true,
+        "startS": 35.74468085106383,
+        "endS": 35.90425531914894,
+        "palign": 0
+      },
+      {
+        "word": "does ",
+        "success": true,
+        "startS": 35.964095744680854,
+        "endS": 36.1436170212766,
+        "palign": 0
+      },
+      {
+        "word": "it ",
+        "success": true,
+        "startS": 36.26329787234043,
+        "endS": 36.462765957446805,
+        "palign": 0
+      },
+      {
+        "word": "mean? (",
+        "success": true,
+        "startS": 36.5625,
+        "endS": 37.06117021276596,
+        "palign": 0
+      },
+      {
+        "word": "Qu’",
+        "success": true,
+        "startS": 37.0811170212766,
+        "endS": 37.101063829787236,
+        "palign": 0
+      },
+      {
+        "word": "est-ce ",
+        "success": true,
+        "startS": 37.180851063829785,
+        "endS": 37.420212765957444,
+        "palign": 0
+      },
+      {
+        "word": "que ",
+        "success": true,
+        "startS": 37.473404255319146,
+        "endS": 37.579787234042556,
+        "palign": 0
+      },
+      {
+        "word": "ça ",
+        "success": true,
+        "startS": 37.65957446808511,
+        "endS": 37.73936170212766,
+        "palign": 0
+      },
+      {
+        "word": "veut ",
+        "success": true,
+        "startS": 37.77925531914894,
+        "endS": 37.898936170212764,
+        "palign": 0
+      },
+      {
+        "word": "dire ?)\n\n",
+        "success": true,
+        "startS": 37.99867021276596,
+        "endS": 38.99177949709865,
+        "palign": 0
+      },
+      {
+        "word": "[Couplet – dialogue A & B]\nA: ",
+        "success": true,
+        "startS": 39.02562862669245,
+        "endS": 39.973404255319146,
+        "palign": 0
+      },
+      {
+        "word": "Hello, ",
+        "success": true,
+        "startS": 40.06914893617021,
+        "endS": 40.54188829787234,
+        "palign": 0
+      },
+      {
+        "word": "welcome! (",
+        "success": true,
+        "startS": 40.63164893617021,
+        "endS": 41.7686170212766,
+        "palign": 0
+      },
+      {
+        "word": "Bonjour, ",
+        "success": true,
+        "startS": 41.82845744680851,
+        "endS": 42.3031914893617,
+        "palign": 0
+      },
+      {
+        "word": "bienvenue !)\n",
+        "success": true,
+        "startS": 42.319148936170215,
+        "endS": 43.30452127659574,
+        "palign": 0
+      },
+      {
+        "word": "B: ",
+        "success": true,
+        "startS": 43.32446808510638,
+        "endS": 43.40425531914894,
+        "palign": 0
+      },
+      {
+        "word": "I ",
+        "success": true,
+        "startS": 43.48404255319149,
+        "endS": 43.48404255319149,
+        "palign": 0
+      },
+      {
+        "word": "don’",
+        "success": true,
+        "startS": 43.51063829787234,
+        "endS": 43.56382978723404,
+        "palign": 0
+      },
+      {
+        "word": "t ",
+        "success": true,
+        "startS": 43.6436170212766,
+        "endS": 44.12234042553192,
+        "palign": 0
+      },
+      {
+        "word": "understand. (",
+        "success": true,
+        "startS": 44.21010638297872,
+        "endS": 45.03989361702128,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 45.05984042553192,
+        "endS": 45.079787234042556,
+        "palign": 0
+      },
+      {
+        "word": "ne ",
+        "success": true,
+        "startS": 45.15957446808511,
+        "endS": 45.23936170212766,
+        "palign": 0
+      },
+      {
+        "word": "comprends ",
+        "success": true,
+        "startS": 45.319148936170215,
+        "endS": 45.638297872340424,
+        "palign": 0
+      },
+      {
+        "word": "pas.)\n",
+        "success": true,
+        "startS": 45.744680851063826,
+        "endS": 46.17021276595745,
+        "palign": 0
+      },
+      {
+        "word": "A: ",
+        "success": true,
+        "startS": 46.276595744680854,
+        "endS": 46.316489361702125,
+        "palign": 0
+      },
+      {
+        "word": "Where ",
+        "success": true,
+        "startS": 46.3563829787234,
+        "endS": 46.59574468085106,
+        "palign": 0
+      },
+      {
+        "word": "is ",
+        "success": true,
+        "startS": 46.67553191489362,
+        "endS": 46.755319148936174,
+        "palign": 0
+      },
+      {
+        "word": "your ",
+        "success": true,
+        "startS": 46.78191489361702,
+        "endS": 46.91489361702128,
+        "palign": 0
+      },
+      {
+        "word": "passport? (",
+        "success": true,
+        "startS": 46.91489361702128,
+        "endS": 48.11170212765957,
+        "palign": 0
+      },
+      {
+        "word": "Où ",
+        "success": true,
+        "startS": 48.15159574468085,
+        "endS": 48.191489361702125,
+        "palign": 0
+      },
+      {
+        "word": "est ",
+        "success": true,
+        "startS": 48.244680851063826,
+        "endS": 48.351063829787236,
+        "palign": 0
+      },
+      {
+        "word": "ton ",
+        "success": true,
+        "startS": 48.43085106382979,
+        "endS": 48.590425531914896,
+        "palign": 0
+      },
+      {
+        "word": "passeport ?)\n",
+        "success": true,
+        "startS": 48.67021276595745,
+        "endS": 49.587765957446805,
+        "palign": 0
+      },
+      {
+        "word": "B: ",
+        "success": true,
+        "startS": 49.62765957446808,
+        "endS": 49.6875,
+        "palign": 0
+      },
+      {
+        "word": "Can ",
+        "success": true,
+        "startS": 49.74734042553192,
+        "endS": 49.86702127659574,
+        "palign": 0
+      },
+      {
+        "word": "you ",
+        "success": true,
+        "startS": 49.973404255319146,
+        "endS": 50.265957446808514,
+        "palign": 0
+      },
+      {
+        "word": "repeat, ",
+        "success": true,
+        "startS": 50.319148936170215,
+        "endS": 50.65349544072948,
+        "palign": 0
+      },
+      {
+        "word": "please? (",
+        "success": true,
+        "startS": 50.72188449848024,
+        "endS": 51.1436170212766,
+        "palign": 0
+      },
+      {
+        "word": "Peux-tu ",
+        "success": true,
+        "startS": 51.183510638297875,
+        "endS": 51.462765957446805,
+        "palign": 0
+      },
+      {
+        "word": "répéter, ",
+        "success": true,
+        "startS": 51.54255319148936,
+        "endS": 52.140957446808514,
+        "palign": 0
+      },
+      {
+        "word": "s’",
+        "success": true,
+        "startS": 52.180851063829785,
+        "endS": 52.180851063829785,
+        "palign": 0
+      },
+      {
+        "word": "il ",
+        "success": true,
+        "startS": 52.26063829787234,
+        "endS": 52.420212765957444,
+        "palign": 0
+      },
+      {
+        "word": "te ",
+        "success": true,
+        "startS": 52.53989361702128,
+        "endS": 52.659574468085104,
+        "palign": 0
+      },
+      {
+        "word": "plaît ?)\n",
+        "success": true,
+        "startS": 52.68617021276596,
+        "endS": 53.31382978723404,
+        "palign": 0
+      },
+      {
+        "word": "A: ",
+        "success": true,
+        "startS": 53.34574468085106,
+        "endS": 53.40957446808511,
+        "palign": 0
+      },
+      {
+        "word": "Your ",
+        "success": true,
+        "startS": 53.44148936170213,
+        "endS": 53.537234042553195,
+        "palign": 0
+      },
+      {
+        "word": "passport, ",
+        "success": true,
+        "startS": 53.61702127659575,
+        "endS": 54.32370820668693,
+        "palign": 0
+      },
+      {
+        "word": "please. (",
+        "success": true,
+        "startS": 54.392097264437695,
+        "endS": 54.797872340425535,
+        "palign": 0
+      },
+      {
+        "word": "Ton ",
+        "success": true,
+        "startS": 54.829787234042556,
+        "endS": 54.8936170212766,
+        "palign": 0
+      },
+      {
+        "word": "passeport, ",
+        "success": true,
+        "startS": 54.94148936170213,
+        "endS": 55.412234042553195,
+        "palign": 0
+      },
+      {
+        "word": "s’",
+        "success": true,
+        "startS": 55.452127659574465,
+        "endS": 55.452127659574465,
+        "palign": 0
+      },
+      {
+        "word": "il ",
+        "success": true,
+        "startS": 55.53191489361702,
+        "endS": 55.691489361702125,
+        "palign": 0
+      },
+      {
+        "word": "te ",
+        "success": true,
+        "startS": 55.77127659574468,
+        "endS": 55.851063829787236,
+        "palign": 0
+      },
+      {
+        "word": "plaît.)\n",
+        "success": true,
+        "startS": 55.87765957446808,
+        "endS": 56.297872340425535,
+        "palign": 0
+      },
+      {
+        "word": "B: ",
+        "success": true,
+        "startS": 56.3218085106383,
+        "endS": 56.36968085106383,
+        "palign": 0
+      },
+      {
+        "word": "Could ",
+        "success": true,
+        "startS": 56.3936170212766,
+        "endS": 56.48936170212766,
+        "palign": 0
+      },
+      {
+        "word": "you ",
+        "success": true,
+        "startS": 56.59574468085106,
+        "endS": 56.808510638297875,
+        "palign": 0
+      },
+      {
+        "word": "speak ",
+        "success": true,
+        "startS": 56.88829787234043,
+        "endS": 57.20744680851064,
+        "palign": 0
+      },
+      {
+        "word": "slowly? (",
+        "success": true,
+        "startS": 57.30053191489362,
+        "endS": 57.97872340425532,
+        "palign": 0
+      },
+      {
+        "word": "Peux-tu ",
+        "success": true,
+        "startS": 58.00531914893617,
+        "endS": 58.32446808510638,
+        "palign": 0
+      },
+      {
+        "word": "parler ",
+        "success": true,
+        "startS": 58.40425531914894,
+        "endS": 58.8031914893617,
+        "palign": 0
+      },
+      {
+        "word": "lentement ?)\n",
+        "success": true,
+        "startS": 58.96276595744681,
+        "endS": 59.6968085106383,
+        "palign": 0
+      },
+      {
+        "word": "A: ",
+        "success": true,
+        "startS": 59.72872340425532,
+        "endS": 59.79255319148936,
+        "palign": 0
+      },
+      {
+        "word": "Pass-port. (",
+        "success": true,
+        "startS": 59.82446808510638,
+        "endS": 60.49012158054711,
+        "palign": 0
+      },
+      {
+        "word": "Passe-port.)\n",
+        "success": true,
+        "startS": 60.535714285714285,
+        "endS": 61.39627659574468,
+        "palign": 0
+      },
+      {
+        "word": "B: ",
+        "success": true,
+        "startS": 61.496010638297875,
+        "endS": 61.755319148936174,
+        "palign": 0
+      },
+      {
+        "word": "Ah! ",
+        "success": true,
+        "startS": 61.83510638297872,
+        "endS": 61.974734042553195,
+        "palign": 0
+      },
+      {
+        "word": "Now ",
+        "success": true,
+        "startS": 62.03457446808511,
+        "endS": 62.15425531914894,
+        "palign": 0
+      },
+      {
+        "word": "I ",
+        "success": true,
+        "startS": 62.31382978723404,
+        "endS": 62.952127659574465,
+        "palign": 0
+      },
+      {
+        "word": "understand! (",
+        "success": true,
+        "startS": 62.99202127659574,
+        "endS": 63.40425531914894,
+        "palign": 0
+      },
+      {
+        "word": "Ah ! ",
+        "success": true,
+        "startS": 63.430851063829785,
+        "endS": 63.55053191489362,
+        "palign": 0
+      },
+      {
+        "word": "Maintenant ",
+        "success": true,
+        "startS": 63.590425531914896,
+        "endS": 64.14893617021276,
+        "palign": 0
+      },
+      {
+        "word": "je ",
+        "success": true,
+        "startS": 64.18882978723404,
+        "endS": 64.22872340425532,
+        "palign": 0
+      },
+      {
+        "word": "comprends !)\n\n",
+        "success": true,
+        "startS": 64.25531914893617,
+        "endS": 64.58469721767594,
+        "palign": 0
+      },
+      {
+        "word": "[Refrain – ensemble]\nI ",
+        "success": true,
+        "startS": 64.59390343698854,
+        "endS": 64.7872340425532,
+        "palign": 0
+      },
+      {
+        "word": "don’",
+        "success": true,
+        "startS": 64.81382978723404,
+        "endS": 64.86702127659575,
+        "palign": 0
+      },
+      {
+        "word": "t ",
+        "success": true,
+        "startS": 64.94680851063829,
+        "endS": 65.58510638297872,
+        "palign": 0
+      },
+      {
+        "word": "understand. (",
+        "success": true,
+        "startS": 65.625,
+        "endS": 66.10372340425532,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 66.16356382978724,
+        "endS": 66.22340425531915,
+        "palign": 0
+      },
+      {
+        "word": "ne ",
+        "success": true,
+        "startS": 66.3031914893617,
+        "endS": 66.38297872340425,
+        "palign": 0
+      },
+      {
+        "word": "comprends ",
+        "success": true,
+        "startS": 66.4627659574468,
+        "endS": 66.86170212765957,
+        "palign": 0
+      },
+      {
+        "word": "pas.)\n",
+        "success": true,
+        "startS": 66.96808510638297,
+        "endS": 67.70744680851064,
+        "palign": 0
+      },
+      {
+        "word": "Can ",
+        "success": true,
+        "startS": 67.77127659574468,
+        "endS": 67.89893617021276,
+        "palign": 0
+      },
+      {
+        "word": "you ",
+        "success": true,
+        "startS": 68.00531914893617,
+        "endS": 68.37765957446808,
+        "palign": 0
+      },
+      {
+        "word": "repeat, ",
+        "success": true,
+        "startS": 68.44414893617021,
+        "endS": 68.83358662613982,
+        "palign": 0
+      },
+      {
+        "word": "please? (",
+        "success": true,
+        "startS": 68.89057750759878,
+        "endS": 69.25531914893617,
+        "palign": 0
+      },
+      {
+        "word": "Peux-tu ",
+        "success": true,
+        "startS": 69.29521276595744,
+        "endS": 69.65425531914893,
+        "palign": 0
+      },
+      {
+        "word": "répéter, ",
+        "success": true,
+        "startS": 69.73404255319149,
+        "endS": 70.17287234042553,
+        "palign": 0
+      },
+      {
+        "word": "s’",
+        "success": true,
+        "startS": 70.2127659574468,
+        "endS": 70.2127659574468,
+        "palign": 0
+      },
+      {
+        "word": "il ",
+        "success": true,
+        "startS": 70.29255319148936,
+        "endS": 70.45212765957447,
+        "palign": 0
+      },
+      {
+        "word": "te ",
+        "success": true,
+        "startS": 70.53191489361703,
+        "endS": 70.61170212765957,
+        "palign": 0
+      },
+      {
+        "word": "plaît ?)\n",
+        "success": true,
+        "startS": 70.63829787234042,
+        "endS": 70.97074468085107,
+        "palign": 0
+      },
+      {
+        "word": "Could ",
+        "success": true,
+        "startS": 71.01063829787233,
+        "endS": 71.17021276595744,
+        "palign": 0
+      },
+      {
+        "word": "you ",
+        "success": true,
+        "startS": 71.27659574468085,
+        "endS": 71.48936170212767,
+        "palign": 0
+      },
+      {
+        "word": "speak ",
+        "success": true,
+        "startS": 71.58510638297874,
+        "endS": 71.96808510638299,
+        "palign": 0
+      },
+      {
+        "word": "slowly? (",
+        "success": true,
+        "startS": 72.06117021276596,
+        "endS": 72.76595744680851,
+        "palign": 0
+      },
+      {
+        "word": "Peux-tu ",
+        "success": true,
+        "startS": 72.80585106382978,
+        "endS": 73.08510638297872,
+        "palign": 0
+      },
+      {
+        "word": "parler ",
+        "success": true,
+        "startS": 73.1781914893617,
+        "endS": 73.6436170212766,
+        "palign": 0
+      },
+      {
+        "word": "lentement ?)\n",
+        "success": true,
+        "startS": 73.72340425531915,
+        "endS": 74.62386018237082,
+        "palign": 0
+      },
+      {
+        "word": "What ",
+        "success": true,
+        "startS": 74.65805471124621,
+        "endS": 74.76063829787235,
+        "palign": 0
+      },
+      {
+        "word": "does ",
+        "success": true,
+        "startS": 74.8404255319149,
+        "endS": 75.07978723404256,
+        "palign": 0
+      },
+      {
+        "word": "it ",
+        "success": true,
+        "startS": 75.15957446808511,
+        "endS": 75.23936170212767,
+        "palign": 0
+      },
+      {
+        "word": "mean? (",
+        "success": true,
+        "startS": 75.33909574468086,
+        "endS": 75.99734042553192,
+        "palign": 0
+      },
+      {
+        "word": "Qu’",
+        "success": true,
+        "startS": 76.01728723404256,
+        "endS": 76.0372340425532,
+        "palign": 0
+      },
+      {
+        "word": "est-ce ",
+        "success": true,
+        "startS": 76.11702127659575,
+        "endS": 76.3563829787234,
+        "palign": 0
+      },
+      {
+        "word": "que ",
+        "success": true,
+        "startS": 76.38297872340425,
+        "endS": 76.43617021276596,
+        "palign": 0
+      },
+      {
+        "word": "ça ",
+        "success": true,
+        "startS": 76.51595744680851,
+        "endS": 76.59574468085107,
+        "palign": 0
+      },
+      {
+        "word": "veut ",
+        "success": true,
+        "startS": 76.63563829787235,
+        "endS": 76.75531914893617,
+        "palign": 0
+      },
+      {
+        "word": "dire ?)\n",
+        "success": true,
+        "startS": 76.85505319148936,
+        "endS": 77.73271276595744,
+        "palign": 0
+      },
+      {
+        "word": "I ",
+        "success": true,
+        "startS": 77.79255319148936,
+        "endS": 77.79255319148936,
+        "palign": 0
+      },
+      {
+        "word": "don’",
+        "success": true,
+        "startS": 77.81914893617021,
+        "endS": 77.87234042553192,
+        "palign": 0
+      },
+      {
+        "word": "t ",
+        "success": true,
+        "startS": 77.95212765957447,
+        "endS": 78.59042553191489,
+        "palign": 0
+      },
+      {
+        "word": "understand. (",
+        "success": true,
+        "startS": 78.63031914893617,
+        "endS": 79.1090425531915,
+        "palign": 0
+      },
+      {
+        "word": "Je ",
+        "success": true,
+        "startS": 79.1688829787234,
+        "endS": 79.22872340425532,
+        "palign": 0
+      },
+      {
+        "word": "ne ",
+        "success": true,
+        "startS": 79.30851063829788,
+        "endS": 79.38829787234043,
+        "palign": 0
+      },
+      {
+        "word": "comprends ",
+        "success": true,
+        "startS": 79.44148936170212,
+        "endS": 79.7872340425532,
+        "palign": 0
+      },
+      {
+        "word": "pas.)\n",
+        "success": true,
+        "startS": 79.8936170212766,
+        "endS": 80.7127659574468,
+        "palign": 0
+      },
+      {
+        "word": "Can ",
+        "success": true,
+        "startS": 80.77659574468085,
+        "endS": 80.90425531914893,
+        "palign": 0
+      },
+      {
+        "word": "you ",
+        "success": true,
+        "startS": 81.01063829787233,
+        "endS": 81.38297872340425,
+        "palign": 0
+      },
+      {
+        "word": "repeat, ",
+        "success": true,
+        "startS": 81.4627659574468,
+        "endS": 81.91869300911854,
+        "palign": 0
+      },
+      {
+        "word": "please? (",
+        "success": true,
+        "startS": 81.9756838905775,
+        "endS": 82.3404255319149,
+        "palign": 0
+      },
+      {
+        "word": "Peux-tu ",
+        "success": true,
+        "startS": 82.38031914893617,
+        "endS": 82.65957446808511,
+        "palign": 0
+      },
+      {
+        "word": "répéter, ",
+        "success": true,
+        "startS": 82.73936170212767,
+        "endS": 83.17819148936171,
+        "palign": 0
+      },
+      {
+        "word": "s’",
+        "success": true,
+        "startS": 83.21808510638299,
+        "endS": 83.21808510638299,
+        "palign": 0
+      },
+      {
+        "word": "il ",
+        "success": true,
+        "startS": 83.29787234042553,
+        "endS": 83.45744680851064,
+        "palign": 0
+      },
+      {
+        "word": "te ",
+        "success": true,
+        "startS": 83.5372340425532,
+        "endS": 83.61702127659575,
+        "palign": 0
+      },
+      {
+        "word": "plaît ?)\n",
+        "success": true,
+        "startS": 83.6436170212766,
+        "endS": 84.03590425531915,
+        "palign": 0
+      },
+      {
+        "word": "Speak ",
+        "success": true,
+        "startS": 84.09574468085106,
+        "endS": 84.33510638297872,
+        "palign": 0
+      },
+      {
+        "word": "slowly, ",
+        "success": true,
+        "startS": 84.4281914893617,
+        "endS": 85.11018237082068,
+        "palign": 0
+      },
+      {
+        "word": "please. (",
+        "success": true,
+        "startS": 85.16717325227964,
+        "endS": 85.5661094224924,
+        "palign": 0
+      },
+      {
+        "word": "Parle ",
+        "success": true,
+        "startS": 85.62310030395138,
+        "endS": 85.85106382978724,
+        "palign": 0
+      },
+      {
+        "word": "lentement, ",
+        "success": true,
+        "startS": 85.93085106382979,
+        "endS": 86.60904255319149,
+        "palign": 0
+      },
+      {
+        "word": "s’",
+        "success": true,
+        "startS": 86.64893617021276,
+        "endS": 86.64893617021276,
+        "palign": 0
+      },
+      {
+        "word": "il ",
+        "success": true,
+        "startS": 86.72872340425532,
+        "endS": 86.88829787234043,
+        "palign": 0
+      },
+      {
+        "word": "te ",
+        "success": true,
+        "startS": 86.96808510638297,
+        "endS": 87.04787234042553,
+        "palign": 0
+      },
+      {
+        "word": "plaît.)\n",
+        "success": true,
+        "startS": 87.07446808510637,
+        "endS": 87.57978723404256,
+        "palign": 0
+      },
+      {
+        "word": "What ",
+        "success": true,
+        "startS": 87.6462765957447,
+        "endS": 87.84574468085107,
+        "palign": 0
+      },
+      {
+        "word": "does ",
+        "success": true,
+        "startS": 87.90558510638299,
+        "endS": 88.08510638297872,
+        "palign": 0
+      },
+      {
+        "word": "it ",
+        "success": true,
+        "startS": 88.20478723404256,
+        "endS": 88.32446808510639,
+        "palign": 0
+      },
+      {
+        "word": "mean? (",
+        "success": true,
+        "startS": 88.42420212765958,
+        "endS": 88.92287234042553,
+        "palign": 0
+      },
+      {
+        "word": "Qu’",
+        "success": true,
+        "startS": 88.94281914893617,
+        "endS": 88.9627659574468,
+        "palign": 0
+      },
+      {
+        "word": "est-ce ",
+        "success": true,
+        "startS": 89.04255319148936,
+        "endS": 89.36170212765957,
+        "palign": 0
+      },
+      {
+        "word": "que ",
+        "success": true,
+        "startS": 89.41489361702128,
+        "endS": 89.52127659574468,
+        "palign": 0
+      },
+      {
+        "word": "ça ",
+        "success": true,
+        "startS": 89.60106382978724,
+        "endS": 89.68085106382979,
+        "palign": 0
+      },
+      {
+        "word": "veut ",
+        "success": true,
+        "startS": 89.72074468085107,
+        "endS": 89.84042553191489,
+        "palign": 0
+      },
+      {
+        "word": "dire ?)\n\n",
+        "success": true,
+        "startS": 89.9290780141844,
+        "endS": 90.63829787234043,
+        "palign": 0
+      }
+    ],
+    "waveformData": [
+      1e-05,
+      0.02451,
+      0.04138,
+      0.06468,
+      0.10453,
+      0.07587,
+      0.07854,
+      0.07557,
+      0.06156,
+      0.03702,
+      0.10612,
+      0.06259,
+      0.0519,
+      0.06543,
+      0.05298,
+      0.04844,
+      0.05855,
+      0.046,
+      0.03022,
+      0.00377,
+      0.04284,
+      0.03616,
+      0.0662,
+      0.07095,
+      0.06011,
+      0.01223,
+      0.05143,
+      0.05164,
+      0.06462,
+      0.0631,
+      0.04554,
+      0.04511,
+      0.0441,
+      0.02623,
+      0.0406,
+      0.04087,
+      0.05233,
+      0.04247,
+      0.03363,
+      0.06332,
+      0.04864,
+      0.00347,
+      0.03415,
+      0.03357,
+      0.04649,
+      0.06982,
+      0.07596,
+      0.04676,
+      0.05748,
+      0.03324,
+      0.02598,
+      0.03387,
+      0.04204,
+      0.042,
+      0.04124,
+      0.05467,
+      0.06953,
+      0.00643,
+      0.05168,
+      0.07224,
+      0.13342,
+      0.02334,
+      0.06606,
+      0.09263,
+      0.06094,
+      0.08235,
+      0.08565,
+      0.08083,
+      0.28867,
+      0.363,
+      0.19087,
+      0.21499,
+      0.20253,
+      0.13522,
+      0.1135,
+      0.3637,
+      0.1921,
+      0.16896,
+      0.16964,
+      0.15725,
+      0.15336,
+      0.12555,
+      0.07284,
+      0.10356,
+      0.06755,
+      0.41255,
+      0.26214,
+      0.26687,
+      0.27373,
+      0.14056,
+      0.08166,
+      0.37752,
+      0.25035,
+      0.24603,
+      0.24032,
+      0.22863,
+      0.21661,
+      0.15588,
+      0.09595,
+      0.23132,
+      0.23007,
+      0.35741,
+      0.17665,
+      0.17643,
+      0.18151,
+      0.16285,
+      0.0987,
+      0.35283,
+      0.18877,
+      0.17378,
+      0.16694,
+      0.14892,
+      0.13316,
+      0.16498,
+      0.06064,
+      0.12133,
+      0.093,
+      0.3395,
+      0.28546,
+      0.23528,
+      0.22462,
+      0.2369,
+      0.09578,
+      0.30197,
+      0.309,
+      0.23979,
+      0.21696,
+      0.21406,
+      0.21159,
+      0.21283,
+      0.09799,
+      0.28272,
+      0.21611,
+      0.30242,
+      0.23836,
+      0.20124,
+      0.22005,
+      0.20504,
+      0.08078,
+      0.22504,
+      0.30637,
+      0.18174,
+      0.16925,
+      0.16595,
+      0.1512,
+      0.16437,
+      0.1103,
+      0.066,
+      0.10825,
+      0.11834,
+      0.41508,
+      0.27526,
+      0.2726,
+      0.27901,
+      0.10783,
+      0.0849,
+      0.39049,
+      0.24091,
+      0.24228,
+      0.24133,
+      0.22501,
+      0.21963,
+      0.1533,
+      0.10102,
+      0.10316,
+      0.07169,
+      0.33726,
+      0.17837,
+      0.18863,
+      0.18407,
+      0.14443,
+      0.07952,
+      0.34887,
+      0.18598,
+      0.1848,
+      0.17108,
+      0.16329,
+      0.13298,
+      0.15864,
+      0.06709,
+      0.11667,
+      0.0963,
+      0.36446,
+      0.22656,
+      0.22306,
+      0.22099,
+      0.21754,
+      0.10022,
+      0.35221,
+      0.25231,
+      0.16464,
+      0.07512,
+      0.14715,
+      0.14202,
+      0.06037,
+      0.04953,
+      0.06173,
+      0.05775,
+      0.30018,
+      0.27739,
+      0.22078,
+      0.21372,
+      0.18672,
+      0.07031,
+      0.27646,
+      0.26579,
+      0.17916,
+      0.17189,
+      0.17163,
+      0.16939,
+      0.17118,
+      0.08275,
+      0.11753,
+      0.11441,
+      0.22977,
+      0.39289,
+      0.29309,
+      0.27774,
+      0.25908,
+      0.07801,
+      0.17692,
+      0.3628,
+      0.25017,
+      0.27056,
+      0.2687,
+      0.26569,
+      0.24391,
+      0.11529,
+      0.08886,
+      0.36246,
+      0.34368,
+      0.33716,
+      0.1996,
+      0.17993,
+      0.17273,
+      0.12725,
+      0.0635,
+      0.36945,
+      0.18835,
+      0.178,
+      0.16334,
+      0.15089,
+      0.14461,
+      0.10122,
+      0.04703,
+      0.04988,
+      0.02734,
+      0.35907,
+      0.24138,
+      0.20432,
+      0.1967,
+      0.19723,
+      0.14415,
+      0.35736,
+      0.34908,
+      0.33539,
+      0.33125,
+      0.28979,
+      0.27685,
+      0.27,
+      0.24718,
+      0.28187,
+      0.30264,
+      0.35693,
+      0.23649,
+      0.21655,
+      0.21325,
+      0.19349,
+      0.08478,
+      0.31116,
+      0.20656,
+      0.18772,
+      0.18961,
+      0.18866,
+      0.16687,
+      0.15951,
+      0.06465,
+      0.06169,
+      0.05009,
+      0.30696,
+      0.26357,
+      0.21337,
+      0.19394,
+      0.18595,
+      0.11666,
+      0.25543,
+      0.35566,
+      0.28867,
+      0.27101,
+      0.27274,
+      0.25539,
+      0.24079,
+      0.06468,
+      0.06122,
+      0.05258,
+      0.20816,
+      0.31459,
+      0.19479,
+      0.18815,
+      0.05278,
+      0.08303,
+      0.08608,
+      0.32775,
+      0.18453,
+      0.33628,
+      0.18958,
+      0.11581,
+      0.06083,
+      0.05774,
+      0.12925,
+      0.10479,
+      0.10101,
+      0.33974,
+      0.25667,
+      0.25088,
+      0.2511,
+      0.3223,
+      0.31436,
+      0.29781,
+      0.30343,
+      0.33388,
+      0.29583,
+      0.26303,
+      0.09392,
+      0.09584,
+      0.09973,
+      0.09349,
+      0.08075,
+      0.34091,
+      0.21479,
+      0.21514,
+      0.2021,
+      0.17735,
+      0.08741,
+      0.35558,
+      0.22584,
+      0.19149,
+      0.18201,
+      0.17968,
+      0.16166,
+      0.15956,
+      0.08925,
+      0.07382,
+      0.08893,
+      0.37334,
+      0.32825,
+      0.30005,
+      0.30052,
+      0.27038,
+      0.07802,
+      0.3112,
+      0.25479,
+      0.2146,
+      0.18729,
+      0.18317,
+      0.13154,
+      0.13945,
+      0.07794,
+      0.20305,
+      0.17869,
+      0.33436,
+      0.26187,
+      0.18805,
+      0.18161,
+      0.18625,
+      0.11213,
+      0.23024,
+      0.30318,
+      0.20101,
+      0.18841,
+      0.19385,
+      0.15659,
+      0.18551,
+      0.10491,
+      0.10254,
+      0.1071,
+      0.14206,
+      0.33261,
+      0.22772,
+      0.23019,
+      0.23998,
+      0.15695,
+      0.10111,
+      0.36787,
+      0.2555,
+      0.2502,
+      0.24481,
+      0.22382,
+      0.19564,
+      0.19464,
+      0.25979,
+      0.26178,
+      0.22289,
+      0.35724,
+      0.23281,
+      0.23221,
+      0.22453,
+      0.2089,
+      0.07793,
+      0.33094,
+      0.22516,
+      0.20589,
+      0.18832,
+      0.17922,
+      0.1677,
+      0.14792,
+      0.0537,
+      0.07238,
+      0.05849,
+      0.39343,
+      0.28515,
+      0.28149,
+      0.28811,
+      0.23911,
+      0.07152,
+      0.34122,
+      0.25764,
+      0.23232,
+      0.22634,
+      0.21973,
+      0.2102,
+      0.20623,
+      0.12736,
+      0.11439,
+      0.08336,
+      0.32366,
+      0.20165,
+      0.20957,
+      0.20343,
+      0.20859,
+      0.07432,
+      0.2669,
+      0.24268,
+      0.20683,
+      0.19591,
+      0.19701,
+      0.17523,
+      0.19255,
+      0.08684,
+      0.11085,
+      0.09903,
+      0.22242,
+      0.32147,
+      0.2439,
+      0.22724,
+      0.23088,
+      0.08821,
+      0.19591,
+      0.3801,
+      0.23874,
+      0.09024,
+      0.13283,
+      0.29688,
+      0.34065,
+      0.22918,
+      0.10803,
+      0.16145,
+      0.06326,
+      0.13049,
+      0.12051,
+      0.12056,
+      0.10882,
+      0.04279,
+      0.01008,
+      0.18373,
+      0.14549,
+      0.12947,
+      0.11681,
+      0.03807,
+      0.01044,
+      0.08291,
+      0.0332,
+      0.00569,
+      0.00342,
+      0.1036,
+      0.07211,
+      0.07745,
+      0.10429,
+      0.06385,
+      0.01029,
+      0.13322,
+      0.09627,
+      0.08093,
+      0.09533,
+      0.0615,
+      0.00737,
+      0.09819,
+      0.05939,
+      0.00634,
+      0.00365,
+      0.11783,
+      0.10149,
+      0.0934,
+      0.1068,
+      0.07576,
+      0.01939,
+      0.10877,
+      0.10758,
+      0.09858,
+      0.10755,
+      0.09165,
+      0.0194,
+      0.072,
+      0.06731,
+      0.00862,
+      0.00473,
+      0.08758,
+      0.07186,
+      0.06339,
+      0.06112,
+      0.0632,
+      0.03131,
+      0.08473,
+      0.08565,
+      0.07256,
+      0.06406,
+      0.05797,
+      0.0191,
+      0.07486,
+      0.10885,
+      0.01702,
+      0.00731,
+      0.05634,
+      0.23041,
+      0.20974,
+      0.19834,
+      0.17335,
+      0.12933,
+      0.0475,
+      0.02182,
+      0.00682,
+      0.00097,
+      0.00058,
+      0.00015,
+      0.00012,
+      9e-05,
+      0.0001
+    ],
+    "hootCer": 0.2915811088295688,
+    "isStreamed": false
+  }
+}
