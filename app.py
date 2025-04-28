@@ -195,12 +195,11 @@ async def job_generate_music_without_docs(
         "job_id": job_instance.id
     }
 
-
-# Here first 
+# Here first
 @app.post("/job/generate_music_from_theme/", tags=['text to music (multiple)'])
 async def job_generate_music_from_theme(
         metadata_file: UploadFile = File(...,
-                                         description="Fichier Excel avec les paramètres (thème, orientation, taille, etc.)"),
+                                        description="Fichier Excel avec les paramètres (thème, orientation, taille, etc.)"),
         email_notification: Optional[str] = Form("workinmusic.app@gmail.com")
 ):
     metadata_path = os.path.join(UPLOAD_DIR, metadata_file.filename)
@@ -222,7 +221,6 @@ async def job_generate_music_from_theme(
         "success": True,
         "job_id": job_instance.id
     }
-
 
 @app.get("/job/status/{job_id}", tags=["job"])
 async def get_job_status(job_id: str):
@@ -266,14 +264,6 @@ async def download_file(file_name: str):
 
 OUTPUT_DIR = "outputs"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
-
-def download_file_by_url(url):
-    # Simule le téléchargement d'un fichier
-    return url
-
-# def upload_file_to_s3(file_path, file_name, title):
-#     # Simule l'upload sur S3
-#     return f"https://s3.fake/{title}/{file_name}"
 
 def convert_json_to_lrc_grouped(json_file_path, output_lrc_path):
     with open(json_file_path, "r", encoding="utf-8") as f:
@@ -402,7 +392,7 @@ async def handle_generation_callback(body: dict):
         with open(output_path, "w", encoding="utf-8") as json_file:
             json.dump(tmp_dict, json_file, ensure_ascii=False, indent=4)
 
-        upload_file_to_s3(output_path, f"data.json", name)
+        upload_file_to_s3(output_path, f"data_{c}.json", name)
         c += 1
 
 if __name__ == "__main__":
