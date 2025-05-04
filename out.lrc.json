@@ -1,0 +1,1832 @@
+{
+    "state": "complete",
+    "alignment": [
+        {
+            "word": "[🎤 INTRODUCTION – tous ensemble]\n🎵\nHoy",
+            "success": true,
+            "start_s": 8.537234042553191,
+            "end_s": 9.01595744680851,
+            "p_align": 1
+        },
+        {
+            "word": " aprend",
+            "success": true,
+            "start_s": 9.01595744680851,
+            "end_s": 9.574468085106384,
+            "p_align": 1
+        },
+        {
+            "word": "emos",
+            "success": true,
+            "start_s": 9.73404255319149,
+            "end_s": 10.053191489361701,
+            "p_align": 1
+        },
+        {
+            "word": " a",
+            "success": true,
+            "start_s": 10.292553191489361,
+            "end_s": 10.452127659574469,
+            "p_align": 1
+        },
+        {
+            "word": " sal",
+            "success": true,
+            "start_s": 10.53191489361702,
+            "end_s": 10.851063829787234,
+            "p_align": 1
+        },
+        {
+            "word": "ud",
+            "success": true,
+            "start_s": 10.851063829787234,
+            "end_s": 11.01063829787234,
+            "p_align": 1
+        },
+        {
+            "word": "ar",
+            "success": true,
+            "start_s": 11.25,
+            "end_s": 11.409574468085106,
+            "p_align": 1
+        },
+        {
+            "word": ",\nA",
+            "success": true,
+            "start_s": 12.606382978723405,
+            "end_s": 12.845744680851064,
+            "p_align": 1
+        },
+        {
+            "word": " pre",
+            "success": true,
+            "start_s": 12.845744680851064,
+            "end_s": 13.085106382978724,
+            "p_align": 1
+        },
+        {
+            "word": "gunt",
+            "success": true,
+            "start_s": 13.085106382978724,
+            "end_s": 13.324468085106384,
+            "p_align": 1
+        },
+        {
+            "word": "ar",
+            "success": true,
+            "start_s": 13.324468085106384,
+            "end_s": 13.48404255319149,
+            "p_align": 1
+        },
+        {
+            "word": " “¿Cómo",
+            "success": true,
+            "start_s": 13.803191489361701,
+            "end_s": 14.361702127659575,
+            "p_align": 1
+        },
+        {
+            "word": " estás",
+            "success": true,
+            "start_s": 14.361702127659575,
+            "end_s": 14.840425531914894,
+            "p_align": 1
+        },
+        {
+            "word": "?” con",
+            "success": true,
+            "start_s": 14.840425531914894,
+            "end_s": 15.159574468085106,
+            "p_align": 1
+        },
+        {
+            "word": " a",
+            "success": true,
+            "start_s": 15.159574468085106,
+            "end_s": 15.319148936170214,
+            "p_align": 1
+        },
+        {
+            "word": "ma",
+            "success": true,
+            "start_s": 15.398936170212766,
+            "end_s": 15.558510638297873,
+            "p_align": 1
+        },
+        {
+            "word": "bil",
+            "success": true,
+            "start_s": 15.638297872340425,
+            "end_s": 15.877659574468085,
+            "p_align": 1
+        },
+        {
+            "word": "idad",
+            "success": true,
+            "start_s": 16.117021276595747,
+            "end_s": 16.43617021276596,
+            "p_align": 1
+        },
+        {
+            "word": ".\nY",
+            "success": true,
+            "start_s": 16.675531914893618,
+            "end_s": 16.914893617021278,
+            "p_align": 1
+        },
+        {
+            "word": " si",
+            "success": true,
+            "start_s": 16.914893617021278,
+            "end_s": 17.154255319148938,
+            "p_align": 1
+        },
+        {
+            "word": " nos",
+            "success": true,
+            "start_s": 17.154255319148938,
+            "end_s": 17.47340425531915,
+            "p_align": 1
+        },
+        {
+            "word": " vamos",
+            "success": true,
+            "start_s": 17.47340425531915,
+            "end_s": 17.95212765957447,
+            "p_align": 1
+        },
+        {
+            "word": ", también",
+            "success": true,
+            "start_s": 18.98936170212766,
+            "end_s": 19.22872340425532,
+            "p_align": 1
+        },
+        {
+            "word": " sa",
+            "success": true,
+            "start_s": 19.22872340425532,
+            "end_s": 19.46808510638298,
+            "p_align": 1
+        },
+        {
+            "word": "bre",
+            "success": true,
+            "start_s": 19.46808510638298,
+            "end_s": 19.70744680851064,
+            "p_align": 1
+        },
+        {
+            "word": "mos",
+            "success": true,
+            "start_s": 20.02659574468085,
+            "end_s": 20.26595744680851,
+            "p_align": 1
+        },
+        {
+            "word": ",\nCómo",
+            "success": true,
+            "start_s": 20.50531914893617,
+            "end_s": 20.98404255319149,
+            "p_align": 1
+        },
+        {
+            "word": " decir",
+            "success": true,
+            "start_s": 20.98404255319149,
+            "end_s": 21.3031914893617,
+            "p_align": 1
+        },
+        {
+            "word": " adi",
+            "success": true,
+            "start_s": 21.3031914893617,
+            "end_s": 21.46276595744681,
+            "p_align": 1
+        },
+        {
+            "word": "ós",
+            "success": true,
+            "start_s": 21.46276595744681,
+            "end_s": 21.622340425531917,
+            "p_align": 1
+        },
+        {
+            "word": "… ¡Vamo",
+            "success": true,
+            "start_s": 22.73936170212766,
+            "end_s": 23.29787234042553,
+            "p_align": 1
+        },
+        {
+            "word": "s,",
+            "success": true,
+            "start_s": 23.53723404255319,
+            "end_s": 23.6968085106383,
+            "p_align": 1
+        },
+        {
+            "word": " emp",
+            "success": true,
+            "start_s": 23.6968085106383,
+            "end_s": 23.77659574468085,
+            "p_align": 1
+        },
+        {
+            "word": "ec",
+            "success": true,
+            "start_s": 23.77659574468085,
+            "end_s": 23.93617021276596,
+            "p_align": 1
+        },
+        {
+            "word": "e",
+            "success": true,
+            "start_s": 24.095744680851062,
+            "end_s": 24.175531914893618,
+            "p_align": 1
+        },
+        {
+            "word": "mos",
+            "success": true,
+            "start_s": 25.53191489361702,
+            "end_s": 25.77127659574468,
+            "p_align": 1
+        },
+        {
+            "word": "!\nBu",
+            "success": true,
+            "start_s": 26.648936170212767,
+            "end_s": 26.96808510638298,
+            "p_align": 1
+        },
+        {
+            "word": "e",
+            "success": true,
+            "start_s": 28.96276595744681,
+            "end_s": 29.04255319148936,
+            "p_align": 1
+        },
+        {
+            "word": "na",
+            "success": true,
+            "start_s": 29.20212765957447,
+            "end_s": 29.361702127659576,
+            "p_align": 1
+        },
+        {
+            "word": "s ",
+            "success": true,
+            "start_s": 29.44148936170213,
+            "end_s": 29.601063829787233,
+            "p_align": 1
+        },
+        {
+            "word": "tar",
+            "success": true,
+            "start_s": 29.680851063829788,
+            "end_s": 29.920212765957448,
+            "p_align": 1
+        },
+        {
+            "word": "de",
+            "success": true,
+            "start_s": 30.159574468085108,
+            "end_s": 30.319148936170212,
+            "p_align": 1
+        },
+        {
+            "word": "s —",
+            "success": true,
+            "start_s": 30.638297872340427,
+            "end_s": 30.877659574468087,
+            "p_align": 1
+        },
+        {
+            "word": " (Bo",
+            "success": true,
+            "start_s": 31.27659574468085,
+            "end_s": 31.356382978723406,
+            "p_align": 1
+        },
+        {
+            "word": "n apr",
+            "success": true,
+            "start_s": 31.356382978723406,
+            "end_s": 31.43617021276596,
+            "p_align": 1
+        },
+        {
+            "word": "ès",
+            "success": true,
+            "start_s": 31.43617021276596,
+            "end_s": 31.595744680851062,
+            "p_align": 1
+        },
+        {
+            "word": "-mi",
+            "success": true,
+            "start_s": 31.675531914893618,
+            "end_s": 31.914893617021278,
+            "p_align": 1
+        },
+        {
+            "word": "di",
+            "success": true,
+            "start_s": 32.473404255319146,
+            "end_s": 32.63297872340426,
+            "p_align": 1
+        },
+        {
+            "word": ")\nBu",
+            "success": true,
+            "start_s": 33.27127659574468,
+            "end_s": 33.430851063829785,
+            "p_align": 1
+        },
+        {
+            "word": "enas",
+            "success": true,
+            "start_s": 33.430851063829785,
+            "end_s": 33.670212765957444,
+            "p_align": 1
+        },
+        {
+            "word": " noch",
+            "success": true,
+            "start_s": 33.670212765957444,
+            "end_s": 34.069148936170215,
+            "p_align": 1
+        },
+        {
+            "word": "es",
+            "success": true,
+            "start_s": 34.148936170212764,
+            "end_s": 34.308510638297875,
+            "p_align": 1
+        },
+        {
+            "word": " — (Bon",
+            "success": true,
+            "start_s": 34.547872340425535,
+            "end_s": 34.70744680851064,
+            "p_align": 1
+        },
+        {
+            "word": "so",
+            "success": true,
+            "start_s": 34.70744680851064,
+            "end_s": 34.86702127659574,
+            "p_align": 1
+        },
+        {
+            "word": "ir",
+            "success": true,
+            "start_s": 34.9468085106383,
+            "end_s": 35.1063829787234,
+            "p_align": 1
+        },
+        {
+            "word": " / Bo",
+            "success": true,
+            "start_s": 35.265957446808514,
+            "end_s": 35.34574468085106,
+            "p_align": 1
+        },
+        {
+            "word": "nn",
+            "success": true,
+            "start_s": 35.34574468085106,
+            "end_s": 35.42553191489362,
+            "p_align": 1
+        },
+        {
+            "word": "e ",
+            "success": true,
+            "start_s": 35.42553191489362,
+            "end_s": 35.58510638297872,
+            "p_align": 1
+        },
+        {
+            "word": "nu",
+            "success": true,
+            "start_s": 35.74468085106383,
+            "end_s": 35.90425531914894,
+            "p_align": 1
+        },
+        {
+            "word": "it",
+            "success": true,
+            "start_s": 36.06382978723404,
+            "end_s": 36.223404255319146,
+            "p_align": 1
+        },
+        {
+            "word": ")\nAdi",
+            "success": true,
+            "start_s": 37.340425531914896,
+            "end_s": 37.5,
+            "p_align": 1
+        },
+        {
+            "word": "ós",
+            "success": true,
+            "start_s": 37.5,
+            "end_s": 37.659574468085104,
+            "p_align": 1
+        },
+        {
+            "word": ", cha",
+            "success": true,
+            "start_s": 37.97872340425532,
+            "end_s": 38.138297872340424,
+            "p_align": 1
+        },
+        {
+            "word": "o",
+            "success": true,
+            "start_s": 38.138297872340424,
+            "end_s": 38.21808510638298,
+            "p_align": 1
+        },
+        {
+            "word": ", hasta",
+            "success": true,
+            "start_s": 39.41489361702128,
+            "end_s": 39.73404255319149,
+            "p_align": 1
+        },
+        {
+            "word": " luego",
+            "success": true,
+            "start_s": 39.73404255319149,
+            "end_s": 40.212765957446805,
+            "p_align": 1
+        },
+        {
+            "word": ",\n¡Nos",
+            "success": true,
+            "start_s": 41.25,
+            "end_s": 41.48936170212766,
+            "p_align": 1
+        },
+        {
+            "word": " ve",
+            "success": true,
+            "start_s": 41.48936170212766,
+            "end_s": 41.72872340425532,
+            "p_align": 1
+        },
+        {
+            "word": "mos",
+            "success": true,
+            "start_s": 41.72872340425532,
+            "end_s": 41.96808510638298,
+            "p_align": 1
+        },
+        {
+            "word": " pronto",
+            "success": true,
+            "start_s": 41.96808510638298,
+            "end_s": 42.526595744680854,
+            "p_align": 1
+        },
+        {
+            "word": ", amigo",
+            "success": true,
+            "start_s": 43.005319148936174,
+            "end_s": 43.56382978723404,
+            "p_align": 1
+        },
+        {
+            "word": " nuevo",
+            "success": true,
+            "start_s": 43.72340425531915,
+            "end_s": 44.202127659574465,
+            "p_align": 1
+        },
+        {
+            "word": "!\nBue",
+            "success": true,
+            "start_s": 45.079787234042556,
+            "end_s": 45.23936170212766,
+            "p_align": 1
+        },
+        {
+            "word": "na",
+            "success": true,
+            "start_s": 45.23936170212766,
+            "end_s": 45.398936170212764,
+            "p_align": 1
+        },
+        {
+            "word": "s ",
+            "success": true,
+            "start_s": 45.47872340425532,
+            "end_s": 45.638297872340424,
+            "p_align": 1
+        },
+        {
+            "word": "tar",
+            "success": true,
+            "start_s": 45.71808510638298,
+            "end_s": 45.95744680851064,
+            "p_align": 1
+        },
+        {
+            "word": "de",
+            "success": true,
+            "start_s": 46.276595744680854,
+            "end_s": 46.43617021276596,
+            "p_align": 1
+        },
+        {
+            "word": "s —",
+            "success": true,
+            "start_s": 46.755319148936174,
+            "end_s": 46.99468085106383,
+            "p_align": 1
+        },
+        {
+            "word": " (Bon",
+            "success": true,
+            "start_s": 47.31382978723404,
+            "end_s": 47.3936170212766,
+            "p_align": 1
+        },
+        {
+            "word": " apr",
+            "success": true,
+            "start_s": 47.3936170212766,
+            "end_s": 47.5531914893617,
+            "p_align": 1
+        },
+        {
+            "word": "ès",
+            "success": true,
+            "start_s": 47.5531914893617,
+            "end_s": 47.712765957446805,
+            "p_align": 1
+        },
+        {
+            "word": "-mi",
+            "success": true,
+            "start_s": 47.79255319148936,
+            "end_s": 48.03191489361702,
+            "p_align": 1
+        },
+        {
+            "word": "di",
+            "success": true,
+            "start_s": 48.590425531914896,
+            "end_s": 48.75,
+            "p_align": 1
+        },
+        {
+            "word": ")\nBu",
+            "success": true,
+            "start_s": 49.308510638297875,
+            "end_s": 49.547872340425535,
+            "p_align": 1
+        },
+        {
+            "word": "enas",
+            "success": true,
+            "start_s": 49.547872340425535,
+            "end_s": 49.787234042553195,
+            "p_align": 1
+        },
+        {
+            "word": " noch",
+            "success": true,
+            "start_s": 49.787234042553195,
+            "end_s": 50.18617021276596,
+            "p_align": 1
+        },
+        {
+            "word": "es",
+            "success": true,
+            "start_s": 50.265957446808514,
+            "end_s": 50.42553191489362,
+            "p_align": 1
+        },
+        {
+            "word": " — (Bon",
+            "success": true,
+            "start_s": 50.58510638297872,
+            "end_s": 50.74468085106383,
+            "p_align": 1
+        },
+        {
+            "word": "so",
+            "success": true,
+            "start_s": 50.74468085106383,
+            "end_s": 50.90425531914894,
+            "p_align": 1
+        },
+        {
+            "word": "ir",
+            "success": true,
+            "start_s": 50.98404255319149,
+            "end_s": 51.1436170212766,
+            "p_align": 1
+        },
+        {
+            "word": " / Bo",
+            "success": true,
+            "start_s": 51.3031914893617,
+            "end_s": 51.38297872340426,
+            "p_align": 1
+        },
+        {
+            "word": "nn",
+            "success": true,
+            "start_s": 51.38297872340426,
+            "end_s": 51.54255319148936,
+            "p_align": 1
+        },
+        {
+            "word": "e ",
+            "success": true,
+            "start_s": 51.54255319148936,
+            "end_s": 51.702127659574465,
+            "p_align": 1
+        },
+        {
+            "word": "nu",
+            "success": true,
+            "start_s": 51.78191489361702,
+            "end_s": 51.941489361702125,
+            "p_align": 1
+        },
+        {
+            "word": "it",
+            "success": true,
+            "start_s": 52.180851063829785,
+            "end_s": 52.340425531914896,
+            "p_align": 1
+        },
+        {
+            "word": ")\nAdi",
+            "success": true,
+            "start_s": 53.37765957446808,
+            "end_s": 53.537234042553195,
+            "p_align": 1
+        },
+        {
+            "word": "ós",
+            "success": true,
+            "start_s": 53.537234042553195,
+            "end_s": 53.6968085106383,
+            "p_align": 1
+        },
+        {
+            "word": ", cha",
+            "success": true,
+            "start_s": 54.015957446808514,
+            "end_s": 54.17553191489362,
+            "p_align": 1
+        },
+        {
+            "word": "o",
+            "success": true,
+            "start_s": 54.17553191489362,
+            "end_s": 54.255319148936174,
+            "p_align": 1
+        },
+        {
+            "word": ", hasta",
+            "success": true,
+            "start_s": 55.452127659574465,
+            "end_s": 55.77127659574468,
+            "p_align": 1
+        },
+        {
+            "word": " lu",
+            "success": true,
+            "start_s": 55.77127659574468,
+            "end_s": 56.01063829787234,
+            "p_align": 1
+        },
+        {
+            "word": "e",
+            "success": true,
+            "start_s": 56.25,
+            "end_s": 56.329787234042556,
+            "p_align": 1
+        },
+        {
+            "word": "go",
+            "success": true,
+            "start_s": 56.409574468085104,
+            "end_s": 56.569148936170215,
+            "p_align": 1
+        },
+        {
+            "word": ",\n¡Nos",
+            "success": true,
+            "start_s": 57.36702127659574,
+            "end_s": 57.6063829787234,
+            "p_align": 1
+        },
+        {
+            "word": " ve",
+            "success": true,
+            "start_s": 57.6063829787234,
+            "end_s": 57.84574468085106,
+            "p_align": 1
+        },
+        {
+            "word": "mos",
+            "success": true,
+            "start_s": 57.84574468085106,
+            "end_s": 58.08510638297872,
+            "p_align": 1
+        },
+        {
+            "word": " pronto",
+            "success": true,
+            "start_s": 58.16489361702128,
+            "end_s": 58.72340425531915,
+            "p_align": 1
+        },
+        {
+            "word": ", amigo",
+            "success": true,
+            "start_s": 59.12234042553192,
+            "end_s": 59.680851063829785,
+            "p_align": 1
+        },
+        {
+            "word": " nuevo",
+            "success": true,
+            "start_s": 59.840425531914896,
+            "end_s": 60.319148936170215,
+            "p_align": 1
+        },
+        {
+            "word": "!\n¡Ho",
+            "success": true,
+            "start_s": 69.17553191489361,
+            "end_s": 69.41489361702128,
+            "p_align": 1
+        },
+        {
+            "word": "la",
+            "success": true,
+            "start_s": 69.41489361702128,
+            "end_s": 69.57446808510639,
+            "p_align": 1
+        },
+        {
+            "word": "! ¿Cómo",
+            "success": true,
+            "start_s": 69.65425531914893,
+            "end_s": 70.13297872340425,
+            "p_align": 1
+        },
+        {
+            "word": " estás",
+            "success": true,
+            "start_s": 70.13297872340425,
+            "end_s": 70.61170212765957,
+            "p_align": 1
+        },
+        {
+            "word": ", Lu",
+            "success": true,
+            "start_s": 70.93085106382979,
+            "end_s": 71.25,
+            "p_align": 1
+        },
+        {
+            "word": "c",
+            "success": true,
+            "start_s": 71.80851063829788,
+            "end_s": 71.88829787234043,
+            "p_align": 1
+        },
+        {
+            "word": "ía",
+            "success": true,
+            "start_s": 71.88829787234043,
+            "end_s": 72.04787234042553,
+            "p_align": 1
+        },
+        {
+            "word": "?\nMuy",
+            "success": true,
+            "start_s": 72.92553191489361,
+            "end_s": 73.16489361702128,
+            "p_align": 1
+        },
+        {
+            "word": " bien",
+            "success": true,
+            "start_s": 73.16489361702128,
+            "end_s": 73.56382978723404,
+            "p_align": 1
+        },
+        {
+            "word": ", gra",
+            "success": true,
+            "start_s": 73.72340425531915,
+            "end_s": 74.12234042553192,
+            "p_align": 1
+        },
+        {
+            "word": "cias",
+            "success": true,
+            "start_s": 74.12234042553192,
+            "end_s": 74.44148936170212,
+            "p_align": 1
+        },
+        {
+            "word": ", ¿y",
+            "success": true,
+            "start_s": 74.92021276595744,
+            "end_s": 75.15957446808511,
+            "p_align": 1
+        },
+        {
+            "word": " tú",
+            "success": true,
+            "start_s": 75.15957446808511,
+            "end_s": 75.39893617021276,
+            "p_align": 1
+        },
+        {
+            "word": ", So",
+            "success": true,
+            "start_s": 75.63829787234043,
+            "end_s": 75.87765957446808,
+            "p_align": 1
+        },
+        {
+            "word": "f",
+            "success": true,
+            "start_s": 75.87765957446808,
+            "end_s": 75.95744680851064,
+            "p_align": 1
+        },
+        {
+            "word": "ía",
+            "success": true,
+            "start_s": 75.95744680851064,
+            "end_s": 76.11702127659575,
+            "p_align": 1
+        },
+        {
+            "word": "?\nEstoy",
+            "success": true,
+            "start_s": 77.15425531914893,
+            "end_s": 77.7127659574468,
+            "p_align": 1
+        },
+        {
+            "word": " bien",
+            "success": true,
+            "start_s": 77.7127659574468,
+            "end_s": 78.11170212765957,
+            "p_align": 1
+        },
+        {
+            "word": ", gra",
+            "success": true,
+            "start_s": 78.19148936170212,
+            "end_s": 78.43085106382979,
+            "p_align": 1
+        },
+        {
+            "word": "cias",
+            "success": true,
+            "start_s": 78.43085106382979,
+            "end_s": 78.75,
+            "p_align": 1
+        },
+        {
+            "word": ". ¿Nos",
+            "success": true,
+            "start_s": 78.98936170212767,
+            "end_s": 79.22872340425532,
+            "p_align": 1
+        },
+        {
+            "word": " ve",
+            "success": true,
+            "start_s": 79.22872340425532,
+            "end_s": 79.46808510638299,
+            "p_align": 1
+        },
+        {
+            "word": "mos",
+            "success": true,
+            "start_s": 79.46808510638299,
+            "end_s": 79.70744680851064,
+            "p_align": 1
+        },
+        {
+            "word": " mañana",
+            "success": true,
+            "start_s": 79.70744680851064,
+            "end_s": 80.26595744680851,
+            "p_align": 1
+        },
+        {
+            "word": "?\nClaro",
+            "success": true,
+            "start_s": 81.22340425531915,
+            "end_s": 81.70212765957447,
+            "p_align": 1
+        },
+        {
+            "word": " que",
+            "success": true,
+            "start_s": 81.70212765957447,
+            "end_s": 81.94148936170212,
+            "p_align": 1
+        },
+        {
+            "word": " sí",
+            "success": true,
+            "start_s": 81.94148936170212,
+            "end_s": 82.18085106382979,
+            "p_align": 1
+        },
+        {
+            "word": ". ¡Hasta",
+            "success": true,
+            "start_s": 83.45744680851064,
+            "end_s": 84.01595744680851,
+            "p_align": 1
+        },
+        {
+            "word": " después",
+            "success": true,
+            "start_s": 84.01595744680851,
+            "end_s": 84.65425531914893,
+            "p_align": 1
+        },
+        {
+            "word": "!\nHasta",
+            "success": true,
+            "start_s": 85.45212765957447,
+            "end_s": 85.69148936170212,
+            "p_align": 1
+        },
+        {
+            "word": " mañ",
+            "success": true,
+            "start_s": 85.69148936170212,
+            "end_s": 86.01063829787235,
+            "p_align": 1
+        },
+        {
+            "word": "a",
+            "success": true,
+            "start_s": 86.40957446808511,
+            "end_s": 86.48936170212767,
+            "p_align": 1
+        },
+        {
+            "word": "na",
+            "success": true,
+            "start_s": 86.56914893617021,
+            "end_s": 86.72872340425532,
+            "p_align": 1
+        },
+        {
+            "word": ", ¡que",
+            "success": true,
+            "start_s": 86.80851063829788,
+            "end_s": 87.04787234042553,
+            "p_align": 1
+        },
+        {
+            "word": " ten",
+            "success": true,
+            "start_s": 87.04787234042553,
+            "end_s": 87.36702127659575,
+            "p_align": 1
+        },
+        {
+            "word": "gas",
+            "success": true,
+            "start_s": 87.52659574468085,
+            "end_s": 87.76595744680851,
+            "p_align": 1
+        },
+        {
+            "word": " bu",
+            "success": true,
+            "start_s": 87.84574468085107,
+            "end_s": 87.92553191489361,
+            "p_align": 1
+        },
+        {
+            "word": "en",
+            "success": true,
+            "start_s": 87.92553191489361,
+            "end_s": 88.08510638297872,
+            "p_align": 1
+        },
+        {
+            "word": " día",
+            "success": true,
+            "start_s": 88.08510638297872,
+            "end_s": 88.40425531914893,
+            "p_align": 1
+        },
+        {
+            "word": "!\nTú",
+            "success": true,
+            "start_s": 89.28191489361703,
+            "end_s": 89.60106382978724,
+            "p_align": 1
+        },
+        {
+            "word": " también",
+            "success": true,
+            "start_s": 90.07978723404256,
+            "end_s": 90.71808510638299,
+            "p_align": 1
+        },
+        {
+            "word": ", ¡cha",
+            "success": true,
+            "start_s": 91.27659574468085,
+            "end_s": 91.43617021276596,
+            "p_align": 1
+        },
+        {
+            "word": "o",
+            "success": true,
+            "start_s": 91.43617021276596,
+            "end_s": 91.51595744680851,
+            "p_align": 1
+        },
+        {
+            "word": " So",
+            "success": true,
+            "start_s": 91.75531914893617,
+            "end_s": 91.99468085106383,
+            "p_align": 1
+        },
+        {
+            "word": "f",
+            "success": true,
+            "start_s": 91.99468085106383,
+            "end_s": 92.07446808510639,
+            "p_align": 1
+        },
+        {
+            "word": "ía",
+            "success": true,
+            "start_s": 92.07446808510639,
+            "end_s": 92.23404255319149,
+            "p_align": 1
+        },
+        {
+            "word": "!\n(T",
+            "success": true,
+            "start_s": 93.11170212765957,
+            "end_s": 93.35106382978724,
+            "p_align": 1
+        },
+        {
+            "word": "oi",
+            "success": true,
+            "start_s": 93.35106382978724,
+            "end_s": 93.51063829787235,
+            "p_align": 1
+        },
+        {
+            "word": " aus",
+            "success": true,
+            "start_s": 93.67021276595744,
+            "end_s": 93.98936170212767,
+            "p_align": 1
+        },
+        {
+            "word": "si",
+            "success": true,
+            "start_s": 94.06914893617021,
+            "end_s": 94.22872340425532,
+            "p_align": 1
+        },
+        {
+            "word": ", cia",
+            "success": true,
+            "start_s": 95.26595744680851,
+            "end_s": 95.50531914893617,
+            "p_align": 1
+        },
+        {
+            "word": "o",
+            "success": true,
+            "start_s": 95.50531914893617,
+            "end_s": 95.58510638297872,
+            "p_align": 1
+        },
+        {
+            "word": " So",
+            "success": true,
+            "start_s": 95.82446808510639,
+            "end_s": 95.98404255319149,
+            "p_align": 1
+        },
+        {
+            "word": "f",
+            "success": true,
+            "start_s": 95.98404255319149,
+            "end_s": 96.06382978723404,
+            "p_align": 1
+        },
+        {
+            "word": "ia",
+            "success": true,
+            "start_s": 96.06382978723404,
+            "end_s": 96.22340425531915,
+            "p_align": 1
+        },
+        {
+            "word": " !)\n¡Ho",
+            "success": true,
+            "start_s": 97.34042553191489,
+            "end_s": 97.57978723404256,
+            "p_align": 1
+        },
+        {
+            "word": "la",
+            "success": true,
+            "start_s": 97.57978723404256,
+            "end_s": 97.73936170212767,
+            "p_align": 1
+        },
+        {
+            "word": "! ¿Qué",
+            "success": true,
+            "start_s": 97.81914893617021,
+            "end_s": 98.05851063829788,
+            "p_align": 1
+        },
+        {
+            "word": " tal",
+            "success": true,
+            "start_s": 98.05851063829788,
+            "end_s": 98.37765957446808,
+            "p_align": 1
+        },
+        {
+            "word": "? — ",
+            "success": true,
+            "start_s": 98.37765957446808,
+            "end_s": 98.61702127659575,
+            "p_align": 1
+        },
+        {
+            "word": "(Sal",
+            "success": true,
+            "start_s": 98.61702127659575,
+            "end_s": 98.8563829787234,
+            "p_align": 1
+        },
+        {
+            "word": "ut",
+            "success": true,
+            "start_s": 98.8563829787234,
+            "end_s": 99.01595744680851,
+            "p_align": 1
+        },
+        {
+            "word": " ! Ça",
+            "success": true,
+            "start_s": 99.09574468085107,
+            "end_s": 99.33510638297872,
+            "p_align": 1
+        },
+        {
+            "word": " va",
+            "success": true,
+            "start_s": 99.33510638297872,
+            "end_s": 99.57446808510639,
+            "p_align": 1
+        },
+        {
+            "word": " ?)\nBu",
+            "success": true,
+            "start_s": 99.65425531914893,
+            "end_s": 99.73404255319149,
+            "p_align": 1
+        },
+        {
+            "word": "en",
+            "success": true,
+            "start_s": 99.73404255319149,
+            "end_s": 99.8936170212766,
+            "p_align": 1
+        },
+        {
+            "word": "os",
+            "success": true,
+            "start_s": 99.8936170212766,
+            "end_s": 100.05319148936171,
+            "p_align": 1
+        },
+        {
+            "word": " días",
+            "success": true,
+            "start_s": 100.13297872340425,
+            "end_s": 100.53191489361703,
+            "p_align": 1
+        },
+        {
+            "word": " — (Bon",
+            "success": true,
+            "start_s": 100.85106382978724,
+            "end_s": 100.93085106382979,
+            "p_align": 1
+        },
+        {
+            "word": "jour",
+            "success": true,
+            "start_s": 100.93085106382979,
+            "end_s": 101.01063829787235,
+            "p_align": 1
+        },
+        {
+            "word": " - le",
+            "success": true,
+            "start_s": 101.01063829787235,
+            "end_s": 101.09042553191489,
+            "p_align": 1
+        },
+        {
+            "word": " mat",
+            "success": true,
+            "start_s": 101.09042553191489,
+            "end_s": 101.32978723404256,
+            "p_align": 1
+        },
+        {
+            "word": "in",
+            "success": true,
+            "start_s": 101.32978723404256,
+            "end_s": 101.48936170212767,
+            "p_align": 1
+        },
+        {
+            "word": ")\nBu",
+            "success": true,
+            "start_s": 101.64893617021276,
+            "end_s": 101.80851063829788,
+            "p_align": 1
+        },
+        {
+            "word": "enas",
+            "success": true,
+            "start_s": 101.80851063829788,
+            "end_s": 102.12765957446808,
+            "p_align": 1
+        },
+        {
+            "word": " tard",
+            "success": true,
+            "start_s": 102.12765957446808,
+            "end_s": 102.52659574468085,
+            "p_align": 1
+        },
+        {
+            "word": "es",
+            "success": true,
+            "start_s": 102.52659574468085,
+            "end_s": 102.68617021276596,
+            "p_align": 1
+        },
+        {
+            "word": " — (Bon",
+            "success": true,
+            "start_s": 102.92553191489361,
+            "end_s": 103.00531914893617,
+            "p_align": 1
+        },
+        {
+            "word": " après",
+            "success": true,
+            "start_s": 103.00531914893617,
+            "end_s": 103.08510638297872,
+            "p_align": 1
+        },
+        {
+            "word": "-mi",
+            "success": true,
+            "start_s": 103.08510638297872,
+            "end_s": 103.32446808510639,
+            "p_align": 1
+        },
+        {
+            "word": "di",
+            "success": true,
+            "start_s": 103.32446808510639,
+            "end_s": 103.48404255319149,
+            "p_align": 1
+        },
+        {
+            "word": ")\nBu",
+            "success": true,
+            "start_s": 103.6436170212766,
+            "end_s": 103.88297872340425,
+            "p_align": 1
+        },
+        {
+            "word": "enas",
+            "success": true,
+            "start_s": 103.88297872340425,
+            "end_s": 104.12234042553192,
+            "p_align": 1
+        },
+        {
+            "word": " no",
+            "success": true,
+            "start_s": 104.12234042553192,
+            "end_s": 104.36170212765957,
+            "p_align": 1
+        },
+        {
+            "word": "ches",
+            "success": true,
+            "start_s": 104.52127659574468,
+            "end_s": 104.76063829787235,
+            "p_align": 1
+        },
+        {
+            "word": " — (Bon",
+            "success": true,
+            "start_s": 104.76063829787235,
+            "end_s": 105.07978723404256,
+            "p_align": 1
+        },
+        {
+            "word": "so",
+            "success": true,
+            "start_s": 105.07978723404256,
+            "end_s": 105.23936170212767,
+            "p_align": 1
+        },
+        {
+            "word": "ir",
+            "success": true,
+            "start_s": 105.31914893617021,
+            "end_s": 105.39893617021276,
+            "p_align": 1
+        },
+        {
+            "word": " / Bonne",
+            "success": true,
+            "start_s": 105.39893617021276,
+            "end_s": 105.47872340425532,
+            "p_align": 1
+        },
+        {
+            "word": " nuit",
+            "success": true,
+            "start_s": 105.47872340425532,
+            "end_s": 105.63829787234043,
+            "p_align": 1
+        },
+        {
+            "word": ")\nAdi",
+            "success": true,
+            "start_s": 105.63829787234043,
+            "end_s": 105.87765957446808,
+            "p_align": 1
+        },
+        {
+            "word": "ós",
+            "success": true,
+            "start_s": 105.87765957446808,
+            "end_s": 106.0372340425532,
+            "p_align": 1
+        },
+        {
+            "word": ", cha",
+            "success": true,
+            "start_s": 106.3563829787234,
+            "end_s": 106.51595744680851,
+            "p_align": 1
+        },
+        {
+            "word": "o",
+            "success": true,
+            "start_s": 106.51595744680851,
+            "end_s": 106.59574468085107,
+            "p_align": 1
+        },
+        {
+            "word": ", hasta",
+            "success": true,
+            "start_s": 107.79255319148936,
+            "end_s": 108.11170212765957,
+            "p_align": 1
+        },
+        {
+            "word": " luego",
+            "success": true,
+            "start_s": 108.11170212765957,
+            "end_s": 108.59042553191489,
+            "p_align": 1
+        },
+        {
+            "word": ",\n¡Nos",
+            "success": true,
+            "start_s": 109.54787234042553,
+            "end_s": 109.7872340425532,
+            "p_align": 1
+        },
+        {
+            "word": " ve",
+            "success": true,
+            "start_s": 109.7872340425532,
+            "end_s": 110.02659574468085,
+            "p_align": 1
+        },
+        {
+            "word": "mos",
+            "success": true,
+            "start_s": 110.1063829787234,
+            "end_s": 110.34574468085107,
+            "p_align": 1
+        },
+        {
+            "word": " pronto",
+            "success": true,
+            "start_s": 110.34574468085107,
+            "end_s": 110.90425531914893,
+            "p_align": 1
+        },
+        {
+            "word": ", amigo",
+            "success": true,
+            "start_s": 111.30319148936171,
+            "end_s": 111.86170212765957,
+            "p_align": 1
+        },
+        {
+            "word": " nuevo",
+            "success": true,
+            "start_s": 112.10106382978724,
+            "end_s": 112.57978723404256,
+            "p_align": 1
+        },
+        {
+            "word": "!\n¡Ho",
+            "success": true,
+            "start_s": 113.37765957446808,
+            "end_s": 113.5372340425532,
+            "p_align": 1
+        },
+        {
+            "word": "la",
+            "success": true,
+            "start_s": 113.5372340425532,
+            "end_s": 113.6968085106383,
+            "p_align": 1
+        },
+        {
+            "word": "! ¿Qué",
+            "success": true,
+            "start_s": 113.77659574468085,
+            "end_s": 114.01595744680851,
+            "p_align": 1
+        },
+        {
+            "word": " tal",
+            "success": true,
+            "start_s": 114.01595744680851,
+            "end_s": 114.33510638297872,
+            "p_align": 1
+        },
+        {
+            "word": "? — ",
+            "success": true,
+            "start_s": 114.41489361702128,
+            "end_s": 114.57446808510639,
+            "p_align": 1
+        },
+        {
+            "word": "(Sal",
+            "success": true,
+            "start_s": 114.57446808510639,
+            "end_s": 114.81382978723404,
+            "p_align": 1
+        },
+        {
+            "word": "ut",
+            "success": true,
+            "start_s": 114.81382978723404,
+            "end_s": 114.97340425531915,
+            "p_align": 1
+        },
+        {
+            "word": " ! Ça",
+            "success": true,
+            "start_s": 115.05319148936171,
+            "end_s": 115.2127659574468,
+            "p_align": 1
+        },
+        {
+            "word": " va",
+            "success": true,
+            "start_s": 115.2127659574468,
+            "end_s": 115.45212765957447,
+            "p_align": 1
+        },
+        {
+            "word": " ?)\nBu",
+            "success": true,
+            "start_s": 115.61170212765957,
+            "end_s": 115.69148936170212,
+            "p_align": 1
+        },
+        {
+            "word": "en",
+            "success": true,
+            "start_s": 115.69148936170212,
+            "end_s": 115.77127659574468,
+            "p_align": 1
+        },
+        {
+            "word": "os",
+            "success": true,
+            "start_s": 115.77127659574468,
+            "end_s": 115.93085106382979,
+            "p_align": 1
+        },
+        {
+            "word": " días",
+            "success": true,
+            "start_s": 115.93085106382979,
+            "end_s": 116.01063829787235,
+            "p_align": 1
+        },
+        {
+            "word": " — (Bo",
+            "success": true,
+            "start_s": 116.01063829787235,
+            "end_s": 116.40957446808511,
+            "p_align": 1
+        },
+        {
+            "word": "nj",
+            "success": true,
+            "start_s": 116.40957446808511,
+            "end_s": 116.56914893617021,
+            "p_align": 1
+        },
+        {
+            "word": "our",
+            "success": true,
+            "start_s": 116.64893617021276,
+            "end_s": 116.88829787234043,
+            "p_align": 1
+        },
+        {
+            "word": " - le",
+            "success": true,
+            "start_s": 116.96808510638299,
+            "end_s": 117.12765957446808,
+            "p_align": 1
+        },
+        {
+            "word": " mat",
+            "success": true,
+            "start_s": 117.12765957446808,
+            "end_s": 117.36702127659575,
+            "p_align": 1
+        },
+        {
+            "word": "in",
+            "success": true,
+            "start_s": 117.36702127659575,
+            "end_s": 117.52659574468085,
+            "p_align": 1
+        },
+        {
+            "word": ")\nBu",
+            "success": true,
+            "start_s": 117.68617021276596,
+            "end_s": 117.92553191489363,
+            "p_align": 1
+        },
+        {
+            "word": "enas",
+            "success": true,
+            "start_s": 117.92553191489363,
+            "end_s": 118.16489361702128,
+            "p_align": 1
+        },
+        {
+            "word": " tard",
+            "success": true,
+            "start_s": 118.16489361702128,
+            "end_s": 118.56382978723404,
+            "p_align": 1
+        },
+        {
+            "word": "es",
+            "success": true,
+            "start_s": 118.56382978723404,
+            "end_s": 118.72340425531915,
+            "p_align": 1
+        },
+        {
+            "word": " — (Bon",
+            "success": true,
+            "start_s": 118.72340425531915,
+            "end_s": 118.9627659574468,
+            "p_align": 1
+        },
+        {
+            "word": " après",
+            "success": true,
+            "start_s": 118.9627659574468,
+            "end_s": 119.12234042553192,
+            "p_align": 1
+        },
+        {
+            "word": "-mi",
+            "success": true,
+            "start_s": 119.12234042553192,
+            "end_s": 119.36170212765957,
+            "p_align": 1
+        },
+        {
+            "word": "di",
+            "success": true,
+            "start_s": 119.36170212765957,
+            "end_s": 119.52127659574468,
+            "p_align": 1
+        },
+        {
+            "word": ")\nBu",
+            "success": true,
+            "start_s": 119.68085106382979,
+            "end_s": 119.92021276595744,
+            "p_align": 1
+        },
+        {
+            "word": "enas",
+            "success": true,
+            "start_s": 119.92021276595744,
+            "end_s": 120.15957446808511,
+            "p_align": 1
+        },
+        {
+            "word": " no",
+            "success": true,
+            "start_s": 120.15957446808511,
+            "end_s": 120.39893617021276,
+            "p_align": 1
+        },
+        {
+            "word": "ches",
+            "success": true,
+            "start_s": 120.55851063829788,
+            "end_s": 120.87765957446808,
+            "p_align": 1
+        },
+        {
+            "word": " — (Bo",
+            "success": true,
+            "start_s": 120.87765957446808,
+            "end_s": 121.0372340425532,
+            "p_align": 1
+        },
+        {
+            "word": "ns",
+            "success": true,
+            "start_s": 121.0372340425532,
+            "end_s": 121.11702127659575,
+            "p_align": 1
+        },
+        {
+            "word": "o",
+            "success": true,
+            "start_s": 121.11702127659575,
+            "end_s": 121.1968085106383,
+            "p_align": 1
+        },
+        {
+            "word": "ir",
+            "success": true,
+            "start_s": 121.27659574468085,
+            "end_s": 121.3563829787234,
+            "p_align": 1
+        },
+        {
+            "word": " / Bonne",
+            "success": true,
+            "start_s": 121.3563829787234,
+            "end_s": 121.43617021276596,
+            "p_align": 1
+        },
+        {
+            "word": " nu",
+            "success": true,
+            "start_s": 121.43617021276596,
+            "end_s": 121.51595744680851,
+            "p_align": 1
+        },
+        {
+            "word": "it)",
+            "success": true,
+            "start_s": 121.51595744680851,
+            "end_s": 121.67553191489363,
+            "p_align": 1
+        },
+        {
+            "word": "\nAdi",
+            "success": true,
+            "start_s": 121.67553191489363,
+            "end_s": 121.91489361702128,
+            "p_align": 1
+        },
+        {
+            "word": "ós",
+            "success": true,
+            "start_s": 121.91489361702128,
+            "end_s": 122.07446808510639,
+            "p_align": 1
+        },
+        {
+            "word": ", cha",
+            "success": true,
+            "start_s": 122.3936170212766,
+            "end_s": 122.55319148936171,
+            "p_align": 1
+        },
+        {
+            "word": "o",
+            "success": true,
+            "start_s": 122.55319148936171,
+            "end_s": 122.63297872340425,
+            "p_align": 1
+        },
+        {
+            "word": ", hasta",
+            "success": true,
+            "start_s": 123.82978723404256,
+            "end_s": 124.14893617021276,
+            "p_align": 1
+        },
+        {
+            "word": " luego",
+            "success": true,
+            "start_s": 124.14893617021276,
+            "end_s": 124.62765957446808,
+            "p_align": 1
+        },
+        {
+            "word": ",\n¡Nos",
+            "success": true,
+            "start_s": 125.58510638297872,
+            "end_s": 125.90425531914893,
+            "p_align": 1
+        },
+        {
+            "word": " ve",
+            "success": true,
+            "start_s": 125.90425531914893,
+            "end_s": 126.1436170212766,
+            "p_align": 1
+        },
+        {
+            "word": "mos",
+            "success": true,
+            "start_s": 126.1436170212766,
+            "end_s": 126.38297872340425,
+            "p_align": 1
+        },
+        {
+            "word": " pronto",
+            "success": true,
+            "start_s": 126.38297872340425,
+            "end_s": 126.94148936170212,
+            "p_align": 1
+        },
+        {
+            "word": ", amigo",
+            "success": true,
+            "start_s": 127.42021276595744,
+            "end_s": 127.97872340425532,
+            "p_align": 1
+        },
+        {
+            "word": " nuevo!\n\n",
+            "success": true,
+            "start_s": 128.13829787234042,
+            "end_s": 128.85638297872342,
+            "p_align": 1
+        }
+    ]
+}

@@ -45,7 +45,7 @@ def generate_music(lyrics, title, style):
         "instrumental": False, # ...
         "model": "V4", # V3_5
         # "negativeTags": "Relaxing Piano",
-        "callBackUrl": "https://459f-41-85-178-29.ngrok-free.app/generation/callback"
+        "callBackUrl": "https://0bad-137-255-43-203.ngrok-free.app/generation/callback"
         })
 
     print("\n")

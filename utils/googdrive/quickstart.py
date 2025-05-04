@@ -35,7 +35,7 @@ def upload_file_to_s3(file_path, s3_file_name, folder):  #, bucket_name, s3_file
     try:
         # Upload the file with folder path (e.g., generated_musics/uploaded_test_file.txt)
         bucket_name = "wim-music-upload"
-        s3_file_name = f"POP CLASSIQUE_V4/MODULE 10 _ Kit de survie express/{folder}/{s3_file_name}"
+        s3_file_name = f"Test/MODULE 1 _ LES INDISPENSABLES DU PREMIER CONTACT/{folder}/{s3_file_name}"
         s3.upload_file(file_path, bucket_name, s3_file_name)
         print(f"File '{file_path}' uploaded to '{bucket_name}' as '{s3_file_name}'")
 

@@ -1,0 +1,2861 @@
+{
+    "state": "complete",
+    "alignment": [
+        {
+            "word": "🎵\n",
+            "success": true,
+            "start_s": 1.3563829787234043,
+            "end_s": 1.5159574468085106,
+            "p_align": 1
+        },
+        {
+            "word": "O",
+            "success": true,
+            "start_s": 3.1117021276595747,
+            "end_s": 3.1914893617021276,
+            "p_align": 1
+        },
+        {
+            "word": "i",
+            "success": true,
+            "start_s": 3.351063829787234,
+            "end_s": 3.4308510638297873,
+            "p_align": 1
+        },
+        {
+            "word": ", o",
+            "success": true,
+            "start_s": 3.8297872340425534,
+            "end_s": 3.9893617021276597,
+            "p_align": 1
+        },
+        {
+            "word": "i",
+            "success": true,
+            "start_s": 3.9893617021276597,
+            "end_s": 4.069148936170213,
+            "p_align": 1
+        },
+        {
+            "word": "! Tudo",
+            "success": true,
+            "start_s": 4.627659574468085,
+            "end_s": 4.946808510638298,
+            "p_align": 1
+        },
+        {
+            "word": " bem",
+            "success": true,
+            "start_s": 4.946808510638298,
+            "end_s": 5.1861702127659575,
+            "p_align": 1
+        },
+        {
+            "word": " com",
+            "success": true,
+            "start_s": 5.1861702127659575,
+            "end_s": 5.345744680851064,
+            "p_align": 1
+        },
+        {
+            "word": " você",
+            "success": true,
+            "start_s": 5.345744680851064,
+            "end_s": 5.74468085106383,
+            "p_align": 1
+        },
+        {
+            "word": "?\n(Sal",
+            "success": true,
+            "start_s": 6.382978723404255,
+            "end_s": 6.622340425531915,
+            "p_align": 1
+        },
+        {
+            "word": "u",
+            "success": true,
+            "start_s": 6.622340425531915,
+            "end_s": 6.702127659574468,
+            "p_align": 1
+        },
+        {
+            "word": "t,",
+            "success": true,
+            "start_s": 6.781914893617022,
+            "end_s": 6.941489361702128,
+            "p_align": 1
+        },
+        {
+            "word": " sal",
+            "success": true,
+            "start_s": 7.0212765957446805,
+            "end_s": 7.340425531914894,
+            "p_align": 1
+        },
+        {
+            "word": "u",
+            "success": true,
+            "start_s": 7.340425531914894,
+            "end_s": 7.420212765957447,
+            "p_align": 1
+        },
+        {
+            "word": "t",
+            "success": true,
+            "start_s": 7.5,
+            "end_s": 7.579787234042553,
+            "p_align": 1
+        },
+        {
+            "word": " ! Ça",
+            "success": true,
+            "start_s": 8.21808510638298,
+            "end_s": 8.377659574468085,
+            "p_align": 1
+        },
+        {
+            "word": " v",
+            "success": true,
+            "start_s": 8.377659574468085,
+            "end_s": 8.537234042553191,
+            "p_align": 1
+        },
+        {
+            "word": "a b",
+            "success": true,
+            "start_s": 8.537234042553191,
+            "end_s": 8.617021276595745,
+            "p_align": 1
+        },
+        {
+            "word": "ie",
+            "success": true,
+            "start_s": 8.617021276595745,
+            "end_s": 8.696808510638299,
+            "p_align": 1
+        },
+        {
+            "word": "n ",
+            "success": true,
+            "start_s": 8.696808510638299,
+            "end_s": 8.856382978723405,
+            "p_align": 1
+        },
+        {
+            "word": "p",
+            "success": true,
+            "start_s": 8.856382978723405,
+            "end_s": 8.936170212765958,
+            "p_align": 1
+        },
+        {
+            "word": "our",
+            "success": true,
+            "start_s": 9.175531914893616,
+            "end_s": 9.25531914893617,
+            "p_align": 1
+        },
+        {
+            "word": " toi",
+            "success": true,
+            "start_s": 9.25531914893617,
+            "end_s": 9.574468085106384,
+            "p_align": 1
+        },
+        {
+            "word": " ?)\nVamos",
+            "success": true,
+            "start_s": 10.053191489361701,
+            "end_s": 10.452127659574469,
+            "p_align": 1
+        },
+        {
+            "word": " convers",
+            "success": true,
+            "start_s": 10.452127659574469,
+            "end_s": 10.930851063829788,
+            "p_align": 1
+        },
+        {
+            "word": "ar",
+            "success": true,
+            "start_s": 10.930851063829788,
+            "end_s": 11.090425531914894,
+            "p_align": 1
+        },
+        {
+            "word": ", você",
+            "success": true,
+            "start_s": 11.569148936170214,
+            "end_s": 11.96808510638298,
+            "p_align": 1
+        },
+        {
+            "word": " vai",
+            "success": true,
+            "start_s": 11.96808510638298,
+            "end_s": 12.287234042553191,
+            "p_align": 1
+        },
+        {
+            "word": " aprend",
+            "success": true,
+            "start_s": 12.446808510638299,
+            "end_s": 12.686170212765958,
+            "p_align": 1
+        },
+        {
+            "word": "er",
+            "success": true,
+            "start_s": 12.686170212765958,
+            "end_s": 12.845744680851064,
+            "p_align": 1
+        },
+        {
+            "word": ".\n(On",
+            "success": true,
+            "start_s": 13.085106382978724,
+            "end_s": 13.24468085106383,
+            "p_align": 1
+        },
+        {
+            "word": " va",
+            "success": true,
+            "start_s": 13.24468085106383,
+            "end_s": 13.48404255319149,
+            "p_align": 1
+        },
+        {
+            "word": " disc",
+            "success": true,
+            "start_s": 13.48404255319149,
+            "end_s": 13.72340425531915,
+            "p_align": 1
+        },
+        {
+            "word": "ut",
+            "success": true,
+            "start_s": 13.72340425531915,
+            "end_s": 13.882978723404255,
+            "p_align": 1
+        },
+        {
+            "word": "er",
+            "success": true,
+            "start_s": 13.962765957446809,
+            "end_s": 14.122340425531915,
+            "p_align": 1
+        },
+        {
+            "word": ", tu",
+            "success": true,
+            "start_s": 14.122340425531915,
+            "end_s": 14.361702127659575,
+            "p_align": 1
+        },
+        {
+            "word": " vas",
+            "success": true,
+            "start_s": 14.361702127659575,
+            "end_s": 14.601063829787234,
+            "p_align": 1
+        },
+        {
+            "word": " app",
+            "success": true,
+            "start_s": 14.601063829787234,
+            "end_s": 14.920212765957446,
+            "p_align": 1
+        },
+        {
+            "word": "rend",
+            "success": true,
+            "start_s": 15,
+            "end_s": 15.159574468085106,
+            "p_align": 1
+        },
+        {
+            "word": "re",
+            "success": true,
+            "start_s": 15.159574468085106,
+            "end_s": 15.319148936170214,
+            "p_align": 1
+        },
+        {
+            "word": ".)\n\n🎵\nO",
+            "success": true,
+            "start_s": 17.95212765957447,
+            "end_s": 18.111702127659573,
+            "p_align": 1
+        },
+        {
+            "word": "i",
+            "success": true,
+            "start_s": 18.111702127659573,
+            "end_s": 18.19148936170213,
+            "p_align": 1
+        },
+        {
+            "word": ", meu",
+            "success": true,
+            "start_s": 18.829787234042552,
+            "end_s": 19.069148936170212,
+            "p_align": 1
+        },
+        {
+            "word": " nome",
+            "success": true,
+            "start_s": 19.069148936170212,
+            "end_s": 19.30851063829787,
+            "p_align": 1
+        },
+        {
+            "word": " é",
+            "success": true,
+            "start_s": 19.30851063829787,
+            "end_s": 19.46808510638298,
+            "p_align": 1
+        },
+        {
+            "word": " Lu",
+            "success": true,
+            "start_s": 19.46808510638298,
+            "end_s": 19.627659574468087,
+            "p_align": 1
+        },
+        {
+            "word": "c",
+            "success": true,
+            "start_s": 19.627659574468087,
+            "end_s": 19.70744680851064,
+            "p_align": 1
+        },
+        {
+            "word": "as",
+            "success": true,
+            "start_s": 19.70744680851064,
+            "end_s": 19.867021276595747,
+            "p_align": 1
+        },
+        {
+            "word": ", tenho",
+            "success": true,
+            "start_s": 20.585106382978722,
+            "end_s": 21.06382978723404,
+            "p_align": 1
+        },
+        {
+            "word": " vin",
+            "success": true,
+            "start_s": 21.06382978723404,
+            "end_s": 21.22340425531915,
+            "p_align": 1
+        },
+        {
+            "word": "te",
+            "success": true,
+            "start_s": 21.22340425531915,
+            "end_s": 21.382978723404257,
+            "p_align": 1
+        },
+        {
+            "word": " an",
+            "success": true,
+            "start_s": 21.46276595744681,
+            "end_s": 21.70212765957447,
+            "p_align": 1
+        },
+        {
+            "word": "os",
+            "success": true,
+            "start_s": 21.861702127659576,
+            "end_s": 22.02127659574468,
+            "p_align": 1
+        },
+        {
+            "word": ".\n(Sal",
+            "success": true,
+            "start_s": 22.340425531914892,
+            "end_s": 22.5,
+            "p_align": 1
+        },
+        {
+            "word": "ut",
+            "success": true,
+            "start_s": 22.5,
+            "end_s": 22.659574468085108,
+            "p_align": 1
+        },
+        {
+            "word": ", je",
+            "success": true,
+            "start_s": 22.73936170212766,
+            "end_s": 22.898936170212767,
+            "p_align": 1
+        },
+        {
+            "word": " m",
+            "success": true,
+            "start_s": 22.898936170212767,
+            "end_s": 22.97872340425532,
+            "p_align": 1
+        },
+        {
+            "word": "'a",
+            "success": true,
+            "start_s": 22.97872340425532,
+            "end_s": 23.138297872340427,
+            "p_align": 1
+        },
+        {
+            "word": "ppe",
+            "success": true,
+            "start_s": 23.21808510638298,
+            "end_s": 23.29787234042553,
+            "p_align": 1
+        },
+        {
+            "word": "lle",
+            "success": true,
+            "start_s": 23.29787234042553,
+            "end_s": 23.53723404255319,
+            "p_align": 1
+        },
+        {
+            "word": " Lu",
+            "success": true,
+            "start_s": 23.6968085106383,
+            "end_s": 23.93617021276596,
+            "p_align": 1
+        },
+        {
+            "word": "c",
+            "success": true,
+            "start_s": 23.93617021276596,
+            "end_s": 24.01595744680851,
+            "p_align": 1
+        },
+        {
+            "word": "as",
+            "success": true,
+            "start_s": 24.01595744680851,
+            "end_s": 24.175531914893618,
+            "p_align": 1
+        },
+        {
+            "word": ", j’",
+            "success": true,
+            "start_s": 24.574468085106382,
+            "end_s": 24.654255319148938,
+            "p_align": 1
+        },
+        {
+            "word": "ai",
+            "success": true,
+            "start_s": 24.654255319148938,
+            "end_s": 24.73404255319149,
+            "p_align": 1
+        },
+        {
+            "word": " v",
+            "success": true,
+            "start_s": 24.73404255319149,
+            "end_s": 24.81382978723404,
+            "p_align": 1
+        },
+        {
+            "word": "ing",
+            "success": true,
+            "start_s": 24.81382978723404,
+            "end_s": 24.893617021276597,
+            "p_align": 1
+        },
+        {
+            "word": "t",
+            "success": true,
+            "start_s": 24.893617021276597,
+            "end_s": 24.97340425531915,
+            "p_align": 1
+        },
+        {
+            "word": " ans",
+            "success": true,
+            "start_s": 24.97340425531915,
+            "end_s": 25.29255319148936,
+            "p_align": 1
+        },
+        {
+            "word": ".)\nSou",
+            "success": true,
+            "start_s": 25.372340425531917,
+            "end_s": 25.611702127659576,
+            "p_align": 1
+        },
+        {
+            "word": " do",
+            "success": true,
+            "start_s": 25.611702127659576,
+            "end_s": 25.851063829787233,
+            "p_align": 1
+        },
+        {
+            "word": " Bras",
+            "success": true,
+            "start_s": 25.851063829787233,
+            "end_s": 26.090425531914892,
+            "p_align": 1
+        },
+        {
+            "word": "il",
+            "success": true,
+            "start_s": 26.090425531914892,
+            "end_s": 26.25,
+            "p_align": 1
+        },
+        {
+            "word": ", mor",
+            "success": true,
+            "start_s": 26.329787234042552,
+            "end_s": 26.48936170212766,
+            "p_align": 1
+        },
+        {
+            "word": "o",
+            "success": true,
+            "start_s": 26.48936170212766,
+            "end_s": 26.569148936170212,
+            "p_align": 1
+        },
+        {
+            "word": " em",
+            "success": true,
+            "start_s": 26.648936170212767,
+            "end_s": 26.72872340425532,
+            "p_align": 1
+        },
+        {
+            "word": " L",
+            "success": true,
+            "start_s": 26.72872340425532,
+            "end_s": 26.80851063829787,
+            "p_align": 1
+        },
+        {
+            "word": "is",
+            "success": true,
+            "start_s": 26.80851063829787,
+            "end_s": 26.96808510638298,
+            "p_align": 1
+        },
+        {
+            "word": "bo",
+            "success": true,
+            "start_s": 26.96808510638298,
+            "end_s": 27.127659574468087,
+            "p_align": 1
+        },
+        {
+            "word": "a",
+            "success": true,
+            "start_s": 27.367021276595747,
+            "end_s": 27.4468085106383,
+            "p_align": 1
+        },
+        {
+            "word": ".\n(Je",
+            "success": true,
+            "start_s": 28.882978723404257,
+            "end_s": 29.122340425531917,
+            "p_align": 1
+        },
+        {
+            "word": " viens",
+            "success": true,
+            "start_s": 29.122340425531917,
+            "end_s": 29.361702127659576,
+            "p_align": 1
+        },
+        {
+            "word": " du",
+            "success": true,
+            "start_s": 29.361702127659576,
+            "end_s": 29.601063829787233,
+            "p_align": 1
+        },
+        {
+            "word": " Br",
+            "success": true,
+            "start_s": 29.601063829787233,
+            "end_s": 29.76063829787234,
+            "p_align": 1
+        },
+        {
+            "word": "és",
+            "success": true,
+            "start_s": 29.76063829787234,
+            "end_s": 29.840425531914892,
+            "p_align": 1
+        },
+        {
+            "word": "il",
+            "success": true,
+            "start_s": 29.840425531914892,
+            "end_s": 30,
+            "p_align": 1
+        },
+        {
+            "word": ", j",
+            "success": true,
+            "start_s": 30.159574468085108,
+            "end_s": 30.23936170212766,
+            "p_align": 1
+        },
+        {
+            "word": "’",
+            "success": true,
+            "start_s": 30.23936170212766,
+            "end_s": 30.319148936170212,
+            "p_align": 1
+        },
+        {
+            "word": "ha",
+            "success": true,
+            "start_s": 30.319148936170212,
+            "end_s": 30.398936170212767,
+            "p_align": 1
+        },
+        {
+            "word": "b",
+            "success": true,
+            "start_s": 30.398936170212767,
+            "end_s": 30.47872340425532,
+            "p_align": 1
+        },
+        {
+            "word": "it",
+            "success": true,
+            "start_s": 30.47872340425532,
+            "end_s": 30.55851063829787,
+            "p_align": 1
+        },
+        {
+            "word": "e",
+            "success": true,
+            "start_s": 30.55851063829787,
+            "end_s": 30.638297872340427,
+            "p_align": 1
+        },
+        {
+            "word": " à",
+            "success": true,
+            "start_s": 30.71808510638298,
+            "end_s": 30.877659574468087,
+            "p_align": 1
+        },
+        {
+            "word": " L",
+            "success": true,
+            "start_s": 30.877659574468087,
+            "end_s": 31.03723404255319,
+            "p_align": 1
+        },
+        {
+            "word": "is",
+            "success": true,
+            "start_s": 31.03723404255319,
+            "end_s": 31.1968085106383,
+            "p_align": 1
+        },
+        {
+            "word": "bon",
+            "success": true,
+            "start_s": 31.1968085106383,
+            "end_s": 31.27659574468085,
+            "p_align": 1
+        },
+        {
+            "word": "ne",
+            "success": true,
+            "start_s": 31.27659574468085,
+            "end_s": 31.43617021276596,
+            "p_align": 1
+        },
+        {
+            "word": ".)\nSo",
+            "success": true,
+            "start_s": 32.473404255319146,
+            "end_s": 32.63297872340426,
+            "p_align": 1
+        },
+        {
+            "word": "u",
+            "success": true,
+            "start_s": 32.63297872340426,
+            "end_s": 32.712765957446805,
+            "p_align": 1
+        },
+        {
+            "word": " est",
+            "success": true,
+            "start_s": 32.87234042553192,
+            "end_s": 32.952127659574465,
+            "p_align": 1
+        },
+        {
+            "word": "ud",
+            "success": true,
+            "start_s": 32.952127659574465,
+            "end_s": 33.111702127659576,
+            "p_align": 1
+        },
+        {
+            "word": "ant",
+            "success": true,
+            "start_s": 33.111702127659576,
+            "end_s": 33.351063829787236,
+            "p_align": 1
+        },
+        {
+            "word": "e ",
+            "success": true,
+            "start_s": 33.351063829787236,
+            "end_s": 33.51063829787234,
+            "p_align": 1
+        },
+        {
+            "word": "de",
+            "success": true,
+            "start_s": 33.590425531914896,
+            "end_s": 33.75,
+            "p_align": 1
+        },
+        {
+            "word": " medic",
+            "success": true,
+            "start_s": 33.829787234042556,
+            "end_s": 34.308510638297875,
+            "p_align": 1
+        },
+        {
+            "word": "ina",
+            "success": true,
+            "start_s": 35.1063829787234,
+            "end_s": 35.34574468085106,
+            "p_align": 1
+        },
+        {
+            "word": ".\n(Je",
+            "success": true,
+            "start_s": 35.90425531914894,
+            "end_s": 36.1436170212766,
+            "p_align": 1
+        },
+        {
+            "word": " suis",
+            "success": true,
+            "start_s": 36.1436170212766,
+            "end_s": 36.38297872340426,
+            "p_align": 1
+        },
+        {
+            "word": " é",
+            "success": true,
+            "start_s": 36.38297872340426,
+            "end_s": 36.54255319148936,
+            "p_align": 1
+        },
+        {
+            "word": "t",
+            "success": true,
+            "start_s": 36.54255319148936,
+            "end_s": 36.62234042553192,
+            "p_align": 1
+        },
+        {
+            "word": "ud",
+            "success": true,
+            "start_s": 36.62234042553192,
+            "end_s": 36.78191489361702,
+            "p_align": 1
+        },
+        {
+            "word": "i",
+            "success": true,
+            "start_s": 36.861702127659576,
+            "end_s": 36.941489361702125,
+            "p_align": 1
+        },
+        {
+            "word": "ant",
+            "success": true,
+            "start_s": 36.941489361702125,
+            "end_s": 37.02127659574468,
+            "p_align": 1
+        },
+        {
+            "word": " en",
+            "success": true,
+            "start_s": 37.02127659574468,
+            "end_s": 37.26063829787234,
+            "p_align": 1
+        },
+        {
+            "word": " mé",
+            "success": true,
+            "start_s": 37.340425531914896,
+            "end_s": 37.579787234042556,
+            "p_align": 1
+        },
+        {
+            "word": "de",
+            "success": true,
+            "start_s": 37.898936170212764,
+            "end_s": 38.058510638297875,
+            "p_align": 1
+        },
+        {
+            "word": "c",
+            "success": true,
+            "start_s": 38.058510638297875,
+            "end_s": 38.138297872340424,
+            "p_align": 1
+        },
+        {
+            "word": "ine",
+            "success": true,
+            "start_s": 38.138297872340424,
+            "end_s": 38.37765957446808,
+            "p_align": 1
+        },
+        {
+            "word": ".)\nE",
+            "success": true,
+            "start_s": 39.65425531914894,
+            "end_s": 39.973404255319146,
+            "p_align": 1
+        },
+        {
+            "word": " você",
+            "success": true,
+            "start_s": 39.973404255319146,
+            "end_s": 40.37234042553192,
+            "p_align": 1
+        },
+        {
+            "word": ", quem",
+            "success": true,
+            "start_s": 40.452127659574465,
+            "end_s": 40.930851063829785,
+            "p_align": 1
+        },
+        {
+            "word": " é",
+            "success": true,
+            "start_s": 40.930851063829785,
+            "end_s": 41.090425531914896,
+            "p_align": 1
+        },
+        {
+            "word": "? Conta",
+            "success": true,
+            "start_s": 41.329787234042556,
+            "end_s": 41.72872340425532,
+            "p_align": 1
+        },
+        {
+            "word": " pra",
+            "success": true,
+            "start_s": 41.72872340425532,
+            "end_s": 41.96808510638298,
+            "p_align": 1
+        },
+        {
+            "word": " mim",
+            "success": true,
+            "start_s": 41.96808510638298,
+            "end_s": 42.287234042553195,
+            "p_align": 1
+        },
+        {
+            "word": ", men",
+            "success": true,
+            "start_s": 42.36702127659574,
+            "end_s": 42.526595744680854,
+            "p_align": 1
+        },
+        {
+            "word": "i",
+            "success": true,
+            "start_s": 42.526595744680854,
+            "end_s": 42.6063829787234,
+            "p_align": 1
+        },
+        {
+            "word": "n",
+            "success": true,
+            "start_s": 42.765957446808514,
+            "end_s": 42.84574468085106,
+            "p_align": 1
+        },
+        {
+            "word": "a",
+            "success": true,
+            "start_s": 43.08510638297872,
+            "end_s": 43.16489361702128,
+            "p_align": 1
+        },
+        {
+            "word": ".\n(E",
+            "success": true,
+            "start_s": 43.16489361702128,
+            "end_s": 43.24468085106383,
+            "p_align": 1
+        },
+        {
+            "word": "t",
+            "success": true,
+            "start_s": 43.24468085106383,
+            "end_s": 43.32446808510638,
+            "p_align": 1
+        },
+        {
+            "word": " toi",
+            "success": true,
+            "start_s": 43.32446808510638,
+            "end_s": 43.56382978723404,
+            "p_align": 1
+        },
+        {
+            "word": ", qui",
+            "success": true,
+            "start_s": 43.56382978723404,
+            "end_s": 43.72340425531915,
+            "p_align": 1
+        },
+        {
+            "word": " es",
+            "success": true,
+            "start_s": 43.72340425531915,
+            "end_s": 43.962765957446805,
+            "p_align": 1
+        },
+        {
+            "word": "-t",
+            "success": true,
+            "start_s": 43.962765957446805,
+            "end_s": 44.12234042553192,
+            "p_align": 1
+        },
+        {
+            "word": "u",
+            "success": true,
+            "start_s": 44.12234042553192,
+            "end_s": 44.202127659574465,
+            "p_align": 1
+        },
+        {
+            "word": " ? Ra",
+            "success": true,
+            "start_s": 44.840425531914896,
+            "end_s": 45,
+            "p_align": 1
+        },
+        {
+            "word": "con",
+            "success": true,
+            "start_s": 45,
+            "end_s": 45.159574468085104,
+            "p_align": 1
+        },
+        {
+            "word": "te",
+            "success": true,
+            "start_s": 45.159574468085104,
+            "end_s": 45.319148936170215,
+            "p_align": 1
+        },
+        {
+            "word": "-moi",
+            "success": true,
+            "start_s": 45.319148936170215,
+            "end_s": 45.47872340425532,
+            "p_align": 1
+        },
+        {
+            "word": ", fil",
+            "success": true,
+            "start_s": 45.47872340425532,
+            "end_s": 45.87765957446808,
+            "p_align": 1
+        },
+        {
+            "word": "le",
+            "success": true,
+            "start_s": 48.111702127659576,
+            "end_s": 48.27127659574468,
+            "p_align": 1
+        },
+        {
+            "word": ".)\n\n🎵\n",
+            "success": true,
+            "start_s": 48.98936170212766,
+            "end_s": 49.148936170212764,
+            "p_align": 1
+        },
+        {
+            "word": "O",
+            "success": true,
+            "start_s": 49.148936170212764,
+            "end_s": 49.22872340425532,
+            "p_align": 1
+        },
+        {
+            "word": "i",
+            "success": true,
+            "start_s": 49.22872340425532,
+            "end_s": 49.308510638297875,
+            "p_align": 1
+        },
+        {
+            "word": " Lu",
+            "success": true,
+            "start_s": 49.46808510638298,
+            "end_s": 49.70744680851064,
+            "p_align": 1
+        },
+        {
+            "word": "cas",
+            "success": true,
+            "start_s": 49.70744680851064,
+            "end_s": 49.9468085106383,
+            "p_align": 1
+        },
+        {
+            "word": "! Eu",
+            "success": true,
+            "start_s": 50.505319148936174,
+            "end_s": 50.74468085106383,
+            "p_align": 1
+        },
+        {
+            "word": " sou",
+            "success": true,
+            "start_s": 50.74468085106383,
+            "end_s": 51.06382978723404,
+            "p_align": 1
+        },
+        {
+            "word": " a",
+            "success": true,
+            "start_s": 51.06382978723404,
+            "end_s": 51.22340425531915,
+            "p_align": 1
+        },
+        {
+            "word": " In",
+            "success": true,
+            "start_s": 51.22340425531915,
+            "end_s": 51.462765957446805,
+            "p_align": 1
+        },
+        {
+            "word": "ê",
+            "success": true,
+            "start_s": 51.462765957446805,
+            "end_s": 51.54255319148936,
+            "p_align": 1
+        },
+        {
+            "word": "s",
+            "success": true,
+            "start_s": 51.62234042553192,
+            "end_s": 51.702127659574465,
+            "p_align": 1
+        },
+        {
+            "word": ", tenho",
+            "success": true,
+            "start_s": 52.26063829787234,
+            "end_s": 52.73936170212766,
+            "p_align": 1
+        },
+        {
+            "word": " de",
+            "success": true,
+            "start_s": 52.73936170212766,
+            "end_s": 52.97872340425532,
+            "p_align": 1
+        },
+        {
+            "word": "ze",
+            "success": true,
+            "start_s": 52.97872340425532,
+            "end_s": 53.138297872340424,
+            "p_align": 1
+        },
+        {
+            "word": "no",
+            "success": true,
+            "start_s": 53.21808510638298,
+            "end_s": 53.37765957446808,
+            "p_align": 1
+        },
+        {
+            "word": "ve",
+            "success": true,
+            "start_s": 54.09574468085106,
+            "end_s": 54.255319148936174,
+            "p_align": 1
+        },
+        {
+            "word": ".\nMo",
+            "success": true,
+            "start_s": 54.33510638297872,
+            "end_s": 54.57446808510638,
+            "p_align": 1
+        },
+        {
+            "word": "ro",
+            "success": true,
+            "start_s": 54.57446808510638,
+            "end_s": 54.73404255319149,
+            "p_align": 1
+        },
+        {
+            "word": " no",
+            "success": true,
+            "start_s": 54.73404255319149,
+            "end_s": 54.97340425531915,
+            "p_align": 1
+        },
+        {
+            "word": " Por",
+            "success": true,
+            "start_s": 54.97340425531915,
+            "end_s": 55.29255319148936,
+            "p_align": 1
+        },
+        {
+            "word": "to",
+            "success": true,
+            "start_s": 55.37234042553192,
+            "end_s": 55.53191489361702,
+            "p_align": 1
+        },
+        {
+            "word": ", est",
+            "success": true,
+            "start_s": 56.01063829787234,
+            "end_s": 56.090425531914896,
+            "p_align": 1
+        },
+        {
+            "word": "u",
+            "success": true,
+            "start_s": 56.090425531914896,
+            "end_s": 56.170212765957444,
+            "p_align": 1
+        },
+        {
+            "word": "do",
+            "success": true,
+            "start_s": 56.329787234042556,
+            "end_s": 56.48936170212766,
+            "p_align": 1
+        },
+        {
+            "word": " design",
+            "success": true,
+            "start_s": 56.72872340425532,
+            "end_s": 57.20744680851064,
+            "p_align": 1
+        },
+        {
+            "word": ".\n(J’",
+            "success": true,
+            "start_s": 57.20744680851064,
+            "end_s": 57.287234042553195,
+            "p_align": 1
+        },
+        {
+            "word": "ha",
+            "success": true,
+            "start_s": 57.287234042553195,
+            "end_s": 57.36702127659574,
+            "p_align": 1
+        },
+        {
+            "word": "b",
+            "success": true,
+            "start_s": 57.36702127659574,
+            "end_s": 57.4468085106383,
+            "p_align": 1
+        },
+        {
+            "word": "ite",
+            "success": true,
+            "start_s": 57.6063829787234,
+            "end_s": 57.68617021276596,
+            "p_align": 1
+        },
+        {
+            "word": " à",
+            "success": true,
+            "start_s": 57.68617021276596,
+            "end_s": 57.765957446808514,
+            "p_align": 1
+        },
+        {
+            "word": " Por",
+            "success": true,
+            "start_s": 57.765957446808514,
+            "end_s": 58.005319148936174,
+            "p_align": 1
+        },
+        {
+            "word": "to",
+            "success": true,
+            "start_s": 58.005319148936174,
+            "end_s": 58.16489361702128,
+            "p_align": 1
+        },
+        {
+            "word": ", j’",
+            "success": true,
+            "start_s": 58.24468085106383,
+            "end_s": 58.32446808510638,
+            "p_align": 1
+        },
+        {
+            "word": "é",
+            "success": true,
+            "start_s": 58.32446808510638,
+            "end_s": 58.40425531914894,
+            "p_align": 1
+        },
+        {
+            "word": "t",
+            "success": true,
+            "start_s": 58.48404255319149,
+            "end_s": 58.56382978723404,
+            "p_align": 1
+        },
+        {
+            "word": "ud",
+            "success": true,
+            "start_s": 58.56382978723404,
+            "end_s": 58.72340425531915,
+            "p_align": 1
+        },
+        {
+            "word": "ie",
+            "success": true,
+            "start_s": 58.72340425531915,
+            "end_s": 58.88297872340426,
+            "p_align": 1
+        },
+        {
+            "word": " le",
+            "success": true,
+            "start_s": 58.96276595744681,
+            "end_s": 59.202127659574465,
+            "p_align": 1
+        },
+        {
+            "word": " design",
+            "success": true,
+            "start_s": 59.441489361702125,
+            "end_s": 60,
+            "p_align": 1
+        },
+        {
+            "word": ".)\nSou",
+            "success": true,
+            "start_s": 60.638297872340424,
+            "end_s": 60.87765957446808,
+            "p_align": 1
+        },
+        {
+            "word": " port",
+            "success": true,
+            "start_s": 60.87765957446808,
+            "end_s": 61.11702127659574,
+            "p_align": 1
+        },
+        {
+            "word": "ug",
+            "success": true,
+            "start_s": 61.11702127659574,
+            "end_s": 61.276595744680854,
+            "p_align": 1
+        },
+        {
+            "word": "u",
+            "success": true,
+            "start_s": 61.3563829787234,
+            "end_s": 61.43617021276596,
+            "p_align": 1
+        },
+        {
+            "word": "e",
+            "success": true,
+            "start_s": 61.43617021276596,
+            "end_s": 61.515957446808514,
+            "p_align": 1
+        },
+        {
+            "word": "s",
+            "success": true,
+            "start_s": 61.515957446808514,
+            "end_s": 61.59574468085106,
+            "p_align": 1
+        },
+        {
+            "word": "a",
+            "success": true,
+            "start_s": 61.59574468085106,
+            "end_s": 61.67553191489362,
+            "p_align": 1
+        },
+        {
+            "word": ", go",
+            "success": true,
+            "start_s": 61.755319148936174,
+            "end_s": 62.07446808510638,
+            "p_align": 1
+        },
+        {
+            "word": "sto",
+            "success": true,
+            "start_s": 62.07446808510638,
+            "end_s": 62.31382978723404,
+            "p_align": 1
+        },
+        {
+            "word": " de",
+            "success": true,
+            "start_s": 62.47340425531915,
+            "end_s": 62.71276595744681,
+            "p_align": 1
+        },
+        {
+            "word": " dan",
+            "success": true,
+            "start_s": 62.87234042553192,
+            "end_s": 63.191489361702125,
+            "p_align": 1
+        },
+        {
+            "word": "çar",
+            "success": true,
+            "start_s": 63.27127659574468,
+            "end_s": 63.51063829787234,
+            "p_align": 1
+        },
+        {
+            "word": ".\n(Je",
+            "success": true,
+            "start_s": 64.14893617021276,
+            "end_s": 64.38829787234043,
+            "p_align": 1
+        },
+        {
+            "word": " suis",
+            "success": true,
+            "start_s": 64.38829787234043,
+            "end_s": 64.62765957446808,
+            "p_align": 1
+        },
+        {
+            "word": " port",
+            "success": true,
+            "start_s": 64.62765957446808,
+            "end_s": 64.86702127659575,
+            "p_align": 1
+        },
+        {
+            "word": "u",
+            "success": true,
+            "start_s": 64.86702127659575,
+            "end_s": 64.94680851063829,
+            "p_align": 1
+        },
+        {
+            "word": "ga",
+            "success": true,
+            "start_s": 65.1063829787234,
+            "end_s": 65.18617021276596,
+            "p_align": 1
+        },
+        {
+            "word": "i",
+            "success": true,
+            "start_s": 65.18617021276596,
+            "end_s": 65.26595744680851,
+            "p_align": 1
+        },
+        {
+            "word": "se",
+            "success": true,
+            "start_s": 65.26595744680851,
+            "end_s": 65.34574468085107,
+            "p_align": 1
+        },
+        {
+            "word": ", j’",
+            "success": true,
+            "start_s": 65.34574468085107,
+            "end_s": 65.42553191489361,
+            "p_align": 1
+        },
+        {
+            "word": "aime",
+            "success": true,
+            "start_s": 65.42553191489361,
+            "end_s": 65.58510638297872,
+            "p_align": 1
+        },
+        {
+            "word": " dans",
+            "success": true,
+            "start_s": 65.58510638297872,
+            "end_s": 65.90425531914893,
+            "p_align": 1
+        },
+        {
+            "word": "er",
+            "success": true,
+            "start_s": 65.90425531914893,
+            "end_s": 66.06382978723404,
+            "p_align": 1
+        },
+        {
+            "word": ".)\nF",
+            "success": true,
+            "start_s": 67.73936170212767,
+            "end_s": 67.81914893617021,
+            "p_align": 1
+        },
+        {
+            "word": "a",
+            "success": true,
+            "start_s": 67.81914893617021,
+            "end_s": 67.89893617021276,
+            "p_align": 1
+        },
+        {
+            "word": "l",
+            "success": true,
+            "start_s": 67.97872340425532,
+            "end_s": 68.05851063829788,
+            "p_align": 1
+        },
+        {
+            "word": "o",
+            "success": true,
+            "start_s": 68.05851063829788,
+            "end_s": 68.13829787234043,
+            "p_align": 1
+        },
+        {
+            "word": " u",
+            "success": true,
+            "start_s": 68.13829787234043,
+            "end_s": 68.21808510638299,
+            "p_align": 1
+        },
+        {
+            "word": "m",
+            "success": true,
+            "start_s": 68.21808510638299,
+            "end_s": 68.29787234042553,
+            "p_align": 1
+        },
+        {
+            "word": " p",
+            "success": true,
+            "start_s": 68.29787234042553,
+            "end_s": 68.37765957446808,
+            "p_align": 1
+        },
+        {
+            "word": "o",
+            "success": true,
+            "start_s": 68.37765957446808,
+            "end_s": 68.45744680851064,
+            "p_align": 1
+        },
+        {
+            "word": "u",
+            "success": true,
+            "start_s": 68.45744680851064,
+            "end_s": 68.5372340425532,
+            "p_align": 1
+        },
+        {
+            "word": "c",
+            "success": true,
+            "start_s": 68.5372340425532,
+            "end_s": 68.61702127659575,
+            "p_align": 1
+        },
+        {
+            "word": "o",
+            "success": true,
+            "start_s": 68.61702127659575,
+            "end_s": 68.69680851063829,
+            "p_align": 1
+        },
+        {
+            "word": " d",
+            "success": true,
+            "start_s": 68.69680851063829,
+            "end_s": 68.77659574468085,
+            "p_align": 1
+        },
+        {
+            "word": "e",
+            "success": true,
+            "start_s": 68.77659574468085,
+            "end_s": 68.8563829787234,
+            "p_align": 1
+        },
+        {
+            "word": " f",
+            "success": true,
+            "start_s": 68.8563829787234,
+            "end_s": 68.93617021276596,
+            "p_align": 1
+        },
+        {
+            "word": "r",
+            "success": true,
+            "start_s": 68.93617021276596,
+            "end_s": 69.01595744680851,
+            "p_align": 1
+        },
+        {
+            "word": "a",
+            "success": true,
+            "start_s": 69.25531914893617,
+            "end_s": 69.33510638297872,
+            "p_align": 1
+        },
+        {
+            "word": "n",
+            "success": true,
+            "start_s": 69.49468085106383,
+            "end_s": 69.57446808510639,
+            "p_align": 1
+        },
+        {
+            "word": "c",
+            "success": true,
+            "start_s": 69.57446808510639,
+            "end_s": 69.65425531914893,
+            "p_align": 1
+        },
+        {
+            "word": "ês ",
+            "success": true,
+            "start_s": 69.65425531914893,
+            "end_s": 69.8936170212766,
+            "p_align": 1
+        },
+        {
+            "word": "e ",
+            "success": true,
+            "start_s": 70.05319148936171,
+            "end_s": 70.2127659574468,
+            "p_align": 1
+        },
+        {
+            "word": "in",
+            "success": true,
+            "start_s": 70.53191489361703,
+            "end_s": 70.69148936170212,
+            "p_align": 1
+        },
+        {
+            "word": "gl",
+            "success": true,
+            "start_s": 70.85106382978724,
+            "end_s": 70.93085106382979,
+            "p_align": 1
+        },
+        {
+            "word": "ê",
+            "success": true,
+            "start_s": 70.93085106382979,
+            "end_s": 71.01063829787235,
+            "p_align": 1
+        },
+        {
+            "word": "s",
+            "success": true,
+            "start_s": 71.01063829787235,
+            "end_s": 71.09042553191489,
+            "p_align": 1
+        },
+        {
+            "word": ".\n(Je",
+            "success": true,
+            "start_s": 71.32978723404256,
+            "end_s": 71.56914893617021,
+            "p_align": 1
+        },
+        {
+            "word": " parle",
+            "success": true,
+            "start_s": 71.56914893617021,
+            "end_s": 71.80851063829788,
+            "p_align": 1
+        },
+        {
+            "word": " un",
+            "success": true,
+            "start_s": 71.80851063829788,
+            "end_s": 71.96808510638299,
+            "p_align": 1
+        },
+        {
+            "word": " peu",
+            "success": true,
+            "start_s": 71.96808510638299,
+            "end_s": 72.2872340425532,
+            "p_align": 1
+        },
+        {
+            "word": " fran",
+            "success": true,
+            "start_s": 72.2872340425532,
+            "end_s": 72.52659574468085,
+            "p_align": 1
+        },
+        {
+            "word": "ça",
+            "success": true,
+            "start_s": 72.52659574468085,
+            "end_s": 72.6063829787234,
+            "p_align": 1
+        },
+        {
+            "word": "is",
+            "success": true,
+            "start_s": 72.6063829787234,
+            "end_s": 72.76595744680851,
+            "p_align": 1
+        },
+        {
+            "word": " et",
+            "success": true,
+            "start_s": 73.08510638297872,
+            "end_s": 73.24468085106383,
+            "p_align": 1
+        },
+        {
+            "word": " ang",
+            "success": true,
+            "start_s": 73.24468085106383,
+            "end_s": 73.56382978723404,
+            "p_align": 1
+        },
+        {
+            "word": "l",
+            "success": true,
+            "start_s": 73.56382978723404,
+            "end_s": 73.6436170212766,
+            "p_align": 1
+        },
+        {
+            "word": "a",
+            "success": true,
+            "start_s": 74.60106382978724,
+            "end_s": 74.68085106382979,
+            "p_align": 1
+        },
+        {
+            "word": "is",
+            "success": true,
+            "start_s": 74.68085106382979,
+            "end_s": 74.84042553191489,
+            "p_align": 1
+        },
+        {
+            "word": ".)\n\n🎵\nComo",
+            "success": true,
+            "start_s": 75.71808510638299,
+            "end_s": 76.19680851063829,
+            "p_align": 1
+        },
+        {
+            "word": " você",
+            "success": true,
+            "start_s": 76.19680851063829,
+            "end_s": 76.59574468085107,
+            "p_align": 1
+        },
+        {
+            "word": " se",
+            "success": true,
+            "start_s": 76.75531914893617,
+            "end_s": 76.99468085106383,
+            "p_align": 1
+        },
+        {
+            "word": " chama",
+            "success": true,
+            "start_s": 77.23404255319149,
+            "end_s": 77.7127659574468,
+            "p_align": 1
+        },
+        {
+            "word": "? Me",
+            "success": true,
+            "start_s": 77.95212765957447,
+            "end_s": 78.11170212765957,
+            "p_align": 1
+        },
+        {
+            "word": " cham",
+            "success": true,
+            "start_s": 78.11170212765957,
+            "end_s": 78.43085106382979,
+            "p_align": 1
+        },
+        {
+            "word": "o",
+            "success": true,
+            "start_s": 78.43085106382979,
+            "end_s": 78.51063829787235,
+            "p_align": 1
+        },
+        {
+            "word": " Jo",
+            "success": true,
+            "start_s": 78.59042553191489,
+            "end_s": 78.82978723404256,
+            "p_align": 1
+        },
+        {
+            "word": "ão",
+            "success": true,
+            "start_s": 78.82978723404256,
+            "end_s": 78.98936170212767,
+            "p_align": 1
+        },
+        {
+            "word": ".\n(Comment",
+            "success": true,
+            "start_s": 79.70744680851064,
+            "end_s": 80.1063829787234,
+            "p_align": 1
+        },
+        {
+            "word": " tu",
+            "success": true,
+            "start_s": 80.1063829787234,
+            "end_s": 80.26595744680851,
+            "p_align": 1
+        },
+        {
+            "word": " t",
+            "success": true,
+            "start_s": 80.26595744680851,
+            "end_s": 80.34574468085107,
+            "p_align": 1
+        },
+        {
+            "word": "’ap",
+            "success": true,
+            "start_s": 80.34574468085107,
+            "end_s": 80.58510638297872,
+            "p_align": 1
+        },
+        {
+            "word": "pe",
+            "success": true,
+            "start_s": 80.58510638297872,
+            "end_s": 80.66489361702128,
+            "p_align": 1
+        },
+        {
+            "word": "lles",
+            "success": true,
+            "start_s": 80.66489361702128,
+            "end_s": 80.98404255319149,
+            "p_align": 1
+        },
+        {
+            "word": " ? Je",
+            "success": true,
+            "start_s": 80.98404255319149,
+            "end_s": 81.1436170212766,
+            "p_align": 1
+        },
+        {
+            "word": " m",
+            "success": true,
+            "start_s": 81.1436170212766,
+            "end_s": 81.22340425531915,
+            "p_align": 1
+        },
+        {
+            "word": "’a",
+            "success": true,
+            "start_s": 81.22340425531915,
+            "end_s": 81.38297872340425,
+            "p_align": 1
+        },
+        {
+            "word": "ppe",
+            "success": true,
+            "start_s": 81.4627659574468,
+            "end_s": 81.54255319148936,
+            "p_align": 1
+        },
+        {
+            "word": "lle",
+            "success": true,
+            "start_s": 81.54255319148936,
+            "end_s": 81.78191489361703,
+            "p_align": 1
+        },
+        {
+            "word": " J",
+            "success": true,
+            "start_s": 81.86170212765957,
+            "end_s": 81.94148936170212,
+            "p_align": 1
+        },
+        {
+            "word": "oã",
+            "success": true,
+            "start_s": 81.94148936170212,
+            "end_s": 82.10106382978724,
+            "p_align": 1
+        },
+        {
+            "word": "o.",
+            "success": true,
+            "start_s": 82.10106382978724,
+            "end_s": 82.26063829787235,
+            "p_align": 1
+        },
+        {
+            "word": ")\nDe",
+            "success": true,
+            "start_s": 82.73936170212767,
+            "end_s": 82.97872340425532,
+            "p_align": 1
+        },
+        {
+            "word": " onde",
+            "success": true,
+            "start_s": 82.97872340425532,
+            "end_s": 83.37765957446808,
+            "p_align": 1
+        },
+        {
+            "word": " você",
+            "success": true,
+            "start_s": 83.45744680851064,
+            "end_s": 83.8563829787234,
+            "p_align": 1
+        },
+        {
+            "word": " é",
+            "success": true,
+            "start_s": 84.09574468085107,
+            "end_s": 84.25531914893617,
+            "p_align": 1
+        },
+        {
+            "word": "? So",
+            "success": true,
+            "start_s": 84.49468085106383,
+            "end_s": 84.57446808510639,
+            "p_align": 1
+        },
+        {
+            "word": "u ",
+            "success": true,
+            "start_s": 84.57446808510639,
+            "end_s": 84.73404255319149,
+            "p_align": 1
+        },
+        {
+            "word": "de",
+            "success": true,
+            "start_s": 84.73404255319149,
+            "end_s": 84.8936170212766,
+            "p_align": 1
+        },
+        {
+            "word": " São",
+            "success": true,
+            "start_s": 84.97340425531915,
+            "end_s": 85.13297872340425,
+            "p_align": 1
+        },
+        {
+            "word": " Pau",
+            "success": true,
+            "start_s": 85.13297872340425,
+            "end_s": 85.45212765957447,
+            "p_align": 1
+        },
+        {
+            "word": "lo",
+            "success": true,
+            "start_s": 85.45212765957447,
+            "end_s": 85.61170212765957,
+            "p_align": 1
+        },
+        {
+            "word": ", então",
+            "success": true,
+            "start_s": 85.85106382978724,
+            "end_s": 86.40957446808511,
+            "p_align": 1
+        },
+        {
+            "word": ".\n(D’o",
+            "success": true,
+            "start_s": 86.88829787234043,
+            "end_s": 87.12765957446808,
+            "p_align": 1
+        },
+        {
+            "word": "ù vi",
+            "success": true,
+            "start_s": 87.12765957446808,
+            "end_s": 87.20744680851064,
+            "p_align": 1
+        },
+        {
+            "word": "ens",
+            "success": true,
+            "start_s": 87.20744680851064,
+            "end_s": 87.36702127659575,
+            "p_align": 1
+        },
+        {
+            "word": "-tu",
+            "success": true,
+            "start_s": 87.36702127659575,
+            "end_s": 87.6063829787234,
+            "p_align": 1
+        },
+        {
+            "word": " ? Je",
+            "success": true,
+            "start_s": 87.6063829787234,
+            "end_s": 87.76595744680851,
+            "p_align": 1
+        },
+        {
+            "word": " viens",
+            "success": true,
+            "start_s": 87.76595744680851,
+            "end_s": 88.08510638297872,
+            "p_align": 1
+        },
+        {
+            "word": " de",
+            "success": true,
+            "start_s": 88.08510638297872,
+            "end_s": 88.24468085106383,
+            "p_align": 1
+        },
+        {
+            "word": " São",
+            "success": true,
+            "start_s": 88.24468085106383,
+            "end_s": 88.48404255319149,
+            "p_align": 1
+        },
+        {
+            "word": " Pau",
+            "success": true,
+            "start_s": 88.48404255319149,
+            "end_s": 88.80319148936171,
+            "p_align": 1
+        },
+        {
+            "word": "lo",
+            "success": true,
+            "start_s": 88.88297872340425,
+            "end_s": 89.04255319148936,
+            "p_align": 1
+        },
+        {
+            "word": ", al",
+            "success": true,
+            "start_s": 89.12234042553192,
+            "end_s": 89.36170212765957,
+            "p_align": 1
+        },
+        {
+            "word": "ors",
+            "success": true,
+            "start_s": 89.36170212765957,
+            "end_s": 89.60106382978724,
+            "p_align": 1
+        },
+        {
+            "word": ".)\nO",
+            "success": true,
+            "start_s": 90.23936170212767,
+            "end_s": 90.39893617021276,
+            "p_align": 1
+        },
+        {
+            "word": " que",
+            "success": true,
+            "start_s": 90.39893617021276,
+            "end_s": 90.71808510638299,
+            "p_align": 1
+        },
+        {
+            "word": " você",
+            "success": true,
+            "start_s": 90.71808510638299,
+            "end_s": 91.11702127659575,
+            "p_align": 1
+        },
+        {
+            "word": " faz",
+            "success": true,
+            "start_s": 91.11702127659575,
+            "end_s": 91.43617021276596,
+            "p_align": 1
+        },
+        {
+            "word": "? So",
+            "success": true,
+            "start_s": 91.51595744680851,
+            "end_s": 91.59574468085107,
+            "p_align": 1
+        },
+        {
+            "word": "u ",
+            "success": true,
+            "start_s": 91.59574468085107,
+            "end_s": 91.75531914893617,
+            "p_align": 1
+        },
+        {
+            "word": "mot",
+            "success": true,
+            "start_s": 91.75531914893617,
+            "end_s": 91.99468085106383,
+            "p_align": 1
+        },
+        {
+            "word": "or",
+            "success": true,
+            "start_s": 91.99468085106383,
+            "end_s": 92.15425531914893,
+            "p_align": 1
+        },
+        {
+            "word": "ista",
+            "success": true,
+            "start_s": 92.55319148936171,
+            "end_s": 92.87234042553192,
+            "p_align": 1
+        },
+        {
+            "word": ".\n(Que",
+            "success": true,
+            "start_s": 93.35106382978724,
+            "end_s": 93.51063829787235,
+            "p_align": 1
+        },
+        {
+            "word": " fais",
+            "success": true,
+            "start_s": 93.51063829787235,
+            "end_s": 93.75,
+            "p_align": 1
+        },
+        {
+            "word": "-tu",
+            "success": true,
+            "start_s": 93.75,
+            "end_s": 93.98936170212767,
+            "p_align": 1
+        },
+        {
+            "word": " ? Je",
+            "success": true,
+            "start_s": 94.30851063829788,
+            "end_s": 94.62765957446808,
+            "p_align": 1
+        },
+        {
+            "word": " suis",
+            "success": true,
+            "start_s": 94.62765957446808,
+            "end_s": 95.02659574468085,
+            "p_align": 1
+        },
+        {
+            "word": " cha",
+            "success": true,
+            "start_s": 95.1063829787234,
+            "end_s": 95.18617021276596,
+            "p_align": 1
+        },
+        {
+            "word": "u",
+            "success": true,
+            "start_s": 95.18617021276596,
+            "end_s": 95.26595744680851,
+            "p_align": 1
+        },
+        {
+            "word": "f",
+            "success": true,
+            "start_s": 95.34574468085107,
+            "end_s": 95.42553191489361,
+            "p_align": 1
+        },
+        {
+            "word": "fe",
+            "success": true,
+            "start_s": 95.42553191489361,
+            "end_s": 95.50531914893617,
+            "p_align": 1
+        },
+        {
+            "word": "ur",
+            "success": true,
+            "start_s": 95.50531914893617,
+            "end_s": 95.66489361702128,
+            "p_align": 1
+        },
+        {
+            "word": ".)\nMui",
+            "success": true,
+            "start_s": 95.66489361702128,
+            "end_s": 95.74468085106383,
+            "p_align": 1
+        },
+        {
+            "word": "to",
+            "success": true,
+            "start_s": 95.74468085106383,
+            "end_s": 95.82446808510639,
+            "p_align": 1
+        },
+        {
+            "word": " p",
+            "success": true,
+            "start_s": 95.82446808510639,
+            "end_s": 95.90425531914893,
+            "p_align": 1
+        },
+        {
+            "word": "ra",
+            "success": true,
+            "start_s": 95.90425531914893,
+            "end_s": 96.06382978723404,
+            "p_align": 1
+        },
+        {
+            "word": "z",
+            "success": true,
+            "start_s": 96.06382978723404,
+            "end_s": 96.1436170212766,
+            "p_align": 1
+        },
+        {
+            "word": "er",
+            "success": true,
+            "start_s": 96.22340425531915,
+            "end_s": 96.38297872340425,
+            "p_align": 1
+        },
+        {
+            "word": "! — ",
+            "success": true,
+            "start_s": 96.62234042553192,
+            "end_s": 96.78191489361703,
+            "p_align": 1
+        },
+        {
+            "word": "O",
+            "success": true,
+            "start_s": 96.78191489361703,
+            "end_s": 96.86170212765957,
+            "p_align": 1
+        },
+        {
+            "word": " pra",
+            "success": true,
+            "start_s": 97.02127659574468,
+            "end_s": 97.18085106382979,
+            "p_align": 1
+        },
+        {
+            "word": "z",
+            "success": true,
+            "start_s": 97.18085106382979,
+            "end_s": 97.26063829787235,
+            "p_align": 1
+        },
+        {
+            "word": "er",
+            "success": true,
+            "start_s": 97.26063829787235,
+            "end_s": 97.34042553191489,
+            "p_align": 1
+        },
+        {
+            "word": " é",
+            "success": true,
+            "start_s": 97.34042553191489,
+            "end_s": 97.42021276595744,
+            "p_align": 1
+        },
+        {
+            "word": " me",
+            "success": true,
+            "start_s": 97.42021276595744,
+            "end_s": 97.5,
+            "p_align": 1
+        },
+        {
+            "word": "u!",
+            "success": true,
+            "start_s": 97.5,
+            "end_s": 97.57978723404256,
+            "p_align": 1
+        },
+        {
+            "word": "\n(En",
+            "success": true,
+            "start_s": 97.57978723404256,
+            "end_s": 97.65957446808511,
+            "p_align": 1
+        },
+        {
+            "word": "ch",
+            "success": true,
+            "start_s": 97.65957446808511,
+            "end_s": 97.73936170212767,
+            "p_align": 1
+        },
+        {
+            "word": "a",
+            "success": true,
+            "start_s": 97.73936170212767,
+            "end_s": 97.81914893617021,
+            "p_align": 1
+        },
+        {
+            "word": "nt",
+            "success": true,
+            "start_s": 97.81914893617021,
+            "end_s": 97.89893617021276,
+            "p_align": 1
+        },
+        {
+            "word": "é",
+            "success": true,
+            "start_s": 97.89893617021276,
+            "end_s": 97.97872340425532,
+            "p_align": 1
+        },
+        {
+            "word": " ! — ",
+            "success": true,
+            "start_s": 97.97872340425532,
+            "end_s": 98.05851063829788,
+            "p_align": 1
+        },
+        {
+            "word": "Le",
+            "success": true,
+            "start_s": 98.05851063829788,
+            "end_s": 98.13829787234043,
+            "p_align": 1
+        },
+        {
+            "word": " pla",
+            "success": true,
+            "start_s": 98.13829787234043,
+            "end_s": 98.29787234042553,
+            "p_align": 1
+        },
+        {
+            "word": "is",
+            "success": true,
+            "start_s": 98.29787234042553,
+            "end_s": 98.37765957446808,
+            "p_align": 1
+        },
+        {
+            "word": "ir",
+            "success": true,
+            "start_s": 98.37765957446808,
+            "end_s": 98.45744680851064,
+            "p_align": 1
+        },
+        {
+            "word": " e",
+            "success": true,
+            "start_s": 98.45744680851064,
+            "end_s": 98.61702127659575,
+            "p_align": 1
+        },
+        {
+            "word": "st",
+            "success": true,
+            "start_s": 98.61702127659575,
+            "end_s": 98.6968085106383,
+            "p_align": 1
+        },
+        {
+            "word": " pour",
+            "success": true,
+            "start_s": 98.6968085106383,
+            "end_s": 98.93617021276596,
+            "p_align": 1
+        },
+        {
+            "word": " moi",
+            "success": true,
+            "start_s": 98.93617021276596,
+            "end_s": 99.25531914893617,
+            "p_align": 1
+        },
+        {
+            "word": " !)\n\n🎵\n",
+            "success": true,
+            "start_s": 101.64893617021276,
+            "end_s": 102.20744680851064,
+            "p_align": 1
+        },
+        {
+            "word": "Se",
+            "success": true,
+            "start_s": 112.89893617021276,
+            "end_s": 113.05851063829788,
+            "p_align": 1
+        },
+        {
+            "word": " ap",
+            "success": true,
+            "start_s": 113.05851063829788,
+            "end_s": 113.21808510638299,
+            "p_align": 1
+        },
+        {
+            "word": "res",
+            "success": true,
+            "start_s": 113.21808510638299,
+            "end_s": 113.45744680851064,
+            "p_align": 1
+        },
+        {
+            "word": "ente",
+            "success": true,
+            "start_s": 113.77659574468085,
+            "end_s": 114.09574468085107,
+            "p_align": 1
+        },
+        {
+            "word": ", sem",
+            "success": true,
+            "start_s": 114.25531914893617,
+            "end_s": 114.57446808510639,
+            "p_align": 1
+        },
+        {
+            "word": " tim",
+            "success": true,
+            "start_s": 114.57446808510639,
+            "end_s": 114.8936170212766,
+            "p_align": 1
+        },
+        {
+            "word": "ide",
+            "success": true,
+            "start_s": 114.97340425531915,
+            "end_s": 115.05319148936171,
+            "p_align": 1
+        },
+        {
+            "word": "z",
+            "success": true,
+            "start_s": 115.05319148936171,
+            "end_s": 115.13297872340425,
+            "p_align": 1
+        },
+        {
+            "word": ",\nFa",
+            "success": true,
+            "start_s": 116.25,
+            "end_s": 116.48936170212767,
+            "p_align": 1
+        },
+        {
+            "word": "le",
+            "success": true,
+            "start_s": 116.48936170212767,
+            "end_s": 116.64893617021276,
+            "p_align": 1
+        },
+        {
+            "word": " seu",
+            "success": true,
+            "start_s": 116.64893617021276,
+            "end_s": 116.88829787234043,
+            "p_align": 1
+        },
+        {
+            "word": " nome",
+            "success": true,
+            "start_s": 116.88829787234043,
+            "end_s": 117.2872340425532,
+            "p_align": 1
+        },
+        {
+            "word": ", id",
+            "success": true,
+            "start_s": 117.36702127659575,
+            "end_s": 117.6063829787234,
+            "p_align": 1
+        },
+        {
+            "word": "ade",
+            "success": true,
+            "start_s": 117.6063829787234,
+            "end_s": 117.84574468085107,
+            "p_align": 1
+        },
+        {
+            "word": " e",
+            "success": true,
+            "start_s": 118.16489361702128,
+            "end_s": 118.24468085106383,
+            "p_align": 1
+        },
+        {
+            "word": " o",
+            "success": true,
+            "start_s": 118.24468085106383,
+            "end_s": 118.40425531914893,
+            "p_align": 1
+        },
+        {
+            "word": " que",
+            "success": true,
+            "start_s": 118.48404255319149,
+            "end_s": 118.72340425531915,
+            "p_align": 1
+        },
+        {
+            "word": " você",
+            "success": true,
+            "start_s": 118.72340425531915,
+            "end_s": 119.12234042553192,
+            "p_align": 1
+        },
+        {
+            "word": " faz",
+            "success": true,
+            "start_s": 119.36170212765957,
+            "end_s": 119.68085106382979,
+            "p_align": 1
+        },
+        {
+            "word": ".\n(Dis",
+            "success": true,
+            "start_s": 120.71808510638299,
+            "end_s": 121.0372340425532,
+            "p_align": 1
+        },
+        {
+            "word": " ton",
+            "success": true,
+            "start_s": 121.0372340425532,
+            "end_s": 121.27659574468085,
+            "p_align": 1
+        },
+        {
+            "word": " nom",
+            "success": true,
+            "start_s": 121.27659574468085,
+            "end_s": 121.59574468085107,
+            "p_align": 1
+        },
+        {
+            "word": ", ton",
+            "success": true,
+            "start_s": 121.59574468085107,
+            "end_s": 121.99468085106383,
+            "p_align": 1
+        },
+        {
+            "word": " â",
+            "success": true,
+            "start_s": 121.99468085106383,
+            "end_s": 122.15425531914893,
+            "p_align": 1
+        },
+        {
+            "word": "ge",
+            "success": true,
+            "start_s": 122.15425531914893,
+            "end_s": 122.31382978723404,
+            "p_align": 1
+        },
+        {
+            "word": " et",
+            "success": true,
+            "start_s": 122.47340425531915,
+            "end_s": 122.7127659574468,
+            "p_align": 1
+        },
+        {
+            "word": " ce",
+            "success": true,
+            "start_s": 122.87234042553192,
+            "end_s": 123.11170212765957,
+            "p_align": 1
+        },
+        {
+            "word": " que",
+            "success": true,
+            "start_s": 123.27127659574468,
+            "end_s": 123.51063829787235,
+            "p_align": 1
+        },
+        {
+            "word": " tu",
+            "success": true,
+            "start_s": 123.51063829787235,
+            "end_s": 123.75,
+            "p_align": 1
+        },
+        {
+            "word": " fa",
+            "success": true,
+            "start_s": 123.75,
+            "end_s": 123.82978723404256,
+            "p_align": 1
+        },
+        {
+            "word": "i",
+            "success": true,
+            "start_s": 123.82978723404256,
+            "end_s": 123.90957446808511,
+            "p_align": 1
+        },
+        {
+            "word": "s",
+            "success": true,
+            "start_s": 123.90957446808511,
+            "end_s": 123.98936170212767,
+            "p_align": 1
+        },
+        {
+            "word": ".)\nFalar",
+            "success": true,
+            "start_s": 124.62765957446808,
+            "end_s": 125.1063829787234,
+            "p_align": 1
+        },
+        {
+            "word": " port",
+            "success": true,
+            "start_s": 125.1063829787234,
+            "end_s": 125.26595744680851,
+            "p_align": 1
+        },
+        {
+            "word": "ug",
+            "success": true,
+            "start_s": 125.26595744680851,
+            "end_s": 125.42553191489363,
+            "p_align": 1
+        },
+        {
+            "word": "u",
+            "success": true,
+            "start_s": 125.50531914893617,
+            "end_s": 125.58510638297872,
+            "p_align": 1
+        },
+        {
+            "word": "ê",
+            "success": true,
+            "start_s": 125.58510638297872,
+            "end_s": 125.66489361702128,
+            "p_align": 1
+        },
+        {
+            "word": "s",
+            "success": true,
+            "start_s": 125.74468085106383,
+            "end_s": 125.82446808510639,
+            "p_align": 1
+        },
+        {
+            "word": " é",
+            "success": true,
+            "start_s": 125.98404255319149,
+            "end_s": 126.1436170212766,
+            "p_align": 1
+        },
+        {
+            "word": " de",
+            "success": true,
+            "start_s": 126.1436170212766,
+            "end_s": 126.38297872340425,
+            "p_align": 1
+        },
+        {
+            "word": "mais",
+            "success": true,
+            "start_s": 126.4627659574468,
+            "end_s": 126.78191489361703,
+            "p_align": 1
+        },
+        {
+            "word": "!\n(Parl",
+            "success": true,
+            "start_s": 126.78191489361703,
+            "end_s": 126.86170212765957,
+            "p_align": 1
+        },
+        {
+            "word": "er",
+            "success": true,
+            "start_s": 126.86170212765957,
+            "end_s": 127.02127659574468,
+            "p_align": 1
+        },
+        {
+            "word": " por",
+            "success": true,
+            "start_s": 127.34042553191489,
+            "end_s": 127.65957446808511,
+            "p_align": 1
+        },
+        {
+            "word": "tu",
+            "success": true,
+            "start_s": 127.97872340425532,
+            "end_s": 128.05851063829786,
+            "p_align": 1
+        },
+        {
+            "word": "gais",
+            "success": true,
+            "start_s": 128.05851063829786,
+            "end_s": 128.13829787234042,
+            "p_align": 1
+        },
+        {
+            "word": ", c’",
+            "success": true,
+            "start_s": 128.13829787234042,
+            "end_s": 128.21808510638297,
+            "p_align": 1
+        },
+        {
+            "word": "est",
+            "success": true,
+            "start_s": 128.21808510638297,
+            "end_s": 128.29787234042553,
+            "p_align": 1
+        },
+        {
+            "word": " g",
+            "success": true,
+            "start_s": 128.29787234042553,
+            "end_s": 128.37765957446808,
+            "p_align": 1
+        },
+        {
+            "word": "én",
+            "success": true,
+            "start_s": 128.37765957446808,
+            "end_s": 128.45744680851064,
+            "p_align": 1
+        },
+        {
+            "word": "i",
+            "success": true,
+            "start_s": 128.45744680851064,
+            "end_s": 128.5372340425532,
+            "p_align": 1
+        },
+        {
+            "word": "a",
+            "success": true,
+            "start_s": 128.5372340425532,
+            "end_s": 128.61702127659575,
+            "p_align": 1
+        },
+        {
+            "word": "l",
+            "success": true,
+            "start_s": 128.61702127659575,
+            "end_s": 128.6968085106383,
+            "p_align": 1
+        },
+        {
+            "word": " !)\nVem",
+            "success": true,
+            "start_s": 128.6968085106383,
+            "end_s": 128.77659574468086,
+            "p_align": 1
+        },
+        {
+            "word": " can",
+            "success": true,
+            "start_s": 128.77659574468086,
+            "end_s": 128.85638297872342,
+            "p_align": 1
+        },
+        {
+            "word": "ta",
+            "success": true,
+            "start_s": 128.85638297872342,
+            "end_s": 129.0159574468085,
+            "p_align": 1
+        },
+        {
+            "word": "r ",
+            "success": true,
+            "start_s": 129.09574468085106,
+            "end_s": 129.1755319148936,
+            "p_align": 1
+        },
+        {
+            "word": "com",
+            "success": true,
+            "start_s": 129.1755319148936,
+            "end_s": 129.25531914893617,
+            "p_align": 1
+        },
+        {
+            "word": " a ",
+            "success": true,
+            "start_s": 129.25531914893617,
+            "end_s": 129.41489361702128,
+            "p_align": 1
+        },
+        {
+            "word": "g",
+            "success": true,
+            "start_s": 129.41489361702128,
+            "end_s": 129.49468085106383,
+            "p_align": 1
+        },
+        {
+            "word": "ente",
+            "success": true,
+            "start_s": 129.7340425531915,
+            "end_s": 130.0531914893617,
+            "p_align": 1
+        },
+        {
+            "word": " mais",
+            "success": true,
+            "start_s": 130.2127659574468,
+            "end_s": 130.37234042553192,
+            "p_align": 1
+        },
+        {
+            "word": "!\n(Vi",
+            "success": true,
+            "start_s": 130.37234042553192,
+            "end_s": 130.7712765957447,
+            "p_align": 1
+        },
+        {
+            "word": "e",
+            "success": true,
+            "start_s": 131.48936170212767,
+            "end_s": 131.56914893617022,
+            "p_align": 1
+        },
+        {
+            "word": "ns",
+            "success": true,
+            "start_s": 131.56914893617022,
+            "end_s": 131.72872340425533,
+            "p_align": 1
+        },
+        {
+            "word": " ch",
+            "success": true,
+            "start_s": 131.72872340425533,
+            "end_s": 131.80851063829786,
+            "p_align": 1
+        },
+        {
+            "word": "ante",
+            "success": true,
+            "start_s": 131.80851063829786,
+            "end_s": 131.96808510638297,
+            "p_align": 1
+        },
+        {
+            "word": "r ",
+            "success": true,
+            "start_s": 131.96808510638297,
+            "end_s": 132.12765957446808,
+            "p_align": 1
+        },
+        {
+            "word": "en",
+            "success": true,
+            "start_s": 132.20744680851064,
+            "end_s": 132.36702127659575,
+            "p_align": 1
+        },
+        {
+            "word": "cor",
+            "success": true,
+            "start_s": 132.4468085106383,
+            "end_s": 132.68617021276597,
+            "p_align": 1
+        },
+        {
+            "word": "e ",
+            "success": true,
+            "start_s": 132.68617021276597,
+            "end_s": 132.84574468085106,
+            "p_align": 1
+        },
+        {
+            "word": "avec",
+            "success": true,
+            "start_s": 132.84574468085106,
+            "end_s": 133.16489361702128,
+            "p_align": 1
+        },
+        {
+            "word": " no",
+            "success": true,
+            "start_s": 133.24468085106383,
+            "end_s": 133.4840425531915,
+            "p_align": 1
+        },
+        {
+            "word": "us !)\n\n",
+            "success": true,
+            "start_s": 133.72340425531914,
+            "end_s": 134.28191489361703,
+            "p_align": 1
+        }
+    ]
+}
